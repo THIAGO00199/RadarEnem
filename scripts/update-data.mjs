@@ -1,0 +1,10 @@
+import {mkdir,writeFile} from 'node:fs/promises';
+import {join} from 'node:path';
+import {loadRadar,projectRoot} from './compile-radar.mjs';
+const {collector}=await loadRadar();
+const result=await collector.collect();
+const destination=join(projectRoot,'portable/public/data');
+await mkdir(destination,{recursive:true});
+await writeFile(join(destination,'latest.json'),JSON.stringify(result,null,2)+'\n');
+for(const s of result.statuses)console.log(`${s.ok?'OK':'FALHA'} · ${s.title} · ${s.message}`);
+console.log(`${result.articles.length} registros gravados. Rode npm run build:pages e publique docs/.`);

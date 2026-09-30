@@ -1,0 +1,234 @@
+{
+  "fetchedAt": "2026-09-30T17:42:03.934Z",
+  "articles": [
+    {
+      "id": "fgv",
+      "title": "Possíveis temas de redação para 2026 — FGV",
+      "url": "https://vestibular.fgv.br/blog/redacao-do-enem-2026-possiveis-temas",
+      "source": "FGV",
+      "kind": "editorial",
+      "date": "2026-05-05",
+      "observedAt": "2026-09-30",
+      "topics": [
+        "mental",
+        "ia",
+        "educacao",
+        "trabalho",
+        "ciencia",
+        "idosos"
+      ],
+      "note": "Página consultada nesta coleta. Temas identificados por palavras-chave; confira a fonte. A data original, quando identificada, determina o peso.",
+      "origin": "collected"
+    },
+    {
+      "id": "brasil-escola",
+      "title": "Quinze propostas de professores para o Enem 2026",
+      "url": "https://vestibular.brasilescola.uol.com.br/enem/15-temas-redacao-enem-2026.htm",
+      "source": "Brasil Escola",
+      "kind": "editorial",
+      "date": "2026-05-06",
+      "observedAt": "2026-09-30",
+      "topics": [
+        "digital",
+        "clima",
+        "mental",
+        "ia",
+        "educacao",
+        "trabalho",
+        "genero",
+        "moradia",
+        "ciencia",
+        "juventude",
+        "democracia"
+      ],
+      "note": "Página consultada nesta coleta. Temas identificados por palavras-chave; confira a fonte. A data original, quando identificada, determina o peso.",
+      "origin": "collected"
+    },
+    {
+      "id": "cnn",
+      "title": "Sete eixos de preparação apontados por professor",
+      "url": "https://www.cnnbrasil.com.br/educacao/redacao-do-enem-professor-aponta-7-temas-que-merecem-atencao-em-2026/",
+      "source": "CNN Brasil / Ademar Celedônio",
+      "kind": "editorial",
+      "date": "2026-08-16",
+      "observedAt": "2026-09-30",
+      "topics": [
+        "digital",
+        "clima",
+        "inclusao",
+        "educacao",
+        "ciencia",
+        "juventude"
+      ],
+      "note": "Página consultada nesta coleta. Temas identificados por palavras-chave; confira a fonte. A data original, quando identificada, determina o peso.",
+      "origin": "collected"
+    },
+    {
+      "id": "mdh-digital",
+      "title": "ECA Digital: orientações de proteção no ambiente online",
+      "url": "https://www.gov.br/mdh/pt-br/assuntos/noticias/2026/defeso-eleitoral/agosto/eca-digital-conheca-as-regras-de-protecao-de-criancas-e-adolescentes-no-ambiente-online",
+      "source": "Ministério dos Direitos Humanos",
+      "kind": "news",
+      "date": "2026-08-21",
+      "observedAt": "2026-09-30",
+      "topics": [
+        "digital",
+        "juventude"
+      ],
+      "note": "Página consultada nesta coleta. Temas identificados por palavras-chave; confira a fonte. A data original, quando identificada, determina o peso.",
+      "origin": "collected"
+    },
+    {
+      "id": "anpd-digital",
+      "title": "ANPD aborda um ano do ECA Digital",
+      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/eca-digital-completa-um-ano-e-e-marco-na-protecao-de-criancas-e-adolescentes-na-internet",
+      "source": "ANPD",
+      "kind": "news",
+      "date": "2026-09-16",
+      "observedAt": "2026-09-30",
+      "topics": [
+        "digital",
+        "ia"
+      ],
+      "note": "Página consultada nesta coleta. Temas identificados por palavras-chave; confira a fonte. A data original, quando identificada, determina o peso.",
+      "origin": "collected"
+    },
+    {
+      "id": "rss-https://agenciabrasil.ebc.com.br/saude/noticia/2026-09/portaria-libera-doacao-de-sangue-de-pessoas-com-mais-de-70-anos",
+      "title": "Portaria libera doação de sangue de pessoas com mais de 70 anos",
+      "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-09/portaria-libera-doacao-de-sangue-de-pessoas-com-mais-de-70-anos",
+      "source": "Agência Brasil — últimas notícias",
+      "kind": "news",
+      "date": "2026-09-30",
+      "observedAt": "2026-09-30",
+      "topics": [
+        "idosos",
+        "fome"
+      ],
+      "note": "Classificação automática por palavras-chave no título e na descrição do feed. Abra a fonte para conferir o contexto.",
+      "origin": "collected"
+    },
+    {
+      "id": "rss-https://agenciabrasil.ebc.com.br/justica/noticia/2026-09/justica-manda-discord-aumentar-protecao-de-criancas-e-adolescentes",
+      "title": "Justiça manda Discord aumentar proteção de crianças e adolescentes",
+      "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-09/justica-manda-discord-aumentar-protecao-de-criancas-e-adolescentes",
+      "source": "Agência Brasil — últimas notícias",
+      "kind": "news",
+      "date": "2026-09-30",
+      "observedAt": "2026-09-30",
+      "topics": [
+        "digital"
+      ],
+      "note": "Classificação automática por palavras-chave no título e na descrição do feed. Abra a fonte para conferir o contexto.",
+      "origin": "collected"
+    },
+    {
+      "id": "rss-https://agenciabrasil.ebc.com.br/internacional/noticia/2026-09/autorregulacao-da-ia-de-trump-e-carta-branca-bigtechs-diz-professor",
+      "title": "Autorregulação da IA de Trump é carta branca a big tech, diz professor",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-09/autorregulacao-da-ia-de-trump-e-carta-branca-bigtechs-diz-professor",
+      "source": "Agência Brasil — últimas notícias",
+      "kind": "news",
+      "date": "2026-09-30",
+      "observedAt": "2026-09-30",
+      "topics": [
+        "ia"
+      ],
+      "note": "Classificação automática por palavras-chave no título e na descrição do feed. Abra a fonte para conferir o contexto.",
+      "origin": "collected"
+    },
+    {
+      "id": "rss-https://agenciabrasil.ebc.com.br/politica/noticia/2026-09/frente-de-prefeitos-apresenta-carta-com-propostas-aos-presidenciaveis",
+      "title": "Frente de prefeitos apresenta carta com propostas aos presidenciáveis",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-09/frente-de-prefeitos-apresenta-carta-com-propostas-aos-presidenciaveis",
+      "source": "Agência Brasil — últimas notícias",
+      "kind": "news",
+      "date": "2026-09-30",
+      "observedAt": "2026-09-30",
+      "topics": [
+        "clima"
+      ],
+      "note": "Classificação automática por palavras-chave no título e na descrição do feed. Abra a fonte para conferir o contexto.",
+      "origin": "collected"
+    },
+    {
+      "id": "rss-https://agenciabrasil.ebc.com.br/geral/noticia/2026-09/trump-anuncia-autorregulacao-da-ia-por-bigtechs-em-meio-temor-social",
+      "title": "Trump anuncia autorregulação da IA por big tech em meio a temor social",
+      "url": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-09/trump-anuncia-autorregulacao-da-ia-por-bigtechs-em-meio-temor-social",
+      "source": "Agência Brasil — últimas notícias",
+      "kind": "news",
+      "date": "2026-09-30",
+      "observedAt": "2026-09-30",
+      "topics": [
+        "ia"
+      ],
+      "note": "Classificação automática por palavras-chave no título e na descrição do feed. Abra a fonte para conferir o contexto.",
+      "origin": "collected"
+    }
+  ],
+  "statuses": [
+    {
+      "id": "fgv",
+      "title": "FGV",
+      "url": "https://vestibular.fgv.br/blog/redacao-do-enem-2026-possiveis-temas",
+      "ok": true,
+      "count": 1,
+      "message": "Consulta concluída"
+    },
+    {
+      "id": "brasil-escola",
+      "title": "Brasil Escola",
+      "url": "https://vestibular.brasilescola.uol.com.br/enem/15-temas-redacao-enem-2026.htm",
+      "ok": true,
+      "count": 1,
+      "message": "Consulta concluída"
+    },
+    {
+      "id": "cnn",
+      "title": "CNN Brasil / Ademar Celedônio",
+      "url": "https://www.cnnbrasil.com.br/educacao/redacao-do-enem-professor-aponta-7-temas-que-merecem-atencao-em-2026/",
+      "ok": true,
+      "count": 1,
+      "message": "Consulta concluída"
+    },
+    {
+      "id": "mdh-digital",
+      "title": "Ministério dos Direitos Humanos",
+      "url": "https://www.gov.br/mdh/pt-br/assuntos/noticias/2026/defeso-eleitoral/agosto/eca-digital-conheca-as-regras-de-protecao-de-criancas-e-adolescentes-no-ambiente-online",
+      "ok": true,
+      "count": 1,
+      "message": "Consulta concluída"
+    },
+    {
+      "id": "anpd-digital",
+      "title": "ANPD",
+      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/eca-digital-completa-um-ano-e-e-marco-na-protecao-de-criancas-e-adolescentes-na-internet",
+      "ok": true,
+      "count": 1,
+      "message": "Consulta concluída"
+    },
+    {
+      "id": "plano-clima",
+      "title": "Ministério do Planejamento",
+      "url": "https://www.gov.br/planejamento/pt-br/assuntos/noticias/2026/marco/ministerio-do-planejamento-e-orcamento-tem-participacao-ativa-na-construcao-do-plano-clima",
+      "ok": false,
+      "count": 0,
+      "message": "HTTP 401"
+    },
+    {
+      "id": "ibge-internet",
+      "title": "IBGE",
+      "url": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/47408-proporcao-de-usuarios-da-internet-no-pais-ultrapassou-90-da-populacao-de-10-anos-ou-mais-em-2025",
+      "ok": false,
+      "count": 0,
+      "message": "HTTP 403"
+    },
+    {
+      "id": "agencia-brasil",
+      "title": "Agência Brasil — últimas notícias",
+      "url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml",
+      "ok": true,
+      "count": 5,
+      "message": "Consulta concluída"
+    }
+  ]
+}
