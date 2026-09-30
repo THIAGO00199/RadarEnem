@@ -28,7 +28,7 @@ O build estático fica em `docs/`. Essa versão não exige chaves, conta de IA o
 
 ## GitHub Pages
 
-No repositório `THIAGO00199/kalorevargas`:
+No repositório `THIAGO00199/RadarEnem`:
 
 1. Abra **Settings → Pages**.
 2. Em **Build and deployment**, escolha **Deploy from a branch**.
