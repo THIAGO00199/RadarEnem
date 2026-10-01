@@ -122,7 +122,7 @@ As recomendações não fazem chamadas externas. Atualizações consecutivas do 
 ### Verificação reproduzível
 
 ```bash
-npm ci
+pnpm install --frozen-lockfile
 npm run typecheck
 node scripts/check-recommend.mjs
 npm run check:radar

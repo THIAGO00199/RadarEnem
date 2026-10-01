@@ -13,16 +13,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
-          cache: npm
       - name: Install project and browser checks
         run: |
-          npm ci
+          npm install --global pnpm@11.25.0
+          pnpm install --frozen-lockfile
           npm install --prefix "$RUNNER_TEMP/quality-tools" --no-package-lock playwright@1.58.2 @axe-core/playwright@4.11.1
           "$RUNNER_TEMP/quality-tools/node_modules/.bin/playwright" install --with-deps chromium
           echo "NODE_PATH=$RUNNER_TEMP/quality-tools/node_modules" >> "$GITHUB_ENV"
@@ -57,10 +57,10 @@ jobs:
         if: always() && steps.build.outcome == 'success'
         run: node scripts/check-glow-performance.cjs
       - name: Capture review screenshots
-        if: always()
+        if: always() && steps.build.outcome == 'success'
         run: node scripts/preview-glow.cjs
       - name: Record generated build and audit
-        if: always()
+        if: always() && steps.build.outcome == 'success'
         run: |
           npm run build:pages
           git config user.name "github-actions[bot]"
