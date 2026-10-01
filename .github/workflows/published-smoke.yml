@@ -1,0 +1,17 @@
+name: Published site smoke check
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: published-site
+  cancel-in-progress: true
+jobs:
+  public:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - name: Verify the deployed HTML, styles, scripts, font and PDF
+        run: python scripts/check-published.py

@@ -137,6 +137,22 @@ Os checks de navegador precisam de Playwright e Chromium; acessibilidade precisa
 
 O relatório `portable/public/data/glow-performance-audit.json` compara a versão anterior f8c1540 com o redesign sob viewport mobile, CPU 4×, latência de 150 ms, download de 1,6 Mbps, cache frio e três execuções. São medições de laboratório; retenção, conversão e p75 de usuários reais exigem dados de uso.
 
+### Resultado desta entrega
+
+[Validação completa no GitHub Actions](https://github.com/THIAGO00199/RadarEnem/actions/runs/36937213079): TypeScript, modelo do Radar, 15 checks de recomendações, regressão funcional, quatro larguras de viewport, preferências de tema, movimento reduzido, partículas, cache e falha real de rede passaram.
+
+A auditoria automatizada verificou **49 telas e estados, com zero regras com violações**. Inclui as 13 seções do Hub e sete seções do Radar nos dois temas, flashcards virados, busca e cinco páginas de materiais. É um teste automatizado, não uma certificação de acessibilidade.
+
+| Página | LCP anterior | LCP novo | CLS novo | Transferência inicial nova |
+| --- | ---: | ---: | ---: | ---: |
+| Radar | 1,472 s | 1,680 s | 0 | 188.840 bytes |
+| Hub | 0,540 s | 0,804 s | 0,0148 | 117.558 bytes |
+| Guia de redação | — | 0,396 s | 0,017 | 37.095 bytes |
+
+O novo visual adiciona uma fonte de 31.148 bytes, estilos e interações. A transferência inicial cresceu em 38.922 bytes no Radar e 44.908 no Hub; o LCP de cache frio também aumentou nesta rodada. O cache-first melhora a entrega dos arquivos em visitas seguintes. Os números acima são medianas de laboratório sob a mesma limitação de rede e CPU, não dados de usuários reais.
+
+As capturas de desktop e mobile estão em [design/previews](./design/previews/). O workflow de publicação confere por hash o HTML, o CSS, o JavaScript, a fonte e um PDF servidos publicamente depois do deploy.
+
 ### Próxima evolução de produto
 
 Prioridade alta: acompanhar em produção LCP, CLS e INP; observar a conclusão da primeira sessão, o retorno em sete dias e a abertura das recomendações. Prioridade média: sincronização opcional entre dispositivos e uma visão de evolução por área. Prioridade baixa: animações complexas e efeitos adicionais, condicionados a melhorar compreensão e manter a fluidez em celulares modestos.
