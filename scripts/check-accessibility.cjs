@@ -14,7 +14,7 @@ const server = http.createServer(async (req,res) => {
   const ctx=await browser.newContext({viewport:{width:1440,height:1050},serviceWorkers:"block"}),page=await ctx.newPage(),results=[];
   const inspect=async (name) => {
     const audit=await new AxeBuilder({page}).withTags(["wcag2a","wcag2aa","wcag21a","wcag21aa","wcag22aa"]).analyze();
-    const violations=audit.violations.map((v)=>({id:v.id,impact:v.impact,description:v.description,helpUrl:v.helpUrl,targets:v.nodes.map((n)=>n.target)}));
+    const violations=audit.violations.map((v)=>({id:v.id,impact:v.impact,description:v.description,helpUrl:v.helpUrl,targets:v.nodes.map((n)=>n.target),details:v.nodes.map((n)=>({target:n.target,summary:n.failureSummary,data:n.any.map((x)=>x.data)}))}));
     results.push({name,violations}); if(violations.length) console.log(name,JSON.stringify(violations));
   };
   for(const theme of ["dark","light"]) {
@@ -22,7 +22,7 @@ const server = http.createServer(async (req,res) => {
     await page.evaluate((theme)=>{document.documentElement.dataset.theme=theme;},theme);
     for(const tab of ["hoje","trilhas","plano","redacao","questoes","simulado","revisao","flashcards","erros","foco","biblioteca","provas-oficiais","prova"]) {
       await page.locator(`[data-tab="${tab}"]`).click(); await page.waitForTimeout(80); await inspect("Hub/"+tab+"/"+theme);
-      if (tab === "flashcards") { await page.locator(".flash-front").first().click(); await inspect("Hub/flashcards/resposta/"+theme); }
+      if (tab === "flashcards") { await page.locator(".flash-front").first().click(); await page.locator(".flashcard").first().evaluate(async (card)=>{await Promise.all(card.getAnimations({subtree:true}).map((a)=>a.finished.catch(()=>{})));}); await inspect("Hub/flashcards/resposta/"+theme); }
     }
     await page.locator("#openQuickSearch").click(); await inspect("Hub/busca/"+theme); await page.locator("#closeQuickSearch").click();
   }

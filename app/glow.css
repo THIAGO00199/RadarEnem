@@ -25,3 +25,5 @@
 .switch-label label{color:var(--kalore-text)}.switch-label label>span{color:var(--kalore-muted)}
 .history-card.reading-year{background:color-mix(in srgb,var(--kalore-violet) 8%,var(--kalore-surface));border-color:color-mix(in srgb,var(--kalore-violet) 30%,var(--kalore-border))}
 .reading-year .history-year{color:var(--kalore-violet)}.reading-year .history-axis{color:var(--kalore-muted)}
+
+.app-shell .tag.kind-institutional{color:var(--kalore-violet);background:color-mix(in srgb,var(--kalore-violet) 8%,var(--kalore-surface));border-color:color-mix(in srgb,var(--kalore-violet) 30%,var(--kalore-border))}
