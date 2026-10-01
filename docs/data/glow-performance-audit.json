@@ -1,45 +1,45 @@
 {
-  "checkedAt": "2026-10-01T22:38:57.199Z",
+  "checkedAt": "2026-10-01T22:44:22.665Z",
   "method": "Chromium headless, viewport 390×844, CPU 4×, latência 150 ms, download 1,6 Mbps, gzip, cache frio, service worker bloqueado, 3 execuções por página; mediana. Servidor local. Não é medição de usuários reais nem prova de desempenho do CDN.",
   "summary": [
     {
       "version": "before",
       "page": "index.html",
-      "lcpMs": 1412,
+      "lcpMs": 1552,
       "cls": 0,
-      "blockingMs": 179,
+      "blockingMs": 305,
       "transferBytes": 149918
     },
     {
       "version": "before",
       "page": "estudar.html",
-      "lcpMs": 552,
+      "lcpMs": 564,
       "cls": 0,
-      "blockingMs": 131,
+      "blockingMs": 223,
       "transferBytes": 72650
     },
     {
       "version": "after",
       "page": "index.html",
-      "lcpMs": 1608,
+      "lcpMs": 1764,
       "cls": 0,
-      "blockingMs": 193,
-      "transferBytes": 188669
+      "blockingMs": 328,
+      "transferBytes": 188813
     },
     {
       "version": "after",
       "page": "estudar.html",
-      "lcpMs": 832,
-      "cls": 0.0149,
-      "blockingMs": 184,
-      "transferBytes": 117482
+      "lcpMs": 844,
+      "cls": 0.0148,
+      "blockingMs": 277,
+      "transferBytes": 117558
     },
     {
       "version": "after",
       "page": "materiais/redacao.html",
-      "lcpMs": 408,
+      "lcpMs": 420,
       "cls": 0.017,
-      "blockingMs": 1,
+      "blockingMs": 13,
       "transferBytes": 37095
     }
   ],
@@ -48,135 +48,135 @@
       "version": "before",
       "page": "index.html",
       "run": 1,
-      "lcpMs": 1440,
+      "lcpMs": 1576,
       "cls": 0,
-      "blockingMs": 204,
+      "blockingMs": 323,
       "transferBytes": 149918
     },
     {
       "version": "before",
       "page": "index.html",
       "run": 2,
-      "lcpMs": 1412,
+      "lcpMs": 1540,
       "cls": 0,
-      "blockingMs": 179,
+      "blockingMs": 303,
       "transferBytes": 149918
     },
     {
       "version": "before",
       "page": "index.html",
       "run": 3,
-      "lcpMs": 1412,
+      "lcpMs": 1552,
       "cls": 0,
-      "blockingMs": 172,
+      "blockingMs": 305,
       "transferBytes": 149918
     },
     {
       "version": "before",
       "page": "estudar.html",
       "run": 1,
-      "lcpMs": 552,
+      "lcpMs": 580,
       "cls": 0,
-      "blockingMs": 131,
+      "blockingMs": 227,
       "transferBytes": 72650
     },
     {
       "version": "before",
       "page": "estudar.html",
       "run": 2,
-      "lcpMs": 552,
+      "lcpMs": 564,
       "cls": 0,
-      "blockingMs": 135,
+      "blockingMs": 209,
       "transferBytes": 72650
     },
     {
       "version": "before",
       "page": "estudar.html",
       "run": 3,
-      "lcpMs": 536,
+      "lcpMs": 556,
       "cls": 0,
-      "blockingMs": 121,
+      "blockingMs": 223,
       "transferBytes": 72650
     },
     {
       "version": "after",
       "page": "index.html",
       "run": 1,
-      "lcpMs": 1608,
+      "lcpMs": 1796,
       "cls": 0,
-      "blockingMs": 193,
-      "transferBytes": 188669
+      "blockingMs": 356,
+      "transferBytes": 188813
     },
     {
       "version": "after",
       "page": "index.html",
       "run": 2,
-      "lcpMs": 1604,
+      "lcpMs": 1764,
       "cls": 0,
-      "blockingMs": 194,
-      "transferBytes": 188669
+      "blockingMs": 320,
+      "transferBytes": 188813
     },
     {
       "version": "after",
       "page": "index.html",
       "run": 3,
-      "lcpMs": 1608,
+      "lcpMs": 1764,
       "cls": 0,
-      "blockingMs": 191,
-      "transferBytes": 188669
+      "blockingMs": 328,
+      "transferBytes": 188813
     },
     {
       "version": "after",
       "page": "estudar.html",
       "run": 1,
-      "lcpMs": 832,
-      "cls": 0.0149,
-      "blockingMs": 187,
-      "transferBytes": 117482
+      "lcpMs": 844,
+      "cls": 0.0148,
+      "blockingMs": 279,
+      "transferBytes": 117558
     },
     {
       "version": "after",
       "page": "estudar.html",
       "run": 2,
-      "lcpMs": 812,
-      "cls": 0.0149,
-      "blockingMs": 169,
-      "transferBytes": 117482
+      "lcpMs": 852,
+      "cls": 0.0148,
+      "blockingMs": 277,
+      "transferBytes": 117558
     },
     {
       "version": "after",
       "page": "estudar.html",
       "run": 3,
-      "lcpMs": 836,
-      "cls": 0.0149,
-      "blockingMs": 184,
-      "transferBytes": 117482
+      "lcpMs": 844,
+      "cls": 0.0148,
+      "blockingMs": 277,
+      "transferBytes": 117558
     },
     {
       "version": "after",
       "page": "materiais/redacao.html",
       "run": 1,
-      "lcpMs": 408,
+      "lcpMs": 412,
       "cls": 0.017,
-      "blockingMs": 1,
+      "blockingMs": 13,
       "transferBytes": 37095
     },
     {
       "version": "after",
       "page": "materiais/redacao.html",
       "run": 2,
-      "lcpMs": 404,
+      "lcpMs": 420,
       "cls": 0.017,
-      "blockingMs": 1,
+      "blockingMs": 11,
       "transferBytes": 37095
     },
     {
       "version": "after",
       "page": "materiais/redacao.html",
       "run": 3,
-      "lcpMs": 408,
+      "lcpMs": 424,
       "cls": 0.017,
-      "blockingMs": 2,
+      "blockingMs": 15,
       "transferBytes": 37095
     }
   ]

@@ -39,3 +39,5 @@ button,a,input,select,textarea,summary{outline-offset:4px}
 .motion-off .button:hover,.motion-off .stat-link:hover,.motion-off .learning-shortcuts a:hover{transform:none!important}
 
 [data-theme=light] .hub-app .btn.primary,[data-theme=light] .app-shell .button.primary{background:linear-gradient(120deg,#e0ff98,#d4f87a 65%,#c8f36f);border-color:#c8f36f;color:var(--glow-action-text)}
+
+.product-short{display:none}@media(max-width:760px){.product-full{display:none}.product-short{display:inline}.product-switch a{min-width:44px;justify-content:center}}
