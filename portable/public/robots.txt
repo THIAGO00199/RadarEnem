@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thiago00199.github.io/RadarEnem/sitemap.xml
