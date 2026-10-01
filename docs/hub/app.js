@@ -89,10 +89,13 @@
     const button = $("#recommendationCTA");
     button.replaceChildren(document.createTextNode(r.action + " →"));
     button.dataset.recommendation = r.key;
-    button.onclick = () => {
+    const open = () => {
       if (r.area) { s.course.track = r.area; save(); renderTrails(); }
       activateTab(r.tab);
     };
+    button.onclick = open;
+    const hero = $("#heroNextSession");
+    if (hero) { hero.textContent = r.action + " ↗"; hero.onclick = open; }
   }
   window.addEventListener("kalore:progress", scheduleRecommendation);
   function dayKey(d = new Date()) {

@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-01T18:06:06.027Z",
-  "engine": "axe-core/playwright 4.13.0",
-  "scope": "13 seções do Hub nos dois temas, flashcards virados e busca, Radar e cinco páginas de materiais. Regras automatizadas WCAG 2 A/AA, 2.1 A/AA e 2.2 AA. Não constitui certificação nem substitui testes com tecnologias assistivas.",
+  "checkedAt": "2026-10-01T22:38:19.894Z",
+  "engine": "axe-core/playwright 4.11.4",
+  "scope": "13 seções do Hub nos dois temas, flashcards virados e busca, sete seções do Radar nos dois temas e cinco páginas de materiais. Regras automatizadas WCAG 2 A/AA, 2.1 A/AA e 2.2 AA. Não constitui certificação nem substitui testes com tecnologias assistivas.",
   "results": [
     {
       "name": "Hub/hoje/dark",
@@ -124,8 +124,120 @@
       "violations": []
     },
     {
-      "name": "Radar/dark",
+      "name": "Radar/Radar/dark",
       "violations": []
+    },
+    {
+      "name": "Radar/Dossiê PND/dark",
+      "violations": []
+    },
+    {
+      "name": "Radar/Inep/dark",
+      "violations": []
+    },
+    {
+      "name": "Radar/Fontes/dark",
+      "violations": []
+    },
+    {
+      "name": "Radar/Histórico/dark",
+      "violations": []
+    },
+    {
+      "name": "Radar/Meu plano/dark",
+      "violations": []
+    },
+    {
+      "name": "Radar/Método/dark",
+      "violations": []
+    },
+    {
+      "name": "Radar/Radar/light",
+      "violations": []
+    },
+    {
+      "name": "Radar/Dossiê PND/light",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "targets": [
+            [
+              "div:nth-child(3) > strong"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Radar/Inep/light",
+      "violations": []
+    },
+    {
+      "name": "Radar/Fontes/light",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "targets": [
+            [
+              "span[data-slot=\"select-value\"]"
+            ],
+            [
+              "label[for=\"hints\"]"
+            ],
+            [
+              "label[for=\"hints\"] > span"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Radar/Histórico/light",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "targets": [
+            [
+              ".history-controls > p"
+            ],
+            [
+              ".reading-year > div > .history-axis"
+            ],
+            [
+              ".reading-year > div > h3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Radar/Meu plano/light",
+      "violations": []
+    },
+    {
+      "name": "Radar/Método/light",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "targets": [
+            [
+              ".formula > span"
+            ]
+          ]
+        }
+      ]
     },
     {
       "name": "Materiais/index/mobile",
