@@ -136,6 +136,7 @@
       if (![first, second, minutes].every(Number.isInteger) || first < 0 || first > 45 || second < 0 || second > 45 || minutes < 1 || minutes > 360) return;
       const record = { id: "official-" + crypto.randomUUID(), examId: selectedExam().id, date: new Date().toISOString(), first, second, minutes, note: $("#officialNote").value.trim().slice(0, 2000) };
       state().officialHistory.unshift(record); state().officialHistory = state().officialHistory.slice(0, 100); save(); renderHistory();
+      window.dispatchEvent(new CustomEvent("kalore:progress"));
       $("#officialFeedback").textContent = "Treino salvo. Sua próxima revisão está logo abaixo.";
       $("#officialFirst").value = ""; $("#officialSecond").value = ""; $("#officialNote").value = ""; persist();
     };
