@@ -1,6 +1,6 @@
 {
   "name": "kalore-radar-enem",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -8,16 +8,20 @@
   },
   "scripts": {
     "dev": "vite --config vite.portable.config.ts",
-    "build": "vite build --config vite.portable.config.ts && node scripts/build-offline.mjs",
+    "build": "vite build --config vite.portable.config.ts",
     "preview": "vite preview --config vite.portable.config.ts",
     "dev:pages": "vite --config vite.portable.config.ts",
-    "build:pages": "vite build --config vite.portable.config.ts && node scripts/build-offline.mjs",
+    "build:pages": "vite build --config vite.portable.config.ts",
     "preview:pages": "vite preview --config vite.portable.config.ts",
     "data:update": "node scripts/update-data.mjs",
     "check:radar": "node scripts/check-radar.mjs",
     "typecheck": "tsc --noEmit",
     "check:hub": "node scripts/check-hub.mjs",
-    "check:ui": "node scripts/check-ui.cjs"
+    "check:ui": "node scripts/check-ui.cjs",
+    "build:materials": "node scripts/build-materials.mjs",
+    "check:accessibility": "node scripts/check-accessibility.cjs",
+    "check:performance": "node scripts/check-performance.cjs",
+    "check:links": "node scripts/check-library-links.mjs"
   },
   "dependencies": {
     "class-variance-authority": "0.7.1",

@@ -10,6 +10,7 @@ const mime = {
   ".css": "text/css",
   ".json": "application/json",
   ".svg": "image/svg+xml",
+  ".pdf": "application/pdf",
   ".webmanifest": "application/manifest+json",
 };
 const server = http.createServer((req, res) => {
@@ -65,7 +66,7 @@ const server = http.createServer((req, res) => {
   assert.match(await page.locator("#startLesson").textContent(), /Próxima/);
   assert.equal(await page.locator('[data-lesson="mat2"]').isDisabled(), false);
   await tab("flashcards");
-  await page.locator(".flashcard").first().press("Enter");
+  await page.locator(".flash-front").first().press("Enter");
   assert.equal(
     await page
       .locator(".flashcard")
@@ -135,6 +136,68 @@ const server = http.createServer((req, res) => {
     "Revisar probabilidades",
   );
   await page.locator("#timerReset").click();
+  await tab("biblioteca");
+  assert.equal(await page.locator(".pdf-resource").count(), 12);
+  assert.match(await page.locator("#libraryResults").textContent(), /68 materiais/);
+  await page.locator("#libraryCat").selectOption("redacao");
+  await page.locator("#librarySearch").fill("redacao 2026");
+  assert.equal(await page.locator(".pdf-resource").count(), 2);
+  await page.locator('[data-library-save="kalore-redacao"]').click();
+  await page.locator('[data-library-read="kalore-redacao"]').click();
+  await page.reload();
+  assert.equal(await page.locator('[data-library-save="kalore-redacao"]').getAttribute("aria-pressed"), "true");
+  assert.equal(await page.locator('[data-library-read="kalore-redacao"]').getAttribute("aria-pressed"), "true");
+  await page.locator('[data-library-view="saved"]').click();
+  assert.equal(await page.locator(".pdf-resource").count(), 1);
+  await page.locator("#librarySearch").fill("sem-resultados-123");
+  assert.equal(await page.locator(".pdf-resource").count(), 0);
+  await page.locator('[data-library-clear]').click();
+  assert.equal(await page.locator(".pdf-resource").count(), 12);
+  await page.locator('[data-library-page="2"]').click();
+  assert.match(await page.locator("#libraryResults").textContent(), /13–24/);
+  await page.keyboard.press("Control+k");
+  assert.equal(await page.locator("#quickSearch").isVisible(), true);
+  await page.locator("#quickSearchInput").fill("matematica");
+  await page.locator('[data-quick-pdf="kalore-matematica"]').click();
+  assert.equal(await page.locator("#quickSearch").isVisible(), false);
+  assert.equal(await page.locator(".pdf-resource").count(), 1);
+  const downloadEvent = page.waitForEvent("download");
+  await page.locator('.pdf-open').click();
+  const pdfDownload = await downloadEvent;
+  assert.equal(pdfDownload.suggestedFilename(), "matematica.pdf");
+  const pdfBytes = fs.readFileSync(await pdfDownload.path());
+  assert.equal(pdfBytes.subarray(0, 5).toString(), "%PDF-");
+  await tab("provas-oficiais");
+  await page.locator("#officialExam").selectOption("enem-2024-d2");
+  assert.match(await page.locator("#officialFirstLabel").textContent(), /Natureza/);
+  assert.match(await page.locator("#officialSecondLabel").textContent(), /Matemática/);
+  await page.locator("#officialTimerStart").click();
+  assert.equal(await page.locator("#officialExam").isDisabled(), true);
+  await page.waitForTimeout(1100);
+  await page.reload();
+  assert.equal(await page.locator("#officialTimerStart").textContent(), "Pausar");
+  assert.equal(await page.locator("#officialExam").inputValue(), "enem-2024-d2");
+  await page.locator("#officialTimerStart").click();
+  await page.locator("#officialFirst").fill("22");
+  await page.locator("#officialSecond").fill("18");
+  await page.locator("#officialMinutes").fill("120");
+  await page.locator("#officialNote").fill('=1+1');
+  await page.locator('#officialResultForm button[type="submit"]').click();
+  assert.equal(await page.locator(".official-history-item").count(), 1);
+  assert.match(await page.locator("#officialInsights").textContent(), /matemática/);
+  const csvEvent = page.waitForEvent("download");
+  await page.locator("#officialExport").click();
+  const csv = await csvEvent;
+  assert.match(fs.readFileSync(await csv.path(), "utf8"), /"'=1\+1"/);
+  await page.reload();
+  assert.equal(await page.locator(".official-history-item").count(), 1);
+  const backupEvent = page.waitForEvent("download");
+  await page.locator(".data-menu summary").click();
+  await page.locator("#exportData").click();
+  const backup = JSON.parse(fs.readFileSync(await (await backupEvent).path(), "utf8"));
+  assert.equal(backup.version, 5);
+  assert.equal(backup.state.library.favorites["kalore-redacao"], true);
+  assert.equal(backup.state.officialHistory[0].examId, "enem-2024-d2");
   await page.goto(base + "/estudar.html#%22%5B");
   assert.equal(await page.locator("#hoje").isVisible(), true);
   await page.goto(base + "/");
@@ -163,6 +226,7 @@ const server = http.createServer((req, res) => {
       "flashcards",
       "plano",
       "biblioteca",
+      "provas-oficiais",
     ]) {
       await page.goto(base + "/estudar.html#" + id);
       const overflow = await page.evaluate(
@@ -194,6 +258,20 @@ const server = http.createServer((req, res) => {
     }
     assert.equal(radarOverflow, false, "Radar overflow " + width);
   }
+  await page.setViewportSize({ width: 1440, height: 1050 });
+  await page.goto(base + "/estudar.html#biblioteca");
+  if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: path.join(process.env.SCREENSHOT_DIR, "library-desktop.png") });
+  await page.goto(base + "/estudar.html#provas-oficiais");
+  if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: path.join(process.env.SCREENSHOT_DIR, "official-desktop.png") });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(base + "/estudar.html#biblioteca");
+  if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: path.join(process.env.SCREENSHOT_DIR, "library-mobile.png"), fullPage: true });
+  for (const name of ["index", "redacao", "matematica", "revisao", "planejamento"]) {
+    await page.goto(base + "/materiais/" + name + ".html");
+    assert.equal(await page.locator("h1").count(), 1);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false, "Material overflow " + name);
+  }
+  if (process.env.SCREENSHOT_DIR) await page.screenshot({ path: path.join(process.env.SCREENSHOT_DIR, "material-mobile.png"), fullPage: true });
   await page.setViewportSize({ width: 1440, height: 1050 });
   await page.goto(base + "/estudar.html#hoje");
   await page.waitForTimeout(600);
@@ -227,7 +305,7 @@ const server = http.createServer((req, res) => {
     });
   assert.deepEqual(errors, []);
   console.log(
-    "Browser: lessons, flashcards, plan, drafts, theme, blueprint, simulation, timer, bad hashes, Radar integration and 4 viewport widths passed.",
+    "Browser: lessons, accessible flashcards, plan, drafts, simulation, library filters, favorites, PDF downloads, quick search, official exam timer/history/CSV, v5 backup, Radar integration and 4 viewport widths passed.",
   );
   await ctx.close();
   const offline = await browser.newContext(),
@@ -255,10 +333,13 @@ const server = http.createServer((req, res) => {
   });
   assert.equal(missing.status, 503);
   assert.match(missing.type, /text\/plain/);
+  const offlinePDF = await op.evaluate(async () => { const r = await fetch("./materiais/pdfs/redacao.pdf"); const bytes = new Uint8Array(await r.arrayBuffer()); return { type: r.headers.get("content-type"), signature: String.fromCharCode(...bytes.slice(0,5)) }; });
+  assert.equal(offlinePDF.signature, "%PDF-");
+  assert.match(offlinePDF.type, /application\/pdf/);
   await op.goto(base + "/");
   assert.equal((await op.locator(".rank-row").count()) > 0, true);
   console.log(
-    "Offline: complete Hub and compiled Radar load, missing scripts return 503.",
+    "Offline: Hub, Radar and original PDFs load; missing scripts return 503.",
   );
   await offline.close();
   await browser.close();

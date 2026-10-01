@@ -52,6 +52,22 @@
     s.tasks = map(v.tasks, (x) => x === true);
     s.checks = map(v.checks, (x) => x === true);
     s.checkRewards = map(v.checkRewards, (x) => x === true);
+    s.library = {
+      favorites: map(obj(v.library).favorites, (x) => x === true),
+      read: map(obj(v.library).read, (x) => x === true),
+    };
+    s.officialHistory = (Array.isArray(v.officialHistory) ? v.officialHistory : [])
+      .filter((x) => id(obj(x).id) && /^enem-20\d{2}-d[12]$/.test(x.examId || ""))
+      .slice(0, 100)
+      .map((x) => ({
+        id: x.id,
+        examId: x.examId,
+        date: iso(x.date),
+        minutes: Math.max(1, Math.round(num(x.minutes, 120, 360))),
+        first: Math.floor(num(x.first, 0, 45)),
+        second: Math.floor(num(x.second, 0, 45)),
+        note: str(x.note, 2000),
+      }));
     s.course = {
       track: areas.includes(c.track) ? c.track : "mat",
       done: map(c.done, (x) => x === true),

@@ -26,6 +26,8 @@
     />
     <link rel="stylesheet" href="./hub/styles.css" />
     <link rel="stylesheet" href="./hub/design.css" />
+    <link rel="stylesheet" href="./shared/tokens.css" />
+    <link rel="stylesheet" href="./hub/study.css" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Kaloré ENEM Hub 2026" />
     <meta
@@ -59,7 +61,7 @@
     <a class="skip" href="#main">Pular para o conteúdo</a>
     <header class="topbar">
       <div class="top-inner">
-        <a class="brand" href="./estudar.html"
+        <a class="brand" href="./estudar.html" aria-label="Kaloré ENEM Hub"
           ><span class="brand-mark">K</span
           ><span>kaloré<small>ENEM HUB 2026</small></span></a
         >
@@ -68,6 +70,7 @@
           ><a class="active" href="./estudar.html">ENEM Hub</a>
         </div>
         <div class="top-actions">
+          <button class="icon-btn" id="openQuickSearch" title="Buscar ferramenta ou PDF (Ctrl+K)" aria-label="Buscar ferramenta ou PDF"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></button>
           <button
             class="icon-btn"
             id="themeToggle"
@@ -111,9 +114,10 @@
             com intenção e acompanhe cada conquista.
           </p>
           <div class="hero-actions">
-            <button class="btn primary" data-go="trilhas">
+          <button class="btn primary" data-go="trilhas">
               Continuar aprendendo <span>↗</span></button
-            ><button class="btn" data-go="simulado">Fazer um simulado</button>
+            ><button class="btn" data-go="provas-oficiais">Treinar prova oficial</button>
+            <button class="btn" data-go="biblioteca">Baixar PDFs</button>
           </div>
           <div class="hero-trust">
             <span>Gratuito</span><span>Sem cadastro</span
@@ -189,7 +193,8 @@
         ><button data-tab="erros">
           Caderno de erros <span id="errorCount">0</span></button
         ><button data-tab="foco">Foco</button
-        ><button data-tab="biblioteca">Biblioteca</button
+        ><button data-tab="biblioteca">Biblioteca de PDFs</button
+        ><button data-tab="provas-oficiais">Provas oficiais</button
         ><button data-tab="prova">Dia da prova</button
         ><a class="nav-radar" href="./"
           >Explorar Radar de Temas ↗<small
@@ -542,13 +547,13 @@
           </p>
         </div>
         <div class="panel quiz-toolbar">
-          <select id="quizArea">
+          <select id="quizArea" aria-label="Área das questões">
             <option value="all">Todas as áreas</option>
             <option value="mat">Matemática</option>
             <option value="nat">Natureza</option>
             <option value="hum">Humanas</option>
             <option value="ling">Linguagens</option></select
-          ><select id="quizQty">
+          ><select id="quizQty" aria-label="Quantidade de questões">
             <option value="5">5 questões</option>
             <option value="10" selected>10 questões</option>
             <option value="20">20 questões</option></select
@@ -650,14 +655,14 @@
           </p>
         </div>
         <div class="panel flash-toolbar">
-          <select id="flashArea">
+          <select id="flashArea" aria-label="Área dos flashcards">
             <option value="all">Todas as áreas</option>
             <option value="mat">Matemática</option>
             <option value="nat">Natureza</option>
             <option value="hum">Humanas</option>
             <option value="ling">Linguagens</option>
             <option value="red">Redação</option></select
-          ><select id="flashMode">
+          ><select id="flashMode" aria-label="Modo de revisão dos flashcards">
             <option value="due">Para revisar</option>
             <option value="all">Todos</option>
             <option value="mastered">Dominados</option></select
@@ -725,33 +730,70 @@
       <section class="tab" id="biblioteca">
         <div class="section-head">
           <div>
-            <span class="eyebrow">BIBLIOTECA LEGAL</span>
-            <h2>Fonte oficial primeiro.</h2>
+            <span class="eyebrow">BIBLIOTECA DE ESTUDO</span>
+            <h2>O próximo capítulo está aqui.</h2>
           </div>
-          <p>
-            Provas, matriz, cartilha e acervos públicos. O Hub não hospeda
-            cópias piratas de livros protegidos.
-          </p>
+          <p>PDFs de redação, apostilas por matéria e nove anos de provas com o gabarito certo. Escolha um material e transforme a leitura em prática.</p>
         </div>
-        <article class="panel official-note">
-          <b>ENEM 2026:</b> a cartilha oficial da redação detalha as cinco
-          competências e apresenta redações comentadas. As provas regulares
-          estão previstas para 8 e 15 de novembro de 2026.
-        </article>
-        <div class="library-toolbar" style="margin-top: 12px">
-          <input
-            class="search"
-            id="librarySearch"
-            placeholder="Buscar material..."
-            aria-label="Buscar na biblioteca"
-          /><select id="libraryCat">
+        <div class="library-overview" id="libraryOverview"></div>
+        <div class="library-collections" aria-label="Coleções de estudo">
+          <button data-library-preset="redacao"><span>01 / ESCREVER</span><b>Redação do início à revisão</b><small>Cartilhas, exemplos e folha para treinar ↗</small></button>
+          <button data-library-preset="matematica"><span>02 / RESOLVER</span><b>Matemática com prática</b><small>Apostilas e problemas comentados ↗</small></button>
+          <button data-library-preset="guias"><span>03 / BAIXAR</span><b>Cadernos Kaloré</b><small>Quatro PDFs autorais disponíveis offline ↗</small></button>
+          <button data-library-preset="provas"><span>04 / SIMULAR</span><b>Provas oficiais de 2017–2025</b><small>Aplicação regular, sempre com gabarito ↗</small></button>
+        </div>
+        <div class="library-toolbar library-filters">
+          <input class="search" id="librarySearch" placeholder="Busque: redação, biologia, ENEM 2025..." aria-label="Buscar na biblioteca" />
+          <select id="libraryCat" aria-label="Filtrar por matéria">
             <option value="all">Tudo</option>
-            <option value="oficial">Inep / oficial</option>
-            <option value="livros">Livros e acervos legais</option>
-            <option value="estudo">Estudo gratuito</option>
+            <option value="redacao">Redação</option>
+            <option value="matematica">Matemática</option>
+            <option value="natureza">Ciências da Natureza</option>
+            <option value="humanas">Ciências Humanas</option>
+            <option value="linguagens">Linguagens</option>
+            <option value="provas">Provas e gabaritos</option>
+            <option value="revisao">Revisão e exercícios</option>
+            <option value="planejamento">Planejamento</option>
+          </select>
+          <select id="libraryYear" aria-label="Filtrar por ano"><option value="all">Todos os anos</option></select>
+          <select id="libraryKind" aria-label="Filtrar por formato de material">
+            <option value="all">Todos os materiais</option><option value="guia">Cadernos Kaloré</option><option value="cartilha">Cartilhas</option><option value="apostila">Apostilas</option><option value="prova">Provas</option><option value="gabarito">Gabaritos</option><option value="exercicios">Exercícios</option><option value="matriz">Matriz</option>
           </select>
         </div>
+        <div class="library-statusbar"><div class="library-view" role="group" aria-label="Minha biblioteca"><button data-library-view="all" aria-pressed="true">Todos</button><button data-library-view="saved" aria-pressed="false">Favoritos</button><button data-library-view="read" aria-pressed="false">Estudados</button></div><button class="btn tiny" id="libraryReset">Limpar filtros</button></div>
+        <p class="muted library-results" id="libraryResults" role="status" aria-live="polite"></p>
         <div class="resource-grid" id="libraryGrid"></div>
+        <div class="library-pagination" id="libraryPagination"></div>
+        <p class="library-disclosure">Cadernos Kaloré são materiais autorais de prática. PDFs de outras instituições abrem no site da fonte e precisam de internet. Se um arquivo não abrir, use “Fonte”. Marcar como estudado não gera XP.</p>
+      </section>
+
+      <section class="tab" id="provas-oficiais">
+        <div class="section-head"><div><span class="eyebrow">TREINO COM A PROVA REAL</span><h2>Conheça seu ritmo. Corrija sua rota.</h2></div><p>Resolva o caderno azul, confira o gabarito correspondente e registre o que acertou. Seu histórico indica onde concentrar a próxima revisão.</p></div>
+        <div class="official-layout">
+          <article class="panel official-exam-panel">
+            <label class="field"><span>Qual prova você vai treinar?</span><select id="officialExam"></select></label>
+            <div id="officialExamInfo"></div>
+            <div class="official-clock"><span>CRONÔMETRO DE ESTUDO</span><b id="officialClock" aria-live="off">00:00:00</b><div><button class="btn primary" id="officialTimerStart">Começar</button><button class="btn" id="officialTimerReset">Zerar</button></div></div>
+            <p class="muted">O cronômetro conta seu tempo de treino. A seleção da prova fica bloqueada enquanto ele roda. As regras e a duração do exame real estão no caderno do Inep.</p>
+          </article>
+          <article class="panel">
+            <span class="eyebrow">DEPOIS DE CONFERIR O GABARITO</span><h3>Registre seu resultado</h3>
+            <form id="officialResultForm">
+              <div class="official-score-fields">
+                <label class="field"><span id="officialFirstLabel">Linguagens · acertos</span><input id="officialFirst" type="number" min="0" max="45" step="1" required placeholder="0 a 45" /></label>
+                <label class="field"><span id="officialSecondLabel">Humanas · acertos</span><input id="officialSecond" type="number" min="0" max="45" step="1" required placeholder="0 a 45" /></label>
+              </div>
+              <label class="field"><span>Tempo de treino em minutos</span><input id="officialMinutes" type="number" min="1" max="360" step="1" required placeholder="Ex.: 120" /></label>
+              <label class="field"><span>O que você vai revisar?</span><textarea id="officialNote" rows="3" maxlength="2000" placeholder="Ex.: errei três problemas de porcentagem; faltou tempo para geometria."></textarea></label>
+              <p class="muted">Informe os acertos após a correção manual. Questões anuladas seguem a orientação do gabarito. Estes números não são nota TRI.</p>
+              <button class="btn primary" type="submit">Salvar treino e ver próxima ação</button>
+              <p id="officialFeedback" role="status" aria-live="polite"></p>
+            </form>
+          </article>
+        </div>
+        <div id="officialInsights"></div>
+        <div class="section-head official-history-head"><div><span class="eyebrow">EVOLUÇÃO</span><h3>Seus treinos, um por um.</h3></div><button class="btn" id="officialExport">Exportar histórico CSV</button></div>
+        <div id="officialHistory"></div>
       </section>
 
       <section class="tab" id="prova">
@@ -809,7 +851,7 @@
         <span
           ><b>kaloré</b> · ENEM Hub 2026 · projeto independente e gratuito</span
         ><span
-          ><a href="./">Radar de redação</a> ·
+          ><a href="./materiais/index.html">PDFs e guias</a> · <a href="./">Radar de redação</a> ·
           <a
             href="https://github.com/THIAGO00199/RadarEnem"
             target="_blank"
@@ -902,9 +944,12 @@
         </div>
       </div>
     </div>
+    <dialog id="quickSearch" class="quick-search" aria-labelledby="quickSearchTitle"><div class="quick-search-head"><h2 id="quickSearchTitle">O que você quer estudar?</h2><button class="icon-btn" id="closeQuickSearch" aria-label="Fechar busca">×</button></div><label class="field"><span>Ferramenta, assunto ou PDF</span><input type="search" id="quickSearchInput" placeholder="Ex.: redação, prova 2025, biologia..." autocomplete="off" /></label><div id="quickSearchResults" class="quick-search-results"></div><p class="muted">Tab para navegar · Enter para abrir · Esc para fechar</p></dialog>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="./hub/core.js" defer></script>
     <script src="./hub/content.js" defer></script>
+    <script src="./hub/library-data.js" defer></script>
+    <script src="./hub/study.js" defer></script>
     <script src="./hub/app.js" defer></script>
   </body>
 </html>

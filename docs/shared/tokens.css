@@ -1,0 +1,37 @@
+/* Tokens comuns aos dois produtos e aos cadernos de estudo. */
+:root {
+  --kalore-bg: #0c1115;
+  --kalore-surface: #141d24;
+  --kalore-text: #edf4f4;
+  --kalore-muted: #a0b0b6;
+  --kalore-primary: #b8ef83;
+  --kalore-link: #8fd9ca;
+  --kalore-border: #2a373e;
+  --kalore-radius: 14px;
+  --kalore-font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --background: var(--kalore-bg);
+  --foreground: var(--kalore-text);
+  --primary: var(--kalore-primary);
+  --muted-foreground: var(--kalore-muted);
+  --border: var(--kalore-border);
+  --bg: var(--kalore-bg);
+  --panel: var(--kalore-surface);
+  --text: var(--kalore-text);
+  --muted: var(--kalore-muted);
+  --green: var(--kalore-primary);
+  --cyan: var(--kalore-link);
+  font-family: var(--kalore-font);
+}
+:root[data-theme="light"] {
+  --kalore-bg: #f4f6f3;
+  --kalore-surface: #ffffff;
+  --kalore-text: #203126;
+  --kalore-muted: #56665c;
+  --kalore-primary: #365e1e;
+  --kalore-link: #267469;
+  --kalore-border: #d9e2d7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

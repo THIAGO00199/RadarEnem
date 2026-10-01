@@ -1,0 +1,151 @@
+{
+  "checkedAt": "2026-10-01T18:06:06.027Z",
+  "engine": "axe-core/playwright 4.13.0",
+  "scope": "13 seções do Hub nos dois temas, flashcards virados e busca, Radar e cinco páginas de materiais. Regras automatizadas WCAG 2 A/AA, 2.1 A/AA e 2.2 AA. Não constitui certificação nem substitui testes com tecnologias assistivas.",
+  "results": [
+    {
+      "name": "Hub/hoje/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/trilhas/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/plano/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/redacao/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/questoes/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/simulado/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/revisao/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/flashcards/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/flashcards/resposta/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/erros/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/foco/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/biblioteca/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/provas-oficiais/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/prova/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/busca/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/hoje/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/trilhas/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/plano/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/redacao/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/questoes/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/simulado/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/revisao/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/flashcards/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/flashcards/resposta/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/erros/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/foco/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/biblioteca/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/provas-oficiais/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/prova/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/busca/light",
+      "violations": []
+    },
+    {
+      "name": "Radar/dark",
+      "violations": []
+    },
+    {
+      "name": "Materiais/index/mobile",
+      "violations": []
+    },
+    {
+      "name": "Materiais/redacao/mobile",
+      "violations": []
+    },
+    {
+      "name": "Materiais/matematica/mobile",
+      "violations": []
+    },
+    {
+      "name": "Materiais/revisao/mobile",
+      "violations": []
+    },
+    {
+      "name": "Materiais/planejamento/mobile",
+      "violations": []
+    }
+  ]
+}

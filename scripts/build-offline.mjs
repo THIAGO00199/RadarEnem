@@ -29,7 +29,7 @@ self.addEventListener('fetch',e=>{
  const request=e.request,url=new URL(request.url);
  if(request.method!=='GET'||url.origin!==self.location.origin||!url.pathname.startsWith(new URL(self.registration.scope).pathname))return;
  const normalized=request.mode==='navigate'?new Request(url.origin+(url.pathname.endsWith('/')?url.pathname+'index.html':url.pathname)):request;
- e.respondWith(fetch(request).then(response=>{if(response.ok){const clone=response.clone();e.waitUntil(caches.open(CACHE).then(c=>c.put(normalized,clone)));}return response;}).catch(async()=>{
+ e.respondWith(fetch(request).then(response=>{if(response.ok&&response.status!==206&&!request.headers.has('range')){const clone=response.clone();e.waitUntil(caches.open(CACHE).then(c=>c.put(normalized,clone)));}return response;}).catch(async()=>{
   const hit=await caches.match(normalized);if(hit)return hit;
   if(request.mode==='navigate'){const fallback=await caches.match(new URL('./estudar.html',self.registration.scope));if(fallback)return fallback;}
   return new Response('Recurso indisponível offline',{status:503,headers:{'Content-Type':'text/plain; charset=utf-8'}});

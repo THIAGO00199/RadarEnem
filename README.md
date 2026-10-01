@@ -5,7 +5,23 @@
 - [Radar de Temas](https://thiago00199.github.io/RadarEnem/)
 - [ENEM Hub](https://thiago00199.github.io/RadarEnem/estudar.html)
 
-## ENEM Hub · atualização 5.0
+## ENEM Hub · atualização 6.0
+
+- [Biblioteca interativa com 68 PDFs](https://thiago00199.github.io/RadarEnem/estudar.html#biblioteca), busca por palavras sem depender de acentos, filtros por matéria/ano/tipo, favoritos, marcação de estudo e paginação.
+- 23 apostilas da Fundação Cecierj, e-book do IFMG, cartilhas, matriz e 18 provas regulares de 2017–2025 com os gabaritos correspondentes. Cada recurso identifica a fonte.
+- [Quatro cadernos próprios](https://thiago00199.github.io/RadarEnem/materiais/index.html): redação (6 páginas), matemática com 12 problemas comentados (6), revisão de Humanas/Natureza (5) e planejamento/caderno de erros (4). Disponíveis offline após uma visita com internet.
+- Treino oficial com seleção de ano/dia, cronômetro recuperável na mesma aba, registro manual de acertos por área, notas de revisão, histórico, próxima ação e exportação CSV.
+- Busca rápida por ferramentas e PDFs com Ctrl/Cmd+K. Atalhos do Radar abrem diretamente a biblioteca e as provas.
+- Apresentação concentrada na tela Hoje; telas de trabalho abrem diretamente no conteúdo. A navegação móvel mostra a seção ativa.
+- Tokens de cores compartilhados entre Radar, Hub e materiais; contraste do tema claro corrigido, seletores rotulados e flashcards com controles nativos, sem botões aninhados.
+- Cinco páginas de conteúdo em HTML, com títulos, canonical, dados estruturados e sitemap; acessíveis sem JavaScript.
+- Backup v5 guarda favoritos, leituras e histórico oficial; importação continua aceitando v3/v4. O progresso anterior é preservado.
+- Geração dos materiais e do worker offline obrigatória no build do Vite, incluindo requisições parciais de PDFs.
+- [Auditoria detalhada e roadmap](./AUDITORIA.md), com diagnóstico, quick wins, prioridades, arquitetura e medições.
+
+A conferência direta encontrou 24 PDFs externos disponíveis. As 40 URLs do Inep retornaram 502 neste ambiente; os links foram extraídos dos catálogos oficiais e têm acesso à publicação de origem. Os quatro PDFs próprios foram renderizados e inspecionados. O catálogo reúne 68 referências de PDF, não 68 arquivos hospedados neste repositório.
+
+## Recursos de prática já disponíveis
 
 - Interface com navegação lateral no computador, atalhos no celular e temas claro/escuro.
 - 25 lições em cinco áreas, desbloqueio por progresso, XP e recuperação de energia por revisão de flashcards.
@@ -17,7 +33,7 @@
 - Checagem local de estrutura e prompt para levar a uma IA externa. Não há IA conectada nem atribuição de nota oficial ou TRI.
 - Planejamento semanal que respeita a quantidade de horas escolhida; rota diária que avança quando suas atividades são realizadas.
 - Pomodoro com recuperação de tempo e anotações após recarregar a página.
-- Backup compatível com versões 3 e 4, validação de dados e preservação do progresso existente.
+- Backup compatível com versões 3, 4 e 5, validação de dados e preservação do progresso existente.
 - Disponibilidade offline de ambos os aplicativos após uma visita com internet. Os materiais externos da biblioteca exigem conexão.
 
 Questões e propostas são autorais e servem para prática. Os cadernos oficiais estão na biblioteca do Inep. O Radar mostra prioridade relativa de estudo; seus percentuais não são probabilidades de um tema cair.
@@ -115,7 +131,7 @@ O teste inicia e encerra seu próprio servidor local. `CHROMIUM_PATH` permite us
 
 O Hub é editado em `portable/public/estudar.html` e `portable/public/hub/`. Sua interface, regras de persistência e conteúdo ficam em arquivos separados. **Não edite o Hub diretamente em `docs/`.**
 
-O build copia todos os arquivos públicos para `docs/` e gera um service worker com a lista completa de scripts e estilos da versão. A atualização limpa apenas caches com o prefixo do projeto. Requisições a scripts indisponíveis retornam erro apropriado, sem substituir JavaScript por HTML.
+O pipeline do Vite gera as páginas de materiais, copia os arquivos públicos para `docs/` e gera um service worker com a lista completa de scripts e estilos da versão. A atualização limpa apenas caches com o prefixo do projeto. Requisições a scripts indisponíveis retornam erro apropriado, sem substituir JavaScript por HTML.
 
 Depois de qualquer mudança, rode `npm run build:pages` e publique tanto os fontes quanto `docs/`. A publicação usa a configuração existente do GitHub Pages (`main`, `/docs`).
 
@@ -124,3 +140,19 @@ Na versão original hospedada com servidor, mantenha os scripts e a configuraç�
 ## Créditos
 
 Interface e identidade do projeto: **Kaloré**. Documentos e conteúdos externos pertencem a seus respectivos autores e instituições; o projeto apenas referencia as fontes. Não há vínculo oficial com o Inep.
+
+## Auditorias adicionais
+
+```sh
+npm install --no-save playwright @axe-core/playwright
+npx playwright install chromium
+npm run check:accessibility
+npm run check:performance
+npm run check:links
+```
+
+A auditoria automatizada final passou em 36 telas. Ela complementa os testes de teclado e a inspeção visual, sem representar certificação completa de acessibilidade. A medição em laboratório usou viewport 390×844, CPU 4×, latência 150 ms, download 1,6 Mbps e gzip: LCP mediano de 1,536 s no Radar, 0,572 s no Hub e 0,420 s na página de redação; CLS zero. Os relatórios e suas limitações estão em `portable/public/data/` e em `AUDITORIA.md`.
+
+`PERF_BASELINE` aceita uma pasta com o build anterior para comparação. Sem essa variável, o script mede apenas o build atual. Estes números não são dados de usuários reais, INP nem garantia de desempenho do GitHub Pages.
+
+Para regenerar os PDFs autorais, instale ReportLab e a fonte DejaVu Sans e rode `python scripts/create-guides.py`. Os PDFs ficam em `portable/public/materiais/pdfs/`; o build os copia para publicação.

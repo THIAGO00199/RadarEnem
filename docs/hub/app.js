@@ -31,6 +31,8 @@
     focusNote: "",
     focusTimer: { total: 1500, seconds: 1500, running: false, end: 0 },
     simHistory: [],
+    library: { favorites: {}, read: {} },
+    officialHistory: [],
     course: { track: "mat", done: {}, energy: { date: "", value: 5 } },
   };
   function load() {
@@ -137,6 +139,7 @@
   }
   function activateTab(id, writeHash = true) {
     if (!$$(".tab").some((t) => t.id === id)) id = "hoje";
+    document.body.dataset.view = id;
     $$(".nav-tabs button").forEach((b) =>
       b.classList.toggle("on", b.dataset.tab === id),
     );
@@ -147,6 +150,10 @@
     $$(".mobile-dock button").forEach((b) =>
       b.classList.toggle("on", b.dataset.go === id),
     );
+    if (innerWidth <= 760) {
+      const nav = $(".nav-tabs"), active = nav.querySelector("button.on");
+      if (active) nav.scrollTo({ left: Math.max(0, active.offsetLeft - (nav.clientWidth - active.clientWidth) / 2), behavior: "instant" });
+    }
     if (writeHash) history.pushState(null, "", "#" + id);
     window.scrollTo({
       top: Math.max(
@@ -2025,57 +2032,26 @@
       .sort((x, y) => flashMeta(x.id).due.localeCompare(flashMeta(y.id).due))
       .slice(0, 12);
     $("#flashGrid").innerHTML = list.length
-      ? list
-          .map((c) => {
-            const m = flashMeta(c.id);
-            return (
-              '<article class="flashcard" tabindex="0" role="button" aria-expanded="false" aria-label="Virar cartão" data-card="' +
-              c.id +
-              '"><div class="flash-inner"><div class="flash-face"><small>' +
-              areaNames[c.a].toUpperCase() +
-              "</small><h3>" +
-              escapeHTML(c.front) +
-              '</h3><span class="muted">Toque para virar</span><span class="flash-due">nível ' +
-              m.stage +
-              " · revisão " +
-              (m.due <= todayKey ? "hoje" : m.due) +
-              '</span></div><div class="flash-face flash-back"><small>RESPOSTA</small><p>' +
-              escapeHTML(c.back) +
-              '</p><div class="flash-actions three"><button class="btn tiny" data-grade="again" data-cardid="' +
-              c.id +
-              '">Errei</button><button class="btn tiny" data-grade="good" data-cardid="' +
-              c.id +
-              '">Bom</button><button class="btn tiny primary" data-grade="easy" data-cardid="' +
-              c.id +
-              '">Fácil</button></div></div></div></article>'
-            );
-          })
-          .join("")
+      ? list.map((c) => {
+        const m = flashMeta(c.id);
+        return `<article class="flashcard" data-card="${c.id}"><div class="flash-inner"><button class="flash-face flash-front" data-flip-card="${c.id}" aria-expanded="false" aria-controls="flash-answer-${c.id}"><small>${areaNames[c.a].toUpperCase()}</small><span class="flash-title">${escapeHTML(c.front)}</span><span class="muted">Mostrar resposta</span><span class="flash-due">nível ${m.stage} · revisão ${m.due <= todayKey ? "hoje" : m.due}</span></button><div class="flash-face flash-back" id="flash-answer-${c.id}" inert><small>RESPOSTA</small><p>${escapeHTML(c.back)}</p><div class="flash-actions three"><button class="btn tiny" data-grade="again" data-cardid="${c.id}">Errei</button><button class="btn tiny" data-grade="good" data-cardid="${c.id}">Bom</button><button class="btn tiny primary" data-grade="easy" data-cardid="${c.id}">Fácil</button></div><button class="flash-repeat" data-unflip-card="${c.id}">← Ver pergunta</button></div></div></article>`;
+      }).join("")
       : '<div class="panel empty" style="grid-column:1/-1">Nada para revisar agora. Você pode abrir “Todos” ou seguir para outra atividade.</div>';
-    $$(".flashcard").forEach(
-      (card) =>
-        (card.onclick = (e) => {
-          if (e.target.closest("button")) return;
-          card.classList.toggle("flip");
-          card.setAttribute("aria-expanded", card.classList.contains("flip"));
-        }),
-    );
-    $$(".flashcard").forEach(
-      (card) =>
-        (card.onkeydown = (e) => {
-          if (e.target !== card) return;
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            card.click();
-          }
-        }),
-    );
+    $$("[data-flip-card], [data-unflip-card]").forEach((button) => button.onclick = () => {
+      const card = button.closest(".flashcard"), flipped = card.classList.toggle("flip");
+      const front = card.querySelector(".flash-front"), back = card.querySelector(".flash-back");
+      front.setAttribute("aria-expanded", String(flipped));
+      front.inert = flipped;
+      back.inert = !flipped;
+      (flipped ? back.querySelector("[data-grade]") : front).focus({ preventScroll: true });
+    });
     $$("[data-grade]").forEach(
       (btn) =>
         (btn.onclick = () => {
           setFlashReview(btn.dataset.cardid, btn.dataset.grade);
           markDailyStep("flashcards");
           renderFlash();
+          $(".flash-front")?.focus({ preventScroll: true });
           renderBadges();
           renderSprint();
         }),
@@ -2201,100 +2177,8 @@
   });
   renderFocusHistory();
   updateClock();
-  const resources = [
-    {
-      cat: "oficial",
-      title: "Cartilha da Redação ENEM 2026",
-      desc: "Documento oficial com as cinco competências, orientações e redações comentadas.",
-      url: "https://www.gov.br/inep/pt-br/centrais-de-conteudo/acervo-linha-editorial/publicacoes-institucionais/avaliacoes-e-exames-da-educacao-basica/a-redacao-do-enem-2026-cartilha-do-a-participante",
-      tag: "Inep · 2026",
-    },
-    {
-      cat: "oficial",
-      title: "Provas e gabaritos do ENEM",
-      desc: "Acervo oficial de edições anteriores, incluindo os cadernos por ano.",
-      url: "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos",
-      tag: "Inep",
-    },
-    {
-      cat: "oficial",
-      title: "Matrizes de Referência",
-      desc: "Competências e habilidades das áreas avaliadas no ENEM.",
-      url: "https://www.gov.br/inep/pt-br/centrais-de-conteudo/acervo-linha-editorial/publicacoes-institucionais/avaliacoes-e-exames-da-educacao-basica/matrizes-de-referencia-enem/",
-      tag: "Inep · 2026",
-    },
-    {
-      cat: "oficial",
-      title: "Cronograma ENEM 2026",
-      desc: "Datas oficiais da aplicação e demais etapas divulgadas pelo Inep.",
-      url: "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/orientacoes/cronograma",
-      tag: "Inep · oficial",
-    },
-    {
-      cat: "oficial",
-      title: "Outros documentos do ENEM",
-      desc: "Guias, cartilhas e matriz reunidos no portal oficial.",
-      url: "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/outros-documentos",
-      tag: "Inep",
-    },
-    {
-      cat: "livros",
-      title: "Portal Domínio Público",
-      desc: "Obras literárias e documentos disponibilizados legalmente pelo Governo Federal.",
-      url: "https://www.dominiopublico.gov.br/",
-      tag: "Acervo público",
-    },
-    {
-      cat: "livros",
-      title: "Biblioteca Brasiliana USP",
-      desc: "Livros, periódicos, mapas e documentos históricos digitalizados pela USP.",
-      url: "https://digital.bbm.usp.br/",
-      tag: "USP",
-    },
-    {
-      cat: "livros",
-      title: "Wikisource em português",
-      desc: "Textos de domínio público e documentos históricos em formato pesquisável.",
-      url: "https://pt.wikisource.org/",
-      tag: "Domínio público",
-    },
-    {
-      cat: "estudo",
-      title: "Khan Academy Brasil",
-      desc: "Conteúdos e exercícios gratuitos de matemática e ciências para revisão.",
-      url: "https://pt.khanacademy.org/",
-      tag: "Gratuito",
-    },
-  ];
-  function renderLibrary() {
-    const q = $("#librarySearch").value.toLowerCase().trim(),
-      cat = $("#libraryCat").value;
-    const list = resources.filter(
-      (r) =>
-        (cat === "all" || r.cat === cat) &&
-        (!q ||
-          (r.title + " " + r.desc + " " + r.tag).toLowerCase().includes(q)),
-    );
-    $("#libraryGrid").innerHTML =
-      list
-        .map(
-          (r) =>
-            '<article class="panel resource"><div class="resource-meta"><span class="chip">' +
-            escapeHTML(r.tag) +
-            "</span></div><h3>" +
-            escapeHTML(r.title) +
-            "</h3><p>" +
-            escapeHTML(r.desc) +
-            '</p><a href="' +
-            r.url +
-            '" target="_blank" rel="noopener noreferrer">Abrir recurso ↗</a></article>',
-        )
-        .join("") ||
-      '<div class="panel empty" style="grid-column:1/-1">Nenhum material neste filtro.</div>';
-  }
-  $("#librarySearch").oninput = renderLibrary;
-  $("#libraryCat").onchange = renderLibrary;
-  renderLibrary();
+  const study = KaloreStudy.init({ getState: () => s, save, escapeHTML, toast, activateTab });
+  function renderLibrary() { study.renderLibrary(); }
   const checks = {
     before: [
       "Conferir local de prova, horário e rota com antecedência",
@@ -2355,7 +2239,7 @@
     download(
       "kalore-enem-hub-" + dayKey() + ".json",
       JSON.stringify(
-        { version: 4, exportedAt: new Date().toISOString(), state: s },
+        { version: 5, exportedAt: new Date().toISOString(), state: s },
         null,
         2,
       ),
@@ -2368,12 +2252,12 @@
       if (f.size > 2_000_000) throw new Error("Arquivo muito grande.");
       const d = JSON.parse(await f.text());
       if (
-        ![3, 4].includes(d.version) ||
+        ![3, 4, 5].includes(d.version) ||
         !d.state ||
         typeof d.state !== "object" ||
         Array.isArray(d.state)
       )
-        throw new Error("Use um backup v3 ou v4 do ENEM Hub.");
+        throw new Error("Use um backup v3, v4 ou v5 do ENEM Hub.");
       s = merge(d.state);
       save();
       location.reload();
