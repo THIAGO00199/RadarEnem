@@ -50,8 +50,10 @@ jobs:
       - name: Browser regression checks
         run: npm run check:ui
       - name: Accessibility across both themes
+        if: always() && steps.build.outcome == 'success'
         run: npm run check:accessibility
       - name: Adaptive home, motion, theme and cache checks
+        if: always() && steps.build.outcome == 'success'
         run: node scripts/check-glow.cjs
       - name: Measure mobile performance
         if: always() && steps.build.outcome == 'success'

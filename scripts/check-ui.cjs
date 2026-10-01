@@ -13,7 +13,9 @@ const mime = {
   ".pdf": "application/pdf",
   ".webmanifest": "application/manifest+json",
 };
+let serveOnline = true;
 const server = http.createServer((req, res) => {
+  if (!serveOnline) { req.socket.destroy(); return; }
   const url = new URL(req.url, "http://localhost");
   let p = path.join(root, decodeURIComponent(url.pathname));
   if (url.pathname.endsWith("/")) p = path.join(p, "index.html");
@@ -321,6 +323,8 @@ const server = http.createServer((req, res) => {
         }),
       );
   });
+  // Disable the transport too: some Chromium versions do not apply CDP offline emulation to worker-owned fetches.
+  serveOnline = false;
   await offline.setOffline(true);
   await op.reload();
   assert.match(await op.locator("#greeting").textContent(), /Bora/);

@@ -25,6 +25,7 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
+    <link rel="preload" href="./shared/fonts/manrope-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="./hub/styles.css" />
     <link rel="stylesheet" href="./hub/design.css" />
     <link rel="stylesheet" href="./shared/tokens.css" />
@@ -114,11 +115,11 @@
           <div class="hero-sticker" aria-hidden="true">todo avanço conta <svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7z"/></svg></div>
           <h1>Seu ritmo.<br /><em>Seu futuro.</em></h1>
           <p class="hero-copy">
-            Uma lição, uma revisão, uma conquista. Pratique no seu ritmo.
+            Uma lição, uma revisão, uma conquista.
             Seu próximo passo está aqui.
           </p>
           <div class="hero-actions">
-          <button class="btn primary" data-go="trilhas">
+          <button class="btn primary" id="heroNextSession">
               Continuar aprendendo <span>↗</span></button
             ><button class="btn" data-go="provas-oficiais">Treinar prova oficial</button>
             <button class="btn" data-go="biblioteca">Baixar PDFs</button>
