@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-01T22:43:44.230Z",
+  "checkedAt": "2026-10-01T22:49:46.620Z",
   "engine": "axe-core/playwright 4.11.4",
   "scope": "13 seções do Hub nos dois temas, flashcards virados e busca, sete seções do Radar nos dois temas e cinco páginas de materiais. Regras automatizadas WCAG 2 A/AA, 2.1 A/AA e 2.2 AA. Não constitui certificação nem substitui testes com tecnologias assistivas.",
   "results": [
@@ -37,25 +37,7 @@
     },
     {
       "name": "Hub/flashcards/resposta/dark",
-      "violations": [
-        {
-          "id": "target-size",
-          "impact": "serious",
-          "description": "Ensure touch targets have sufficient size and space",
-          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
-          "targets": [
-            [
-              ".tiny[data-cardid=\"f0\"][data-grade=\"again\"]"
-            ],
-            [
-              ".tiny[data-cardid=\"f0\"][data-grade=\"good\"]"
-            ],
-            [
-              ".primary[data-cardid=\"f0\"][data-grade=\"easy\"]"
-            ]
-          ]
-        }
-      ]
+      "violations": []
     },
     {
       "name": "Hub/erros/dark",
@@ -115,25 +97,7 @@
     },
     {
       "name": "Hub/flashcards/resposta/light",
-      "violations": [
-        {
-          "id": "target-size",
-          "impact": "serious",
-          "description": "Ensure touch targets have sufficient size and space",
-          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=playwright",
-          "targets": [
-            [
-              ".tiny[data-cardid=\"f0\"][data-grade=\"again\"]"
-            ],
-            [
-              ".tiny[data-cardid=\"f0\"][data-grade=\"good\"]"
-            ],
-            [
-              ".primary[data-cardid=\"f0\"][data-grade=\"easy\"]"
-            ]
-          ]
-        }
-      ]
+      "violations": []
     },
     {
       "name": "Hub/erros/light",
@@ -205,19 +169,7 @@
     },
     {
       "name": "Radar/Histórico/light",
-      "violations": [
-        {
-          "id": "color-contrast",
-          "impact": "serious",
-          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-          "targets": [
-            [
-              ".tag"
-            ]
-          ]
-        }
-      ]
+      "violations": []
     },
     {
       "name": "Radar/Meu plano/light",
