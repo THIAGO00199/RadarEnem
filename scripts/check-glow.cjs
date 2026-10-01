@@ -1,0 +1,55 @@
+const http=require("node:http"),fs=require("node:fs/promises"),path=require("node:path"),assert=require("node:assert/strict");
+const {chromium}=require("playwright");
+const root=path.resolve(__dirname,"../docs"),requests=new Map(),types={".html":"text/html",".js":"text/javascript",".css":"text/css",".json":"application/json",".svg":"image/svg+xml",".woff2":"font/woff2",".pdf":"application/pdf"};
+let slowHTML=false;
+const server=http.createServer(async(req,res)=>{
+ const u=new URL(req.url,"http://localhost"),file=path.resolve(root,"."+ (u.pathname.endsWith("/")?u.pathname+"index.html":u.pathname));
+ if(!file.startsWith(root+path.sep)){res.writeHead(403).end();return;}
+ requests.set(u.pathname,(requests.get(u.pathname)||0)+1);
+ const send=async()=>{try{res.writeHead(200,{"Content-Type":types[path.extname(file)]||"text/plain","Cache-Control":"no-store"}).end(await fs.readFile(file));}catch{res.writeHead(404).end();}};
+ if(slowHTML&&u.pathname==="/estudar.html")setTimeout(send,5000);else await send();
+});
+(async()=>{
+ await new Promise(r=>server.listen(0,"127.0.0.1",r));
+ const url="http://127.0.0.1:"+server.address().port,browser=await chromium.launch({headless:true,args:["--no-sandbox","--disable-dev-shm-usage"],...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{})});
+ const ctx=await browser.newContext({reducedMotion:"reduce",viewport:{width:390,height:844},serviceWorkers:"block"}),page=await ctx.newPage(),errors=[];
+ page.on("pageerror",e=>errors.push(e.message));
+ await page.goto(url+"/estudar.html");
+ assert.equal(await page.locator("#recommendationCTA").getAttribute("data-recommendation"),"start");
+ await page.locator("#recommendationCTA").click();
+ assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem("kalore-hub-v3")).course.track),"ling");
+ assert.equal(await page.locator("#trilhas").isVisible(),true);
+ await page.locator('[data-tab="trilhas"]').click();
+ await page.evaluate(()=>{const s=JSON.parse(localStorage.getItem("kalore-hub-v3"));s.course.track="mat";localStorage.setItem("kalore-hub-v3",JSON.stringify(s));});
+ await page.reload();await page.locator("#startLesson").click();await page.locator('[data-lo="1"]').click();
+ assert.match(await page.locator(".feedback-chip").textContent(),/Mandou bem/);
+ assert.equal(await page.locator(".feedback-particle").count(),0);
+ assert.equal(await page.locator(".feedback-chip").getAttribute("role"),"status");
+ await page.locator("#themeToggle").click();
+ assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),"light");
+ await page.goto(url+"/");
+ assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),"light");
+ await page.getByRole("button",{name:"Alternar tema",exact:true}).click();
+ assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),"dark");
+ await page.goto(url+"/estudar.html");
+ assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),"dark");
+ await page.goto(url+"/estudar.html#redacao");await page.locator("#essay").fill("Uma redação em construção com um argumento que ainda precisa ser desenvolvido.");
+ await page.locator('[data-tab="hoje"]').click();
+ await page.waitForFunction(()=>document.getElementById("recommendationCTA").dataset.recommendation==="draft");
+ await page.locator("#recommendationCTA").click();
+ assert.match(await page.locator("#essay").inputValue(),/Uma redação em construção/);
+ for(const width of[360,390,768,1440])for(const theme of["dark","light"]){await page.setViewportSize({width,height:900});await page.evaluate(t=>{document.documentElement.dataset.theme=t;localStorage.setItem("kalore-color-theme",t);},theme);for(const site of["/estudar.html","/"]){await page.goto(url+site);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,"Overflow "+site+" "+width+" "+theme);}}
+ assert.deepEqual(errors,[]);
+ await ctx.close();
+ const motion=await browser.newContext({serviceWorkers:"block"}),mp=await motion.newPage();
+ await mp.goto(url+"/estudar.html#trilhas");await mp.locator("#startLesson").click();await mp.locator('[data-lo="1"]').click();
+ assert.equal(await mp.locator(".feedback-particle").count()>0,true);await mp.waitForTimeout(1250);assert.equal(await mp.locator(".feedback-particle").count(),0);await motion.close();
+ const cached=await browser.newContext(),cp=await cached.newPage();await cp.goto(url+"/estudar.html");
+ await cp.evaluate(async()=>{await navigator.serviceWorker.ready;if(!navigator.serviceWorker.controller)await new Promise(r=>navigator.serviceWorker.addEventListener("controllerchange",r,{once:true}));});
+ const before=requests.get("/shared/glow.css")||0;
+ const status=await cp.evaluate(async()=>{const r=await fetch("./shared/glow.css");return r.status;});
+ assert.equal(status,200);assert.equal(requests.get("/shared/glow.css")||0,before,"Warm CSS should be served without a network request");
+ slowHTML=true;const start=Date.now();await cp.reload({waitUntil:"domcontentloaded"});assert.equal(await cp.locator("#greeting").isVisible(),true);assert.equal(Date.now()-start<3500,true,"Slow navigation should fall back to cached HTML after 1.8s");slowHTML=false;
+ await cached.close();await browser.close();server.close();
+ console.log("Glow-up: adaptive entry, saved draft, shared themes, reduced motion, bounded particles, 4 viewport widths and cache/slow-network checks passed.");
+})().catch(e=>{console.error(e);server.close();process.exit(1);});

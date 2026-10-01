@@ -11,7 +11,8 @@
       name="description"
       content="Uma central gratuita para estudar para o ENEM 2026: trilhas gamificadas, plano semanal, laboratório de redação, questões autorais, flashcards, caderno de erros, Pomodoro e materiais oficiais do Inep."
     />
-    <meta name="theme-color" content="#07100d" />
+    <meta name="theme-color" content="#0b0d17" />
+    <script>try{const t=localStorage.getItem("kalore-color-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}</script>
     <meta name="robots" content="index,follow" />
     <link
       rel="canonical"
@@ -28,6 +29,8 @@
     <link rel="stylesheet" href="./hub/design.css" />
     <link rel="stylesheet" href="./shared/tokens.css" />
     <link rel="stylesheet" href="./hub/study.css" />
+    <link rel="stylesheet" href="./shared/glow.css" />
+    <link rel="stylesheet" href="./hub/glow.css" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Kaloré ENEM Hub 2026" />
     <meta
@@ -57,7 +60,7 @@
       }
     </script>
   </head>
-  <body>
+  <body class="hub-app">
     <a class="skip" href="#main">Pular para o conteúdo</a>
     <header class="topbar">
       <div class="top-inner">
@@ -104,14 +107,15 @@
     </header>
     <main class="wrap" id="main">
       <section class="hero">
-        <div>
+        <div class="hero-main glow-card">
           <span class="eyebrow"
             ><i class="live-dot"></i> SEU ESPAÇO DE ESTUDO · ENEM 2026</span
           >
-          <h1>Um passo por dia.<br /><em>Seu futuro mais perto.</em></h1>
+          <div class="hero-sticker" aria-hidden="true">todo avanço conta <svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7z"/></svg></div>
+          <h1>Seu ritmo.<br /><em>Seu futuro.</em></h1>
           <p class="hero-copy">
-            Da primeira questão à última revisão. Organize seu ritmo, pratique
-            com intenção e acompanhe cada conquista.
+            Uma lição, uma revisão, uma conquista. Pratique no seu ritmo.
+            Seu próximo passo está aqui.
           </p>
           <div class="hero-actions">
           <button class="btn primary" data-go="trilhas">
@@ -124,11 +128,11 @@
             ><span>Seu progresso fica com você</span>
           </div>
         </div>
-        <aside class="count-card">
+        <aside class="count-card glow-card">
           <div class="count-orbit" aria-hidden="true">
             <span>✦</span><i></i><i></i>
           </div>
-          <span class="count-label">O PRÓXIMO CAPÍTULO COMEÇA EM</span>
+          <span class="count-label">ENEM NO HORIZONTE</span>
           <div class="count-number" id="days">—</div>
           <small>dias · até o primeiro dia do ENEM</small>
           <div class="exam-row">
@@ -156,23 +160,23 @@
         ><button class="btn tiny" id="dismissInstall">Agora não</button>
       </div>
       <section class="metric-grid" aria-label="Seu progresso">
-        <div class="metric">
+        <div class="metric glow-card"><span class="metric-icon"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2c1 5-4 5-2 10 3-1 4-4 4-4s5 5 5 9a8 8 0 1 1-16 0c0-4 2-6 4-8 0 3 1 4 1 4S8 6 13 2z"/></svg></span>
           <b id="streak">0</b><small>dias de sequência</small>
           <div class="sub">CONSISTÊNCIA</div>
         </div>
-        <div class="metric">
+        <div class="metric glow-card"><span class="metric-icon"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="m7 12 3 3 7-7"/></svg></span>
           <b id="done">0</b><small>tarefas concluídas</small>
           <div class="sub">EXECUÇÃO</div>
         </div>
-        <div class="metric">
+        <div class="metric glow-card"><span class="metric-icon"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></svg></span>
           <b id="focus">0</b><small>minutos focados</small>
           <div class="sub">TEMPO REAL</div>
         </div>
-        <div class="metric">
+        <div class="metric glow-card"><span class="metric-icon"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 3 5 5-12 12-6 1 1-6zM14 5l5 5"/></svg></span>
           <b id="essays">0</b><small>redações salvas</small>
           <div class="sub">ESCRITA</div>
         </div>
-        <div class="metric">
+        <div class="metric glow-card"><span class="metric-icon"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7z"/></svg></span>
           <b id="xp">0</b
           ><small>XP de estudo · <span id="level">Nível 1</span></small>
           <div class="progress" style="margin-top: 9px">
@@ -180,28 +184,7 @@
           </div>
         </div>
       </section>
-      <nav class="nav-tabs" aria-label="Ferramentas do Hub">
-        <span class="nav-label">APRENDER, UM DIA DE CADA VEZ</span
-        ><button class="on" data-tab="hoje">Hoje</button
-        ><button data-tab="trilhas">Trilhas</button
-        ><button data-tab="plano">Plano</button
-        ><button data-tab="redacao">Redação</button
-        ><button data-tab="questoes">Questões</button
-        ><button data-tab="simulado">Simulado</button
-        ><button data-tab="revisao">Guia de revisão</button
-        ><button data-tab="flashcards">Flashcards</button
-        ><button data-tab="erros">
-          Caderno de erros <span id="errorCount">0</span></button
-        ><button data-tab="foco">Foco</button
-        ><button data-tab="biblioteca">Biblioteca de PDFs</button
-        ><button data-tab="provas-oficiais">Provas oficiais</button
-        ><button data-tab="prova">Dia da prova</button
-        ><a class="nav-radar" href="./"
-          >Explorar Radar de Temas ↗<small
-            >Fontes para sua próxima redação</small
-          ></a
-        >
-      </nav>
+      <nav class="nav-tabs" aria-label="Ferramentas do Hub"><span class="nav-label">MEU ESPAÇO</span><button class="on" data-tab="hoje"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10H3z"/><path d="M9 20v-7h6v7"/></svg><span class="nav-text">Hoje</span></button><button data-tab="plano"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 11h18M8 15h2M14 15h2"/></svg><span class="nav-text">Meu plano</span></button><button data-tab="foco"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></svg><span class="nav-text">Modo foco</span></button><span class="nav-label">PRATICAR</span><button data-tab="trilhas"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4v16M12 4v16M19 4v16"/><path d="M2 8h6M9 14h6M16 10h6"/></svg><span class="nav-text">Trilhas</span></button><button data-tab="questoes"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="m7 12 3 3 7-7"/></svg><span class="nav-text">Questões</span></button><button data-tab="simulado"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg><span class="nav-text">Simulado</span></button><button data-tab="provas-oficiais"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6z"/><path d="m8 12 3 3 5-6"/></svg><span class="nav-text">Provas oficiais</span></button><button data-tab="redacao"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 3 5 5-12 12-6 1 1-6zM14 5l5 5"/></svg><span class="nav-text">Redação</span></button><button data-tab="flashcards"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="14" height="14" rx="3"/><path d="M17 3H6a3 3 0 0 0-3 3v11"/></svg><span class="nav-text">Flashcards</span></button><button data-tab="erros"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11a9 9 0 1 1 2.5 7M3 4v7h7"/><path d="M12 7v5l3 2"/></svg><span class="nav-text">Caderno de erros</span> <span id="errorCount">0</span></button><span class="nav-label">EXPLORAR</span><button data-tab="biblioteca"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H5v20h14V7zM14 2v6h5M8 12h8M8 16h5"/></svg><span class="nav-text">Biblioteca de PDFs</span></button><button data-tab="revisao"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v16M3 4c3-1 6-1 9 1 3-2 6-2 9-1v15c-3-1-6-1-9 1-3-2-6-2-9-1z"/></svg><span class="nav-text">Guia de revisão</span></button><button data-tab="prova"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 11h18M8 15h2M14 15h2"/></svg><span class="nav-text">Dia da prova</span></button><a class="nav-radar" href="./"><span class="glow-icon-box lime"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7z"/></svg></span><b>Ideias para sua redação</b><small>Explore os temas do Radar <svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></small></a></nav>
 
       <section class="tab on" id="hoje">
         <div class="section-head">
@@ -214,8 +197,12 @@
             concreto.
           </p>
         </div>
-        <div class="grid2">
-          <article class="panel mission">
+        <div class="grid2 today-bento"><article class="panel next-session"><div class="next-top"><span class="glow-pill"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7z"/></svg> FEITO PARA O SEU MOMENTO</span><span class="session-time" id="recommendationTime">10 min</span></div><h3 id="recommendationTitle">Uma lição. Seu primeiro avanço.</h3><p id="recommendationWhy">O próximo passo acompanha o seu progresso.</p><button class="btn primary" id="recommendationCTA">Começar minha próxima sessão <svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button><span class="recommendation-note">Seu progresso decide. Você escolhe o ritmo.</span><div class="session-orbit" aria-hidden="true"><span>✦</span></div></article><article class="panel progress-panel">
+            <span class="eyebrow">SEU MAPA</span>
+            <h3>Seu avanço nas trilhas</h3>
+            <p class="muted small-copy">Lições concluídas em cada área.</p>
+            <div id="areas"></div>
+          </article><article class="panel mission">
             <span class="eyebrow">MISSÃO DO DIA</span>
             <h3 id="mission">—</h3>
             <p id="missionText" class="muted">—</p>
@@ -224,24 +211,16 @@
                 Marcar como feita</button
               ><button class="btn" id="openMission">Abrir ferramenta</button>
             </div>
-          </article>
-          <article class="panel">
-            <span class="eyebrow">SEU MAPA</span>
-            <h3>Seu avanço nas trilhas</h3>
-            <p class="muted small-copy">Lições concluídas em cada área.</p>
-            <div id="areas"></div>
-          </article>
-          <article class="panel">
+          </article><article class="panel quick-panel">
             <span class="eyebrow">ATALHOS</span>
             <h3>O que você quer fazer?</h3>
             <div class="quick-grid">
-              <button data-go="trilhas">◆ Continuar trilha</button
-              ><button data-go="redacao">✍ Escrever redação</button
-              ><button data-go="questoes">⌁ Fazer questões</button
-              ><button data-go="flashcards">◇ Revisar cartões</button>
+              <button data-go="trilhas"><span class="glow-icon-box"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4v16M12 4v16M19 4v16"/><path d="M2 8h6M9 14h6M16 10h6"/></svg></span><span>Continuar trilha</span><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button
+              ><button data-go="redacao"><span class="glow-icon-box"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 3 5 5-12 12-6 1 1-6zM14 5l5 5"/></svg></span><span>Escrever redação</span><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button
+              ><button data-go="questoes"><span class="glow-icon-box"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="m7 12 3 3 7-7"/></svg></span><span>Fazer questões</span><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button
+              ><button data-go="flashcards"><span class="glow-icon-box"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="14" height="14" rx="3"/><path d="M17 3H6a3 3 0 0 0-3 3v11"/></svg></span><span>Revisar cartões</span><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
             </div>
-          </article>
-          <article class="panel">
+          </article><article class="panel activity-panel">
             <span class="eyebrow">ATIVIDADE</span>
             <h3>Últimos 21 dias</h3>
             <div
@@ -250,8 +229,7 @@
               aria-label="Mapa de atividade"
             ></div>
             <div class="achievement-list" id="badges"></div>
-          </article>
-        </div>
+          </article></div>
         <article class="panel sprint" id="dailySprint">
           <div>
             <span class="eyebrow">ROTA RÁPIDA · 10 MIN</span>
@@ -950,6 +928,8 @@
     <script src="./hub/content.js" defer></script>
     <script src="./hub/library-data.js" defer></script>
     <script src="./hub/study.js" defer></script>
+    <script src="./shared/motion.js" defer></script>
+    <script src="./shared/recommend.js" defer></script>
     <script src="./hub/app.js" defer></script>
   </body>
 </html>

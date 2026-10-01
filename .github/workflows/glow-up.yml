@@ -1,0 +1,72 @@
+name: Glow-up validation
+on:
+  push:
+    branches: [design/glow-up]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: glow-up-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install project and browser checks
+        run: |
+          npm ci
+          npm install --prefix "$RUNNER_TEMP/quality-tools" --no-package-lock playwright@1.58.2 @axe-core/playwright@4.11.1
+          "$RUNNER_TEMP/quality-tools/node_modules/.bin/playwright" install --with-deps chromium
+          echo "NODE_PATH=$RUNNER_TEMP/quality-tools/node_modules" >> "$GITHUB_ENV"
+      - name: Prepare self-hosted typeface
+        run: |
+          python -m pip install fonttools brotli
+          python scripts/prepare-font.py
+      - name: Typecheck and model checks
+        run: |
+          npm run typecheck
+          node --check portable/public/hub/app.js
+          node --check portable/public/shared/motion.js
+          node scripts/check-recommend.mjs
+          npm run check:radar
+      - name: Save the current production baseline
+        run: |
+          mkdir -p "$RUNNER_TEMP/glow-baseline"
+          git archive f8c1540a82acc909f56c653c094f7a2d0f6a2195 docs | tar -x -C "$RUNNER_TEMP/glow-baseline"
+          echo "PERF_BASELINE=$RUNNER_TEMP/glow-baseline/docs" >> "$GITHUB_ENV"
+      - name: Build and Hub checks
+        id: build
+        run: |
+          npm run build:pages
+          npm run check:hub
+      - name: Browser regression checks
+        run: npm run check:ui
+      - name: Accessibility across both themes
+        run: npm run check:accessibility
+      - name: Adaptive home, motion, theme and cache checks
+        run: node scripts/check-glow.cjs
+      - name: Measure mobile performance
+        if: always() && steps.build.outcome == 'success'
+        run: node scripts/check-glow-performance.cjs
+      - name: Capture review screenshots
+        if: always()
+        run: node scripts/preview-glow.cjs
+      - name: Record generated build and audit
+        if: always()
+        run: |
+          npm run build:pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs portable/public/shared/fonts portable/public/data/accessibility-audit.json portable/public/data/glow-performance-audit.json design/previews
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh glow-up build and review snapshots"
+            git push origin HEAD:design/glow-up
+          fi

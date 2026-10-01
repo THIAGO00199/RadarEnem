@@ -62,16 +62,39 @@
     installPrompt = null,
     currentQuiz = [],
     quizBlock = { answered: 0, correct: 0 },
-    trailSession = null;
+    trailSession = null,
+    recommendationFrame = 0;
+  try { const theme = localStorage.getItem("kalore-color-theme"); if (theme === "dark" || theme === "light") s.theme = theme; } catch (_) {}
   function save() {
+    scheduleRecommendation();
     try {
       localStorage.setItem(KEY, JSON.stringify(s));
+      localStorage.setItem("kalore-color-theme", s.theme);
     } catch (e) {
       toast(
         "Não consegui salvar neste navegador. Exporte seus dados para não perder o progresso.",
       );
     }
   }
+  function scheduleRecommendation() {
+    if (!recommendationFrame) recommendationFrame = requestAnimationFrame(() => { recommendationFrame = 0; renderRecommendation(); });
+  }
+  function renderRecommendation() {
+    const title = $("#recommendationTitle");
+    if (!title || !window.KaloreRecommend) return;
+    const r = KaloreRecommend.choose(s, new Date(), window.KaloreLibrary?.exams || []);
+    title.textContent = r.title;
+    $("#recommendationWhy").textContent = r.why;
+    $("#recommendationTime").textContent = r.minutes + " min";
+    const button = $("#recommendationCTA");
+    button.replaceChildren(document.createTextNode(r.action + " →"));
+    button.dataset.recommendation = r.key;
+    button.onclick = () => {
+      if (r.area) { s.course.track = r.area; save(); renderTrails(); }
+      activateTab(r.tab);
+    };
+  }
+  window.addEventListener("kalore:progress", scheduleRecommendation);
   function dayKey(d = new Date()) {
     return new Intl.DateTimeFormat("en-CA", { timeZone: TZ }).format(d);
   }
@@ -138,6 +161,7 @@
     );
   }
   function activateTab(id, writeHash = true) {
+    const previousView = document.body.dataset.view;
     if (!$$(".tab").some((t) => t.id === id)) id = "hoje";
     document.body.dataset.view = id;
     $$(".nav-tabs button").forEach((b) =>
@@ -154,7 +178,8 @@
       const nav = $(".nav-tabs"), active = nav.querySelector("button.on");
       if (active) nav.scrollTo({ left: Math.max(0, active.offsetLeft - (nav.clientWidth - active.clientWidth) / 2), behavior: "instant" });
     }
-    if (writeHash) history.pushState(null, "", "#" + id);
+    if (writeHash && previousView !== id) { history.pushState(null, "", "#" + id); window.KaloreMotion?.enter($("#" + id)); }
+    if (id === "hoje") scheduleRecommendation();
     window.scrollTo({
       top: Math.max(
         0,
@@ -774,6 +799,7 @@
     });
     $("#lessonExplain").innerHTML =
       "<b>" + (correct ? "Boa! " : "Revise: ") + "</b>" + escapeHTML(lesson.e);
+    window.KaloreMotion?.feedback($("#lessonBody"), correct, correct ? "Você avançou mais uma ideia. Veja a explicação para consolidar." : "Leia a explicação e tente novamente. Aprender também passa por aqui.");
     if (!correct && !s.course.done[lesson.id])
       s.course.energy.value = Math.max(0, ensureEnergy() - 1);
     if (correct) {
@@ -1084,6 +1110,7 @@
     s.tasks["mission-" + dayKey()] = true;
     save();
     addXP(20, "Missão concluída");
+    window.KaloreMotion?.feedback($(".mission"), true, "Um passo a mais no seu ritmo de estudo.");
     markDailyStep();
     renderMission();
   };
@@ -1765,6 +1792,7 @@
       else if (i === j) b.classList.add("no");
       b.disabled = true;
     });
+    window.KaloreMotion?.feedback(card, j === q.c, j === q.c ? "Resposta certa. A explicação ajuda a guardar o raciocínio." : "Esta questão entrou no seu caderno de erros para a próxima revisão.");
     s.answers = (s.answers || 0) + 1;
     quizBlock.answered++;
     if (j === q.c) {
@@ -2281,12 +2309,16 @@
       }
     } catch (e) {}
   };
+  function renderTheme() {
+    document.documentElement.dataset.theme = s.theme || "dark";
+    $("#themeToggle").innerHTML = s.theme === "dark" ? "<svg class=\"glow-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5\"/></svg>" : "<svg class=\"glow-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20.8 13a9 9 0 0 1-9.8-9.8A9 9 0 1 0 20.8 13z\"/></svg>";
+    $("#themeToggle").title = s.theme === "dark" ? "Ativar tema claro" : "Ativar tema escuro";
+  }
   $("#themeToggle").onclick = () => {
-    s.theme = s.theme === "light" ? "dark" : "light";
-    document.documentElement.dataset.theme = s.theme;
-    save();
+    s.theme = s.theme === "light" ? "dark" : "light"; renderTheme(); save();
   };
-  document.documentElement.dataset.theme = s.theme || "dark";
+  window.addEventListener("storage", (e) => { if (e.key === "kalore-color-theme" && (e.newValue === "dark" || e.newValue === "light")) { s.theme = e.newValue; renderTheme(); } });
+  renderTheme();
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", () =>
       navigator.serviceWorker.register("./sw.js").catch(() => {}),
@@ -2718,6 +2750,8 @@
   renderFlash();
   renderLibrary();
   renderChecks();
+  renderRecommendation();
+  window.KaloreMotion?.init(document.querySelector("main"));
   window.addEventListener("load", () =>
     requestAnimationFrame(() => {
       if (location.hash) activateTab(location.hash.slice(1), false);

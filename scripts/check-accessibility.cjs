@@ -26,11 +26,15 @@ const server = http.createServer(async (req,res) => {
     }
     await page.locator("#openQuickSearch").click(); await inspect("Hub/busca/"+theme); await page.locator("#closeQuickSearch").click();
   }
-  await page.goto(base+"/"); await inspect("Radar/dark");
+  for(const theme of ["dark","light"]) {
+    await page.goto(base+"/");
+    await page.evaluate((theme)=>{document.documentElement.dataset.theme=theme;},theme);
+    for(const tab of ["Radar","Dossiê PND","Inep","Fontes","Histórico","Meu plano","Método"]) { await page.getByRole("tab",{name:tab,exact:tab!=="Dossiê PND"}).click(); await page.waitForTimeout(80); await inspect("Radar/"+tab+"/"+theme); }
+  }
   await page.setViewportSize({width:390,height:844});
   for(const name of ["index","redacao","matematica","revisao","planejamento"]) {await page.goto(base+"/materiais/"+name+".html");await inspect("Materiais/"+name+"/mobile");}
   await ctx.close();await browser.close();server.close();
-  await fs.writeFile(path.resolve(__dirname,"../portable/public/data/accessibility-audit.json"),JSON.stringify({checkedAt:new Date().toISOString(),engine:"axe-core/playwright 4.13.0",scope:"13 seções do Hub nos dois temas, flashcards virados e busca, Radar e cinco páginas de materiais. Regras automatizadas WCAG 2 A/AA, 2.1 A/AA e 2.2 AA. Não constitui certificação nem substitui testes com tecnologias assistivas.",results},null,2)+"\n");
+  await fs.writeFile(path.resolve(__dirname,"../portable/public/data/accessibility-audit.json"),JSON.stringify({checkedAt:new Date().toISOString(),engine:"axe-core/playwright "+require("axe-core/package.json").version,scope:"13 seções do Hub nos dois temas, flashcards virados e busca, sete seções do Radar nos dois temas e cinco páginas de materiais. Regras automatizadas WCAG 2 A/AA, 2.1 A/AA e 2.2 AA. Não constitui certificação nem substitui testes com tecnologias assistivas.",results},null,2)+"\n");
   console.log("Acessibilidade:",results.length,"telas,",results.reduce((n,r)=>n+r.violations.length,0),"regras com violações.");
   if(results.some((r)=>r.violations.length))process.exitCode=1;
 })().catch((error)=>{console.error(error);server.close();process.exit(1);});
