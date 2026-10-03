@@ -5,6 +5,18 @@
 - [Radar de Temas](https://thiago00199.github.io/RadarEnem/)
 - [ENEM Hub](https://thiago00199.github.io/RadarEnem/estudar.html)
 
+## Clareza, contexto e direção · versão 4.1
+
+- Painel **Meu progresso** com acertos reais por área e assunto, períodos de 7/30 dias, gráfico diário e relatório. O histórico anterior é preservado; o detalhamento começa nesta versão.
+- **84 questões autorais**, incluindo 24 novas questões contextualizadas com cinco alternativas, pistas e explicações. Busca por assunto e filtros de erros, acertos com dúvida e itens sem registro.
+- Prática por assunto com uma questão por tela, teclado, confiança opcional e anotações. Acertar uma pendência encerra sua revisão no caderno de erros.
+- Roteiro de redação em três etapas no Radar, salvo por tema e exportável. No Hub, preenche campos vazios e preserva o rascunho e os campos anteriores.
+- Navegação móvel com cinco destinos e menu para todas as 14 ferramentas. Cores aplicadas imediatamente ao trocar o tema, com movimento e feedback opcionais.
+- Importação aceita backups de até 12 MB, com validação e limites por campo. O teste inclui uma cópia válida com várias redações acima do antigo limite de 2 MB.
+- Auditoria automatizada ampliada para 97 estados de tela nos dois temas, sem violações de regras de acessibilidade encontradas.
+
+[Detalhes, arquitetura, limites e validação da evolução](./CLAREZA.md).
+
 ## Nova experiência de estudo · outubro de 2026
 
 - Sessões guiadas de 10, 20 ou 30 minutos estimados: questões autorais e flashcards, uma atividade por vez, com respostas salvas e retomada depois de fechar a página.
@@ -37,7 +49,7 @@ A conferência direta encontrou 24 PDFs externos disponíveis. As 40 URLs do Ine
 
 - Interface com navegação lateral no computador, atalhos no celular e temas claro/escuro.
 - 25 lições em cinco áreas, desbloqueio por progresso, XP e recuperação de energia por revisão de flashcards.
-- 60 questões autorais com explicações; blocos por área e caderno de erros.
+- 84 questões autorais com explicações: 60 de fundamentos e 24 contextualizadas; treino por assunto, blocos e caderno de erros.
 - Simulado cronometrado, navegação entre itens, marcação para revisão, correção ao finalizar e histórico. A sessão continua após recarregar a página na mesma aba.
 - 22 fórmulas e conceitos pesquisáveis, com significado e exemplos.
 - 22 flashcards com revisão espaçada e operação por teclado.
@@ -71,6 +83,7 @@ pnpm install --frozen-lockfile
 pnpm run dev:pages
 pnpm run check:radar
 pnpm run check:session
+pnpm run check:insights
 pnpm run build:pages
 pnpm run check:hub
 ```

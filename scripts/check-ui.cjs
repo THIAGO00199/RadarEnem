@@ -210,6 +210,7 @@ const server = http.createServer((req, res) => {
   assert.equal(await page.locator(".plan-card").count(), 1);
   await page.getByRole("tab", { name: "Radar", exact: true }).click();
   await page.getByRole("link", { name: /Escrever sobre este tema/ }).click();
+  await page.waitForFunction(() => /Desafios|Caminhos|Brasil/.test(document.querySelector("#prompt")?.textContent || ""));
   assert.match(
     await page.locator("#prompt").textContent(),
     /Desafios|Caminhos|Brasil/,

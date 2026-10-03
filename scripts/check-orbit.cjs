@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
   if (!file.startsWith(root + path.sep)) { res.writeHead(403).end(); return; }
   fs.readFile(file, (e, data) => e ? res.writeHead(404).end() : res.writeHead(200, { "Content-Type": types[path.extname(file)] || "text/plain" }).end(data));
 });
-const sandbox = {}; vm.createContext(sandbox); vm.runInContext(fs.readFileSync(path.join(root, "hub/content.js"), "utf8"), sandbox);
+const sandbox = {}; vm.createContext(sandbox); vm.runInContext(fs.readFileSync(path.join(root, "hub/content.js"), "utf8"), sandbox); vm.runInContext(fs.readFileSync(path.join(root, "hub/practice-data.js"), "utf8"), sandbox);
 const app = fs.readFileSync(path.join(root, "hub/app.js"), "utf8");
 const questions = vm.runInContext("(" + app.match(/const questions = (\[[\s\S]*?\n  \]);/)[1] + ")", sandbox).concat(sandbox.KaloreContent.questions);
 const read = (p) => p.evaluate(() => JSON.parse(localStorage.getItem("kalore-hub-v3")));
@@ -31,7 +31,7 @@ const read = (p) => p.evaluate(() => JSON.parse(localStorage.getItem("kalore-hub
   assert.equal(await page.locator(".feedback-particle").count(), 0);
   await page.locator("#closeStudyRoom").click(); await page.reload();
   const before = await read(page); await page.locator("#heroNextSession").click();
-  assert.equal(await page.locator(".session-option:disabled").count(), 4);
+  assert.equal(await page.locator(".session-option:disabled").count(), first.o.length);
   assert.equal((await read(page)).answers, before.answers, "Resuming an answered question must not award progress twice");
   await page.locator("#sessionNext").click();
   for (let i = 0; i < 20 && !(await page.locator("#sessionDone").count()); i++) {
@@ -42,7 +42,7 @@ const read = (p) => p.evaluate(() => JSON.parse(localStorage.getItem("kalore-hub
     await page.locator("#sessionNext").click();
   }
   const finished = await read(page);
-  assert.equal(finished.answers, 6); assert.equal(finished.correct, 5);
+  assert.equal(finished.answers, 6); assert.equal(finished.attempts.length, 6); assert.equal(finished.attempts.filter(a => a.source === "guided").length, 6); assert.equal(finished.correct, 5);
   assert.equal(finished.journeyHistory.length, 1); assert.equal(finished.journeyHistory[0].cards, 3);
   assert.equal(finished.errors.filter((e) => !e.reviewed).length, 1);
   await page.screenshot({ path: path.join(out, "session-summary-desktop.jpg"), type: "jpeg", quality: 80 });
@@ -92,7 +92,7 @@ const read = (p) => p.evaluate(() => JSON.parse(localStorage.getItem("kalore-hub
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
     assert.equal(await page.locator("#studyRoom").evaluate((el) => el.scrollWidth <= el.clientWidth + 1), true);
     if (width === 390) await page.screenshot({ path: path.join(out, `session-${theme}-mobile.jpg`), type: "jpeg", quality: 80 });
-    await page.keyboard.press("Escape"); await page.locator('[data-tab="redacao"]').click(); await page.locator("#enterWritingMode").click();
+    await page.keyboard.press("Escape"); if (width <= 760) { await page.locator('#openToolMenu').click(); await page.locator('[data-menu-go="redacao"]').click(); } else await page.locator('[data-tab="redacao"]').click(); await page.locator("#enterWritingMode").click();
     assert.equal(await page.locator("#writingRoom").evaluate((el) => el.scrollWidth <= el.clientWidth + 1), true);
     if (width === 390) await page.screenshot({ path: path.join(out, `writing-${theme}-mobile.jpg`), type: "jpeg", quality: 80 });
     await page.keyboard.press("Escape");

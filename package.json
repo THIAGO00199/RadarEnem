@@ -1,6 +1,6 @@
 {
   "name": "kalore-radar-enem",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -22,6 +22,8 @@
     "check:accessibility": "node scripts/check-accessibility.cjs",
     "check:performance": "node scripts/check-performance.cjs",
     "check:links": "node scripts/check-library-links.mjs",
+    "check:insights": "node scripts/check-insights.mjs",
+    "check:clarity": "node scripts/check-clarity.cjs",
     "check:session": "node scripts/check-session.mjs",
     "check:experience": "node scripts/check-orbit.cjs"
   },

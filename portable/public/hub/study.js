@@ -148,6 +148,7 @@
     };
     const tools = [
       ["hoje", "Minha rota de hoje", "missão diária progresso conquistas sequência"],
+      ["progresso", "Meu progresso por assunto", "acertos desempenho histórico mapa evolução estatísticas"],
       ["trilhas", "Trilhas e lições", "aprender aula matemática linguagens humanas natureza"],
       ["redacao", "Laboratório de redação", "escrever tese argumento intervenção revisar"],
       ["provas-oficiais", "Treinar prova oficial", "enem pdf gabarito 2025 histórico acertos"],

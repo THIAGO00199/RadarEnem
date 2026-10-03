@@ -33,6 +33,8 @@
     simHistory: [],
     journey: null,
     journeyHistory: [],
+    attempts: [],
+    questionNotes: {},
     preferences: { motion: true, writingFont: 20 },
     library: { favorites: {}, read: {} },
     officialHistory: [],
@@ -67,7 +69,8 @@
     quizBlock = { answered: 0, correct: 0 },
     trailSession = null,
     recommendationFrame = 0,
-    experience = null;
+    experience = null,
+    insights = null;
   document.body.dataset.view = "hoje";
   try { const motion = localStorage.getItem("kalore-motion"); if (motion === "true" || motion === "false") s.preferences.motion = motion === "true"; } catch (_) {}
   try { const theme = localStorage.getItem("kalore-color-theme"); if (theme === "dark" || theme === "light") s.theme = theme; } catch (_) {}
@@ -89,7 +92,7 @@
     }
   }
   function scheduleRecommendation() {
-    if (!recommendationFrame) recommendationFrame = requestAnimationFrame(() => { recommendationFrame = 0; renderRecommendation(); experience?.render(); });
+    if (!recommendationFrame) recommendationFrame = requestAnimationFrame(() => { recommendationFrame = 0; renderRecommendation(); experience?.render(); insights?.render(); });
   }
   function renderRecommendation() {
     const title = $("#recommendationTitle");
@@ -195,6 +198,7 @@
       if (active) nav.scrollTo({ left: Math.max(0, active.offsetLeft - (nav.clientWidth - active.clientWidth) / 2), behavior: "instant" });
     }
     if (writeHash && previousView !== id) { history.pushState(null, "", "#" + id); window.KaloreMotion?.enter($("#" + id)); }
+    window.dispatchEvent(new CustomEvent("kalore:view", { detail: { id } }));
     if (id === "hoje") scheduleRecommendation();
     window.scrollTo({
       top: Math.max(
@@ -1799,7 +1803,12 @@
       );
     });
   }
-  function recordPracticeAnswer(q, j, resolveError = false) {
+  function recordAttempt(q, choice, source, confidence = null) {
+    s.attempts.unshift({ id: crypto.randomUUID(), qid: q.id, area: q.a, choice, source, confidence, date: new Date().toISOString() });
+    s.attempts = s.attempts.slice(0, 1000);
+  }
+  function recordPracticeAnswer(q, j, resolveError = false, source = "block", confidence = null) {
+    recordAttempt(q, j, source, confidence);
     s.answers = (s.answers || 0) + 1;
     if (j === q.c) {
       s.correct = (s.correct || 0) + 1;
@@ -1837,7 +1846,7 @@
     window.KaloreMotion?.feedback(card, j === q.c, j === q.c ? "Resposta certa. A explicação ajuda a guardar o raciocínio." : "Esta questão entrou no seu caderno de erros para a próxima revisão.");
     quizBlock.answered++;
     if (j === q.c) quizBlock.correct++;
-    recordPracticeAnswer(q, j);
+    recordPracticeAnswer(q, j, true);
     $("#quizScore").textContent = quizBlock.answered
       ? quizBlock.correct +
         "/" +
@@ -1866,6 +1875,7 @@
       questions.filter((q) => area === "all" || q.a === area),
     ).slice(0, qty);
     renderQuiz();
+    $("#quiz").scrollIntoView({ block: "start" });
     toast(
       "Bloco iniciado com " +
         currentQuiz.length +
@@ -1897,7 +1907,7 @@
           escapeHTML(q.o[q.c]) +
           "<br><b>Por quê:</b> " +
           escapeHTML(q.e) +
-          '</p></div><button class="btn tiny" data-review-error="' +
+          '</p><button class="btn" data-practice-q="' + q.id + '">Tentar sem ver a resposta →</button></div><button class="btn tiny" data-review-error="' +
           e.id +
           '">Revisei ✓</button></article>'
         );
@@ -2300,7 +2310,7 @@
     const f = e.target.files?.[0];
     if (!f) return;
     try {
-      if (f.size > 2_000_000) throw new Error("Arquivo muito grande.");
+      if (f.size > 12_000_000) throw new Error("Backup acima de 12 MB. Use uma cópia menor.");
       const d = JSON.parse(await f.text());
       if (
         ![3, 4, 5].includes(d.version) ||
@@ -2653,6 +2663,7 @@
     s.answers += qs.length;
     s.correct += correct;
     qs.forEach((q, i) => {
+      recordAttempt(q, run.choices[i] ?? -1, "sim");
       if (
         run.choices[i] !== q.c &&
         !s.errors.some((e) => e.qid === q.id && !e.reviewed)
@@ -2767,9 +2778,18 @@
   renderTrails();
   renderRecommendation();
   experience = KaloreExperience.init({ getState: () => s, save, toast, escapeHTML, questions, cards,
-    recordAnswer: (q, j) => recordPracticeAnswer(q, j, true),
+    recordAnswer: (q, j) => recordPracticeAnswer(q, j, true, "guided"),
     reviewFlash: (id, grade) => { setFlashReview(id, grade); renderFlash(); renderBadges(); markDailyStep("flashcards"); },
     markDailyStep,
+  });
+  insights = KaloreInsightsUI.init({ getState: () => s, save, escapeHTML, questions, cards, trails,
+    recordAnswer: (q, j, confidence) => { recordPracticeAnswer(q, j, true, "explore", confidence); markDailyStep("questoes"); },
+    activateTab, download,
+    setEssayTheme: (title) => {
+      let index = themes.findIndex((x) => x[0] === title);
+      if (index < 0) { themes.push([title, "Tema planejado no Radar. Consulte suas fontes e desenvolva o roteiro."]); index = themes.length - 1; const option = document.createElement("option"); option.value = index; option.textContent = title; $("#theme").append(option); }
+      showTheme(index);
+    },
   });
   window.KaloreMotion?.init(document.querySelector("main"));
   window.addEventListener("load", () =>

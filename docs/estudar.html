@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="./shared/glow.css" />
     <link rel="stylesheet" href="./hub/glow.css" />
     <link rel="stylesheet" href="./hub/experience.css" />
+    <link rel="stylesheet" href="./hub/insights.css" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Kaloré ENEM Hub 2026" />
     <meta
@@ -187,7 +188,7 @@
           </div>
         </div>
       </section>
-      <nav class="nav-tabs" aria-label="Ferramentas do Hub"><span class="nav-label">MEU ESPAÇO</span><button class="on" data-tab="hoje"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10H3z"/><path d="M9 20v-7h6v7"/></svg><span class="nav-text">Hoje</span></button><button data-tab="plano"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 11h18M8 15h2M14 15h2"/></svg><span class="nav-text">Meu plano</span></button><button data-tab="foco"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></svg><span class="nav-text">Modo foco</span></button><span class="nav-label">PRATICAR</span><button data-tab="trilhas"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4v16M12 4v16M19 4v16"/><path d="M2 8h6M9 14h6M16 10h6"/></svg><span class="nav-text">Trilhas</span></button><button data-tab="questoes"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="m7 12 3 3 7-7"/></svg><span class="nav-text">Questões</span></button><button data-tab="simulado"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg><span class="nav-text">Simulado</span></button><button data-tab="provas-oficiais"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6z"/><path d="m8 12 3 3 5-6"/></svg><span class="nav-text">Provas oficiais</span></button><button data-tab="redacao"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 3 5 5-12 12-6 1 1-6zM14 5l5 5"/></svg><span class="nav-text">Redação</span></button><button data-tab="flashcards"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="14" height="14" rx="3"/><path d="M17 3H6a3 3 0 0 0-3 3v11"/></svg><span class="nav-text">Flashcards</span></button><button data-tab="erros"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11a9 9 0 1 1 2.5 7M3 4v7h7"/><path d="M12 7v5l3 2"/></svg><span class="nav-text">Caderno de erros</span> <span id="errorCount">0</span></button><span class="nav-label">EXPLORAR</span><button data-tab="biblioteca"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H5v20h14V7zM14 2v6h5M8 12h8M8 16h5"/></svg><span class="nav-text">Biblioteca de PDFs</span></button><button data-tab="revisao"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v16M3 4c3-1 6-1 9 1 3-2 6-2 9-1v15c-3-1-6-1-9 1-3-2-6-2-9-1z"/></svg><span class="nav-text">Guia de revisão</span></button><button data-tab="prova"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 11h18M8 15h2M14 15h2"/></svg><span class="nav-text">Dia da prova</span></button><a class="nav-radar" href="./"><span class="glow-icon-box lime"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7z"/></svg></span><b>Ideias para sua redação</b><small>Explore os temas do Radar <svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></small></a></nav>
+      <nav class="nav-tabs" aria-label="Ferramentas do Hub"><span class="nav-label">MEU ESPAÇO</span><button class="on" data-tab="hoje"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10H3z"/><path d="M9 20v-7h6v7"/></svg><span class="nav-text">Hoje</span></button><button data-tab="plano"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 11h18M8 15h2M14 15h2"/></svg><span class="nav-text">Meu plano</span></button><button data-tab="foco"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></svg><span class="nav-text">Modo foco</span></button><button data-tab="progresso"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M12 20V4M20 20v-8"/></svg><span class="nav-text">Meu progresso</span></button><span class="nav-label">PRATICAR</span><button data-tab="trilhas"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4v16M12 4v16M19 4v16"/><path d="M2 8h6M9 14h6M16 10h6"/></svg><span class="nav-text">Trilhas</span></button><button data-tab="questoes"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="m7 12 3 3 7-7"/></svg><span class="nav-text">Questões</span></button><button data-tab="simulado"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg><span class="nav-text">Simulado</span></button><button data-tab="provas-oficiais"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6z"/><path d="m8 12 3 3 5-6"/></svg><span class="nav-text">Provas oficiais</span></button><button data-tab="redacao"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 3 5 5-12 12-6 1 1-6zM14 5l5 5"/></svg><span class="nav-text">Redação</span></button><button data-tab="flashcards"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="14" height="14" rx="3"/><path d="M17 3H6a3 3 0 0 0-3 3v11"/></svg><span class="nav-text">Flashcards</span></button><button data-tab="erros"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11a9 9 0 1 1 2.5 7M3 4v7h7"/><path d="M12 7v5l3 2"/></svg><span class="nav-text">Caderno de erros</span> <span id="errorCount">0</span></button><span class="nav-label">EXPLORAR</span><button data-tab="biblioteca"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H5v20h14V7zM14 2v6h5M8 12h8M8 16h5"/></svg><span class="nav-text">Biblioteca de PDFs</span></button><button data-tab="revisao"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v16M3 4c3-1 6-1 9 1 3-2 6-2 9-1v15c-3-1-6-1-9 1-3-2-6-2-9-1z"/></svg><span class="nav-text">Guia de revisão</span></button><button data-tab="prova"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 11h18M8 15h2M14 15h2"/></svg><span class="nav-text">Dia da prova</span></button><a class="nav-radar" href="./"><span class="glow-icon-box lime"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7z"/></svg></span><b>Ideias para sua redação</b><small>Explore os temas do Radar <svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></small></a></nav>
 
       <div class="workspace-heading"><button class="btn" data-go="hoje">← Meu espaço</button><span id="workspaceTitle">Hoje</span><span class="workspace-hint">Um passo de cada vez.</span></div>
       <section class="tab on" id="hoje">
@@ -208,7 +209,7 @@
         </div>
         <div class="grid2 today-bento"><article class="panel next-session"><div class="next-top"><span class="glow-pill"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7z"/></svg> FEITO PARA O SEU MOMENTO</span><span class="session-time" id="recommendationTime">10 min</span></div><h3 id="recommendationTitle">Uma lição. Seu primeiro avanço.</h3><p id="recommendationWhy">O próximo passo acompanha o seu progresso.</p><button class="btn primary" id="recommendationCTA">Começar minha próxima sessão <svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button><span class="recommendation-note">Seu progresso decide. Você escolhe o ritmo.</span><div class="session-orbit" aria-hidden="true"><span>✦</span></div></article><article class="panel progress-panel">
             <span class="eyebrow">SEU MAPA</span>
-            <h3>Seu avanço nas trilhas</h3>
+            <h3>Seu avanço nas trilhas</h3><button class="progress-link" data-go="progresso">Ver meu progresso por assunto ↗</button>
             <p class="muted small-copy">Lições concluídas em cada área.</p>
             <div id="areas"></div>
           </article><article class="panel mission">
@@ -281,6 +282,15 @@
         </div>
       </section>
 
+      <section class="tab" id="progresso">
+        <div class="section-head"><div><span class="eyebrow">MENOS ACHISMO. MAIS DIREÇÃO.</span><h2>Seu esforço, em perspectiva.</h2></div><p>Respostas registradas, assuntos para retomar e um próximo passo que faz sentido.</p></div>
+        <div class="insight-controls"><div class="period-switch" role="group" aria-label="Período das respostas"><button class="on" data-insight-period="30" aria-pressed="true">30 dias</button><button data-insight-period="7" aria-pressed="false">7 dias</button><button data-insight-period="0" aria-pressed="false">Todo o registro</button></div><button class="btn" id="exportInsights">Exportar relatório ↓</button></div>
+        <div id="insightSummary" class="insight-summary"></div>
+        <div class="insight-bento"><article class="panel insight-chart-panel"><div class="insight-panel-head"><div><span class="eyebrow">PRÁTICA NOS ÚLTIMOS 7 DIAS</span><h3>Cada tentativa conta.</h3></div><span class="chart-legend"><i></i> acertos <i></i> outras respostas</span></div><div id="answerChart"></div><p class="muted small-copy">Repetições entram como novas tentativas. Barras vazias significam que não há respostas registradas naquele dia.</p></article><article class="panel insight-next"><span class="eyebrow">PARA O SEU PRÓXIMO BLOCO</span><div id="insightNext"></div></article><article class="panel insight-areas"><span class="eyebrow">QUATRO ÁREAS. SEU PERCURSO.</span><h3>Onde você está praticando?</h3><div id="insightAreas"></div></article><article class="panel insight-memory"><span class="eyebrow">APRENDER TAMBÉM É VOLTAR</span><h3>O que está em andamento.</h3><div id="insightMemory"></div><button class="btn" data-go="flashcards">Revisar cartões →</button></article></div>
+        <article class="panel topic-map-panel"><div class="insight-panel-head"><div><span class="eyebrow">MAPA DE ASSUNTOS</span><h3>Escolha o que destravar.</h3></div><label class="field"><span class="sr-only">Área do mapa de assuntos</span><select id="insightArea"><option value="all">Todas as áreas</option><option value="mat">Matemática</option><option value="nat">Natureza</option><option value="hum">Humanas</option><option value="ling">Linguagens</option></select></label></div><p class="muted small-copy">Amostras pequenas são um ponto de partida. Este mapa mostra prática autoral, sem estimar domínio ou nota TRI.</p><div id="topicMap" class="topic-map"></div></article>
+        <p id="insightScope" class="insight-scope"></p>
+      </section>
+
       <section class="tab" id="trilhas">
         <div class="section-head">
           <div>
@@ -304,7 +314,7 @@
             <div class="trail-kpis">
               <span class="chip">⚡ <b id="energy">5</b>/5 energia</span
               ><span class="chip">◆ <b id="trailDone">0</b> lições</span
-              ><span class="chip">★ <b id="trailMastery">0</b>% domínio</span>
+              ><span class="chip">★ <b id="trailMastery">0</b>% da trilha</span>
             </div>
           </article>
           <div class="trail-switch" id="trailSwitch"></div>
@@ -475,7 +485,7 @@
           </div>
           <button class="btn" id="exportBlueprint">Exportar roteiro</button>
         </details>
-        <div class="essay-layout">
+        <article class="brief-import panel" id="briefImport" hidden><span class="eyebrow">SEU ROTEIRO VEIO DO RADAR</span><h3 id="briefImportTitle"></h3><p>Você pode preencher o roteiro abaixo com seu planejamento. Seu texto no editor será preservado.</p><div class="hero-actions"><button class="btn primary" id="applyBrief">Aplicar ao roteiro ↓</button><button class="btn" id="dismissBrief">Agora não</button></div><p id="briefImportStatus" role="status"></p></article><div class="essay-layout">
           <article class="panel editor">
             <div class="editor-top">
               <select id="theme" aria-label="Tema de redação"></select
@@ -547,6 +557,12 @@
             >Bloco: <b class="quiz-score" id="quizScore">—</b></span
           >
         </div>
+        <article class="panel practice-catalog" id="practiceCatalog">
+          <div class="insight-panel-head"><div><span class="eyebrow">UM ASSUNTO DE CADA VEZ</span><h3>Encontre seu próximo desafio.</h3></div><span class="catalog-count" id="catalogTotal">84 questões autorais</span></div>
+          <p class="muted small-copy">Busque por assunto, treine o que errou ou escolha uma questão contextualizada. O bloco rápido acima continua disponível.</p>
+          <div class="catalog-controls"><label class="field"><span>Buscar questão</span><input type="search" id="catalogSearch" placeholder="Ex.: energia, leitura, porcentagem…" autocomplete="off" /></label><label class="field"><span>Área</span><select id="catalogArea"><option value="all">Todas</option><option value="mat">Matemática</option><option value="nat">Natureza</option><option value="hum">Humanas</option><option value="ling">Linguagens</option></select></label><label class="field"><span>Assunto</span><select id="catalogTopic"><option value="all">Todos</option></select></label><label class="field"><span>Minha prática</span><select id="catalogStatus"><option value="all">Todas as questões</option><option value="new">Sem registro</option><option value="review">Para revisar</option><option value="uncertain">Acertos com dúvida</option><option value="context">Contextualizadas</option><option value="right">Última resposta certa</option></select></label></div>
+          <p id="catalogResults" class="catalog-results" role="status"></p><div id="catalogList" class="catalog-list"></div><div id="catalogPagination" class="catalog-pagination"></div>
+        </article>
         <div id="quiz"></div>
       </section>
 
@@ -845,12 +861,15 @@
         >
       </footer>
     </main>
-    <nav class="mobile-dock" aria-label="Atalhos de estudo">
-      <button data-go="hoje">⌂<span>Hoje</span></button
-      ><button data-go="trilhas">◇<span>Trilhas</span></button
-      ><button data-go="redacao">✎<span>Redação</span></button
-      ><button data-go="simulado">◷<span>Simulado</span></button>
+    <nav class="mobile-dock" aria-label="Navegação principal">
+      <button data-go="hoje"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10H3zM9 20v-7h6v7"/></svg><span>Hoje</span></button>
+      <button data-go="questoes"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="m7 12 3 3 7-7"/></svg><span>Questões</span></button>
+      <button data-go="redacao"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 3 5 5-12 12-6 1 1-6zM14 5l5 5"/></svg><span>Redação</span></button>
+      <button data-go="progresso"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M12 20V4M20 20v-8"/></svg><span>Progresso</span></button>
+      <button id="openToolMenu" aria-haspopup="dialog"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Mais</span></button>
     </nav>
+    <dialog id="toolMenu" class="tool-menu" aria-labelledby="toolMenuTitle"><div class="tool-menu-head"><div><span class="eyebrow">SEU ESPAÇO, DO SEU JEITO</span><h2 id="toolMenuTitle">O que vamos fazer?</h2></div><button class="icon-btn" id="closeToolMenu" aria-label="Fechar ferramentas">×</button></div><div id="toolMenuList"></div><a class="btn" href="./">Explorar o Radar de temas ↗</a></dialog>
+    <dialog id="practiceRoom" class="practice-room" aria-labelledby="practiceTitle"><header class="practice-head"><div><span class="eyebrow" id="practiceArea">PRÁTICA AUTORAL</span><h2 id="practiceTitle">Um raciocínio de cada vez.</h2></div><button class="icon-btn" id="closePracticeRoom" aria-label="Fechar questão">×</button></header><div id="practiceContent"></div></dialog>
 
     <div
       class="modal-shell"
@@ -940,13 +959,17 @@
     <dialog id="quickSearch" class="quick-search" aria-labelledby="quickSearchTitle"><div class="quick-search-head"><h2 id="quickSearchTitle">O que você quer estudar?</h2><button class="icon-btn" id="closeQuickSearch" aria-label="Fechar busca">×</button></div><label class="field"><span>Ferramenta, assunto ou PDF</span><input type="search" id="quickSearchInput" placeholder="Ex.: redação, prova 2025, biologia..." autocomplete="off" /></label><div id="quickSearchResults" class="quick-search-results"></div><p class="muted">Tab para navegar · Enter para abrir · Esc para fechar</p></dialog>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="./hub/session-model.js" defer></script>
+    <script src="./hub/insights-model.js" defer></script>
     <script src="./hub/core.js" defer></script>
     <script src="./hub/content.js" defer></script>
+    <script src="./hub/practice-data.js" defer></script>
     <script src="./hub/library-data.js" defer></script>
     <script src="./hub/study.js" defer></script>
     <script src="./shared/motion.js" defer></script>
     <script src="./shared/recommend.js" defer></script>
     <script src="./hub/experience.js" defer></script>
+    <script src="./shared/brief.js" defer></script>
+    <script src="./hub/insights.js" defer></script>
     <script src="./hub/app.js" defer></script>
   </body>
 </html>

@@ -19,7 +19,7 @@ const server=http.createServer(async(req,res)=>{
  await page.locator("#recommendationCTA").click();
  assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem("kalore-hub-v3")).course.track),"ling");
  assert.equal(await page.locator("#trilhas").isVisible(),true);
- await page.locator('[data-tab="trilhas"]').click();
+ await page.locator('#openToolMenu').click(); await page.locator('[data-menu-go="trilhas"]').click();
  await page.evaluate(()=>{const s=JSON.parse(localStorage.getItem("kalore-hub-v3"));s.course.track="mat";localStorage.setItem("kalore-hub-v3",JSON.stringify(s));});
  await page.reload();await page.locator("#startLesson").click();await page.locator('[data-lo="1"]').click();
  assert.match(await page.locator(".feedback-chip").textContent(),/Mandou bem/);
@@ -34,7 +34,7 @@ const server=http.createServer(async(req,res)=>{
  await page.goto(url+"/estudar.html");
  assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),"dark");
  await page.goto(url+"/estudar.html#redacao");await page.locator("#essay").fill("Uma redação em construção com um argumento que ainda precisa ser desenvolvido.");
- await page.locator('[data-tab="hoje"]').click();
+ await page.locator('.mobile-dock [data-go="hoje"]').click();
  await page.waitForFunction(()=>document.getElementById("recommendationCTA").dataset.recommendation==="draft");
  await page.locator("#recommendationCTA").click();
  assert.match(await page.locator("#essay").inputValue(),/Uma redação em construção/);

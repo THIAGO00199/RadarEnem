@@ -1,7 +1,7 @@
 name: Product quality
 on:
   push:
-    branches: [main, experience/orbit]
+    branches: [main, experience/orbit, experience/clarity]
   pull_request:
   workflow_dispatch:
 permissions:
@@ -34,6 +34,8 @@ jobs:
           npm run check:radar
           node scripts/check-recommend.mjs
           npm run check:session
+          npm run check:insights
+          node --check portable/public/hub/insights.js
       - name: Build the published products
         id: build
         run: |
@@ -44,6 +46,9 @@ jobs:
       - name: Guided practice, writing and Radar comparison
         if: always() && steps.build.outcome == 'success'
         run: npm run check:experience
+      - name: Progress, contextual questions and writing outline
+        if: always() && steps.build.outcome == 'success'
+        run: npm run check:clarity
       - name: Motion, theme and cache regression
         if: always() && steps.build.outcome == 'success'
         run: node scripts/check-glow.cjs

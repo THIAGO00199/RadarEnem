@@ -180,6 +180,8 @@
       }));
     s.journey = root.KaloreSession?.sanitize(v.journey) || null;
     s.journeyHistory = root.KaloreSession?.history(v.journeyHistory) || [];
+    s.attempts = root.KaloreInsights?.history(v.attempts) || [];
+    s.questionNotes = root.KaloreInsights?.notes(v.questionNotes) || {};
     s.preferences = {
       motion: obj(v.preferences).motion !== false,
       writingFont: [18, 20, 22].includes(obj(v.preferences).writingFont) ? v.preferences.writingFont : 20,

@@ -8,6 +8,7 @@ vm.runInContext(
   await readFile("portable/public/hub/content.js", "utf8"),
   sandbox,
 );
+vm.runInContext(await readFile("portable/public/hub/practice-data.js", "utf8"), sandbox);
 vm.runInContext(await readFile("portable/public/hub/library-data.js", "utf8"), sandbox);
 vm.runInContext(await readFile("portable/public/hub/study.js", "utf8"), sandbox);
 const c = sandbox.KaloreCore,
@@ -56,17 +57,21 @@ for (const hours of [3, 12, 35]) {
 }
 const shuffled = c.shuffle([1, 2, 3, 4], () => 0);
 assert.deepEqual(Array.from(shuffled).sort(), [1, 2, 3, 4]);
-assert.equal(content.questions.length, 40);
+assert.equal(content.questions.length, 64);
 assert.equal(content.formulas.length, 22);
 for (const q of content.questions) {
-  assert.equal(q.o.length, 4);
-  assert.ok(Number.isInteger(q.c) && q.c >= 0 && q.c < 4);
+  assert.equal(q.o.length, q.contextual ? 5 : 4);
+  assert.ok(Number.isInteger(q.c) && q.c >= 0 && q.c < q.o.length);
   assert.ok(q.e.length > 20);
 }
 const html = await readFile("docs/estudar.html", "utf8"),
   sw = await readFile("docs/sw.js", "utf8");
 for (const f of [
   "core.js",
+  "insights-model.js",
+  "insights.js",
+  "insights.css",
+  "practice-data.js",
   "content.js",
   "library-data.js",
   "study.js",

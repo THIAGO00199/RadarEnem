@@ -1,5 +1,7 @@
 # Radar ENEM + ENEM Hub · nova experiência
 
+A evolução seguinte está em [CLAREZA.md](./CLAREZA.md), com 84 questões, progresso por assunto, roteiro entre os produtos e navegação móvel. As medições e o total de 67 estados abaixo documentam esta rodada anterior.
+
 Esta versão aproxima o produto de um aplicativo de estudo: prática guiada, escrita concentrada e organização das ideias no próprio Radar. A evolução foi aplicada aos dois produtos e ao build que o GitHub Pages publica.
 
 ## O que mudou para quem estuda

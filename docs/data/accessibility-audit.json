@@ -1,10 +1,14 @@
 {
-  "checkedAt": "2026-10-03T03:52:35.814Z",
+  "checkedAt": "2026-10-03T15:45:00.800Z",
   "engine": "axe-core/playwright 4.13.0",
-  "scope": "13 seções do Hub nos dois temas, flashcards virados, busca, sete estados de prática guiada e escrita; sete seções do Radar, comparação e anotações nos dois temas; cinco páginas de materiais. Regras automatizadas WCAG 2 A/AA, 2.1 A/AA e 2.2 AA. Não constitui certificação nem substitui testes com tecnologias assistivas.",
+  "scope": "14 seções do Hub nos dois temas, flashcards virados, busca, sete estados de prática guiada e escrita, exploração de questões, respostas e transferência de roteiros; sete seções do Radar, comparação, anotações e três etapas do roteiro nos dois temas; novas telas também a 390 px; cinco páginas de materiais. Regras automatizadas WCAG 2 A/AA, 2.1 A/AA e 2.2 AA. Não constitui certificação nem substitui testes com tecnologias assistivas.",
   "results": [
     {
       "name": "Hub/hoje/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/progresso/dark",
       "violations": []
     },
     {
@@ -92,7 +96,39 @@
       "violations": []
     },
     {
+      "name": "Hub/assunto/questão/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/assunto/pista/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/assunto/erro/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/assunto/acerto-com-dúvida/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/progresso/com-respostas/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/roteiro/transferência/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/roteiro/aplicado/dark",
+      "violations": []
+    },
+    {
       "name": "Hub/hoje/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/progresso/light",
       "violations": []
     },
     {
@@ -180,6 +216,34 @@
       "violations": []
     },
     {
+      "name": "Hub/assunto/questão/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/assunto/pista/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/assunto/erro/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/assunto/acerto-com-dúvida/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/progresso/com-respostas/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/roteiro/transferência/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/roteiro/aplicado/light",
+      "violations": []
+    },
+    {
       "name": "Radar/Radar/dark",
       "violations": []
     },
@@ -216,6 +280,18 @@
       "violations": []
     },
     {
+      "name": "Radar/roteiro/tese/dark",
+      "violations": []
+    },
+    {
+      "name": "Radar/roteiro/argumentos/dark",
+      "violations": []
+    },
+    {
+      "name": "Radar/roteiro/intervenção/dark",
+      "violations": []
+    },
+    {
       "name": "Radar/Radar/light",
       "violations": []
     },
@@ -249,6 +325,50 @@
     },
     {
       "name": "Radar/anotações/light",
+      "violations": []
+    },
+    {
+      "name": "Radar/roteiro/tese/light",
+      "violations": []
+    },
+    {
+      "name": "Radar/roteiro/argumentos/light",
+      "violations": []
+    },
+    {
+      "name": "Radar/roteiro/intervenção/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/progresso/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/ferramentas/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/assunto/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Radar/roteiro/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/progresso/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/ferramentas/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/assunto/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Radar/roteiro/mobile/light",
       "violations": []
     },
     {
