@@ -1,6 +1,6 @@
 {
   "name": "kalore-radar-enem",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -21,7 +21,9 @@
     "build:materials": "node scripts/build-materials.mjs",
     "check:accessibility": "node scripts/check-accessibility.cjs",
     "check:performance": "node scripts/check-performance.cjs",
-    "check:links": "node scripts/check-library-links.mjs"
+    "check:links": "node scripts/check-library-links.mjs",
+    "check:session": "node scripts/check-session.mjs",
+    "check:experience": "node scripts/check-orbit.cjs"
   },
   "dependencies": {
     "class-variance-authority": "0.7.1",

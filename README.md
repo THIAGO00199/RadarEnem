@@ -5,6 +5,18 @@
 - [Radar de Temas](https://thiago00199.github.io/RadarEnem/)
 - [ENEM Hub](https://thiago00199.github.io/RadarEnem/estudar.html)
 
+## Nova experiência de estudo · outubro de 2026
+
+- Sessões guiadas de 10, 20 ou 30 minutos estimados: questões autorais e flashcards, uma atividade por vez, com respostas salvas e retomada depois de fechar a página.
+- Erros pendentes da área entram primeiro no treino; uma resposta correta durante a sessão encerra essa revisão. Os cartões usam o agendamento existente.
+- Metas de 3, 5 ou 7 dias de estudo por semana, gráfico de ações reais e histórico de sessões concluídas. A semana segue o calendário de São Paulo.
+- Modo escrita com o mesmo rascunho, fonte ajustável, salvamento de versões por Ctrl/⌘+S e indicação de falhas de armazenamento. Nenhum editor duplicado.
+- Radar com comparação entre dois temas, exportação da comparação e anotações de repertório por tema, incluídas no backup e no plano exportado.
+- Entrada mais direta, telas de ferramentas com espaço próprio, transições coordenadas, resposta ao toque e celebrações breves. Preferência de animações compartilhada entre os produtos.
+- Validação automática de funções, dados e acessibilidade em cada atualização. Publicação conferida contra os arquivos da versão validada.
+
+[Detalhes, medições e validação desta versão](./EXPERIENCIA.md).
+
 ## ENEM Hub · atualização 6.0
 
 - [Biblioteca interativa com 68 PDFs](https://thiago00199.github.io/RadarEnem/estudar.html#biblioteca), busca por palavras sem depender de acentos, filtros por matéria/ano/tipo, favoritos, marcação de estudo e paginação.
@@ -54,11 +66,13 @@ Questões e propostas são autorais e servem para prática. Os cadernos oficiais
 Requer Node.js 22.13 ou superior.
 
 ```sh
-npm install
-npm run dev:pages
-npm run check:radar
-npm run build:pages
-npm run check:hub
+npm install --global pnpm@11.25.0
+pnpm install --frozen-lockfile
+pnpm run dev:pages
+pnpm run check:radar
+pnpm run check:session
+pnpm run build:pages
+pnpm run check:hub
 ```
 
 O build estático fica em `docs/`. Essa versão não exige chaves, conta de IA ou servidor próprio. Pode ser hospedada no GitHub Pages e em serviços que publicam arquivos estáticos.

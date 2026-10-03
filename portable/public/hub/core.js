@@ -41,6 +41,7 @@
       name: str(p.name, 40),
       goal: str(p.goal, 80),
       hours: Math.max(3, Math.round(num(p.hours, 12, 35))),
+      weeklyGoal: [3, 5, 7].includes(p.weeklyGoal) ? p.weeklyGoal : 5,
     };
     areas.forEach((a) => {
       s.profile["d_" + a] = Math.max(1, Math.round(num(p["d_" + a], 2, 3)));
@@ -177,6 +178,12 @@
         total: num(obj(x).total, 0, 100),
         seconds: num(obj(x).seconds, 0, 10800),
       }));
+    s.journey = root.KaloreSession?.sanitize(v.journey) || null;
+    s.journeyHistory = root.KaloreSession?.history(v.journeyHistory) || [];
+    s.preferences = {
+      motion: obj(v.preferences).motion !== false,
+      writingFont: [18, 20, 22].includes(obj(v.preferences).writingFont) ? v.preferences.writingFont : 20,
+    };
     return s;
   }
   function shuffle(values, random = Math.random) {

@@ -31,6 +31,9 @@
     focusNote: "",
     focusTimer: { total: 1500, seconds: 1500, running: false, end: 0 },
     simHistory: [],
+    journey: null,
+    journeyHistory: [],
+    preferences: { motion: true, writingFont: 20 },
     library: { favorites: {}, read: {} },
     officialHistory: [],
     course: { track: "mat", done: {}, energy: { date: "", value: 5 } },
@@ -63,21 +66,30 @@
     currentQuiz = [],
     quizBlock = { answered: 0, correct: 0 },
     trailSession = null,
-    recommendationFrame = 0;
+    recommendationFrame = 0,
+    experience = null;
+  document.body.dataset.view = "hoje";
+  try { const motion = localStorage.getItem("kalore-motion"); if (motion === "true" || motion === "false") s.preferences.motion = motion === "true"; } catch (_) {}
   try { const theme = localStorage.getItem("kalore-color-theme"); if (theme === "dark" || theme === "light") s.theme = theme; } catch (_) {}
   function save() {
     scheduleRecommendation();
     try {
       localStorage.setItem(KEY, JSON.stringify(s));
       localStorage.setItem("kalore-color-theme", s.theme);
+      const status = $("#draftStatus");
+      if (status) { if (status.textContent !== "Salvo neste navegador") status.textContent = "Salvo neste navegador"; status.dataset.saved = "true"; }
+      return true;
     } catch (e) {
+      const status = $("#draftStatus");
+      if (status) { status.textContent = "Sem salvar · exporte uma cópia"; status.dataset.saved = "false"; }
       toast(
         "Não consegui salvar neste navegador. Exporte seus dados para não perder o progresso.",
       );
+      return false;
     }
   }
   function scheduleRecommendation() {
-    if (!recommendationFrame) recommendationFrame = requestAnimationFrame(() => { recommendationFrame = 0; renderRecommendation(); });
+    if (!recommendationFrame) recommendationFrame = requestAnimationFrame(() => { recommendationFrame = 0; renderRecommendation(); experience?.render(); });
   }
   function renderRecommendation() {
     const title = $("#recommendationTitle");
@@ -94,8 +106,7 @@
       activateTab(r.tab);
     };
     button.onclick = open;
-    const hero = $("#heroNextSession");
-    if (hero) { hero.textContent = r.action + " ↗"; hero.onclick = open; }
+
   }
   window.addEventListener("kalore:progress", scheduleRecommendation);
   function dayKey(d = new Date()) {
@@ -167,6 +178,8 @@
     const previousView = document.body.dataset.view;
     if (!$$(".tab").some((t) => t.id === id)) id = "hoje";
     document.body.dataset.view = id;
+    const label = $$(".nav-tabs [data-tab]").find((b) => b.dataset.tab === id)?.querySelector(".nav-text");
+    if ($("#workspaceTitle")) $("#workspaceTitle").textContent = label?.textContent || "Meu espaço";
     $$(".nav-tabs button").forEach((b) =>
       b.classList.toggle("on", b.dataset.tab === id),
     );
@@ -887,7 +900,7 @@
         dayKey(d) +
         " · " +
         n +
-        ' atividade(s)"></i>';
+        ' atividade(s)" role="img" aria-label="' + dayKey(d) + ' · ' + n + ' atividades"></i>';
     }
     box.innerHTML = out;
   }
@@ -1786,21 +1799,14 @@
       );
     });
   }
-  function answerQuestion(card, j) {
-    if (card.classList.contains("done")) return;
-    const q = questions.find((x) => x.id === card.dataset.q);
-    card.classList.add("done");
-    $$(".option", card).forEach((b, i) => {
-      if (i === q.c) b.classList.add("ok");
-      else if (i === j) b.classList.add("no");
-      b.disabled = true;
-    });
-    window.KaloreMotion?.feedback(card, j === q.c, j === q.c ? "Resposta certa. A explicação ajuda a guardar o raciocínio." : "Esta questão entrou no seu caderno de erros para a próxima revisão.");
+  function recordPracticeAnswer(q, j, resolveError = false) {
     s.answers = (s.answers || 0) + 1;
-    quizBlock.answered++;
     if (j === q.c) {
       s.correct = (s.correct || 0) + 1;
-      quizBlock.correct++;
+      if (resolveError && s.errors.some((e) => e.qid === q.id && !e.reviewed)) {
+        s.errors.filter((e) => e.qid === q.id && !e.reviewed).forEach((e) => e.reviewed = true);
+        markDailyStep("erros"); renderErrors();
+      }
       addXP(5, "Resposta correta");
     } else {
       if (!s.errors.some((e) => e.qid === q.id && !e.reviewed))
@@ -1818,6 +1824,20 @@
     save();
     renderMetrics();
     renderAreas();
+  }
+  function answerQuestion(card, j) {
+    if (card.classList.contains("done")) return;
+    const q = questions.find((x) => x.id === card.dataset.q);
+    card.classList.add("done");
+    $$(".option", card).forEach((b, i) => {
+      if (i === q.c) b.classList.add("ok");
+      else if (i === j) b.classList.add("no");
+      b.disabled = true;
+    });
+    window.KaloreMotion?.feedback(card, j === q.c, j === q.c ? "Resposta certa. A explicação ajuda a guardar o raciocínio." : "Esta questão entrou no seu caderno de erros para a próxima revisão.");
+    quizBlock.answered++;
+    if (j === q.c) quizBlock.correct++;
+    recordPracticeAnswer(q, j);
     $("#quizScore").textContent = quizBlock.answered
       ? quizBlock.correct +
         "/" +
@@ -2742,18 +2762,15 @@
     }
   });
 
-  renderMetrics();
-  renderAreas();
+  // Other panels render once where their handlers are initialized.
   renderBadges();
-  renderGreeting();
   renderTrails();
-  renderPlan();
-  renderEssayHistory();
-  renderErrors();
-  renderFlash();
-  renderLibrary();
-  renderChecks();
   renderRecommendation();
+  experience = KaloreExperience.init({ getState: () => s, save, toast, escapeHTML, questions, cards,
+    recordAnswer: (q, j) => recordPracticeAnswer(q, j, true),
+    reviewFlash: (id, grade) => { setFlashReview(id, grade); renderFlash(); renderBadges(); markDailyStep("flashcards"); },
+    markDailyStep,
+  });
   window.KaloreMotion?.init(document.querySelector("main"));
   window.addEventListener("load", () =>
     requestAnimationFrame(() => {

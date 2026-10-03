@@ -1,5 +1,7 @@
 # Kaloré Glow — Radar ENEM + ENEM Hub
 
+A evolução posterior, com prática guiada, modo escrita e novas verificações, está em [EXPERIENCIA.md](./EXPERIENCIA.md). As medições abaixo registram a primeira rodada de redesign.
+
 A identidade compartilha a mesma linguagem entre investigação de temas e prática. A home passa a organizar o estudo pela próxima ação, com bento grid, superfícies arredondadas, menus translúcidos e feedback contextual.
 
 ## 1. Moodboard técnico

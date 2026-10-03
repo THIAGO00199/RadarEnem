@@ -51,6 +51,6 @@ const server = http.createServer(async (req, res) => {
     if (matches.length) summary.push({ version, page: p, lcpMs: median(matches.map((x) => x.lcpMs)), cls: median(matches.map((x) => x.cls)), blockingMs: median(matches.map((x) => x.blockingMs)), transferBytes: median(matches.map((x) => x.transferBytes)) });
   }
   const report = { checkedAt: new Date().toISOString(), method: "Chromium headless, viewport 390×844, CPU 4×, latência 150 ms, download 1,6 Mbps, gzip, cache frio, service worker bloqueado, 3 execuções por página; mediana. Servidor local. Não é medição de usuários reais nem prova de desempenho do CDN.", summary, samples };
-  await fs.writeFile(path.resolve(__dirname, "../portable/public/data/glow-performance-audit.json"), JSON.stringify(report,null,2) + "\n");
+  await fs.writeFile(path.resolve(__dirname, "../portable/public/data/" + (process.env.PERF_REPORT || "glow-performance-audit.json")), JSON.stringify(report,null,2) + "\n");
   console.table(summary);
 })().catch((e) => { console.error(e); server.close(); process.exit(1); });

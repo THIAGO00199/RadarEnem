@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="./hub/study.css" />
     <link rel="stylesheet" href="./shared/glow.css" />
     <link rel="stylesheet" href="./hub/glow.css" />
+    <link rel="stylesheet" href="./hub/experience.css" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Kaloré ENEM Hub 2026" />
     <meta
@@ -95,6 +96,7 @@
             <div>
               <button class="btn" id="exportData">Exportar progresso</button
               ><button class="btn" id="importData">Importar backup</button>
+              <label class="motion-option"><input type="checkbox" id="motionPreference" checked /> Animações suaves</label>
             </div>
           </details>
         </div>
@@ -115,12 +117,12 @@
           <div class="hero-sticker" aria-hidden="true">todo avanço conta <svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7z"/></svg></div>
           <h1>Seu ritmo.<br /><em>Seu futuro.</em></h1>
           <p class="hero-copy">
-            Uma lição, uma revisão, uma conquista.
-            Seu próximo passo está aqui.
+            Seu treino, seus materiais, suas ideias.
+            Menos distrações. Mais um passo na direção do ENEM.
           </p>
           <div class="hero-actions">
           <button class="btn primary" id="heroNextSession">
-              Continuar aprendendo <span>↗</span></button
+              Montar minha sessão <span>↗</span></button
             ><button class="btn" data-go="provas-oficiais">Treinar prova oficial</button>
             <button class="btn" data-go="biblioteca">Baixar PDFs</button>
           </div>
@@ -187,6 +189,7 @@
       </section>
       <nav class="nav-tabs" aria-label="Ferramentas do Hub"><span class="nav-label">MEU ESPAÇO</span><button class="on" data-tab="hoje"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10H3z"/><path d="M9 20v-7h6v7"/></svg><span class="nav-text">Hoje</span></button><button data-tab="plano"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 11h18M8 15h2M14 15h2"/></svg><span class="nav-text">Meu plano</span></button><button data-tab="foco"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></svg><span class="nav-text">Modo foco</span></button><span class="nav-label">PRATICAR</span><button data-tab="trilhas"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4v16M12 4v16M19 4v16"/><path d="M2 8h6M9 14h6M16 10h6"/></svg><span class="nav-text">Trilhas</span></button><button data-tab="questoes"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="m7 12 3 3 7-7"/></svg><span class="nav-text">Questões</span></button><button data-tab="simulado"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg><span class="nav-text">Simulado</span></button><button data-tab="provas-oficiais"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6z"/><path d="m8 12 3 3 5-6"/></svg><span class="nav-text">Provas oficiais</span></button><button data-tab="redacao"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 3 5 5-12 12-6 1 1-6zM14 5l5 5"/></svg><span class="nav-text">Redação</span></button><button data-tab="flashcards"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="14" height="14" rx="3"/><path d="M17 3H6a3 3 0 0 0-3 3v11"/></svg><span class="nav-text">Flashcards</span></button><button data-tab="erros"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11a9 9 0 1 1 2.5 7M3 4v7h7"/><path d="M12 7v5l3 2"/></svg><span class="nav-text">Caderno de erros</span> <span id="errorCount">0</span></button><span class="nav-label">EXPLORAR</span><button data-tab="biblioteca"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H5v20h14V7zM14 2v6h5M8 12h8M8 16h5"/></svg><span class="nav-text">Biblioteca de PDFs</span></button><button data-tab="revisao"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v16M3 4c3-1 6-1 9 1 3-2 6-2 9-1v15c-3-1-6-1-9 1-3-2-6-2-9-1z"/></svg><span class="nav-text">Guia de revisão</span></button><button data-tab="prova"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 11h18M8 15h2M14 15h2"/></svg><span class="nav-text">Dia da prova</span></button><a class="nav-radar" href="./"><span class="glow-icon-box lime"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7z"/></svg></span><b>Ideias para sua redação</b><small>Explore os temas do Radar <svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></small></a></nav>
 
+      <div class="workspace-heading"><button class="btn" data-go="hoje">← Meu espaço</button><span id="workspaceTitle">Hoje</span><span class="workspace-hint">Um passo de cada vez.</span></div>
       <section class="tab on" id="hoje">
         <div class="section-head">
           <div>
@@ -197,6 +200,11 @@
             Defina uma meta de curso ou nota para deixar seu estudo mais
             concreto.
           </p>
+        </div>
+        <div class="study-launch panel">
+          <div class="study-launch-art" aria-hidden="true"><span>✦</span><i></i><i></i><b>01 →</b></div>
+          <div><span class="eyebrow">UM TREINO. VÁRIOS AVANÇOS.</span><h3>Só você e o próximo passo.</h3><p id="sessionHomeStatus">Questões + memória ativa. Uma atividade por vez.</p></div>
+          <button class="btn primary" id="openStudyRoom">Escolher meu treino →</button>
         </div>
         <div class="grid2 today-bento"><article class="panel next-session"><div class="next-top"><span class="glow-pill"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7z"/></svg> FEITO PARA O SEU MOMENTO</span><span class="session-time" id="recommendationTime">10 min</span></div><h3 id="recommendationTitle">Uma lição. Seu primeiro avanço.</h3><p id="recommendationWhy">O próximo passo acompanha o seu progresso.</p><button class="btn primary" id="recommendationCTA">Começar minha próxima sessão <svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button><span class="recommendation-note">Seu progresso decide. Você escolhe o ritmo.</span><div class="session-orbit" aria-hidden="true"><span>✦</span></div></article><article class="panel progress-panel">
             <span class="eyebrow">SEU MAPA</span>
@@ -221,16 +229,12 @@
               ><button data-go="questoes"><span class="glow-icon-box"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="m7 12 3 3 7-7"/></svg></span><span>Fazer questões</span><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button
               ><button data-go="flashcards"><span class="glow-icon-box"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="14" height="14" rx="3"/><path d="M17 3H6a3 3 0 0 0-3 3v11"/></svg></span><span>Revisar cartões</span><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
             </div>
-          </article><article class="panel activity-panel">
-            <span class="eyebrow">ATIVIDADE</span>
-            <h3>Últimos 21 dias</h3>
-            <div
-              class="heatmap"
-              id="heatmap"
-              aria-label="Mapa de atividade"
-            ></div>
-            <div class="achievement-list" id="badges"></div>
+          </article><article class="panel weekly-panel">
+            <div class="weekly-top"><span class="eyebrow">SUA SEMANA</span><label><span class="sr-only">Meta de dias de estudo por semana</span><select id="weekGoal"><option value="3">3 dias / semana</option><option value="5" selected>5 dias / semana</option><option value="7">7 dias / semana</option></select></label></div>
+            <div class="weekly-score"><div class="weekly-ring" id="weeklyRing"><span><b id="weekDays">0</b>/<span id="weekTarget">5</span></span></div><div><h3>Constância possível.</h3><p id="weekDescription">Todo avanço conta.</p></div></div>
+            <ol class="weekly-chart" id="weeklyChart" aria-label="Atividades registradas de segunda a domingo"></ol><p class="weekly-caption" id="weekActions">0 ações nesta semana</p>
           </article></div>
+        <div class="progress-journal grid2"><article class="panel activity-panel"><div class="journal-top"><span class="eyebrow">SEU CAMINHO</span><span>21 dias</span></div><h3>Cada dia deixa uma marca.</h3><div class="heatmap" id="heatmap" aria-label="Mapa de atividade"></div><div class="achievement-list" id="badges"></div></article><article class="panel"><span class="eyebrow">SESSÕES CONCLUÍDAS</span><h3>O que você já construiu.</h3><div id="practiceHistory"></div></article></div>
         <article class="panel sprint" id="dailySprint">
           <div>
             <span class="eyebrow">ROTA RÁPIDA · 10 MIN</span>
@@ -416,6 +420,7 @@
             humano e não produz nota oficial do ENEM.
           </p>
         </div>
+        <div class="writing-tools"><span><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 3 5 5-12 12-6 1 1-6zM14 5l5 5"/></svg>Seu texto merece atenção.</span><button class="btn primary" id="enterWritingMode">Abrir modo escrita ↗</button></div>
         <details class="panel blueprint">
           <summary>
             Antes de escrever: organize sua argumentação <span>＋</span>
@@ -486,7 +491,7 @@
             <div class="editor-meta">
               <span><b id="wordCount">0</b> palavras</span
               ><span><b id="paraCount">0</b> parágrafos</span
-              ><span>rascunho salvo automaticamente</span>
+              ><span id="draftStatus" role="status" data-saved="true">Salvo neste navegador</span>
             </div>
             <div class="editor-actions">
               <button class="btn primary" id="analyzeEssay">Diagnosticar</button
@@ -923,14 +928,25 @@
         </div>
       </div>
     </div>
+    <dialog id="studyRoom" class="study-room" aria-labelledby="sessionTitle" aria-describedby="sessionSubtitle">
+      <div class="session-room-top"><span class="session-brand"><span aria-hidden="true">✦</span> SEU MOMENTO DE ESTUDO</span><button class="icon-btn" id="closeStudyRoom" aria-label="Pausar e fechar sessão">×</button></div>
+      <div class="session-room-heading"><h2 id="sessionTitle">Um treino que cabe no seu dia.</h2><p id="sessionSubtitle">Escolha seu tempo.</p><progress id="sessionProgress" max="1" value="0" aria-label="Atividades concluídas" hidden></progress></div>
+      <div id="sessionContent" class="session-content"></div><p class="session-keyboard">1–5 para responder · Esc para pausar · Você pode retomar depois</p>
+    </dialog>
+    <dialog id="writingRoom" class="writing-room" aria-labelledby="writingTitle">
+      <div class="writing-room-top"><div><span class="eyebrow">MODO ESCRITA</span><h2 id="writingTitle">Uma ideia por vez.</h2></div><div class="writing-room-actions"><div class="writing-fonts" role="group" aria-label="Tamanho da letra"><button class="btn" data-writing-font="18" aria-pressed="false" aria-label="Letra menor">A</button><button class="btn" data-writing-font="20" aria-pressed="true" aria-label="Letra média">A</button><button class="btn" data-writing-font="22" aria-pressed="false" aria-label="Letra maior">A</button></div><button class="btn" id="writerSave">Salvar versão</button><button class="btn" id="closeWritingRoom">Sair do foco ×</button></div></div>
+      <div id="writerMount"></div><p id="writingVersionStatus" class="writing-version-status" role="status"></p><p class="writing-shortcut">Ctrl / ⌘ + S para salvar uma versão · Esc para voltar · Diagnosticar abre o coach</p>
+    </dialog>
     <dialog id="quickSearch" class="quick-search" aria-labelledby="quickSearchTitle"><div class="quick-search-head"><h2 id="quickSearchTitle">O que você quer estudar?</h2><button class="icon-btn" id="closeQuickSearch" aria-label="Fechar busca">×</button></div><label class="field"><span>Ferramenta, assunto ou PDF</span><input type="search" id="quickSearchInput" placeholder="Ex.: redação, prova 2025, biologia..." autocomplete="off" /></label><div id="quickSearchResults" class="quick-search-results"></div><p class="muted">Tab para navegar · Enter para abrir · Esc para fechar</p></dialog>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./hub/session-model.js" defer></script>
     <script src="./hub/core.js" defer></script>
     <script src="./hub/content.js" defer></script>
     <script src="./hub/library-data.js" defer></script>
     <script src="./hub/study.js" defer></script>
     <script src="./shared/motion.js" defer></script>
     <script src="./shared/recommend.js" defer></script>
+    <script src="./hub/experience.js" defer></script>
     <script src="./hub/app.js" defer></script>
   </body>
 </html>

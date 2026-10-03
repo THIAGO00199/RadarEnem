@@ -1,0 +1,48 @@
+import assert from "node:assert/strict";
+import fs from "node:fs/promises";
+import vm from "node:vm";
+const scope = { Intl, Date, structuredClone, console };
+vm.createContext(scope);
+vm.runInContext(await fs.readFile("portable/public/hub/session-model.js", "utf8"), scope);
+vm.runInContext(await fs.readFile("portable/public/hub/core.js", "utf8"), scope);
+vm.runInContext(await fs.readFile("portable/public/hub/content.js", "utf8"), scope);
+const model = scope.KaloreSession;
+const questions = scope.KaloreContent.questions;
+const cards = Array.from({ length: 12 }, (_, i) => ({ id: "f" + i, a: ["mat", "nat", "hum", "ling"][i % 4] }));
+const now = new Date("2026-10-04T01:30:00Z"); // Saturday in São Paulo, Sunday in UTC.
+const state = { profile: { d_mat: 3 }, area: {}, errors: [{ qid: questions.find((q) => q.a === "mat").id, reviewed: false }], flash: {}, activity: { "2026-09-28": 2, "2026-10-03": 3, "2026-10-04": 99 } };
+const original = JSON.stringify(state);
+for (const minutes of [10, 20, 30]) {
+  const s = model.create(state, { minutes, area: "auto" }, questions, cards, now, () => .3);
+  assert.equal(s.area, "mat");
+  assert.equal(s.items[0].id, state.errors[0].qid, "An outstanding error in the selected area is practiced first");
+  assert.equal(new Set(s.items.map((x) => x.kind + x.id)).size, s.items.length);
+  assert.equal(s.items.filter((x) => x.kind === "question").length, minutes === 10 ? 3 : minutes === 20 ? 6 : 8);
+  assert.equal(s.items.filter((x) => x.kind === "flash").length, minutes === 10 ? 2 : 3);
+}
+assert.equal(JSON.stringify(state), original, "Planning must not mutate learner state");
+const week = model.week(state, now);
+assert.equal(week.days[0].key, "2026-09-28");
+assert.equal(week.days[5].today, true);
+assert.equal(week.days[6].future, true);
+assert.equal(week.actions, 5, "Future activity never counts toward the weekly goal");
+assert.equal(week.active, 2);
+const sanitized = model.sanitize({ id: "session-1", index: 999, seconds: Infinity, area: "unknown", minutes: -1, items: [{ kind: "question", id: "q1", choice: null }, { kind: "flash", id: "f1", grade: "easy" }, { kind: "flash", id: "f1", grade: "easy" }, { kind: "question", id: "bad<id", choice: 2 }] });
+assert.equal(sanitized.index, 0, "A backup cannot skip an unanswered step");
+assert.equal(sanitized.items.length, 2);
+assert.equal(sanitized.seconds, 0);
+assert.equal(sanitized.area, "all");
+assert.equal(sanitized.minutes, 10);
+assert.equal(model.sanitize(null), null);
+assert.equal(model.sanitize({ id: "bad<id", items: [] }), null);
+const resumed = model.sanitize({ ...sanitized, items: [{ kind: "question", id: "q1", choice: 2 }, { kind: "flash", id: "f1", grade: "good" }], index: 2 });
+assert.equal(resumed.index, 2);
+assert.equal(model.summary(resumed, [{ id: "q1", c: 2 }]).correct, 1);
+const merged = scope.KaloreCore.mergeState({}, { journey: resumed, journeyHistory: [{ id: "session-1", date: now.toISOString(), questions: 2, correct: 99 }, { id: "session-1", date: now.toISOString() }], preferences: { writingFont: 99, motion: false }, profile: { weeklyGoal: 5 } });
+assert.equal(merged.journey.index, 2);
+assert.equal(merged.journeyHistory.length, 1);
+assert.equal(merged.journeyHistory[0].correct, 2);
+assert.equal(merged.preferences.writingFont, 20);
+assert.equal(merged.preferences.motion, false);
+assert.equal(merged.profile.weeklyGoal, 5);
+console.log("Sessions: duration, area priorities, distinct items, error-first practice, São Paulo weeks, future dates, resume, corrupt backups, history and preferences passed.");

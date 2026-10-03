@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-01T22:49:46.620Z",
-  "engine": "axe-core/playwright 4.11.4",
-  "scope": "13 seções do Hub nos dois temas, flashcards virados e busca, sete seções do Radar nos dois temas e cinco páginas de materiais. Regras automatizadas WCAG 2 A/AA, 2.1 A/AA e 2.2 AA. Não constitui certificação nem substitui testes com tecnologias assistivas.",
+  "checkedAt": "2026-10-03T03:52:35.814Z",
+  "engine": "axe-core/playwright 4.13.0",
+  "scope": "13 seções do Hub nos dois temas, flashcards virados, busca, sete estados de prática guiada e escrita; sete seções do Radar, comparação e anotações nos dois temas; cinco páginas de materiais. Regras automatizadas WCAG 2 A/AA, 2.1 A/AA e 2.2 AA. Não constitui certificação nem substitui testes com tecnologias assistivas.",
   "results": [
     {
       "name": "Hub/hoje/dark",
@@ -61,6 +61,34 @@
     },
     {
       "name": "Hub/busca/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/sessão/configuração/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/sessão/questão/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/sessão/feedback/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/sessão/flashcard/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/sessão/flashcard-resposta/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/sessão/resultado/dark",
+      "violations": []
+    },
+    {
+      "name": "Hub/escrita/dark",
       "violations": []
     },
     {
@@ -124,6 +152,34 @@
       "violations": []
     },
     {
+      "name": "Hub/sessão/configuração/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/sessão/questão/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/sessão/feedback/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/sessão/flashcard/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/sessão/flashcard-resposta/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/sessão/resultado/light",
+      "violations": []
+    },
+    {
+      "name": "Hub/escrita/light",
+      "violations": []
+    },
+    {
       "name": "Radar/Radar/dark",
       "violations": []
     },
@@ -152,6 +208,14 @@
       "violations": []
     },
     {
+      "name": "Radar/comparação/dark",
+      "violations": []
+    },
+    {
+      "name": "Radar/anotações/dark",
+      "violations": []
+    },
+    {
       "name": "Radar/Radar/light",
       "violations": []
     },
@@ -177,6 +241,14 @@
     },
     {
       "name": "Radar/Método/light",
+      "violations": []
+    },
+    {
+      "name": "Radar/comparação/light",
+      "violations": []
+    },
+    {
+      "name": "Radar/anotações/light",
       "violations": []
     },
     {

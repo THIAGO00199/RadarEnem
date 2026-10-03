@@ -11,7 +11,7 @@ root = Path(__file__).resolve().parent.parent / "docs"
 base = "https://thiago00199.github.io/RadarEnem/"
 version = os.environ.get("GITHUB_SHA", "glow")
 assets = re.findall(r'(?:src|href)="[.]/(assets/[^"]+)"', (root / "index.html").read_text())
-paths = ["index.html", "estudar.html", "hub/glow.css", "shared/tokens.css", "shared/motion.js", "shared/fonts/manrope-latin-variable.woff2", "materiais/pdfs/redacao.pdf"] + assets
+paths = ["index.html", "estudar.html", "sw.js", "shared/recommend.js", "hub/library-data.js", "hub/glow.css", "hub/experience.css", "hub/experience.js", "hub/session-model.js", "hub/core.js", "hub/app.js", "shared/tokens.css", "shared/motion.js", "shared/fonts/manrope-latin-variable.woff2", "materiais/pdfs/redacao.pdf"] + assets
 def verify(name):
     expected = (root / name).read_bytes()
     resource = "" if name == "index.html" else name
