@@ -2352,7 +2352,7 @@
   };
   window.addEventListener("storage", (e) => { if (e.key === "kalore-color-theme" && (e.newValue === "dark" || e.newValue === "light")) { s.theme = e.newValue; renderTheme(); } });
   renderTheme();
-  if ("serviceWorker" in navigator) {
+  if ("serviceWorker" in navigator && !window.KaloreOfflineApp) {
     window.addEventListener("load", () =>
       navigator.serviceWorker.register("./sw.js").catch(() => {}),
     );

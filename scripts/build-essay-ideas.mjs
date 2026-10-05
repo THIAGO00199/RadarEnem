@@ -1,0 +1,12 @@
+import ts from 'typescript';
+import { writeFile } from 'node:fs/promises';
+const source=await import('node:fs/promises').then(fs=>fs.readFile('lib/essay-ideas-data.ts','utf8'));
+const js=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+const module={exports:{}};
+const radarSource=await import('node:fs/promises').then(fs=>fs.readFile('lib/radar-data.ts','utf8'));
+const radarJs=ts.transpileModule(radarSource,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+const radarModule={exports:{}};new Function('exports','module',radarJs)(radarModule.exports,radarModule);
+new Function('exports','module','require',js)(module.exports,module,(name)=>name==='./radar-data'?radarModule.exports:require(name));
+const topicData=module.exports.essayIdeas;
+await writeFile('portable/public/shared/essay-ideas-data.js','/* Generated from the shared, reviewed editorial topic bank. */\nglobalThis.KaloreEssayIdeasData='+JSON.stringify({version:1,reviewedAt:'2026-10-05',topics:topicData})+';\n');
+console.log('Essay ideas: generated',topicData.length,'topic records and',topicData.reduce((sum,topic)=>sum+topic.routes.length,0),'study routes.');

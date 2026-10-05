@@ -17,12 +17,22 @@
 
 [Detalhes, arquitetura, limites e validação da evolução](./CLAREZA.md).
 
+## Laboratório de redação e aplicativo offline · versão 4.2
+
+- **17 temas de treino**, alinhados ao Radar, com três recortes por tema e 34 caminhos autorais de argumentação.
+- Cada caminho traz tese, dois argumentos com explicação e exemplo hipotético, perguntas para desenvolver a análise, quatro partes de uma proposta de intervenção e pontos para revisar.
+- No Radar e no Hub, o preenchimento automático só usa campos vazios. A exportação do tema gera um guia Markdown próprio.
+- [Baixe o ENEM Hub offline](https://thiago00199.github.io/RadarEnem/estudar-offline.html): um arquivo HTML de menos de 1 MB abre pela primeira vez sem conexão e inclui os quatro PDFs Kaloré. O progresso fica no navegador do aparelho.
+- No app offline, biblioteca autoral, questões, simulados, flashcards, escrita, foco e backups continuam locais. As fontes e provas oficiais hospedadas na internet abrem quando voltar a conexão.
+- Os temas são ideias de estudo, não probabilidades nem previsões da prova.
+
 ## Nova experiência de estudo · outubro de 2026
 
 - Sessões guiadas de 10, 20 ou 30 minutos estimados: questões autorais e flashcards, uma atividade por vez, com respostas salvas e retomada depois de fechar a página.
 - Erros pendentes da área entram primeiro no treino; uma resposta correta durante a sessão encerra essa revisão. Os cartões usam o agendamento existente.
 - Metas de 3, 5 ou 7 dias de estudo por semana, gráfico de ações reais e histórico de sessões concluídas. A semana segue o calendário de São Paulo.
 - Modo escrita com o mesmo rascunho, fonte ajustável, salvamento de versões por Ctrl/⌘+S e indicação de falhas de armazenamento. Nenhum editor duplicado.
+- A instalação PWA continua disponível pelo site. Ela baixa os arquivos após a visita conectada; para abrir de primeira sem rede, use o arquivo independente abaixo.
 - Radar com comparação entre dois temas, exportação da comparação e anotações de repertório por tema, incluídas no backup e no plano exportado.
 - Entrada mais direta, telas de ferramentas com espaço próprio, transições coordenadas, resposta ao toque e celebrações breves. Preferência de animações compartilhada entre os produtos.
 - Validação automática de funções, dados e acessibilidade em cada atualização. Publicação conferida contra os arquivos da versão validada.
@@ -58,7 +68,7 @@ A conferência direta encontrou 24 PDFs externos disponíveis. As 40 URLs do Ine
 - Planejamento semanal que respeita a quantidade de horas escolhida; rota diária que avança quando suas atividades são realizadas.
 - Pomodoro com recuperação de tempo e anotações após recarregar a página.
 - Backup compatível com versões 3, 4 e 5, validação de dados e preservação do progresso existente.
-- Disponibilidade offline de ambos os aplicativos após uma visita com internet. Os materiais externos da biblioteca exigem conexão.
+- O site instalável fica disponível offline após carregar seus recursos. O [app de um arquivo só](https://thiago00199.github.io/RadarEnem/estudar-offline.html) funciona desde a primeira abertura e leva quatro PDFs locais; as fontes e provas oficiais externas ainda exigem conexão.
 
 Questões e propostas são autorais e servem para prática. Os cadernos oficiais estão na biblioteca do Inep. O Radar mostra prioridade relativa de estudo; seus percentuais não são probabilidades de um tema cair.
 

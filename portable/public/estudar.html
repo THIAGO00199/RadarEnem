@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="./hub/glow.css" />
     <link rel="stylesheet" href="./hub/experience.css" />
     <link rel="stylesheet" href="./hub/insights.css" />
+    <link rel="stylesheet" href="./shared/essay-ideas.css" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Kaloré ENEM Hub 2026" />
     <meta
@@ -163,6 +164,14 @@
         <button class="btn tiny primary" id="installBtn">Instalar</button
         ><button class="btn tiny" id="dismissInstall">Agora não</button>
       </div>
+      <article class="offline-kit panel" aria-labelledby="offlineKitTitle">
+        <div><span class="eyebrow">PARA ESTUDAR MESMO SEM SINAL</span>
+          <h2 id="offlineKitTitle">Leve o Hub inteiro no seu aparelho.</h2>
+          <p>Baixe um único arquivo com as ferramentas de estudo, seus roteiros, os 17 temas e os quatro PDFs autorais. Abra o arquivo no navegador: ele já funciona sem internet.</p>
+          <small>O aplicativo salva progresso no navegador do aparelho. Fontes e provas oficiais online continuam disponíveis quando a conexão voltar.</small>
+        </div>
+        <a class="btn primary" href="./estudar-offline.html" download="kalore-enem-hub-offline.html" data-download-offline>Baixar aplicativo offline ↓</a>
+      </article>
       <section class="metric-grid" aria-label="Seu progresso">
         <div class="metric glow-card"><span class="metric-icon"><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2c1 5-4 5-2 10 3-1 4-4 4-4s5 5 5 9a8 8 0 1 1-16 0c0-4 2-6 4-8 0 3 1 4 1 4S8 6 13 2z"/></svg></span>
           <b id="streak">0</b><small>dias de sequência</small>
@@ -430,6 +439,7 @@
             humano e não produz nota oficial do ENEM.
           </p>
         </div>
+        <div id="essay-ideas-hub"></div>
         <div class="writing-tools"><span><svg class="glow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 3 5 5-12 12-6 1 1-6zM14 5l5 5"/></svg>Seu texto merece atenção.</span><button class="btn primary" id="enterWritingMode">Abrir modo escrita ↗</button></div>
         <details class="panel blueprint">
           <summary>
@@ -969,6 +979,9 @@
     <script src="./shared/recommend.js" defer></script>
     <script src="./hub/experience.js" defer></script>
     <script src="./shared/brief.js" defer></script>
+    <script src="./shared/essay-ideas-data.js" defer></script>
+    <script src="./shared/essay-ideas-model.js" defer></script>
+    <script src="./shared/essay-ideas-ui.js" defer></script>
     <script src="./hub/insights.js" defer></script>
     <script src="./hub/app.js" defer></script>
   </body>

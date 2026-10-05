@@ -1,7 +1,7 @@
 name: Product quality
 on:
   push:
-    branches: [main, experience/orbit, experience/clarity]
+    branches: [main, experience/orbit, experience/clarity, experience/ideas-offline]
   pull_request:
   workflow_dispatch:
 permissions:
@@ -35,6 +35,9 @@ jobs:
           node scripts/check-recommend.mjs
           npm run check:session
           npm run check:insights
+          npm run check:essay
+          node --check portable/public/shared/essay-ideas-model.js
+          node --check portable/public/shared/essay-ideas-ui.js
           node --check portable/public/hub/insights.js
       - name: Build the published products
         id: build
@@ -42,7 +45,9 @@ jobs:
           npm run build:pages
           npm run check:hub
       - name: Existing flows and offline functionality
-        run: npm run check:ui
+        run: |
+          npm run check:ui
+          npm run check:offline-app
       - name: Guided practice, writing and Radar comparison
         if: always() && steps.build.outcome == 'success'
         run: npm run check:experience

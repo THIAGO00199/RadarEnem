@@ -1,5 +1,19 @@
 # Radar ENEM + ENEM Hub · clareza e prática
 
+## Redação e aplicativo offline · 5 de outubro de 2026
+
+O **Laboratório de ideias** é uma base editorial compartilhada pelo Radar, pelo Hub e pelo app offline. Ele usa os mesmos 17 IDs de tema do Radar. Cada eixo possui três recortes de treino, dois caminhos distintos e, em cada caminho, uma tese, dois argumentos estruturados (afirmação, explicação, exemplo hipotético e pergunta de ligação), quatro partes de intervenção, conceitos para estudar, alertas e perguntas de revisão. Uma leitura curada do Inep acompanha o tema, para consulta quando houver conexão. Nenhuma pontuação ou tema previsto é atribuído.
+
+No Radar, o banco se abre dentro do roteiro em três etapas. No Hub, fica no laboratório de redação ao lado do editor. O estudante pode escolher um campo ou preencher os vazios do caminho inteiro. Campos ocupados nunca são substituídos; se não houver espaços vazios, nada muda. Trocar o tema requer uma ação explícita e mantém o rascunho. O guia completo do tema pode ser baixado em Markdown.
+
+### Arquivo autônomo
+
+`estudar-offline.html` empacota HTML, nove folhas de estilo, dezesseis scripts, a fonte local, os dados e os quatro PDFs autorais em um único arquivo de aproximadamente 874 KiB. O app abre por `file://`, funciona desde a primeira execução sem visitar o site, conserva dados no armazenamento do navegador para aquele arquivo e aparelho, e não faz requisições HTTP. Cronômetro, biblioteca dos cadernos Kaloré, temas, treino, escrita, histórico e backups usam recursos locais. Links externos mostram um aviso; cadernos oficiais hospedados pelo Inep e outros materiais online ficam disponíveis quando há conexão.
+
+O service worker da versão publicada passou a precachear 51 arquivos. Essa instalação continua sendo uma alternativa após uma visita com internet; o arquivo autônomo é a cópia que funciona na primeira abertura totalmente offline. Os dois modos não sincronizam seus dados entre si.
+
+Verificação desta versão: conteúdo e alinhamento automático dos 17 temas, 34 rotas, 68 argumentos, 34 intervenções, tipagem, busca, navegação nos dois produtos, preservação de rascunho e campos, auditoria automatizada da interface, abertura direta de `file://`, salvamento após recarregar, download dos quatro PDFs como arquivos válidos, bloqueio de navegação externa, zero solicitações de rede e largura móvel de 360 px.
+
 Esta evolução acrescenta direção ao estudo: registrar respostas, escolher o assunto a revisar e transformar uma ideia do Radar em um roteiro de redação. A identidade compartilhada continua em grafite, lima, lilás e ciano, com tema claro em gelo e creme.
 
 ## Mudanças aplicadas

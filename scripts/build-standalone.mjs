@@ -1,0 +1,32 @@
+/* Produce a first-open, no-server/no-network study app with its own PDFs. */
+import {readFile,writeFile,stat} from 'node:fs/promises';
+const root='docs/';
+const files=['redacao','matematica','revisao','planejamento'];
+const pdfs={};
+for(const name of files){const bytes=await readFile(root+'materiais/pdfs/'+name+'.pdf');pdfs['kalore-'+name]=`data:application/pdf;base64,${bytes.toString('base64')}`;}
+const cssFiles=[],jsFiles=[];
+let html=await readFile(root+'estudar.html','utf8');
+const scriptPattern=/<script\b(?=[^>]*\bsrc=["']\.\/([^"']+\.js)["'])[^>]*><\/script\s*>/gis;
+for(const match of html.matchAll(scriptPattern)){if(match[1]==='sw.js')continue;jsFiles.push({tag:match[0],path:match[1]});}
+const stylePattern=/<link\b(?=[^>]*\brel=["']stylesheet["'])[^>]*>/gis;
+for(const match of html.matchAll(stylePattern)){const path=match[0].match(/\bhref=["']\.\/([^"']+\.css)["']/i)?.[1];if(path)cssFiles.push({tag:match[0],path});}
+const dataUri=async(raw,relative)=>{
+ const address=raw.trim();
+ if(!address||address.startsWith('data:')||address.startsWith('#'))return raw;
+ if(/^https?:|^\/\//i.test(address))throw Error('External CSS resource cannot be bundled: '+address);
+ const clean=decodeURIComponent(address).replace(/^\.\//,'').split(/[?#]/)[0];
+ const bytes=await readFile(root+clean).catch(()=>readFile(root+relative.split('/').slice(0,-1).join('/')+'/'+clean));
+ const mime=clean.endsWith('.woff2')?'font/woff2':clean.endsWith('.woff')?'font/woff':clean.endsWith('.svg')?'image/svg+xml':clean.endsWith('.png')?'image/png':clean.endsWith('.webp')?'image/webp':'application/octet-stream';
+ return `data:${mime};base64,${bytes.toString('base64')}`;
+};
+let combined='';
+for(const{path}of cssFiles){let css=await readFile(root+path,'utf8');const replacements=[];for(const match of css.matchAll(/url\(\s*(['"]?)([^'")]+)\1\s*\)/g)){replacements.push([match[0],await dataUri(match[2],path)]);}for(const [old,value]of replacements)css=css.replace(old,`url("${value}")`);combined+='\n/* '+path+' */\n'+css+'\n';}
+const styles='<style data-kalore-standalone>'+combined+'\n.offline-app-notice{position:sticky;top:0;z-index:99;padding:8px 14px;background:#1a422e;color:#e3ffe9;text-align:center;font:700 11px/1.6 system-ui}.offline-kit{margin:10px 0 18px;padding:20px;display:flex;align-items:center;justify-content:space-between;gap:18px}.offline-kit h2{margin:8px 0;font-size:21px}.offline-kit p,.offline-kit small{display:block;max-width:760px;color:var(--kalore-muted);font-size:11px;line-height:1.75}.offline-kit a{flex:none}.offline-exam-note{margin:12px 0;border-radius:12px;padding:13px;background:var(--kalore-raised);color:var(--kalore-text);font-size:11px;line-height:1.8}@media(max-width:760px){.offline-kit{display:grid;padding:15px}.offline-kit h2{font-size:18px}.offline-kit a{width:100%;text-align:center}}\n</style>';
+let firstStyle=true;
+html=html.replace(stylePattern,(tag)=>{if(!firstStyle)return '';firstStyle=false;return styles;});
+if(firstStyle)html=html.replace('</head>',styles+'</head>');
+for(const{tag,path}of jsFiles){const source=await readFile(root+path,'utf8'),inline=`<script data-kalore-bundled="${path}">(function(){\n${source}\n})();\n</script>`;html=html.replace(tag,()=>inline);}
+html=html.replace(/<link\b(?=[^>]*\brel=["']manifest["'])[^>]*>/gi,'').replace(/<link\b(?=[^>]*\brel=["']icon["'])[^>]*>/gi,'').replace(/<link\b(?=[^>]*\brel=["']preload["'])[^>]*>/gi,'');
+html=html.replace(/<head\b[^>]*>/i,(open)=>open+'\n<script>globalThis.KaloreOfflineApp=true;globalThis.KaloreOfflinePdfs='+JSON.stringify(pdfs)+';globalThis.KaloreOfflineMode="hub-completo-pdfs-incluidos";\nwindow.addEventListener("DOMContentLoaded",function(){const $=s=>document.querySelector(s);const notify=message=>{const toast=$("#toast");if(toast){toast.textContent=message;toast.classList.add("on");setTimeout(()=>toast.classList.remove("on"),3800);}};document.body.dataset.offline="true";document.body.insertAdjacentHTML("afterbegin",\'<div class="offline-app-notice" role="status">Aplicativo offline · seus dados ficam neste navegador · 4 PDFs autorais incluídos</div>\');$("#installBanner")?.remove();const kit=$(".offline-kit");if(kit){kit.querySelector("h2").textContent="Você já está usando a versão offline.";kit.querySelector("p").textContent="O Hub, os 17 temas, o progresso e seus roteiros funcionam neste arquivo. Os cadernos autorais estão na Biblioteca.";kit.querySelector("small").textContent="As fontes oficiais, links externos e provas on-line abrem quando houver internet.";kit.querySelector("a").remove();}const collection=$("[data-library-preset=provas]");if(collection){collection.disabled=true;const small=collection.querySelector("small");if(small)small.textContent="Provas completas disponíveis online";}$("#provas-oficiais .official-layout")?.insertAdjacentHTML("beforebegin",\'<p class="offline-exam-note">O cronômetro, seu registro de acertos e os dados de estudo funcionam offline. Os PDFs oficiais abrem no site quando houver conexão; os quatro cadernos autorais estão na Biblioteca.</p>\');const titles={"./":"#redacao","./index.html":"#redacao","./materiais/index.html":"#biblioteca"};document.addEventListener("click",event=>{const a=event.target.closest("a[href]");if(!a)return;const href=a.getAttribute("href");if(/^https?:|^\\/\\//i.test(href)){event.preventDefault();event.stopImmediatePropagation();notify("Este material abre quando você voltar à internet. Os quatro cadernos autorais estão na Biblioteca.");return;}let target=titles[href];const page=href.match(/^\\.\\/materiais\\/(redacao|matematica|revisao|planejamento)\\.html$/);if(page){event.preventDefault();event.stopImmediatePropagation();const pdf=globalThis.KaloreOfflinePdfs["kalore-"+page[1]];if(pdf){const link=document.createElement("a");link.href=pdf;link.download="kalore-"+page[1]+".pdf";link.click();}return;}if(!target&&/\\.html(?:[?#]|$)/i.test(href)){event.preventDefault();event.stopImmediatePropagation();notify("Esta página precisa da versão online. O Hub e seus cadernos continuam disponíveis aqui.");return;}if(target){event.preventDefault();event.stopImmediatePropagation();if(target==="#biblioteca")$("[data-tab=biblioteca]")?.click();else $("[data-tab=redacao]")?.click();}} ,true);});</script>');
+const out=root+'estudar-offline.html';await writeFile(out,html);
+const result=await stat(out);console.log('Offline app: single local file,',Math.round(result.size/1024),'KiB, 4 bundled PDFs,',jsFiles.length,'scripts,',cssFiles.length,'stylesheets.');

@@ -11,9 +11,12 @@ async function generate(script:string){
 }
 export default defineConfig({
  root:root+'portable',base:'./',plugins:[react(),{
-  name:'kalore-generated-materials-and-offline',apply:'build',
-  async buildStart(){await generate('build-materials.mjs')},
-  async closeBundle(){await generate('build-offline.mjs')},
+  name:'kalore-editorial-bank-dev',
+  async configureServer(){await generate('build-essay-ideas.mjs')},
+ },{
+ name:'kalore-generated-materials-and-offline',apply:'build',
+  async buildStart(){await generate('build-materials.mjs');await generate('build-essay-ideas.mjs')},
+  async closeBundle(){await generate('build-standalone.mjs');await generate('build-offline.mjs')},
  }],
  resolve:{alias:{'@':root}},
  build:{outDir:root+'docs',emptyOutDir:true},

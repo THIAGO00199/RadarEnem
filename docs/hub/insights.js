@@ -123,6 +123,21 @@
       const rows = model.topics(state(), questions, metadata, new Date(), period);
       download("kalore-meu-progresso.md", "# Meu progresso · Kaloré\n\nExportado em " + model.day() + ". Período: " + (period ? period + " dias" : "todo o registro") + ".\n\n" + data.correct + " de " + data.total + " respostas certas. " + data.unique + " questões diferentes.\n\n## Assuntos\n\n" + rows.map((r) => "- " + names[r.area] + " / " + r.topic + ": " + r.correct + "/" + r.total + " acertos; " + r.pending + " questão(ões) para revisar.").join("\n") + "\n\n## Tentativas\n\n" + data.list.map((a) => "- " + a.date + " · " + sourceNames[a.source] + " · " + a.qid + " · alternativa " + (a.choice === -1 ? "em branco" : String.fromCharCode(65 + a.choice))).join("\n") + "\n\n## Minhas anotações\n\n" + Object.entries(state().questionNotes).filter(([, note]) => note.trim()).map(([id, note]) => "### " + id + "\n\n" + note).join("\n\n") + "\n\nDados locais de prática autoral; não estimam domínio ou nota TRI. Respostas anteriores sem detalhamento: " + data.legacy + ".", "text/markdown");
     };
+    function setupEssayIdeas() {
+      const host=$("#essay-ideas-hub"); if(!host||!root.KaloreEssayIdeasUI||!root.KaloreEssayIdeas)return;
+      root.KaloreEssayIdeasUI.mount(host,{
+        initialTheme:$("#theme").selectedOptions[0]?.textContent||"",
+        getBlueprint:()=>state().blueprint,
+        onTheme:setEssayTheme,
+        onApply:(suggestion)=>{
+          const result=root.KaloreEssayIdeas.fillEmpty(state().blueprint,suggestion);
+          if(!result.added)return;
+          state().blueprint=result.value;
+          $$("[data-blueprint]").forEach((field)=>{field.value=result.value[field.dataset.blueprint]||"";});
+          $(".blueprint").open=true;save();
+        },
+      });
+    }
     function setupBrief() {
       const topicId = new URLSearchParams(location.search).get("roteiro"); if (!topicId) return;
       let brief; try { brief = root.KaloreBrief.handoff(JSON.parse(localStorage.getItem("kalore-essay-brief-v1") || "null")); } catch (_) {}
@@ -152,7 +167,7 @@
     }
     root.addEventListener("kalore:view", () => { syncDock(); render(true); });
     root.addEventListener("kalore:progress", () => render());
-    refreshTopics(); render(true); syncDock(); setupBrief();
+    refreshTopics(); render(true); syncDock(); setupBrief(); setupEssayIdeas();
     return { render, openQuestion };
   }
   root.KaloreInsightsUI = { init };

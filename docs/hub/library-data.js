@@ -1518,3 +1518,7 @@ globalThis.KaloreLibrary = {
     }
   ]
 };
+if(globalThis.KaloreOfflineApp){
+  const bundled=globalThis.KaloreOfflinePdfs||{};
+  globalThis.KaloreLibrary.resources=globalThis.KaloreLibrary.resources.filter((resource)=>resource.local&&bundled[resource.id]).map((resource)=>({...resource,url:bundled[resource.id],sourceUrl:"#biblioteca",offlineBundled:true}));
+}

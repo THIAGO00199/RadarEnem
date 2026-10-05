@@ -3,6 +3,7 @@ import {ArrowRight, ArrowUpRight, Check, Download, FileText, Lightbulb} from 'lu
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from '@/components/ui/dialog';
 import {briefFields, type EssayBrief} from '@/lib/brief';
 import {safeURL} from '@/lib/radar-model';
+import {EssayIdeaExplorer} from '@/components/essay-idea-explorer';
 import './writing-canvas.css';
 
 type Props = {
@@ -34,6 +35,7 @@ export function WritingCanvas({open,onOpenChange,topic,value,onChange,saved,note
   return <Dialog open={open} onOpenChange={onOpenChange}><DialogContent className="app-dialog writing-canvas">
     <DialogHeader><span className="eyebrow">IDEIAS COM UM CAMINHO</span><DialogTitle>Da ideia ao seu roteiro.</DialogTitle><DialogDescription>{topic.proposal}</DialogDescription></DialogHeader>
     <div className="canvas-progress"><div><span>{count} de 7 campos com ideias</span><span role="status">{saved?'Salvo neste navegador':'Sem salvar · exporte uma cópia'}</span></div><div className="canvas-track" role="img" aria-label={count+' de 7 campos preenchidos'}><span style={{width:count/7*100+'%'}}/></div></div>
+    <EssayIdeaExplorer topicId={topic.id} theme={topic.proposal} value={value} onChange={onChange}/>
     <div className="canvas-layout"><div className="canvas-editor">
       <div className="canvas-steps" role="group" aria-label="Etapas do planejamento">{steps.map((s,i)=><button key={s.label} onClick={()=>setStep(i)} aria-pressed={step===i}><span aria-hidden="true">{s.fields.every(f=>value[f.key].trim())?<Check size={13}/>:i+1}</span>{s.label}</button>)}</div>
       <div className="canvas-step-body" key={step}><h3>{current.title}</h3><p>{current.description}</p><div className={'canvas-fields '+(step===2?'canvas-fields-pair':'')}>{current.fields.map(f=><label key={f.key} htmlFor={'brief-'+f.key}><span>{f.label}</span><textarea id={'brief-'+f.key} value={value[f.key]} onChange={e=>onChange({...value,[f.key]:e.target.value})} maxLength={2000} rows={step===0?7:4} placeholder={f.hint}/><small>{value[f.key].length}/2.000 caracteres</small></label>)}</div></div>
