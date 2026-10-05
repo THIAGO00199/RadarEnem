@@ -24,6 +24,9 @@ jobs:
           pnpm install --frozen-lockfile
           npm install --prefix "$RUNNER_TEMP/quality-tools" --no-package-lock playwright@1.58.2 @axe-core/playwright@4.11.1
           "$RUNNER_TEMP/quality-tools/node_modules/.bin/playwright" install --with-deps --only-shell chromium
+          CHROMIUM_PATH=$(find "$HOME/.cache/ms-playwright" -type f -name chrome-headless-shell -perm -111 -print -quit)
+          test -n "$CHROMIUM_PATH"
+          echo "CHROMIUM_PATH=$CHROMIUM_PATH" >> "$GITHUB_ENV"
           echo "NODE_PATH=$RUNNER_TEMP/quality-tools/node_modules" >> "$GITHUB_ENV"
       - name: Typecheck, state validation and content rules
         run: |
