@@ -8,9 +8,18 @@ vm.runInContext(
   await readFile("portable/public/hub/content.js", "utf8"),
   sandbox,
 );
-vm.runInContext(await readFile("portable/public/hub/practice-data.js", "utf8"), sandbox);
-vm.runInContext(await readFile("portable/public/hub/library-data.js", "utf8"), sandbox);
-vm.runInContext(await readFile("portable/public/hub/study.js", "utf8"), sandbox);
+vm.runInContext(
+  await readFile("portable/public/hub/practice-data.js", "utf8"),
+  sandbox,
+);
+vm.runInContext(
+  await readFile("portable/public/hub/library-data.js", "utf8"),
+  sandbox,
+);
+vm.runInContext(
+  await readFile("portable/public/hub/study.js", "utf8"),
+  sandbox,
+);
 const c = sandbox.KaloreCore,
   content = sandbox.KaloreContent;
 const s = c.mergeState(
@@ -25,8 +34,21 @@ const s = c.mergeState(
     essays: null,
     flash: { f1: { stage: Infinity, due: "2026-02-30" } },
     errors: [{ id: "error-1", qid: "extra1", selected: -1 }],
-    library: { favorites: { "kalore-redacao": true, 'bad<id': true }, read: null },
-    officialHistory: [{ id: "official-1", examId: "enem-2025-d1", first: 80, second: -2, minutes: 20000, note: "Treino" }, { id: "official-2", examId: "unknown" }],
+    library: {
+      favorites: { "kalore-redacao": true, "bad<id": true },
+      read: null,
+    },
+    officialHistory: [
+      {
+        id: "official-1",
+        examId: "enem-2025-d1",
+        first: 80,
+        second: -2,
+        minutes: 20000,
+        note: "Treino",
+      },
+      { id: "official-2", examId: "unknown" },
+    ],
   },
 );
 assert.equal(s.xp, 0);
@@ -43,6 +65,25 @@ assert.equal(s.officialHistory.length, 1);
 assert.equal(s.officialHistory[0].first, 45);
 assert.equal(s.officialHistory[0].second, 0);
 assert.equal(s.officialHistory[0].minutes, 360);
+const versioned = c.mergeState(
+  { xp: 0, answers: 0, correct: 0, focus: 0 },
+  {
+    essays: [
+      {
+        id: "essay-test",
+        text: "Rascunho preservado",
+        blueprint: {
+          tese: "Uma tese",
+          argumento1: "a".repeat(3000),
+          unknown: "ignored",
+        },
+      },
+    ],
+  },
+);
+assert.equal(versioned.essays[0].blueprint.tese, "Uma tese");
+assert.equal(versioned.essays[0].blueprint.argumento1.length, 2000);
+assert.equal(versioned.essays[0].blueprint.unknown, undefined);
 assert.equal(c.addDays("2026-12-31", 1), "2027-01-01");
 assert.equal(c.addDays("2028-02-28", 1), "2028-02-29");
 for (const hours of [3, 12, 35]) {
@@ -92,7 +133,9 @@ assert.equal(library.exams.length, 18);
 assert.equal(new Set(library.resources.map((r) => r.id)).size, 68);
 assert.equal(new Set(library.resources.map((r) => r.url)).size, 68);
 for (const r of library.resources) {
-  assert.ok(r.id && r.title && r.source && r.sourceUrl && r.desc && r.tags.length);
+  assert.ok(
+    r.id && r.title && r.source && r.sourceUrl && r.desc && r.tags.length,
+  );
   if (r.local) {
     const pdf = await readFile("docs/" + r.url.slice(2));
     assert.equal(pdf.subarray(0, 5).toString(), "%PDF-");
@@ -102,15 +145,40 @@ for (const r of library.resources) {
 }
 for (const e of library.exams) {
   assert.equal(e.color, "Azul");
-  assert.ok(library.resources.some((r) => r.examId === e.id && r.kind === "prova" && r.url === e.url));
-  assert.ok(library.resources.some((r) => r.examId === e.id && r.kind === "gabarito" && r.url === e.answerUrl));
+  assert.ok(
+    library.resources.some(
+      (r) => r.examId === e.id && r.kind === "prova" && r.url === e.url,
+    ),
+  );
+  assert.ok(
+    library.resources.some(
+      (r) =>
+        r.examId === e.id && r.kind === "gabarito" && r.url === e.answerUrl,
+    ),
+  );
 }
-assert.ok(sandbox.KaloreStudy.matchResource(library.resources.find((r) => r.id === "inep-cartilha-2026"), "redacao 2026"));
-assert.ok(!sandbox.KaloreStudy.matchResource(library.resources.find((r) => r.id === "kalore-matematica"), "biologia"));
-for (const page of ["index", "redacao", "matematica", "revisao", "planejamento"]) {
+assert.ok(
+  sandbox.KaloreStudy.matchResource(
+    library.resources.find((r) => r.id === "inep-cartilha-2026"),
+    "redacao 2026",
+  ),
+);
+assert.ok(
+  !sandbox.KaloreStudy.matchResource(
+    library.resources.find((r) => r.id === "kalore-matematica"),
+    "biologia",
+  ),
+);
+for (const page of [
+  "index",
+  "redacao",
+  "matematica",
+  "revisao",
+  "planejamento",
+]) {
   const source = await readFile("docs/materiais/" + page + ".html", "utf8");
   assert.ok(source.includes('<link rel="canonical"'));
-  assert.ok(source.includes('application/ld+json'));
+  assert.ok(source.includes("application/ld+json"));
   assert.ok(source.includes("<h1>"));
 }
 console.log(

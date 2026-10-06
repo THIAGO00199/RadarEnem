@@ -33,7 +33,7 @@ const local=(page)=>page.evaluate(()=>JSON.parse(localStorage.getItem('kalore-hu
  const axeModule=require('@axe-core/playwright');const AxeBuilder=axeModule.default||axeModule;const audit=await new AxeBuilder({page}).include('#essay-ideas-hub').analyze();
  assert.deepEqual(audit.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>n.target)})),[],'Essay bank should pass the accessibility audit');
  await page.goto(base+'/estudar.html#biblioteca');await page.waitForFunction(()=>document.querySelectorAll('#libraryGrid [data-resource]').length>0);assert.ok(await page.locator('#libraryGrid [data-resource]').count()>0);
- await page.goto(base+'/index.html');await page.getByRole('button',{name:'Planejar este texto'}).click();await page.waitForSelector('.writing-canvas');
+ await page.goto(base+'/radar.html');await page.getByRole('button',{name:'Planejar este texto'}).click();await page.waitForSelector('.writing-canvas');
  await page.waitForFunction(()=>document.querySelector('.writing-canvas .essay-ideas-shell'));
  await page.locator('.writing-canvas .essay-ideas-shell [data-idea-topic]').selectOption('ciencia');
  await page.locator('.writing-canvas .idea-route-tabs [data-idea-route]').nth(1).click();const expectedThesis=(await page.locator('.writing-canvas .idea-thesis p').textContent()).trim();

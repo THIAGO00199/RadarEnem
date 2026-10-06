@@ -25,6 +25,21 @@
         .slice(0, 1500)
         .map(([k, x]) => [k, fn(x)]),
     );
+  const blueprint = (v) =>
+    map(
+      v,
+      (x) => str(x, 2000),
+      (k) =>
+        [
+          "tese",
+          "argumento1",
+          "argumento2",
+          "agente",
+          "acao",
+          "meio",
+          "finalidade",
+        ].includes(k),
+    );
   function mergeState(base, input) {
     const v = obj(input),
       s = structuredClone(base),
@@ -57,8 +72,12 @@
       favorites: map(obj(v.library).favorites, (x) => x === true),
       read: map(obj(v.library).read, (x) => x === true),
     };
-    s.officialHistory = (Array.isArray(v.officialHistory) ? v.officialHistory : [])
-      .filter((x) => id(obj(x).id) && /^enem-20\d{2}-d[12]$/.test(x.examId || ""))
+    s.officialHistory = (
+      Array.isArray(v.officialHistory) ? v.officialHistory : []
+    )
+      .filter(
+        (x) => id(obj(x).id) && /^enem-20\d{2}-d[12]$/.test(x.examId || ""),
+      )
       .slice(0, 100)
       .map((x) => ({
         id: x.id,
@@ -97,6 +116,7 @@
         theme: str(e.theme, 500),
         themeIndex: Math.floor(num(e.themeIndex, 0, 100)),
         diagnostic: num(e.diagnostic, 0, 100),
+        ...(e.blueprint ? { blueprint: blueprint(e.blueprint) } : {}),
       }));
     s.errors = (Array.isArray(v.errors) ? v.errors : [])
       .filter((e) => id(obj(e).id) && id(e.qid))
@@ -147,20 +167,7 @@
       }),
       date,
     );
-    s.blueprint = map(
-      v.blueprint,
-      (x) => str(x, 2000),
-      (k) =>
-        [
-          "tese",
-          "argumento1",
-          "argumento2",
-          "agente",
-          "acao",
-          "meio",
-          "finalidade",
-        ].includes(k),
-    );
+    s.blueprint = blueprint(v.blueprint);
     s.focusGoal = str(v.focusGoal, 500);
     s.focusNote = str(v.focusNote, 6000);
     const t = obj(v.focusTimer);
@@ -184,7 +191,9 @@
     s.questionNotes = root.KaloreInsights?.notes(v.questionNotes) || {};
     s.preferences = {
       motion: obj(v.preferences).motion !== false,
-      writingFont: [18, 20, 22].includes(obj(v.preferences).writingFont) ? v.preferences.writingFont : 20,
+      writingFont: [18, 20, 22].includes(obj(v.preferences).writingFont)
+        ? v.preferences.writingFont
+        : 20,
     };
     return s;
   }

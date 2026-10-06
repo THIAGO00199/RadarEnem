@@ -27,6 +27,7 @@ const server = http.createServer(async (req,res) => {
     await page.locator("#openQuickSearch").click(); await inspect("Hub/busca/"+theme); await page.locator("#closeQuickSearch").click();
     await page.locator('[data-tab="hoje"]').click();
     await page.locator("#heroNextSession").click(); await inspect("Hub/sessão/configuração/"+theme); await page.locator("#closeStudyRoom").click();
+    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
     await page.evaluate(()=>{const s=JSON.parse(localStorage.getItem("kalore-hub-v3"));s.journey={id:"audit-session",area:"mat",minutes:10,index:0,seconds:0,createdAt:new Date().toISOString(),items:[{kind:"question",id:"m1",choice:null},{kind:"flash",id:"f0",grade:null}]};localStorage.setItem("kalore-hub-v3",JSON.stringify(s));});
     await page.reload(); await page.evaluate((t)=>document.documentElement.dataset.theme=t,theme);
     await page.locator("#heroNextSession").click(); await inspect("Hub/sessão/questão/"+theme);
@@ -46,7 +47,7 @@ const server = http.createServer(async (req,res) => {
 
   }
   for(const theme of ["dark","light"]) {
-    await page.goto(base+"/");
+    await page.goto(base+"/radar.html");
     await page.evaluate((theme)=>{document.documentElement.dataset.theme=theme;},theme);
     for(const tab of ["Radar","Dossiê PND","Inep","Fontes","Histórico","Meu plano","Método"]) { await page.getByRole("tab",{name:tab,exact:tab!=="Dossiê PND"}).click(); await page.waitForTimeout(80); await inspect("Radar/"+tab+"/"+theme); }
     await page.getByRole("tab",{name:"Radar",exact:true}).click();
@@ -59,7 +60,7 @@ const server = http.createServer(async (req,res) => {
     await page.goto(base+'/estudar.html?mobile='+theme+'#progresso'); await page.evaluate(t=>document.documentElement.dataset.theme=t,theme); await inspect('Hub/progresso/mobile/'+theme);
     await page.locator('#openToolMenu').click(); await inspect('Hub/ferramentas/mobile/'+theme); await page.locator('[data-menu-go="questoes"]').click();
     await page.locator('#catalogSearch').fill('ESCOLA CADERNOS'); await page.locator('#catalogList [data-practice-q="ctx-m1"]').click(); await inspect('Hub/assunto/mobile/'+theme); await page.keyboard.press('Escape');
-    await page.goto(base+'/?mobileCanvas='+theme); await page.evaluate(t=>document.documentElement.dataset.theme=t,theme); await page.getByRole('button',{name:'Planejar este texto'}).click(); await inspect('Radar/roteiro/mobile/'+theme); await page.keyboard.press('Escape');
+    await page.goto(base+'/radar.html?mobileCanvas='+theme); await page.evaluate(t=>document.documentElement.dataset.theme=t,theme); await page.getByRole('button',{name:'Planejar este texto'}).click(); await inspect('Radar/roteiro/mobile/'+theme); await page.keyboard.press('Escape');
   }
   for(const name of ["index","redacao","matematica","revisao","planejamento"]) {await page.goto(base+"/materiais/"+name+".html");await inspect("Materiais/"+name+"/mobile");}
   await ctx.close();await browser.close();server.close();

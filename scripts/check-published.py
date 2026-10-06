@@ -1,29 +1,33 @@
-"""Confirm that the public CDN serves this checked-out build after Pages deployment."""
-from pathlib import Path
-from urllib.request import Request, urlopen
-from urllib.parse import urlencode
-from hashlib import sha256
+"""Compare the public CDN with the actual committed Next.js static export."""
 from concurrent.futures import ThreadPoolExecutor
+from hashlib import sha256
+from pathlib import Path
 from time import sleep
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
 import os
-import re
+
 root = Path(__file__).resolve().parent.parent / "docs"
-base = "https://thiago00199.github.io/RadarEnem/"
-version = os.environ.get("GITHUB_SHA", "glow")
-assets = re.findall(r'(?:src|href)="[.]/(assets/[^"]+)"', (root / "index.html").read_text())
-paths = ["index.html", "estudar.html", "estudar-offline.html", "sw.js", "shared/recommend.js", "shared/essay-ideas-data.js", "shared/essay-ideas-model.js", "shared/essay-ideas-ui.js", "shared/essay-ideas.css", "hub/library-data.js", "hub/glow.css", "hub/experience.css", "hub/experience.js", "hub/session-model.js", "hub/insights.js", "hub/insights.css", "hub/insights-model.js", "hub/practice-data.js", "shared/brief.js", "hub/core.js", "hub/app.js", "shared/tokens.css", "shared/motion.js", "shared/fonts/manrope-latin-variable.woff2", "materiais/pdfs/redacao.pdf", "materiais/pdfs/matematica.pdf", "materiais/pdfs/revisao.pdf", "materiais/pdfs/planejamento.pdf"] + assets
+base = os.environ.get("PUBLISHED_URL", "https://thiago00199.github.io/RadarEnem/").rstrip("/") + "/"
+version = os.environ.get("GITHUB_SHA", "atena")
+# Verify every exported resource, including React chunks, local fonts and the image.
+paths = sorted(str(item.relative_to(root)) for item in root.rglob("*") if item.is_file() and not item.name.startswith(".") and item.name != "CNAME")
+
+
 def verify(name):
     expected = (root / name).read_bytes()
     resource = "" if name == "index.html" else name
-    request = Request(base + resource + "?" + urlencode({"build": version}), headers={"Cache-Control": "no-cache", "User-Agent": "Kalore-Published-Check"})
+    request = Request(base + resource + "?" + urlencode({"build": version}), headers={"Cache-Control": "no-cache", "User-Agent": "ATENA-Published-Check"})
     with urlopen(request, timeout=20) as response:
         actual = response.read()
     if sha256(actual).digest() != sha256(expected).digest():
         raise RuntimeError("CDN has not published the expected version of " + name)
     return name, len(actual)
+
+
 for attempt in range(18):
     try:
-        with ThreadPoolExecutor(max_workers=4) as pool:
+        with ThreadPoolExecutor(max_workers=6) as pool:
             results = list(pool.map(verify, paths))
         for name, size in results:
             print("Published:", name, size, "bytes")

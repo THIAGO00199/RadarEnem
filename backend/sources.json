@@ -1,0 +1,398 @@
+{
+  "sources": [
+    {
+      "id": "fgv",
+      "title": "FGV",
+      "url": "https://vestibular.fgv.br/blog/redacao-do-enem-2026-possiveis-temas",
+      "format": "html",
+      "kind": "editorial",
+      "template": {
+        "id": "fgv",
+        "title": "Possíveis temas de redação para 2026 — FGV",
+        "url": "https://vestibular.fgv.br/blog/redacao-do-enem-2026-possiveis-temas",
+        "source": "FGV",
+        "kind": "editorial",
+        "date": "2026-05-05",
+        "observedAt": "2026-09-30",
+        "topics": [
+          "educacao",
+          "ia",
+          "mental",
+          "trabalho",
+          "ciencia",
+          "idosos"
+        ],
+        "note": "Sugere tecnologia na educação, cidadania digital, saúde mental, trabalho, informação em saúde e envelhecimento. Data de publicação obtida nos metadados da página.",
+        "origin": "curated"
+      }
+    },
+    {
+      "id": "brasil-escola",
+      "title": "Brasil Escola",
+      "url": "https://vestibular.brasilescola.uol.com.br/enem/15-temas-redacao-enem-2026.htm",
+      "format": "html",
+      "kind": "editorial",
+      "template": {
+        "id": "brasil-escola",
+        "title": "Quinze propostas de professores para o Enem 2026",
+        "url": "https://vestibular.brasilescola.uol.com.br/enem/15-temas-redacao-enem-2026.htm",
+        "source": "Brasil Escola",
+        "kind": "editorial",
+        "date": "2026-05-06",
+        "observedAt": "2026-09-30",
+        "topics": [
+          "clima",
+          "digital",
+          "ciencia",
+          "genero",
+          "moradia",
+          "ia",
+          "educacao",
+          "trabalho",
+          "democracia",
+          "mental",
+          "juventude"
+        ],
+        "note": "Reúne apostas docentes sobre clima, infância online, informação, desigualdades e saúde. Opiniões de preparação; nenhuma confirmação do tema.",
+        "origin": "curated"
+      }
+    },
+    {
+      "id": "cnn",
+      "title": "CNN Brasil / Ademar Celedônio",
+      "url": "https://www.cnnbrasil.com.br/educacao/redacao-do-enem-professor-aponta-7-temas-que-merecem-atencao-em-2026/",
+      "format": "html",
+      "kind": "editorial",
+      "template": {
+        "id": "cnn",
+        "title": "Sete eixos de preparação apontados por professor",
+        "url": "https://www.cnnbrasil.com.br/educacao/redacao-do-enem-professor-aponta-7-temas-que-merecem-atencao-em-2026/",
+        "source": "CNN Brasil / Ademar Celedônio",
+        "kind": "editorial",
+        "date": "2026-08-16",
+        "observedAt": "2026-09-30",
+        "topics": [
+          "digital",
+          "juventude",
+          "educacao",
+          "ciencia",
+          "inclusao",
+          "clima"
+        ],
+        "note": "Indica proteção online, juventude, alfabetização, confiança científica, altas habilidades, neurodivergência e ambiente como assuntos para estudar.",
+        "origin": "curated"
+      }
+    },
+    {
+      "id": "mdh-digital",
+      "title": "Ministério dos Direitos Humanos",
+      "url": "https://www.gov.br/mdh/pt-br/assuntos/noticias/2026/defeso-eleitoral/agosto/eca-digital-conheca-as-regras-de-protecao-de-criancas-e-adolescentes-no-ambiente-online",
+      "format": "html",
+      "kind": "news",
+      "template": {
+        "id": "mdh-digital",
+        "title": "ECA Digital: orientações de proteção no ambiente online",
+        "url": "https://www.gov.br/mdh/pt-br/assuntos/noticias/2026/defeso-eleitoral/agosto/eca-digital-conheca-as-regras-de-protecao-de-criancas-e-adolescentes-no-ambiente-online",
+        "source": "Ministério dos Direitos Humanos",
+        "kind": "news",
+        "date": "2026-08-21",
+        "observedAt": "2026-09-30",
+        "topics": [
+          "digital"
+        ],
+        "note": "Publicação sobre proteção de crianças e adolescentes no ambiente digital. Contexto social, sem indicação sobre a prova.",
+        "origin": "curated"
+      }
+    },
+    {
+      "id": "anpd-digital",
+      "title": "ANPD",
+      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/eca-digital-completa-um-ano-e-e-marco-na-protecao-de-criancas-e-adolescentes-na-internet",
+      "format": "html",
+      "kind": "news",
+      "template": {
+        "id": "anpd-digital",
+        "title": "ANPD aborda um ano do ECA Digital",
+        "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/eca-digital-completa-um-ano-e-e-marco-na-protecao-de-criancas-e-adolescentes-na-internet",
+        "source": "ANPD",
+        "kind": "news",
+        "date": "2026-09-16",
+        "observedAt": "2026-09-30",
+        "topics": [
+          "digital"
+        ],
+        "note": "Balanço da proteção de menores na internet. Agrupado com gov.br para limitar repetição institucional.",
+        "origin": "curated"
+      }
+    },
+    {
+      "id": "plano-clima",
+      "title": "Ministério do Planejamento",
+      "url": "https://www.gov.br/planejamento/pt-br/assuntos/noticias/2026/marco/ministerio-do-planejamento-e-orcamento-tem-participacao-ativa-na-construcao-do-plano-clima",
+      "format": "html",
+      "kind": "news",
+      "template": {
+        "id": "plano-clima",
+        "title": "Planejamento participa da construção do Plano Clima",
+        "url": "https://www.gov.br/planejamento/pt-br/assuntos/noticias/2026/marco/ministerio-do-planejamento-e-orcamento-tem-participacao-ativa-na-construcao-do-plano-clima",
+        "source": "Ministério do Planejamento",
+        "kind": "news",
+        "date": "2026-03-19",
+        "observedAt": "2026-09-30",
+        "topics": [
+          "clima"
+        ],
+        "note": "Apresentação de planejamento climático e discussão de financiamento. É atualidade, não aposta do Inep.",
+        "origin": "curated"
+      }
+    },
+    {
+      "id": "ibge-internet",
+      "title": "IBGE",
+      "url": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/47408-proporcao-de-usuarios-da-internet-no-pais-ultrapassou-90-da-populacao-de-10-anos-ou-mais-em-2025",
+      "format": "html",
+      "kind": "news",
+      "template": {
+        "id": "ibge-internet",
+        "title": "IBGE divulga uso da internet pela população em 2025",
+        "url": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/47408-proporcao-de-usuarios-da-internet-no-pais-ultrapassou-90-da-populacao-de-10-anos-ou-mais-em-2025",
+        "source": "IBGE",
+        "kind": "news",
+        "date": null,
+        "observedAt": "2026-09-30",
+        "topics": [
+          "acesso"
+        ],
+        "note": "Dados de acesso à internet e diferenças regionais. Data exata de publicação não identificada nesta base; recebe peso reduzido.",
+        "origin": "curated"
+      }
+    },
+    {
+      "id": "agencia-brasil",
+      "title": "Agência Brasil — últimas notícias",
+      "url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml",
+      "format": "rss",
+      "kind": "news",
+      "template": null
+    },
+    {
+      "id": "mec-noticias",
+      "title": "MEC — notícias públicas",
+      "url": "https://www.gov.br/mec/pt-br/assuntos/noticias",
+      "format": "listing",
+      "kind": "news",
+      "template": null
+    },
+    {
+      "id": "inep-noticias",
+      "title": "Inep — notícias públicas",
+      "url": "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias",
+      "format": "listing",
+      "kind": "news",
+      "template": null
+    },
+    {
+      "id": "g1-educacao",
+      "title": "G1 Educação — RSS",
+      "url": "https://g1.globo.com/rss/g1/educacao/",
+      "format": "rss",
+      "kind": "news",
+      "template": null
+    }
+  ],
+  "topics": [
+    {
+      "id": "leitura",
+      "keywords": [
+        "formacao de leitores",
+        "habito de leitura",
+        "ensino da leitura",
+        "pratica de leitura",
+        "acesso ao livro",
+        "bibliotecas",
+        "letramento",
+        "leitura como pratica social"
+      ]
+    },
+    {
+      "id": "digital",
+      "keywords": [
+        "eca digital",
+        "protecao de criancas",
+        "criancas e adolescentes no ambiente",
+        "infancia digital",
+        "adultizacao",
+        "publicidade infantil"
+      ]
+    },
+    {
+      "id": "clima",
+      "keywords": [
+        "climatic",
+        "plano clima",
+        "enchent",
+        "desastres",
+        "degradacao ambiental",
+        "racismo ambiental",
+        "aquecimento global"
+      ]
+    },
+    {
+      "id": "mental",
+      "keywords": [
+        "saude mental",
+        "doencas mentais",
+        "hiperconect",
+        "era das telas",
+        "dependencia digital",
+        "ansiedade"
+      ]
+    },
+    {
+      "id": "ia",
+      "keywords": [
+        "inteligencia artificial",
+        "desinformacao",
+        "fake news",
+        "deepfake",
+        "letramento midiatico",
+        "poluicao informacional"
+      ]
+    },
+    {
+      "id": "inclusao",
+      "keywords": [
+        "neurodivergen",
+        "capacitismo",
+        "altas habilidades",
+        "superdotacao",
+        "pessoas com deficiencia",
+        "educacao inclusiva",
+        "autismo",
+        "acessibilidade"
+      ]
+    },
+    {
+      "id": "educacao",
+      "keywords": [
+        "alfabetizacao",
+        "analfabetismo",
+        "evasao escolar",
+        "abandono escolar",
+        "desigualdade educacional",
+        "tecnologia, escola",
+        "violencia escolar"
+      ]
+    },
+    {
+      "id": "trabalho",
+      "keywords": [
+        "trabalho escravo",
+        "precarizacao",
+        "informalidade",
+        "protecao social",
+        "relacoes de trabalho",
+        "trabalho no seculo",
+        "uberizacao"
+      ]
+    },
+    {
+      "id": "genero",
+      "keywords": [
+        "misoginia",
+        "violencia contra a mulher",
+        "mulheres cientistas",
+        "mulheres na ciencia",
+        "trabalho de cuidado",
+        "desigualdade de genero",
+        "violencia de genero"
+      ]
+    },
+    {
+      "id": "moradia",
+      "keywords": [
+        "situacao de rua",
+        "deficit habitacional",
+        "gentrificacao",
+        "direito a moradia",
+        "habitacao"
+      ]
+    },
+    {
+      "id": "ciencia",
+      "keywords": [
+        "automedicacao",
+        "confianca na ciencia",
+        "instituicoes de saude",
+        "educacao em saude",
+        "vacinas",
+        "alcoolismo",
+        "padroes esteticos",
+        "saude publica e comportamento"
+      ]
+    },
+    {
+      "id": "juventude",
+      "keywords": [
+        "futuro da juventude",
+        "violencia letal",
+        "violencia escolar",
+        "protecao da infancia",
+        "violencia sexual contra",
+        "criancas em situacao"
+      ]
+    },
+    {
+      "id": "democracia",
+      "keywords": [
+        "participacao social",
+        "sistema democratico",
+        "participacao politica",
+        "registro civil",
+        "acesso a cidadania"
+      ]
+    },
+    {
+      "id": "idosos",
+      "keywords": [
+        "idoso",
+        "envelhecimento",
+        "etarismo",
+        "brasil que envelhece",
+        "populacao idosa"
+      ]
+    },
+    {
+      "id": "cultura",
+      "keywords": [
+        "povos tradicionais",
+        "povos indigenas",
+        "heranca africana",
+        "patrimonio cultural",
+        "diversidade cultural",
+        "acesso a cultura",
+        "intolerancia religiosa"
+      ]
+    },
+    {
+      "id": "fome",
+      "keywords": [
+        "inseguranca alimentar",
+        "combate a fome",
+        "seguranca alimentar",
+        "desperdicio de alimentos"
+      ]
+    },
+    {
+      "id": "acesso",
+      "keywords": [
+        "inclusao digital",
+        "exclusao digital",
+        "acesso a internet",
+        "usuarios da internet",
+        "desigualdade digital",
+        "domicilios com internet"
+      ]
+    }
+  ]
+}

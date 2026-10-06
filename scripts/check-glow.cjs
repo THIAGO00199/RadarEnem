@@ -27,7 +27,7 @@ const server=http.createServer(async(req,res)=>{
  assert.equal(await page.locator(".feedback-chip").getAttribute("role"),"status");
  await page.locator("#themeToggle").click();
  assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),"light");
- await page.goto(url+"/");
+ await page.goto(url+"/radar.html");
  assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),"light");
  await page.getByRole("button",{name:"Alternar tema",exact:true}).click();
  assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),"dark");

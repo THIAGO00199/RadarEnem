@@ -69,7 +69,9 @@ const read = (p) => p.evaluate(() => JSON.parse(localStorage.getItem("kalore-hub
   await page.locator("#essay").fill(draft);
   await page.locator(".data-menu summary").click(); await page.locator("#motionPreference").uncheck();
   assert.equal(await page.evaluate(() => document.documentElement.classList.contains("motion-off")), true);
-  await page.goto(url + "/");
+  await page.goto(url + "/radar.html");
+  await page.locator('[data-atena-ready="true"]').waitFor();
+  await page.waitForFunction(() => document.querySelector(".app-shell").classList.contains("motion-off"));
   assert.equal(await page.evaluate(() => document.querySelector(".app-shell").classList.contains("motion-off")), true);
   await page.locator(".topic-notebook summary").click();
   const note = "Bibliotecas públicas: conecte o acesso ao repertório e às desigualdades. <img src=x>";
@@ -81,6 +83,7 @@ const read = (p) => p.evaluate(() => JSON.parse(localStorage.getItem("kalore-hub
   const bytes = fs.readFileSync(await (await download).path(), "utf8"); assert.ok(bytes.includes(note)); assert.match(bytes, /Índices relativos/);
   await page.screenshot({ path: path.join(out, "comparison-desktop.jpg"), type: "jpeg", quality: 80 });
   await page.keyboard.press("Escape"); await page.getByRole("tab", { name: "Método", exact: true }).click(); await page.reload();
+  await page.locator('.app-shell[data-view="metodo"]').waitFor();
   assert.equal(await page.locator(".app-shell").getAttribute("data-view"), "metodo");
   // Exercise the new rooms on narrow screens in both palettes.
   for (const theme of ["dark", "light"]) for (const width of [360, 390, 768]) {

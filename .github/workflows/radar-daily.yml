@@ -1,0 +1,43 @@
+name: Radar public sources — Python
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: radar-daily
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: 24
+      - name: Install pinned dependencies
+        run: |
+          npm install --global pnpm@11.25.0
+          pnpm install --frozen-lockfile
+      - name: Collect public sources with Python
+        run: python3 backend/radar_collect.py
+      - name: Validate and produce static pages
+        run: |
+          npm run check:radar
+          npm run check:atena
+          npm run build:pages
+      - name: Publish the updated public dataset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add portable/public/data/latest.json docs
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: refresh public radar sources'
+            git push
+            gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+          fi

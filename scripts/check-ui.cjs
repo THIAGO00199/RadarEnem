@@ -202,7 +202,7 @@ const server = http.createServer((req, res) => {
   assert.equal(backup.state.officialHistory[0].examId, "enem-2024-d2");
   await page.goto(base + "/estudar.html#%22%5B");
   assert.equal(await page.locator("#hoje").isVisible(), true);
-  await page.goto(base + "/");
+  await page.goto(base + "/radar.html");
   await page
     .getByRole("button", { name: "Salvar no meu plano", exact: true })
     .click();
@@ -237,7 +237,7 @@ const server = http.createServer((req, res) => {
       );
       assert.equal(overflow, false, "Overflow " + width + " " + id);
     }
-    await page.goto(base + "/");
+    await page.goto(base + "/radar.html");
     const radarOverflow = await page.evaluate(
       () => document.documentElement.scrollWidth > innerWidth + 1,
     );
@@ -294,7 +294,7 @@ const server = http.createServer((req, res) => {
     await page.screenshot({
       path: path.join(process.env.SCREENSHOT_DIR, "hub-mobile.png"),
     });
-  await page.goto(base + "/");
+  await page.goto(base + "/radar.html");
   await page.waitForTimeout(600);
   if (process.env.SCREENSHOT_DIR)
     await page.screenshot({
@@ -341,7 +341,8 @@ const server = http.createServer((req, res) => {
   const offlinePDF = await op.evaluate(async () => { const r = await fetch("./materiais/pdfs/redacao.pdf"); const bytes = new Uint8Array(await r.arrayBuffer()); return { type: r.headers.get("content-type"), signature: String.fromCharCode(...bytes.slice(0,5)) }; });
   assert.equal(offlinePDF.signature, "%PDF-");
   assert.match(offlinePDF.type, /application\/pdf/);
-  await op.goto(base + "/");
+  await op.goto(base + "/radar.html");
+  await op.locator(".rank-row").first().waitFor();
   assert.equal((await op.locator(".rank-row").count()) > 0, true);
   console.log(
     "Offline: Hub, Radar and original PDFs load; missing scripts return 503.",

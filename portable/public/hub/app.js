@@ -247,392 +247,7 @@
     mat: "Matemática",
     red: "Redação",
   };
-  const trails = {
-    mat: {
-      icon: "∑",
-      title: "Matemática",
-      units: [
-        {
-          id: "mat1",
-          title: "Porcentagem sem medo",
-          desc: "Transforme porcentagens em multiplicadores e resolva aumentos e descontos.",
-          concept:
-            "20% = 0,20. Para calcular x% de N, multiplique N por x/100.",
-          q: "Um tênis de R$ 300 recebe 15% de desconto. Qual o preço final?",
-          o: ["R$ 245", "R$ 255", "R$ 265", "R$ 285"],
-          c: 1,
-          e: "15% de 300 = 45; 300 − 45 = 255.",
-        },
-        {
-          id: "mat2",
-          title: "Razão e proporção",
-          desc: "Leia relações entre grandezas e use proporcionalidade com unidade correta.",
-          concept:
-            "Uma razão compara duas grandezas. Em proporções, produtos cruzados ajudam a encontrar o valor desconhecido.",
-          q: "Se 4 cadernos custam R$ 28, quanto custam 7, mantendo o preço unitário?",
-          o: ["R$ 42", "R$ 45", "R$ 49", "R$ 52"],
-          c: 2,
-          e: "Cada caderno custa R$ 7; 7×7 = R$ 49.",
-        },
-        {
-          id: "mat3",
-          title: "Função afim",
-          desc: "Entenda taxa de variação, valor inicial e leitura de gráficos.",
-          concept:
-            "Em f(x)=ax+b, a indica quanto y varia quando x aumenta uma unidade; b é o valor quando x=0.",
-          q: "Em f(x)=3x−2, quanto vale f(4)?",
-          o: ["8", "10", "12", "14"],
-          c: 1,
-          e: "3×4−2 = 10.",
-        },
-        {
-          id: "mat4",
-          title: "Estatística essencial",
-          desc: "Média, mediana e leitura crítica de conjuntos de dados.",
-          concept:
-            "A média usa todos os valores; a mediana é o valor central após ordenar os dados.",
-          q: "Qual a mediana de 2, 4, 7, 9 e 20?",
-          o: ["4", "7", "8,4", "9"],
-          c: 1,
-          e: "Com cinco valores ordenados, o terceiro é a mediana: 7.",
-        },
-        {
-          id: "mat5",
-          boss: true,
-          title: "Chefe: Matemática base",
-          desc: "Checkpoint da unidade. Resolva sem fórmula decorada.",
-          concept:
-            "Misture porcentagem, proporção, função e estatística escolhendo a ideia adequada.",
-          q: "Uma conta sobe de R$ 160 para R$ 184. O aumento percentual foi:",
-          o: ["10%", "12%", "15%", "24%"],
-          c: 2,
-          e: "O aumento foi 24. 24/160=0,15=15%.",
-        },
-      ],
-    },
-    nat: {
-      icon: "⚗",
-      title: "Natureza",
-      units: [
-        {
-          id: "nat1",
-          title: "Energia e transformações",
-          desc: "Reconheça conversões de energia em situações do cotidiano.",
-          concept:
-            "A energia pode mudar de forma, mas a análise deve acompanhar o sistema e as transferências.",
-          q: "Num painel solar fotovoltaico, a transformação principal é:",
-          o: [
-            "luminosa em elétrica",
-            "elétrica em química",
-            "química em sonora",
-            "térmica em nuclear",
-          ],
-          c: 0,
-          e: "Células fotovoltaicas convertem energia luminosa em elétrica.",
-        },
-        {
-          id: "nat2",
-          title: "Ecologia",
-          desc: "Fluxo de energia, cadeias alimentares e relações ecológicas.",
-          concept:
-            "Energia entra majoritariamente pelos produtores e diminui a cada transferência trófica.",
-          q: "A maior quantidade de energia disponível em uma cadeia tende a estar:",
-          o: [
-            "nos decompositores apenas",
-            "nos produtores",
-            "no último predador",
-            "igual em todos os níveis",
-          ],
-          c: 1,
-          e: "Os produtores formam a base energética da cadeia.",
-        },
-        {
-          id: "nat3",
-          title: "Eletricidade básica",
-          desc: "Tensão, resistência, corrente e potência.",
-          concept:
-            "A Lei de Ohm relaciona V=R·I. Potência elétrica pode ser calculada por P=V·I.",
-          q: "Com 12 V em um resistor de 6 Ω, a corrente é:",
-          o: ["0,5 A", "2 A", "6 A", "72 A"],
-          c: 1,
-          e: "I=V/R=12/6=2 A.",
-        },
-        {
-          id: "nat4",
-          title: "Química e pH",
-          desc: "Interprete acidez e ordens de grandeza.",
-          concept:
-            "A escala de pH é logarítmica: uma unidade representa fator 10 na concentração de H⁺.",
-          q: "Comparando pH 3 e pH 5, a solução de pH 3 tem concentração de H⁺:",
-          o: [
-            "2 vezes maior",
-            "10 vezes maior",
-            "100 vezes maior",
-            "1000 vezes menor",
-          ],
-          c: 2,
-          e: "São duas unidades: 10²=100 vezes.",
-        },
-        {
-          id: "nat5",
-          boss: true,
-          title: "Chefe: Natureza base",
-          desc: "Checkpoint interdisciplinar.",
-          concept: "Leia o fenômeno antes de escolher a fórmula ou conceito.",
-          q: "Se a resistência dobra e a tensão permanece constante, a corrente elétrica:",
-          o: ["dobra", "cai pela metade", "fica igual", "quadruplica"],
-          c: 1,
-          e: "I=V/R; dobrar R reduz I à metade.",
-        },
-      ],
-    },
-    hum: {
-      icon: "⌘",
-      title: "Humanas",
-      units: [
-        {
-          id: "hum1",
-          title: "Cidadania",
-          desc: "Direitos, deveres e participação na vida coletiva.",
-          concept:
-            "Cidadania envolve dimensões civis, políticas e sociais e formas de participação.",
-          q: "Qual situação representa exercício de cidadania para além do voto?",
-          o: [
-            "participar de conselho comunitário",
-            "ignorar decisões públicas",
-            "evitar qualquer debate",
-            "recusar direitos sociais",
-          ],
-          c: 0,
-          e: "Participação em conselhos e espaços públicos é exercício de cidadania.",
-        },
-        {
-          id: "hum2",
-          title: "Urbanização brasileira",
-          desc: "Industrialização, êxodo rural e metropolização.",
-          concept:
-            "A urbanização acelerou com industrialização, transformações no campo e migrações internas.",
-          q: "Um fator importante da urbanização brasileira no século XX foi:",
-          o: [
-            "êxodo rural",
-            "fim da indústria",
-            "queda absoluta dos serviços",
-            "proibição de migrações",
-          ],
-          c: 0,
-          e: "O êxodo rural contribuiu para o crescimento urbano.",
-        },
-        {
-          id: "hum3",
-          title: "Globalização",
-          desc: "Fluxos globais e desigualdades.",
-          concept:
-            "Globalização intensifica fluxos econômicos, informacionais e produtivos, sem eliminar fronteiras e desigualdades.",
-          q: "Uma característica da globalização contemporânea é:",
-          o: [
-            "redução de todos os fluxos",
-            "intensificação de redes produtivas e informacionais",
-            "fim dos Estados",
-            "igualdade automática entre países",
-          ],
-          c: 1,
-          e: "Redes e fluxos se intensificam, mas desigualdades permanecem.",
-        },
-        {
-          id: "hum4",
-          title: "Trabalho e produção",
-          desc: "Divisão do trabalho e mudanças econômicas.",
-          concept:
-            "A divisão internacional do trabalho distribui atividades e especializações entre economias.",
-          q: "A expressão “divisão internacional do trabalho” refere-se à:",
-          o: [
-            "separação de bairros",
-            "distribuição produtiva entre países",
-            "divisão dos poderes",
-            "grade escolar",
-          ],
-          c: 1,
-          e: "Ela descreve especializações e posições produtivas na economia mundial.",
-        },
-        {
-          id: "hum5",
-          boss: true,
-          title: "Chefe: Humanas base",
-          desc: "Checkpoint de interpretação social.",
-          concept:
-            "Conecte processos históricos, sociais, políticos e econômicos sem reduzir fenômenos a uma causa única.",
-          q: "Eleições periódicas em democracias representativas têm como função:",
-          o: [
-            "eliminar conflitos",
-            "renovar representação política",
-            "substituir leis automaticamente",
-            "impedir participação social",
-          ],
-          c: 1,
-          e: "Eleições renovam mandatos e representantes.",
-        },
-      ],
-    },
-    ling: {
-      icon: "¶",
-      title: "Linguagens",
-      units: [
-        {
-          id: "ling1",
-          title: "Tese e argumento",
-          desc: "Encontre o ponto central defendido por um texto.",
-          concept:
-            "A tese é a posição central; argumentos são razões, dados ou relações usadas para sustentá-la.",
-          q: "Em um artigo de opinião, a tese corresponde principalmente:",
-          o: [
-            "ao ponto de vista defendido",
-            "à fonte bibliográfica",
-            "ao título",
-            "a qualquer exemplo",
-          ],
-          c: 0,
-          e: "A tese organiza o posicionamento do texto.",
-        },
-        {
-          id: "ling2",
-          title: "Coesão",
-          desc: "Entenda o papel dos conectores.",
-          concept:
-            "Conectores explicitam relações como causa, contraste, consequência e conclusão.",
-          q: "“Contudo” costuma introduzir:",
-          o: ["adição", "contraste", "causa", "exemplo"],
-          c: 1,
-          e: "“Contudo” marca oposição ou contraste.",
-        },
-        {
-          id: "ling3",
-          title: "Inferência",
-          desc: "Leia o que o texto sugere sem inventar informação.",
-          concept:
-            "Inferir é construir uma conclusão sustentada por pistas do texto e pelo contexto.",
-          q: "Uma inferência válida deve:",
-          o: [
-            "contradizer o texto",
-            "ser sustentada por pistas textuais",
-            "depender só de opinião pessoal",
-            "ignorar contexto",
-          ],
-          c: 1,
-          e: "A inferência precisa ser justificável por evidências do texto.",
-        },
-        {
-          id: "ling4",
-          title: "Figuras de linguagem",
-          desc: "Reconheça efeitos de sentido.",
-          concept:
-            "Figuras organizam efeitos expressivos; personificação atribui traços humanos a seres não humanos.",
-          q: "“A cidade acordou nervosa” contém:",
-          o: ["personificação", "onomatopeia", "eufemismo", "pleonasmo"],
-          c: 0,
-          e: "A cidade recebe uma característica humana.",
-        },
-        {
-          id: "ling5",
-          boss: true,
-          title: "Chefe: Linguagens base",
-          desc: "Checkpoint de leitura e argumentação.",
-          concept:
-            "Leia objetivo, gênero e contexto antes de nomear recursos linguísticos.",
-          q: "Informação explícita é aquela que:",
-          o: [
-            "está declarada diretamente",
-            "depende de adivinhação",
-            "existe fora do texto",
-            "só aparece por ironia",
-          ],
-          c: 0,
-          e: "Explícita significa apresentada diretamente no texto.",
-        },
-      ],
-    },
-    red: {
-      icon: "✎",
-      title: "Redação",
-      units: [
-        {
-          id: "red1",
-          title: "Tese forte",
-          desc: "Transforme tema em posição argumentável.",
-          concept:
-            "Uma tese funcional responde ao problema e antecipa o caminho dos argumentos.",
-          q: "Qual tese é mais adequada a um texto sobre desinformação científica?",
-          o: [
-            "A ciência existe.",
-            "A desinformação científica se mantém por baixa alfabetização midiática e circulação irresponsável de conteúdo, exigindo educação e responsabilização.",
-            "Redes sociais são legais.",
-            "O tema é importante.",
-          ],
-          c: 1,
-          e: "Ela apresenta posição e dois eixos que podem ser desenvolvidos.",
-        },
-        {
-          id: "red2",
-          title: "Desenvolvimento",
-          desc: "Monte parágrafo com função clara.",
-          concept:
-            "Um desenvolvimento pode usar tópico frasal, explicação, repertório pertinente e ligação com a tese.",
-          q: "Qual elemento evita que repertório vire “nome jogado”?",
-          o: [
-            "explicar sua relação com o argumento",
-            "usar autor famoso sempre",
-            "colocar aspas",
-            "aumentar o tamanho da frase",
-          ],
-          c: 0,
-          e: "O repertório precisa ser produtivo, isto é, contribuir para o raciocínio.",
-        },
-        {
-          id: "red3",
-          title: "Coesão na redação",
-          desc: "Faça as ideias conversarem.",
-          concept:
-            "Coesão não é decorar conectivos; é explicitar relações lógicas entre frases e parágrafos.",
-          q: "Para introduzir consequência, um conector adequado é:",
-          o: ["por conseguinte", "embora", "por exemplo", "por outro lado"],
-          c: 0,
-          e: "“Por conseguinte” indica consequência/conclusão.",
-        },
-        {
-          id: "red4",
-          title: "Intervenção",
-          desc: "Construa proposta concreta e relacionada ao problema.",
-          concept:
-            "Uma revisão útil procura agente, ação, meio/modo, finalidade e detalhamento, respeitando os direitos humanos.",
-          q: "Qual opção apresenta agente e ação?",
-          o: [
-            "É necessário melhorar.",
-            "O Ministério da Educação deve ampliar programas de educação midiática nas escolas.",
-            "Logo, existe um problema.",
-            "Tal questão é difícil.",
-          ],
-          c: 1,
-          e: "Há agente definido e ação concreta.",
-        },
-        {
-          id: "red5",
-          boss: true,
-          title: "Chefe: Arquitetura da redação",
-          desc: "Checkpoint da estrutura argumentativa.",
-          concept:
-            "O texto precisa manter tema, tese, argumentos conectados e intervenção coerente.",
-          q: "Se a conclusão propõe uma ação sem relação com os argumentos anteriores, o principal problema é:",
-          o: [
-            "falta de coerência",
-            "excesso de parágrafos",
-            "uso de título",
-            "presença de repertório",
-          ],
-          c: 0,
-          e: "A intervenção deve responder aos problemas discutidos no desenvolvimento.",
-        },
-      ],
-    },
-  };
+  const trails = globalThis.AtenaAcademy;
   function ensureEnergy() {
     const k = dayKey();
     if (s.course.energy.date !== k) {
@@ -697,9 +312,7 @@
     $("#trailHeadline").textContent = prog.done
       ? prog.done + " de " + prog.total + " lições concluídas"
       : "Escolha uma área e comece";
-    $("#trailSub").textContent = energy
-      ? "Complete uma lição curta e ganhe XP."
-      : "Revise um flashcard com acerto para recuperar energia e continuar.";
+    $("#trailSub").textContent = "Complete uma lição curta e continue. A energia nunca bloqueia seu aprendizado.";
     $("#trailMap").innerHTML =
       '<div class="unit-head"><span>TRILHA · ' +
       areaNames[s.course.track].toUpperCase() +
@@ -777,11 +390,6 @@
     btn.onclick = () => startTrailLesson(lesson);
   }
   function startTrailLesson(lesson) {
-    if (ensureEnergy() <= 0 && !s.course.done[lesson.id]) {
-      toast("Revise um flashcard com acerto para recuperar energia.");
-      activateTab("flashcards");
-      return;
-    }
     trailSession = { lessonId: lesson.id, answered: false };
     $("#lessonBody").innerHTML =
       '<div class="lesson-preview"><p><b>Resumo:</b> ' +
@@ -840,13 +448,19 @@
       );
       if (first) markDailyStep("trilhas");
       $("#startLesson").disabled = false;
-      $("#startLesson").textContent = "Próxima lição";
+      const currentList=trailList(),currentIndex=currentList.findIndex(x=>x.id===lesson.id);
+      $("#startLesson").textContent = currentList[currentIndex+1] ? "Próxima lição" : "Continuar em outra trilha";
       $("#startLesson").onclick = () => {
         const list = trailList(),
           i = list.findIndex((x) => x.id === lesson.id),
           n = list[i + 1];
         renderTrails();
         if (n) selectLesson(n.id);
+        else {
+          const nextTrack=Object.keys(trails).find(area=>trails[area].units.some(unit=>!s.course.done[unit.id]));
+          if(nextTrack){s.course.track=nextTrack;trailSession=null;save();renderTrails();toast("Nova trilha. Seu progresso anterior continua salvo.");}
+          else {activateTab("flashcards");toast("Você concluiu todas as lições. Revise ou repita qualquer trilha quando quiser.");}
+        }
       };
     } else {
       save();
@@ -2300,7 +1914,7 @@
     download(
       "kalore-enem-hub-" + dayKey() + ".json",
       JSON.stringify(
-        { version: 5, exportedAt: new Date().toISOString(), state: s },
+        { version: 5, exportedAt: new Date().toISOString(), state: s, atena: window.AtenaTools?.read() },
         null,
         2,
       ),
@@ -2319,6 +1933,7 @@
         Array.isArray(d.state)
       )
         throw new Error("Use um backup v3, v4 ou v5 do ENEM Hub.");
+      if(d.atena && window.AtenaTools && !window.AtenaTools.write(d.atena))throw new Error("Não foi possível importar o planejamento ATENA.");
       s = merge(d.state);
       save();
       location.reload();
@@ -2330,7 +1945,7 @@
   };
   $("#shareBtn").onclick = async () => {
     const data = {
-      title: "Kaloré ENEM Hub 2026",
+      title: "ATENA · Estudos ENEM",
       text: "Plano, redação, questões, flashcards e materiais oficiais para o ENEM 2026.",
       url: location.origin + location.pathname,
     };
@@ -2792,6 +2407,7 @@
     },
   });
   window.KaloreMotion?.init(document.querySelector("main"));
+  window.AtenaTools?.init();
   window.addEventListener("load", () =>
     requestAnimationFrame(() => {
       if (location.hash) activateTab(location.hash.slice(1), false);

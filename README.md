@@ -1,195 +1,125 @@
-# Kaloré · Radar de Temas + ENEM Hub 2026
+# ATENA · Conhecimento é poder
 
-**Feito por Kaloré, para todos.** Uma plataforma gratuita de preparação, com Radar de Temas e um espaço completo de prática no ENEM Hub.
+Plataforma gratuita e de código aberto para estudar para o ENEM. A ATENA reúne o Radar de Temas e o ENEM Hub em um painel com identidade própria: mármore, ouro, uma interface escura e a imagem de Atena fornecida para o projeto.
 
-- [Radar de Temas](https://thiago00199.github.io/RadarEnem/)
-- [ENEM Hub](https://thiago00199.github.io/RadarEnem/estudar.html)
+**Feito por Kaloré, para todos.**
 
-## Clareza, contexto e direção · versão 4.1
+Código original sob [licença MIT](./LICENSE). Consulte o [guia de contribuição](./CONTRIBUTING.md) para participar e conhecer o tratamento de conteúdo, fontes e materiais externos.
 
-- Painel **Meu progresso** com acertos reais por área e assunto, períodos de 7/30 dias, gráfico diário e relatório. O histórico anterior é preservado; o detalhamento começa nesta versão.
-- **84 questões autorais**, incluindo 24 novas questões contextualizadas com cinco alternativas, pistas e explicações. Busca por assunto e filtros de erros, acertos com dúvida e itens sem registro.
-- Prática por assunto com uma questão por tela, teclado, confiança opcional e anotações. Acertar uma pendência encerra sua revisão no caderno de erros.
-- Roteiro de redação em três etapas no Radar, salvo por tema e exportável. No Hub, preenche campos vazios e preserva o rascunho e os campos anteriores.
-- Navegação móvel com cinco destinos e menu para todas as 14 ferramentas. Cores aplicadas imediatamente ao trocar o tema, com movimento e feedback opcionais.
-- Importação aceita backups de até 12 MB, com validação e limites por campo. O teste inclui uma cópia válida com várias redações acima do antigo limite de 2 MB.
-- Auditoria automatizada ampliada para 97 estados de tela nos dois temas, sem violações de regras de acessibilidade encontradas.
+- [Abrir a ATENA](https://atena.dev.br/)
+- [Academia de estudos](https://atena.dev.br/estudos.html)
+- [Estúdio de redação](https://atena.dev.br/redacao.html)
+- [Radar de temas](https://atena.dev.br/radar.html)
+- [Simulados, PDFs e outras ferramentas](https://atena.dev.br/estudar.html)
+- [Aplicativo offline de um arquivo](https://atena.dev.br/estudar-offline.html)
 
-[Detalhes, arquitetura, limites e validação da evolução](./CLAREZA.md).
+## O que foi entregue na versão 5
 
-## Laboratório de redação e aplicativo offline · versão 4.2
+- **Next.js 15, React 19, TypeScript e Tailwind 4**, com exportação estática para GitHub Pages. Home, academia, estúdio e Radar são rotas React; o Hub mantém as ferramentas existentes e o arquivo independente offline.
+- Sidebar no computador, menu móvel com foco contido e Escape, busca por Ctrl/⌘+K, temas claro/escuro, animações discretas e respeito ao movimento reduzido.
+- **40 lições autorais em cinco áreas**, com resolução, nova tentativa, revisão e transição entre trilhas. O estudante continua depois da quinta lição; energia não bloqueia o aprendizado.
+- Progresso real do aparelho, sequência diária, atividade semanal e um plano personalizável de 3, 5 ou 7 blocos. A conclusão registra o dia em que a atividade aconteceu, mesmo quando o bloco estava previsto para outra data.
+- **17 temas de prática, 34 caminhos de argumentação e 51 recortes** para desenvolver teses, argumentos e intervenções. O estúdio salva rascunho, roteiro, checklist das cinco competências e até 30 versões. Permite retomar uma versão guardando antes o rascunho em andamento, além de exportar texto, roteiro e revisão.
+- **Cartões pessoais**, com pergunta, resposta, área, fila de revisão e intervalos de 1, 3, 7, 14, 30 e 60 dias. São incluídos no backup v5 do Hub junto do planejamento ATENA.
+- **84 questões autorais**, simulados cronometrados, sessões guiadas, confiança e anotações por questão, caderno de erros, Pomodoro e histórico de provas oficiais preservados.
+- **68 referências de PDF** com fonte identificada, busca, filtros, favoritos e marcação de estudo. Quatro cadernos próprios estão hospedados no projeto e incluídos no arquivo offline; os demais são links para as instituições de origem.
+- Coletor **Python sem API de IA**, com consultas concorrentes a fontes públicas, limites de tempo/tamanho e preservação dos dados em falhas parciais. O Radar busca o JSON publicado quando é aberto.
 
-- **17 temas de treino**, alinhados ao Radar, com três recortes por tema e 34 caminhos autorais de argumentação.
-- Cada caminho traz tese, dois argumentos com explicação e exemplo hipotético, perguntas para desenvolver a análise, quatro partes de uma proposta de intervenção e pontos para revisar.
-- No Radar e no Hub, o preenchimento automático só usa campos vazios. A exportação do tema gera um guia Markdown próprio.
-- [Baixe o ENEM Hub offline](https://thiago00199.github.io/RadarEnem/estudar-offline.html): um arquivo HTML de menos de 1 MB abre pela primeira vez sem conexão e inclui os quatro PDFs Kaloré. O progresso fica no navegador do aparelho.
-- No app offline, biblioteca autoral, questões, simulados, flashcards, escrita, foco e backups continuam locais. As fontes e provas oficiais hospedadas na internet abrem quando voltar a conexão.
-- Os temas são ideias de estudo, não probabilidades nem previsões da prova.
+As questões, os argumentos e as propostas locais são materiais de treino. O Radar apresenta prioridades relativas de estudo, não probabilidades do tema da prova. Checagens de texto e checklists não atribuem nota oficial, correção de competências ou estimativa TRI.
 
-## Nova experiência de estudo · outubro de 2026
+## Executar e construir
 
-- Sessões guiadas de 10, 20 ou 30 minutos estimados: questões autorais e flashcards, uma atividade por vez, com respostas salvas e retomada depois de fechar a página.
-- Erros pendentes da área entram primeiro no treino; uma resposta correta durante a sessão encerra essa revisão. Os cartões usam o agendamento existente.
-- Metas de 3, 5 ou 7 dias de estudo por semana, gráfico de ações reais e histórico de sessões concluídas. A semana segue o calendário de São Paulo.
-- Modo escrita com o mesmo rascunho, fonte ajustável, salvamento de versões por Ctrl/⌘+S e indicação de falhas de armazenamento. Nenhum editor duplicado.
-- A instalação PWA continua disponível pelo site. Ela baixa os arquivos após a visita conectada; para abrir de primeira sem rede, use o arquivo independente abaixo.
-- Radar com comparação entre dois temas, exportação da comparação e anotações de repertório por tema, incluídas no backup e no plano exportado.
-- Entrada mais direta, telas de ferramentas com espaço próprio, transições coordenadas, resposta ao toque e celebrações breves. Preferência de animações compartilhada entre os produtos.
-- Validação automática de funções, dados e acessibilidade em cada atualização. Publicação conferida contra os arquivos da versão validada.
-
-[Detalhes, medições e validação desta versão](./EXPERIENCIA.md).
-
-## ENEM Hub · atualização 6.0
-
-- [Biblioteca interativa com 68 PDFs](https://thiago00199.github.io/RadarEnem/estudar.html#biblioteca), busca por palavras sem depender de acentos, filtros por matéria/ano/tipo, favoritos, marcação de estudo e paginação.
-- 23 apostilas da Fundação Cecierj, e-book do IFMG, cartilhas, matriz e 18 provas regulares de 2017–2025 com os gabaritos correspondentes. Cada recurso identifica a fonte.
-- [Quatro cadernos próprios](https://thiago00199.github.io/RadarEnem/materiais/index.html): redação (6 páginas), matemática com 12 problemas comentados (6), revisão de Humanas/Natureza (5) e planejamento/caderno de erros (4). Disponíveis offline após uma visita com internet.
-- Treino oficial com seleção de ano/dia, cronômetro recuperável na mesma aba, registro manual de acertos por área, notas de revisão, histórico, próxima ação e exportação CSV.
-- Busca rápida por ferramentas e PDFs com Ctrl/Cmd+K. Atalhos do Radar abrem diretamente a biblioteca e as provas.
-- Apresentação concentrada na tela Hoje; telas de trabalho abrem diretamente no conteúdo. A navegação móvel mostra a seção ativa.
-- Tokens de cores compartilhados entre Radar, Hub e materiais; contraste do tema claro corrigido, seletores rotulados e flashcards com controles nativos, sem botões aninhados.
-- Cinco páginas de conteúdo em HTML, com títulos, canonical, dados estruturados e sitemap; acessíveis sem JavaScript.
-- Backup v5 guarda favoritos, leituras e histórico oficial; importação continua aceitando v3/v4. O progresso anterior é preservado.
-- Geração dos materiais e do worker offline obrigatória no build do Vite, incluindo requisições parciais de PDFs.
-- [Auditoria detalhada e roadmap](./AUDITORIA.md), com diagnóstico, quick wins, prioridades, arquitetura e medições.
-
-A conferência direta encontrou 24 PDFs externos disponíveis. As 40 URLs do Inep retornaram 502 neste ambiente; os links foram extraídos dos catálogos oficiais e têm acesso à publicação de origem. Os quatro PDFs próprios foram renderizados e inspecionados. O catálogo reúne 68 referências de PDF, não 68 arquivos hospedados neste repositório.
-
-## Recursos de prática já disponíveis
-
-- Interface com navegação lateral no computador, atalhos no celular e temas claro/escuro.
-- 25 lições em cinco áreas, desbloqueio por progresso, XP e recuperação de energia por revisão de flashcards.
-- 84 questões autorais com explicações: 60 de fundamentos e 24 contextualizadas; treino por assunto, blocos e caderno de erros.
-- Simulado cronometrado, navegação entre itens, marcação para revisão, correção ao finalizar e histórico. A sessão continua após recarregar a página na mesma aba.
-- 22 fórmulas e conceitos pesquisáveis, com significado e exemplos.
-- 22 flashcards com revisão espaçada e operação por teclado.
-- Editor de redação com rascunho automático, tema persistente, versões, roteiro de argumentação e exportação de texto. Um tema selecionado no Radar abre diretamente no editor.
-- Checagem local de estrutura e prompt para levar a uma IA externa. Não há IA conectada nem atribuição de nota oficial ou TRI.
-- Planejamento semanal que respeita a quantidade de horas escolhida; rota diária que avança quando suas atividades são realizadas.
-- Pomodoro com recuperação de tempo e anotações após recarregar a página.
-- Backup compatível com versões 3, 4 e 5, validação de dados e preservação do progresso existente.
-- O site instalável fica disponível offline após carregar seus recursos. O [app de um arquivo só](https://thiago00199.github.io/RadarEnem/estudar-offline.html) funciona desde a primeira abertura e leva quatro PDFs locais; as fontes e provas oficiais externas ainda exigem conexão.
-
-Questões e propostas são autorais e servem para prática. Os cadernos oficiais estão na biblioteca do Inep. O Radar mostra prioridade relativa de estudo; seus percentuais não são probabilidades de um tema cair.
-
-## O que você encontra
-
-- Ranking de 17 temas com índice relativo e contribuição de cada sinal.
-- Dossiê PND 2026 / leitura, com comparação entre os cenários com e sem provas relacionadas.
-- Biblioteca do Inep: cartilha 2026, acervo do Enem e materiais da PND.
-- Histórico de 28 aplicações regulares, de 1998 a 2025, com busca.
-- Busca de fontes, inclusão de matérias e pistas públicas, pesos ajustáveis.
-- Plano de escrita com temas salvos, acompanhamento e download em Markdown.
-- Importação e exportação da análise em JSON; ajustes salvos no navegador.
-- Layout responsivo, navegação por teclado, animações opcionais e respeito ao movimento reduzido.
-
-## Rodar a versão estática
-
-Requer Node.js 22.13 ou superior.
+Requer Node.js 22.13+ e Python 3.10+. O projeto fixa pnpm 11.25.0.
 
 ```sh
 npm install --global pnpm@11.25.0
 pnpm install --frozen-lockfile
-pnpm run dev:pages
-pnpm run check:radar
-pnpm run check:session
-pnpm run check:insights
-pnpm run build:pages
-pnpm run check:hub
+pnpm dev
 ```
 
-O build estático fica em `docs/`. Essa versão não exige chaves, conta de IA ou servidor próprio. Pode ser hospedada no GitHub Pages e em serviços que publicam arquivos estáticos.
-
-## GitHub Pages
-
-No repositório `THIAGO00199/RadarEnem`:
-
-1. Abra **Settings → Pages**.
-2. Em **Build and deployment**, escolha **Deploy from a branch**.
-3. Selecione **main** e **/docs**, depois **Save**.
-4. Aguarde o GitHub informar a URL publicada nessa mesma tela.
-
-Os arquivos em `docs/` já estão compilados. Caminhos relativos permitem publicar na subpasta do repositório. Não é necessário configurar um domínio para começar.
-
-## Atualizar matérias
+O servidor de desenvolvimento Next abre em `http://localhost:3000`. Os destinos usam `.html` para funcionar tanto na raiz do domínio como em `/RadarEnem/`; reescritas somente de desenvolvimento mantêm esses mesmos links funcionando no Next local.
 
 ```sh
-npm run data:update
-npm run build:pages
+pnpm build:pages
+pnpm preview:pages
 ```
 
-O script consulta as fontes públicas fixadas em `lib/radar-data.ts` e grava `portable/public/data/latest.json`. Depois do build, publique as mudanças em `docs/` também. Não há tarefa agendada neste projeto.
+O build gera as rotas em `out/`, copia a versão final para `docs/`, preserva `docs/CNAME`, resolve os caminhos relativos de CSS/fontes, gera o aplicativo independente e cria o service worker a partir dos arquivos efetivamente publicados. Nenhuma chave ou processo de servidor é necessário para os alunos abrirem a plataforma.
 
-No GitHub Pages, **Atualizar base** lê o arquivo publicado; o navegador não faz scraping de sites externos. Na versão hospedada com servidor, **Atualizar fontes** usa `GET /api/collect`, com cache em memória de até 15 minutos e consultas limitadas por tempo e tamanho.
+## Estrutura
 
-A coleta não cobre toda a internet. Uma página pode bloquear o acesso ou mudar de estrutura. Falhas individuais aparecem no status e não removem a curadoria inicial. Na consulta de 30/09/2026, seis das oito fontes responderam; Planejamento retornou 401 e IBGE, 403.
-
-## Como ler os números
-
-Os percentuais são **prioridades de estudo entre os temas desta seleção**, não probabilidades de cair. A soma é 100,0%. Não há calibração preditiva, promessa de acerto ou informação reservada do Inep.
-
+```text
+app/                    Rotas App Router, layout, tokens e estilos do painel
+components/             Home, academia, redação, navegação e componentes acessíveis
+lib/                    Conteúdo tipado, regras do Radar e acesso ao progresso local
+backend/                Coletor Python, fontes e testes determinísticos
+portable/public/hub/    Ferramentas existentes, questões, simulados e biblioteca
+portable/public/shared/ Regras compartilhadas de redação, planejamento e revisão
+portable/public/atena/   Imagem de referência e símbolo vetorial
+scripts/                Build, geração offline, validação e conferência do CDN
+docs/                   Exportação pronta para GitHub Pages
+.github/workflows/      Qualidade, coleta diária e conferência da publicação
 ```
-Pontos = 10 + 50E + 25A + 10H + 10D + 0P
-Índice (%) = pontos / soma dos pontos de todos os temas × 100
-```
 
-- **E**: apostas docentes; **A**: atualidades; **D**: provas relacionadas; **P**: pistas não verificadas. Por categoria e tema, usa-se a maior contribuição de cada grupo de domínio, somada, dividida por três e limitada a um.
-- O peso de uma publicação cai pela metade em 180 dias. Sem data, a contribuição é 0,5. Publicações futuras ou com mais de dois anos ficam fora.
-- **H**: frequência editorial do eixo nas edições regulares anteriores ao ano da análise, com suavização. Não existe bônus por um tema estar “atrasado”.
-- Provas relacionadas podem ser desligadas e têm peso máximo de 15. Pistas não verificadas começam desligadas e têm limite de cinco pontos.
-- A curadoria precede a classificação automática de uma URL repetida. URLs com parâmetros de rastreamento são deduplicadas.
-- Cartilhas e acervos oficiais são referências de preparação e não pontuam automaticamente.
+A academia tem uma fonte tipada em `lib/academy-data.ts`. O build gera `hub/academy-data.js` para disponibilizar as mesmas 40 lições no Hub e no aplicativo offline.
 
-A análise sobre leitura na PND 2026 está atribuída ao **Instituto Dering**, publicação de 21/09/2026. O **Inep** confirmou a publicação dos cadernos e da grade em 24/09. Os links dos PDFs foram localizados no acervo oficial; o download retornou 502 durante a preparação deste projeto, portanto o conteúdo não foi conferido diretamente no PDF. Uma aproximação temática entre PND e Enem em 2025 não demonstra um padrão de previsão.
+## Atualização de fontes e hospedagem
 
-## Fontes e manutenção
-
-Fontes iniciais: FGV, Brasil Escola, CNN Brasil, Instituto Dering, MDH, ANPD, Ministério do Planejamento, IBGE e Agência Brasil. Os links, datas, notas de curadoria e relações com temas estão em `lib/radar-data.ts` e na interface. Histórico: compilação Quero Bolsa e referência oficial do Inep para 2025. A série não inclui PPL, reaplicações, edições digitais e regionais. Títulos antigos são resumos, não transcrições integrais.
-
-Altere temas, palavras-chave e fontes no arquivo de dados. O modelo compartilhado fica em `lib/radar-model.ts`; a coleta em `lib/collector.ts`. Evite usar páginas genéricas como indícios de um assunto específico. Contribuições pessoais não se tornam oficiais ao receber uma categoria.
-
-## Privacidade e verificação
-
-Pistas, favoritos e ajustes ficam em `localStorage`. Não há rastreador, cadastro ou sincronização de dados pessoais. Os botões de atualização fazem requisições de dados; links de fontes abrem os sites correspondentes. Exportações podem conter as notas que você digitou: revise antes de compartilhar.
-
-Verificações automatizadas: tipos, build, regras do Radar, validação de backups, datas, quantidade exata de sessões e integridade dos arquivos offline. Testes de navegador cobrem lições, flashcards, redação, roteiro, simulado, recuperação do timer, integração Radar/Hub, hashes inválidos, modo offline e layouts de 360, 390, 768 e 1440 px. Foram inspecionados os temas claro/escuro em desktop e celular.
-
-Para repetir os testes de navegador:
+[Guia de publicação, DNS, HTTPS e apresentação offline](./DEPLOYMENT.md).
 
 ```sh
-npm install --no-save playwright
-npx playwright install chromium
-npm run check:ui
+python3 backend/radar_collect.py
+pnpm build:pages
 ```
 
-O teste inicia e encerra seu próprio servidor local. `CHROMIUM_PATH` permite usar um Chromium já instalado; `SCREENSHOT_DIR` salva imagens de verificação.
+O workflow `radar-daily.yml` roda diariamente com `0 0 * * *` UTC e também pode ser acionado manualmente. Consulta páginas públicas e RSS, valida os dados, recompila os arquivos estáticos e solicita uma nova publicação do Pages. Horários de cron do GitHub são aproximados e podem sofrer atrasos.
 
-## Estrutura e publicação reproduzível
+O navegador lê `data/latest.json`; acessar a plataforma não dispara scraping, processamento remoto de redações ou uma API paga. Sem rede, a última base disponível continua acessível pelo cache.
 
-O Hub é editado em `portable/public/estudar.html` e `portable/public/hub/`. Sua interface, regras de persistência e conteúdo ficam em arquivos separados. **Não edite o Hub diretamente em `docs/`.**
+GitHub Pages serve `main` → `/docs`. O domínio personalizado fica em `docs/CNAME`. A compilação é SSG e a atualização é feita por reconstrução agendada: Pages não executa ISR, Next Server, Python ou banco em produção. Há uma cópia pré-renderizada de cada rota, compartilhada entre os visitantes.
 
-O pipeline do Vite gera as páginas de materiais, copia os arquivos públicos para `docs/` e gera um service worker com a lista completa de scripts e estilos da versão. A atualização limpa apenas caches com o prefixo do projeto. Requisições a scripts indisponíveis retornam erro apropriado, sem substituir JavaScript por HTML.
+## Progresso e uso offline
 
-Depois de qualquer mudança, rode `npm run build:pages` e publique tanto os fontes quanto `docs/`. A publicação usa a configuração existente do GitHub Pages (`main`, `/docs`).
+A conta é dispensável. Rascunhos, respostas, plano, cartões e preferências ficam no armazenamento local do navegador. `kalore-hub-v3` mantém a identidade do progresso anterior; `atena-workspace-v1` guarda os novos cartões, plano e checklist. Use **Dados → Exportar** no Hub antes de trocar de aparelho, limpar o navegador ou mudar de domínio.
 
-Na versão original hospedada com servidor, mantenha os scripts e a configuração de hospedagem existentes; a versão independente do GitHub contém apenas a aplicação estática e o coletor de linha de comando.
+Armazenamento de `github.io` e `atena.dev.br` é separado pelo navegador. Exporte no endereço antigo e importe no novo para transferir o estudo. O arquivo independente também usa seu próprio armazenamento.
 
-## Créditos
+- **PWA:** depois de uma visita conectada e do cache concluído, os arquivos do site podem abrir sem rede, incluindo as rotas React e os PDFs próprios.
+- **Arquivo offline:** baixe `estudar-offline.html` e abra no navegador. Funciona desde a primeira abertura sem conexão; contém Hub, 40 lições, redação, revisão, cartões pessoais, simulados e quatro PDFs. Seu editor é o do Hub, preservado para essa distribuição independente.
+- Links de fontes e provas oficiais externas exigem conexão. O cache pode ser removido pelo navegador; mantenha o arquivo e um backup do progresso.
 
-Interface e identidade do projeto: **Kaloré**. Documentos e conteúdos externos pertencem a seus respectivos autores e instituições; o projeto apenas referencia as fontes. Não há vínculo oficial com o Inep.
-
-## Auditorias adicionais
+## Validação
 
 ```sh
-npm install --no-save playwright @axe-core/playwright
-npx playwright install chromium
-npm run check:accessibility
-npm run check:performance
-npm run check:links
+pnpm build:pages
+pnpm typecheck
+pnpm check:atena
+python3 -m unittest backend.test_radar_collect
+pnpm check:radar
+pnpm check:session
+pnpm check:insights
+pnpm check:essay
+pnpm check:hub
 ```
 
-A auditoria automatizada final passou em 36 telas. Ela complementa os testes de teclado e a inspeção visual, sem representar certificação completa de acessibilidade. A medição em laboratório usou viewport 390×844, CPU 4×, latência 150 ms, download 1,6 Mbps e gzip: LCP mediano de 1,536 s no Radar, 0,572 s no Hub e 0,420 s na página de redação; CLS zero. Os relatórios e suas limitações estão em `portable/public/data/` e em `AUDITORIA.md`.
+Para os testes de navegador, instale Playwright e axe-core em um diretório de ferramentas, defina `NODE_PATH` para esse diretório e instale Chromium. `CHROMIUM_PATH` permite selecionar um binário existente.
 
-`PERF_BASELINE` aceita uma pasta com o build anterior para comparação. Sem essa variável, o script mede apenas o build atual. Estes números não são dados de usuários reais, INP nem garantia de desempenho do GitHub Pages.
+```sh
+pnpm check:atena-ui
+pnpm check:ui
+pnpm check:offline-app
+pnpm check:experience
+pnpm check:clarity
+pnpm check:accessibility
+node scripts/check-glow.cjs
+```
 
-Para regenerar os PDFs autorais, instale ReportLab e a fonte DejaVu Sans e rode `python scripts/create-guides.py`. Os PDFs ficam em `portable/public/materiais/pdfs/`; o build os copia para publicação.
+A CI testa as mesmas funções. Auditorias automatizadas não substituem avaliação manual, tecnologias assistivas ou medições de tráfego real. `scripts/check-published.py` compara cada recurso servido publicamente com o build validado.
+
+## Evolução e limites
+
+[Plano de evolução, capacidade e meta de 190 mil visitas mensais](./ATENA.md).
+
+O site estático reduz trabalho por visitante e dispensa servidor de aplicação. Não foi realizado teste de 100 mil acessos simultâneos; isso não é uma capacidade garantida. Limites e políticas da hospedagem continuam aplicáveis. Sincronização de conta, sala de comunidade e avaliação humana de redação ainda não são serviços implementados.
+
+Histórico de decisões: [Auditoria](./AUDITORIA.md), [Experiência](./EXPERIENCIA.md) e [Clareza](./CLAREZA.md).

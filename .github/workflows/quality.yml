@@ -1,7 +1,7 @@
 name: Product quality
 on:
   push:
-    branches: [main, experience/orbit, experience/clarity, experience/ideas-offline]
+    branches: [main, experience/orbit, experience/clarity, experience/ideas-offline, feature/atena-saas]
   pull_request:
   workflow_dispatch:
 permissions:
@@ -28,12 +28,19 @@ jobs:
           test -n "$CHROMIUM_PATH"
           echo "CHROMIUM_PATH=$CHROMIUM_PATH" >> "$GITHUB_ENV"
           echo "NODE_PATH=$RUNNER_TEMP/quality-tools/node_modules" >> "$GITHUB_ENV"
+      - name: Build the published products
+        id: build
+        run: |
+          npm run build:pages
+          npm run check:hub
       - name: Typecheck, state validation and content rules
         run: |
           npm run typecheck
           node --check portable/public/hub/app.js
           node --check portable/public/hub/experience.js
           node --check portable/public/shared/motion.js
+          npm run check:atena
+          python3 -m unittest backend.test_radar_collect
           npm run check:radar
           node scripts/check-recommend.mjs
           npm run check:session
@@ -42,13 +49,9 @@ jobs:
           node --check portable/public/shared/essay-ideas-model.js
           node --check portable/public/shared/essay-ideas-ui.js
           node --check portable/public/hub/insights.js
-      - name: Build the published products
-        id: build
-        run: |
-          npm run build:pages
-          npm run check:hub
       - name: Existing flows and offline functionality
         run: |
+          npm run check:atena-ui
           npm run check:ui
           npm run check:offline-app
       - name: Guided practice, writing and Radar comparison

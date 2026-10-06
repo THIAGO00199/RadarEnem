@@ -1,0 +1,94 @@
+{
+  "checkedAt": "2026-10-06T09:45:03.346Z",
+  "scope": "Next static routes at root and project prefix; legacy five-lesson progression and zero energy; next-track persistence; essay draft, outline, checklist and version preservation; personal flashcards; offline React routes. Automated accessibility rules on desktop/mobile in both palettes. Not an accessibility certification.",
+  "results": [
+    {
+      "name": "Home/busca/dark",
+      "violations": []
+    },
+    {
+      "name": "Home/menu/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "//390/dark",
+      "violations": []
+    },
+    {
+      "name": "/#plano/390/dark",
+      "violations": []
+    },
+    {
+      "name": "/#comunidade/390/dark",
+      "violations": []
+    },
+    {
+      "name": "/estudos.html/390/dark",
+      "violations": []
+    },
+    {
+      "name": "/redacao.html/390/dark",
+      "violations": []
+    },
+    {
+      "name": "//390/light",
+      "violations": []
+    },
+    {
+      "name": "/#plano/390/light",
+      "violations": []
+    },
+    {
+      "name": "/#comunidade/390/light",
+      "violations": []
+    },
+    {
+      "name": "/estudos.html/390/light",
+      "violations": []
+    },
+    {
+      "name": "/redacao.html/390/light",
+      "violations": []
+    },
+    {
+      "name": "//1440/dark",
+      "violations": []
+    },
+    {
+      "name": "/#plano/1440/dark",
+      "violations": []
+    },
+    {
+      "name": "/#comunidade/1440/dark",
+      "violations": []
+    },
+    {
+      "name": "/estudos.html/1440/dark",
+      "violations": []
+    },
+    {
+      "name": "/redacao.html/1440/dark",
+      "violations": []
+    },
+    {
+      "name": "//1440/light",
+      "violations": []
+    },
+    {
+      "name": "/#plano/1440/light",
+      "violations": []
+    },
+    {
+      "name": "/#comunidade/1440/light",
+      "violations": []
+    },
+    {
+      "name": "/estudos.html/1440/light",
+      "violations": []
+    },
+    {
+      "name": "/redacao.html/1440/light",
+      "violations": []
+    }
+  ]
+}

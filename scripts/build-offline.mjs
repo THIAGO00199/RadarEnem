@@ -9,7 +9,7 @@ async function files(dir = "") {
   })) {
     const p = dir + item.name;
     if (item.isDirectory()) out.push(...(await files(p + "/")));
-    else if (p !== "sw.js" && !p.startsWith(".") && !/robots|sitemap/.test(p))
+    else if (p !== "sw.js" && p !== "CNAME" && !p.startsWith(".") && !/robots|sitemap/.test(p))
       out.push(p);
   }
   return out.sort();

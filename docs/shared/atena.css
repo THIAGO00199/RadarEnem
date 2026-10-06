@@ -1,0 +1,386 @@
+/* Brand finish shared by the Radar, study tools and offline application. */
+:root {
+  --bg2: #10141b;
+  --panel2: #1b2028;
+  --panel3: #232936;
+  --line: var(--kalore-border);
+  --line2: #46453f;
+  --green2: #c9a447;
+  --amber: #e5c158;
+  --cyan: var(--kalore-link);
+  --sans: var(--kalore-font);
+}
+:root[data-theme="light"] {
+  --bg2: #eee9df;
+  --panel2: #f2ede4;
+  --panel3: #e6dfd1;
+  --line2: #b8ad99;
+  --green2: #79571b;
+  --amber: #79571b;
+}
+body {
+  background: var(--kalore-bg);
+  background-image: none;
+}
+.hub-app .topbar,
+.app-shell .topbar {
+  background: color-mix(in srgb, var(--kalore-bg) 91%, transparent);
+  border-color: var(--kalore-border);
+}
+.hub-app .brand-mark,
+.app-shell .brand-symbol {
+  background: transparent !important;
+  border: 0 !important;
+  font-size: 0 !important;
+  border-radius: 0 !important;
+  background-image: url("../atena/symbol.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  box-shadow: none !important;
+}
+.hub-app .brand > span:last-child,
+.app-shell .brand > span:last-child {
+  font-family: Georgia, serif !important;
+  letter-spacing: 3px !important;
+  font-size: 24px !important;
+  font-weight: 400 !important;
+  color: var(--kalore-text);
+}
+.hub-app .brand small,
+.app-shell .brand-sub {
+  font-family: Manrope, sans-serif !important;
+  letter-spacing: 1.5px !important;
+  font-size: 7px !important;
+  color: var(--kalore-muted) !important;
+}
+.hub-app .hero-main {
+  background:
+    radial-gradient(ellipse at 90% 10%, #d4af3710, transparent 60%),
+    var(--kalore-surface);
+  border-color: #d4af3735;
+  box-shadow: none;
+}
+.hub-app .hero h1 em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  color: var(--kalore-primary);
+}
+.hub-app .hero-sticker {
+  background: #d4af3716;
+  border: 1px solid #d4af372a;
+  color: var(--kalore-primary);
+  transform: none;
+  font-family: Manrope, sans-serif;
+}
+.hub-app .count-card {
+  background: var(--kalore-surface);
+  border-color: var(--kalore-border);
+}
+.hub-app .nav-tabs {
+  background: var(--kalore-bg);
+  border-color: var(--kalore-border);
+}
+.hub-app .nav-tabs button.on {
+  background: linear-gradient(100deg, #d4af371c, #d4af3708);
+  color: var(--kalore-primary);
+  border-color: #d4af3730;
+}
+.hub-app .nav-radar {
+  background: #d4af370c;
+  border-color: #d4af3730;
+}
+.hub-app .nav-radar .glow-icon-box {
+  background: #d4af3718;
+  color: var(--kalore-primary);
+}
+.hub-app .panel,
+.app-shell .panel {
+  border-color: var(--kalore-border);
+  box-shadow: inset 0 1px #ffffff03;
+}
+.hub-app .metric {
+  background: var(--kalore-surface);
+}
+.hub-app .metric b {
+  color: var(--kalore-text);
+}
+.hub-app .metric-icon {
+  background: #d4af3710;
+  color: var(--kalore-primary);
+}
+.hub-app .metric:nth-child(3) .metric-icon,
+.hub-app .metric:nth-child(5) .metric-icon {
+  color: var(--kalore-link);
+  background: #75c9e212;
+}
+.hub-app .btn.primary,
+.app-shell .button.primary {
+  background: linear-gradient(110deg, #efcf79, #d6b148);
+  color: #231b0b;
+  border-color: #e1c46b;
+  box-shadow: 0 3px 20px #c7a44b10;
+}
+.hub-app .btn.primary:hover,
+.app-shell .button.primary:hover {
+  background: linear-gradient(110deg, #f4d990, #dec063);
+}
+.app-shell .page-intro {
+  background:
+    radial-gradient(ellipse at 90% 0, #d4af3712, transparent 60%),
+    var(--kalore-surface);
+  border-color: #d4af3730;
+}
+.app-shell .page-intro h1 > span {
+  color: var(--kalore-primary);
+}
+.app-shell .learning-callout {
+  background: var(--kalore-surface);
+  border-color: var(--kalore-border);
+}
+.app-shell .percentage,
+.app-shell .focus-stat > strong {
+  color: var(--kalore-link);
+}
+.app-shell .rank-row.selected {
+  background: #d4af370c;
+}
+.app-shell .rank-row.selected .percentage {
+  color: var(--kalore-primary);
+}
+.hub-app .atena-tool-section {
+  margin: 24px 0;
+}
+.atena-tool-section h3 {
+  font-size: 22px;
+  letter-spacing: -0.6px;
+  margin: 8px 0 14px;
+}
+.atena-tool-section > p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--kalore-muted);
+}
+.atena-tool-section label {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--kalore-text);
+}
+.atena-tool-section input,
+.atena-tool-section textarea,
+.atena-tool-section select {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--kalore-border);
+  border-radius: 9px;
+  padding: 12px;
+  background: var(--kalore-bg);
+  color: var(--kalore-text);
+  font:
+    500 13px/1.7 Manrope,
+    sans-serif;
+}
+.atena-tool-section textarea {
+  resize: vertical;
+}
+.atena-tool-section .atena-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+}
+.atena-fields > label:first-child,
+.atena-fields > label:nth-child(2) {
+  grid-column: 1/-1;
+}
+.atena-card-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+.atena-personal-card {
+  padding: 20px;
+  background: var(--kalore-bg);
+  border: 1px solid var(--kalore-border);
+  border-radius: 15px;
+  min-width: 0;
+}
+.atena-personal-card small {
+  font-size: 10px;
+  color: var(--kalore-muted);
+}
+.atena-personal-card h4 {
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+  margin: 11px 0;
+}
+.atena-personal-card p {
+  font-size: 13px;
+  line-height: 1.85;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--kalore-text);
+}
+.atena-card-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+.atena-card-actions .btn {
+  min-height: 42px;
+  font-size: 11px;
+}
+.atena-personal-card .atena-delete {
+  font-size: 10px;
+  min-height: 36px;
+  padding: 8px;
+  color: var(--kalore-coral);
+  border: 0;
+  background: transparent;
+  margin-top: 8px;
+}
+.atena-competencies {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+.atena-competency {
+  border: 1px solid var(--kalore-border);
+  border-radius: 13px;
+  padding: 17px;
+  background: var(--kalore-bg);
+}
+.atena-competency > span {
+  color: var(--kalore-primary);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+.atena-competency h4 {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 9px 0 15px;
+  min-height: 40px;
+}
+.atena-competency label {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 10px;
+  line-height: 1.8;
+  color: var(--kalore-muted);
+  margin-top: 11px;
+}
+.atena-competency input {
+  width: 17px;
+  min-width: 17px;
+  height: 17px;
+  min-height: 17px;
+  accent-color: var(--kalore-primary);
+  margin-top: 3px;
+}
+.atena-writing-signals {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 11px;
+  margin: 15px 0;
+}
+.atena-writing-signals > div {
+  border: 1px solid var(--kalore-border);
+  background: var(--kalore-bg);
+  border-radius: 12px;
+  padding: 15px;
+}
+.atena-writing-signals strong {
+  display: block;
+  color: var(--kalore-link);
+  font-size: 25px;
+}
+.atena-writing-signals span {
+  font-size: 10px;
+  color: var(--kalore-muted);
+}
+.atena-review-note {
+  font-size: 12px !important;
+  color: var(--kalore-muted);
+  line-height: 1.9;
+}
+.atena-tool-status {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--kalore-primary);
+  min-height: 20px;
+}
+.atena-form-note {
+  font-size: 10px;
+  color: var(--kalore-muted);
+  line-height: 1.8;
+}
+.atena-inline-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.hub-app .offline-kit {
+  border-color: #d4af3730;
+  background: var(--kalore-surface);
+}
+@media (max-width: 1050px) {
+  .atena-competencies {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .atena-competency h4 {
+    min-height: 0;
+  }
+}
+@media (max-width: 760px) {
+  .hub-app .brand > span:last-child,
+  .app-shell .brand > span:last-child {
+    font-size: 18px !important;
+    letter-spacing: 2px !important;
+  }
+  .atena-tool-section .atena-fields {
+    grid-template-columns: 1fr;
+  }
+  .atena-fields > label {
+    grid-column: auto !important;
+  }
+  .atena-card-list {
+    grid-template-columns: 1fr;
+  }
+  .atena-competencies {
+    grid-template-columns: 1fr;
+  }
+  .atena-competency label {
+    font-size: 12px;
+  }
+  .atena-competency h4 {
+    font-size: 16px;
+  }
+  .atena-writing-signals {
+    grid-template-columns: 1fr 1fr;
+  }
+  .atena-personal-card {
+    padding: 18px;
+  }
+  .atena-tool-section h3 {
+    font-size: 24px;
+  }
+  .atena-review-note {
+    font-size: 11px !important;
+  }
+  .atena-inline-actions .btn {
+    font-size: 10px;
+  }
+  .hub-app .hero-sticker {
+    font-size: 10px;
+    right: 18px;
+    top: 18px;
+  }
+}
