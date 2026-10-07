@@ -1,22 +1,340 @@
 {
-  "fetchedAt": "2026-10-06T00:07:34.978051+00:00",
+  "fetchedAt": "2026-10-07T05:38:57.408247+00:00",
   "articles": [
     {
-      "id": "fgv",
-      "title": "Redação do Enem 2026: possíveis temas",
-      "url": "https://vestibular.fgv.br/blog/redacao-do-enem-2026-possiveis-temas",
-      "source": "FGV",
-      "kind": "editorial",
-      "date": "2026-05-05",
-      "observedAt": "2026-10-06",
+      "id": "public-e0ac6ac0760cd35981e0",
+      "title": "OEA elogia eleição no Brasil, mas aponta preocupação com desinformação",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/oea-elogia-eleicao-no-brasil-mas-aponta-preocupacao-com-desinformacao",
+      "source": "Agência Brasil — últimas notícias",
+      "kind": "news",
+      "date": "2026-10-07",
+      "observedAt": "2026-10-07",
       "topics": [
+        "ia"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-57d840c65e18320c6d90",
+      "title": "Governo inclui 82 empregadores na lista suja do trabalho escravo",
+      "url": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/governo-inclui-82-empregadores-na-lista-suja-do-trabalho-escravo",
+      "source": "Agência Brasil — últimas notícias",
+      "kind": "news",
+      "date": "2026-10-06",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "trabalho"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-3c2d9ee2b0c765eded02",
+      "title": "Que tal banir do vocabulário a expressão tsunami prateado?",
+      "url": "https://g1.globo.com/bemestar/blog/longevidade-modo-de-usar/post/2026/10/01/que-tal-banir-do-vocabulario-a-expressao-tsunami-prateado.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-10-01",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "idosos"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-baa6a4ccaaa64b7577bf",
+      "title": "Calendário Pé-de-Meia de outubro: veja quem recebe a próxima parcela e as datas de pagamento",
+      "url": "https://g1.globo.com/educacao/noticia/2026/10/01/calendario-pe-de-meia-de-outubro.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-10-01",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "educacao"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-b76eb73fde0a3e393ff5",
+      "title": "Quanto mais idiomas você fala, mais jovem seu cérebro pode parecer, indica pesquisa",
+      "url": "https://g1.globo.com/educacao/noticia/2026/09/29/quanto-mais-idiomas-voce-fala-mais-jovem-seu-cerebro-pode-parecer-indica-pesquisa.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-09-29",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "ia",
+        "idosos"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-7217e5c951ab3c1d0059",
+      "title": "Pisa: 20 estados e o DF vão pior em matemática do que o esperado para seus níveis socioeconômicos; veja ranking",
+      "url": "https://g1.globo.com/educacao/noticia/2026/09/23/pisa-20-estados-e-o-df-vao-pior-em-matematica-do-que-o-esperado-para-seus-niveis-socioeconomicos-veja-ranking.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-09-23",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "acesso"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-c6499cdab1f3a3ef8036",
+      "title": "23% dos jovens com dificuldade de mobilidade e sem deficiência cognitiva são analfabetos no Brasil; média na população geral é de 1%",
+      "url": "https://g1.globo.com/educacao/noticia/2026/09/18/23percent-dos-jovens-com-dificuldade-de-mobilidade-e-sem-deficiencia-cognitiva-sao-analfabetos-no-brasil.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-09-18",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "inclusao",
+        "educacao"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "anpd-digital",
+      "title": "ECA Digital completa um ano e é marco na proteção de crianças e adolescentes na internet",
+      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/eca-digital-completa-um-ano-e-e-marco-na-protecao-de-criancas-e-adolescentes-na-internet",
+      "source": "ANPD",
+      "kind": "news",
+      "date": "2026-09-16",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "digital",
+        "ia"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-39e57547a143bb6deadf",
+      "title": "‘Apagão’: número de professores idosos mais do que dobra em 8 anos, enquanto o de docentes jovens cai 31%, diz pesquisa",
+      "url": "https://g1.globo.com/educacao/noticia/2026/09/16/apagao-numero-de-professores-idosos-mais-do-que-dobra-em-8-anos-enquanto-o-de-docentes-jovens-cai-31percent-diz-pesquisa.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-09-16",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "idosos"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-657d7911858c6a0a7b32",
+      "title": "Dormir bem pode ajudar no desempenho escolar de adolescentes, mostra estudo",
+      "url": "https://g1.globo.com/educacao/noticia/2026/09/16/dormir-bem-pode-ajudar-no-desempenho-escolar-de-adolescentes-mostra-estudo.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-09-16",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "mental"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-333eb66ad44535adf601",
+      "title": "IA chega à sala de aula e muda a forma de ensinar e aprender; veja dilemas de escolas e alunos",
+      "url": "https://g1.globo.com/fantastico/noticia/2026/09/16/ia-chega-a-sala-de-aula-e-muda-a-forma-de-ensinar-e-aprender-veja-dilemas-de-escolas-e-alunos.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-09-16",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "ia",
+        "educacao"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-4226cd9f9961b00476d6",
+      "title": "Alunos de países ricos têm seu pior desempenho escolar da história do Pisa; hábito de leitura despencou",
+      "url": "https://g1.globo.com/educacao/noticia/2026/09/08/alunos-de-paises-ricos-tem-seu-pior-desempenho-escolar-da-historia-do-pisa-habito-de-leitura-despencou.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-09-08",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "leitura",
+        "ia"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-db8d63a8fdb452c84409",
+      "title": "Plano de governo para a educação pesa na escolha do candidato, mostra levantamento; 80% querem alfabetização como prioridade",
+      "url": "https://g1.globo.com/educacao/noticia/2026/09/03/o-que-a-populacao-pensa-sobre-a-educacao-2026.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-09-03",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "educacao"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-4d2ae40507609408c26c",
+      "title": "Nova York suspende uso de IA para alunos de escolas públicas",
+      "url": "https://g1.globo.com/tecnologia/noticia/2026/09/02/nova-york-suspensao-inteligencia-artificial-escolas-publicas.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-09-03",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "ia"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-0e80d21b602ae6a1c405",
+      "title": "Inep contraria edital do Enem e nega tempo extra para parte dos alunos com transtornos mentais: 'desesperada', diz jovem com bipolaridade",
+      "url": "https://g1.globo.com/educacao/noticia/2026/08/27/tempo-extra-negado-para-parte-dos-alunos-com-transtornos-mentais-enem.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-08-27",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "mental"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "mdh-digital",
+      "title": "ECA Digital: conheça as regras de proteção de crianças e adolescentes no ambiente online",
+      "url": "https://www.gov.br/mdh/pt-br/assuntos/noticias/2026/defeso-eleitoral/agosto/eca-digital-conheca-as-regras-de-protecao-de-criancas-e-adolescentes-no-ambiente-online",
+      "source": "Ministério dos Direitos Humanos",
+      "kind": "news",
+      "date": "2026-08-21",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "digital",
+        "juventude"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-937f29964b10d018617e",
+      "title": "Candidatos com ansiedade solicitam apoio prometido no Enem e têm laudo negado; Inep diz que corrigirá erro",
+      "url": "https://g1.globo.com/educacao/noticia/2026/08/21/candidatos-com-ansiedade-atendimento-especializado-enem.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-08-21",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "mental"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-b2f22e1cf01fe7730fdb",
+      "title": "Dinamarca quer usar provas orais para combater cola com inteligência artificial nas escolas",
+      "url": "https://g1.globo.com/educacao/noticia/2026/08/20/dinamarca-quer-usar-provas-orais-para-combater-cola-com-inteligencia-artificial-nas-escolas.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-08-20",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "ia"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-e3e8269ac32d1c5f2bac",
+      "title": "Academia LED: aula aberta na UFRJ debate impactos da inteligência artificial na produção de conteúdo",
+      "url": "https://g1.globo.com/rj/rio-de-janeiro/noticia/2026/08/17/academia-led-aula-aberta-na-ufrj-debate-impactos-da-inteligencia-artificial-na-producao-de-conteudo.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-08-17",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "ia"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "cnn",
+      "title": "Sete eixos de preparação apontados por professor",
+      "url": "https://www.cnnbrasil.com.br/educacao/redacao-do-enem-professor-aponta-7-temas-que-merecem-atencao-em-2026/",
+      "source": "CNN Brasil / Ademar Celedônio",
+      "kind": "editorial",
+      "date": "2026-08-16",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "leitura",
+        "digital",
+        "clima",
         "mental",
         "ia",
         "inclusao",
         "educacao",
-        "trabalho",
         "ciencia",
+        "juventude",
+        "democracia",
         "idosos"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-4132d562ab087bc3be2d",
+      "title": "Colocar telas na frente dos filhos tem mais a ver com o estresse dos pais do que com outros fatores",
+      "url": "https://g1.globo.com/educacao/noticia/2026/08/14/colocar-telas-na-frente-dos-filhos-tem-mais-a-ver-com-o-estresse-dos-pais-do-que-com-outros-fatores.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-08-14",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "mental"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-c4b8e4856e9347238eea",
+      "title": "Enem 2026: entenda o que é o ‘comando’ da frase temática e como ele pode mudar o caminho da redação",
+      "url": "https://g1.globo.com/educacao/enem/2026/noticia/2026/08/14/enem-2026-comando-da-frase-tematica-o-que-e.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-08-14",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "mental"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-2627b3aacccd72c66e59",
+      "title": "Universidade nos EUA 'elimina' registro de notas para preservar saúde mental dos alunos",
+      "url": "https://g1.globo.com/educacao/noticia/2026/08/12/universidade-nos-eua-elimina-registro-de-notas-para-preservar-saude-mental-dos-alunos.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-08-12",
+      "observedAt": "2026-10-07",
+      "topics": [
+        "mental"
       ],
       "origin": "collected",
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
@@ -28,7 +346,7 @@
       "source": "Brasil Escola",
       "kind": "editorial",
       "date": "2026-05-06",
-      "observedAt": "2026-10-06",
+      "observedAt": "2026-10-07",
       "topics": [
         "leitura",
         "digital",
@@ -48,55 +366,37 @@
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
     },
     {
-      "id": "cnn",
-      "title": "Sete eixos de preparação apontados por professor",
-      "url": "https://www.cnnbrasil.com.br/educacao/redacao-do-enem-professor-aponta-7-temas-que-merecem-atencao-em-2026/",
-      "source": "CNN Brasil / Ademar Celedônio",
+      "id": "fgv",
+      "title": "Redação do Enem 2026: possíveis temas",
+      "url": "https://vestibular.fgv.br/blog/redacao-do-enem-2026-possiveis-temas",
+      "source": "FGV",
       "kind": "editorial",
-      "date": "2026-08-16",
-      "observedAt": "2026-10-06",
+      "date": "2026-05-05",
+      "observedAt": "2026-10-07",
       "topics": [
-        "leitura",
-        "digital",
-        "clima",
         "mental",
         "ia",
         "inclusao",
         "educacao",
+        "trabalho",
         "ciencia",
-        "juventude",
-        "democracia",
         "idosos"
       ],
       "origin": "collected",
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
     },
     {
-      "id": "mdh-digital",
-      "title": "ECA Digital: conheça as regras de proteção de crianças e adolescentes no ambiente online",
-      "url": "https://www.gov.br/mdh/pt-br/assuntos/noticias/2026/defeso-eleitoral/agosto/eca-digital-conheca-as-regras-de-protecao-de-criancas-e-adolescentes-no-ambiente-online",
-      "source": "Ministério dos Direitos Humanos",
+      "id": "ibge-internet",
+      "title": "IBGE divulga uso da internet pela população em 2025",
+      "url": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/47408-proporcao-de-usuarios-da-internet-no-pais-ultrapassou-90-da-populacao-de-10-anos-ou-mais-em-2025",
+      "source": "IBGE",
       "kind": "news",
-      "date": "2026-08-21",
+      "date": "2026-07-02",
       "observedAt": "2026-10-06",
       "topics": [
-        "digital",
-        "juventude"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "anpd-digital",
-      "title": "ECA Digital completa um ano e é marco na proteção de crianças e adolescentes na internet",
-      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/eca-digital-completa-um-ano-e-e-marco-na-protecao-de-criancas-e-adolescentes-na-internet",
-      "source": "ANPD",
-      "kind": "news",
-      "date": "2026-09-16",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "digital",
-        "ia"
+        "inclusao",
+        "idosos",
+        "acesso"
       ],
       "origin": "collected",
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
@@ -171,278 +471,6 @@
       ],
       "note": "Classificação automática por palavras-chave no título e na descrição do feed. Abra a fonte para conferir o contexto.",
       "origin": "collected"
-    },
-    {
-      "id": "ibge-internet",
-      "title": "IBGE divulga uso da internet pela população em 2025",
-      "url": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/47408-proporcao-de-usuarios-da-internet-no-pais-ultrapassou-90-da-populacao-de-10-anos-ou-mais-em-2025",
-      "source": "IBGE",
-      "kind": "news",
-      "date": "2026-07-02",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "inclusao",
-        "idosos",
-        "acesso"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-3c2d9ee2b0c765eded02",
-      "title": "Que tal banir do vocabulário a expressão tsunami prateado?",
-      "url": "https://g1.globo.com/bemestar/blog/longevidade-modo-de-usar/post/2026/10/01/que-tal-banir-do-vocabulario-a-expressao-tsunami-prateado.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-10-01",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "idosos"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-baa6a4ccaaa64b7577bf",
-      "title": "Calendário Pé-de-Meia de outubro: veja quem recebe a próxima parcela e as datas de pagamento",
-      "url": "https://g1.globo.com/educacao/noticia/2026/10/01/calendario-pe-de-meia-de-outubro.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-10-01",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "educacao"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-b76eb73fde0a3e393ff5",
-      "title": "Quanto mais idiomas você fala, mais jovem seu cérebro pode parecer, indica pesquisa",
-      "url": "https://g1.globo.com/educacao/noticia/2026/09/29/quanto-mais-idiomas-voce-fala-mais-jovem-seu-cerebro-pode-parecer-indica-pesquisa.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-09-29",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "ia",
-        "idosos"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-7217e5c951ab3c1d0059",
-      "title": "Pisa: 20 estados e o DF vão pior em matemática do que o esperado para seus níveis socioeconômicos; veja ranking",
-      "url": "https://g1.globo.com/educacao/noticia/2026/09/23/pisa-20-estados-e-o-df-vao-pior-em-matematica-do-que-o-esperado-para-seus-niveis-socioeconomicos-veja-ranking.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-09-23",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "acesso"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-c6499cdab1f3a3ef8036",
-      "title": "23% dos jovens com dificuldade de mobilidade e sem deficiência cognitiva são analfabetos no Brasil; média na população geral é de 1%",
-      "url": "https://g1.globo.com/educacao/noticia/2026/09/18/23percent-dos-jovens-com-dificuldade-de-mobilidade-e-sem-deficiencia-cognitiva-sao-analfabetos-no-brasil.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-09-18",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "inclusao",
-        "educacao"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-39e57547a143bb6deadf",
-      "title": "‘Apagão’: número de professores idosos mais do que dobra em 8 anos, enquanto o de docentes jovens cai 31%, diz pesquisa",
-      "url": "https://g1.globo.com/educacao/noticia/2026/09/16/apagao-numero-de-professores-idosos-mais-do-que-dobra-em-8-anos-enquanto-o-de-docentes-jovens-cai-31percent-diz-pesquisa.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-09-16",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "idosos"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-657d7911858c6a0a7b32",
-      "title": "Dormir bem pode ajudar no desempenho escolar de adolescentes, mostra estudo",
-      "url": "https://g1.globo.com/educacao/noticia/2026/09/16/dormir-bem-pode-ajudar-no-desempenho-escolar-de-adolescentes-mostra-estudo.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-09-16",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "mental"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-333eb66ad44535adf601",
-      "title": "IA chega à sala de aula e muda a forma de ensinar e aprender; veja dilemas de escolas e alunos",
-      "url": "https://g1.globo.com/fantastico/noticia/2026/09/16/ia-chega-a-sala-de-aula-e-muda-a-forma-de-ensinar-e-aprender-veja-dilemas-de-escolas-e-alunos.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-09-16",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "ia",
-        "educacao"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-4226cd9f9961b00476d6",
-      "title": "Alunos de países ricos têm seu pior desempenho escolar da história do Pisa; hábito de leitura despencou",
-      "url": "https://g1.globo.com/educacao/noticia/2026/09/08/alunos-de-paises-ricos-tem-seu-pior-desempenho-escolar-da-historia-do-pisa-habito-de-leitura-despencou.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-09-08",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "leitura",
-        "ia"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-db8d63a8fdb452c84409",
-      "title": "Plano de governo para a educação pesa na escolha do candidato, mostra levantamento; 80% querem alfabetização como prioridade",
-      "url": "https://g1.globo.com/educacao/noticia/2026/09/03/o-que-a-populacao-pensa-sobre-a-educacao-2026.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-09-03",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "educacao"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-4d2ae40507609408c26c",
-      "title": "Nova York suspende uso de IA para alunos de escolas públicas",
-      "url": "https://g1.globo.com/tecnologia/noticia/2026/09/02/nova-york-suspensao-inteligencia-artificial-escolas-publicas.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-09-03",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "ia"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-0e80d21b602ae6a1c405",
-      "title": "Inep contraria edital do Enem e nega tempo extra para parte dos alunos com transtornos mentais: 'desesperada', diz jovem com bipolaridade",
-      "url": "https://g1.globo.com/educacao/noticia/2026/08/27/tempo-extra-negado-para-parte-dos-alunos-com-transtornos-mentais-enem.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-08-27",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "mental"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-937f29964b10d018617e",
-      "title": "Candidatos com ansiedade solicitam apoio prometido no Enem e têm laudo negado; Inep diz que corrigirá erro",
-      "url": "https://g1.globo.com/educacao/noticia/2026/08/21/candidatos-com-ansiedade-atendimento-especializado-enem.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-08-21",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "mental"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-b2f22e1cf01fe7730fdb",
-      "title": "Dinamarca quer usar provas orais para combater cola com inteligência artificial nas escolas",
-      "url": "https://g1.globo.com/educacao/noticia/2026/08/20/dinamarca-quer-usar-provas-orais-para-combater-cola-com-inteligencia-artificial-nas-escolas.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-08-20",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "ia"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-e3e8269ac32d1c5f2bac",
-      "title": "Academia LED: aula aberta na UFRJ debate impactos da inteligência artificial na produção de conteúdo",
-      "url": "https://g1.globo.com/rj/rio-de-janeiro/noticia/2026/08/17/academia-led-aula-aberta-na-ufrj-debate-impactos-da-inteligencia-artificial-na-producao-de-conteudo.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-08-17",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "ia"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-4132d562ab087bc3be2d",
-      "title": "Colocar telas na frente dos filhos tem mais a ver com o estresse dos pais do que com outros fatores",
-      "url": "https://g1.globo.com/educacao/noticia/2026/08/14/colocar-telas-na-frente-dos-filhos-tem-mais-a-ver-com-o-estresse-dos-pais-do-que-com-outros-fatores.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-08-14",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "mental"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-c4b8e4856e9347238eea",
-      "title": "Enem 2026: entenda o que é o ‘comando’ da frase temática e como ele pode mudar o caminho da redação",
-      "url": "https://g1.globo.com/educacao/enem/2026/noticia/2026/08/14/enem-2026-comando-da-frase-tematica-o-que-e.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-08-14",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "mental"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-2627b3aacccd72c66e59",
-      "title": "Universidade nos EUA 'elimina' registro de notas para preservar saúde mental dos alunos",
-      "url": "https://g1.globo.com/educacao/noticia/2026/08/12/universidade-nos-eua-elimina-registro-de-notas-para-preservar-saude-mental-dos-alunos.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-08-12",
-      "observedAt": "2026-10-06",
-      "topics": [
-        "mental"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
     }
   ],
   "statuses": [
@@ -498,17 +526,17 @@
       "id": "ibge-internet",
       "title": "IBGE",
       "url": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/47408-proporcao-de-usuarios-da-internet-no-pais-ultrapassou-90-da-populacao-de-10-anos-ou-mais-em-2025",
-      "ok": true,
-      "count": 1,
-      "message": "Consulta concluída"
+      "ok": false,
+      "count": 0,
+      "message": "Não foi possível consultar a fonte: HTTP Error 403: Forbidden"
     },
     {
       "id": "agencia-brasil",
       "title": "Agência Brasil — últimas notícias",
       "url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml",
       "ok": true,
-      "count": 0,
-      "message": "Consulta concluída, sem temas compatíveis"
+      "count": 2,
+      "message": "Consulta concluída"
     },
     {
       "id": "mec-noticias",
