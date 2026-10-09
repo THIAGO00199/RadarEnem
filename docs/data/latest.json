@@ -1,6 +1,34 @@
 {
-  "fetchedAt": "2026-10-08T05:47:13.392159+00:00",
+  "fetchedAt": "2026-10-09T05:51:42.777019+00:00",
   "articles": [
+    {
+      "id": "public-f88033cdedbc04384817",
+      "title": "Fux pede acesso a processos contra Jair Bolsonaro no STF",
+      "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/fux-pede-acesso-processos-contra-jair-bolsonaro-no-stf",
+      "source": "Agência Brasil — últimas notícias",
+      "kind": "news",
+      "date": "2026-10-09",
+      "observedAt": "2026-10-09",
+      "topics": [
+        "ia"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-95a38ce5a5fdead386b6",
+      "title": "Prédio incendiado na UFPE tinha laboratórios com pesquisas sobre câncer, covid-19 e autismo",
+      "url": "https://g1.globo.com/pe/pernambuco/noticia/2026/10/08/predio-incendiado-na-ufpe-tinha-laboratorios-com-pesquisas-sobre-cancer-covid-19-e-autismo.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-10-08",
+      "observedAt": "2026-10-09",
+      "topics": [
+        "inclusao"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
     {
       "id": "public-b6b8904d928f6457592f",
       "title": "OpenAI afirma que novo modelo produziu 377 resultados matemáticos complexos; entenda",
@@ -8,7 +36,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-07",
-      "observedAt": "2026-10-08",
+      "observedAt": "2026-10-09",
       "topics": [
         "ia"
       ],
@@ -22,7 +50,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-07",
-      "observedAt": "2026-10-08",
+      "observedAt": "2026-10-09",
       "topics": [
         "mental"
       ],
@@ -36,7 +64,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-01",
-      "observedAt": "2026-10-08",
+      "observedAt": "2026-10-09",
       "topics": [
         "idosos"
       ],
@@ -50,7 +78,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-01",
-      "observedAt": "2026-10-08",
+      "observedAt": "2026-10-09",
       "topics": [
         "educacao"
       ],
@@ -64,7 +92,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-29",
-      "observedAt": "2026-10-08",
+      "observedAt": "2026-10-09",
       "topics": [
         "ia",
         "idosos"
@@ -79,7 +107,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-23",
-      "observedAt": "2026-10-08",
+      "observedAt": "2026-10-09",
       "topics": [
         "acesso"
       ],
@@ -93,7 +121,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-18",
-      "observedAt": "2026-10-08",
+      "observedAt": "2026-10-09",
       "topics": [
         "inclusao",
         "educacao"
@@ -108,7 +136,7 @@
       "source": "ANPD",
       "kind": "news",
       "date": "2026-09-16",
-      "observedAt": "2026-10-08",
+      "observedAt": "2026-10-09",
       "topics": [
         "digital",
         "ia"
@@ -123,7 +151,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-16",
-      "observedAt": "2026-10-08",
+      "observedAt": "2026-10-09",
       "topics": [
         "idosos"
       ],
@@ -137,7 +165,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-16",
-      "observedAt": "2026-10-08",
+      "observedAt": "2026-10-09",
       "topics": [
         "mental"
       ],
@@ -151,7 +179,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-16",
-      "observedAt": "2026-10-08",
+      "observedAt": "2026-10-09",
       "topics": [
         "ia",
         "educacao"
@@ -166,7 +194,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-08",
-      "observedAt": "2026-10-08",
+      "observedAt": "2026-10-09",
       "topics": [
         "leitura",
         "ia"
@@ -181,7 +209,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-03",
-      "observedAt": "2026-10-08",
+      "observedAt": "2026-10-09",
       "topics": [
         "educacao"
       ],
@@ -195,7 +223,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-03",
-      "observedAt": "2026-10-08",
+      "observedAt": "2026-10-09",
       "topics": [
         "ia"
       ],
@@ -209,9 +237,121 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-08-27",
-      "observedAt": "2026-10-08",
+      "observedAt": "2026-10-09",
       "topics": [
         "mental"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-937f29964b10d018617e",
+      "title": "Candidatos com ansiedade solicitam apoio prometido no Enem e têm laudo negado; Inep diz que corrigirá erro",
+      "url": "https://g1.globo.com/educacao/noticia/2026/08/21/candidatos-com-ansiedade-atendimento-especializado-enem.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-08-21",
+      "observedAt": "2026-10-09",
+      "topics": [
+        "mental"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-b2f22e1cf01fe7730fdb",
+      "title": "Dinamarca quer usar provas orais para combater cola com inteligência artificial nas escolas",
+      "url": "https://g1.globo.com/educacao/noticia/2026/08/20/dinamarca-quer-usar-provas-orais-para-combater-cola-com-inteligencia-artificial-nas-escolas.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-08-20",
+      "observedAt": "2026-10-09",
+      "topics": [
+        "ia"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-e3e8269ac32d1c5f2bac",
+      "title": "Academia LED: aula aberta na UFRJ debate impactos da inteligência artificial na produção de conteúdo",
+      "url": "https://g1.globo.com/rj/rio-de-janeiro/noticia/2026/08/17/academia-led-aula-aberta-na-ufrj-debate-impactos-da-inteligencia-artificial-na-producao-de-conteudo.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-08-17",
+      "observedAt": "2026-10-09",
+      "topics": [
+        "ia"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "cnn",
+      "title": "Sete eixos de preparação apontados por professor",
+      "url": "https://www.cnnbrasil.com.br/educacao/redacao-do-enem-professor-aponta-7-temas-que-merecem-atencao-em-2026/",
+      "source": "CNN Brasil / Ademar Celedônio",
+      "kind": "editorial",
+      "date": "2026-08-16",
+      "observedAt": "2026-10-09",
+      "topics": [
+        "leitura",
+        "digital",
+        "clima",
+        "mental",
+        "ia",
+        "inclusao",
+        "educacao",
+        "ciencia",
+        "juventude",
+        "democracia",
+        "idosos"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "brasil-escola",
+      "title": "15 temas de redação para o Enem 2026",
+      "url": "https://vestibular.brasilescola.uol.com.br/enem/15-temas-redacao-enem-2026.htm",
+      "source": "Brasil Escola",
+      "kind": "editorial",
+      "date": "2026-05-06",
+      "observedAt": "2026-10-09",
+      "topics": [
+        "leitura",
+        "digital",
+        "clima",
+        "mental",
+        "ia",
+        "educacao",
+        "trabalho",
+        "genero",
+        "moradia",
+        "ciencia",
+        "juventude",
+        "democracia",
+        "idosos"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "fgv",
+      "title": "Redação do Enem 2026: possíveis temas",
+      "url": "https://vestibular.fgv.br/blog/redacao-do-enem-2026-possiveis-temas",
+      "source": "FGV",
+      "kind": "editorial",
+      "date": "2026-05-05",
+      "observedAt": "2026-10-09",
+      "topics": [
+        "mental",
+        "ia",
+        "inclusao",
+        "educacao",
+        "trabalho",
+        "ciencia",
+        "idosos"
       ],
       "origin": "collected",
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
@@ -227,72 +367,6 @@
       "topics": [
         "digital",
         "juventude"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-937f29964b10d018617e",
-      "title": "Candidatos com ansiedade solicitam apoio prometido no Enem e têm laudo negado; Inep diz que corrigirá erro",
-      "url": "https://g1.globo.com/educacao/noticia/2026/08/21/candidatos-com-ansiedade-atendimento-especializado-enem.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-08-21",
-      "observedAt": "2026-10-08",
-      "topics": [
-        "mental"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-b2f22e1cf01fe7730fdb",
-      "title": "Dinamarca quer usar provas orais para combater cola com inteligência artificial nas escolas",
-      "url": "https://g1.globo.com/educacao/noticia/2026/08/20/dinamarca-quer-usar-provas-orais-para-combater-cola-com-inteligencia-artificial-nas-escolas.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-08-20",
-      "observedAt": "2026-10-08",
-      "topics": [
-        "ia"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-e3e8269ac32d1c5f2bac",
-      "title": "Academia LED: aula aberta na UFRJ debate impactos da inteligência artificial na produção de conteúdo",
-      "url": "https://g1.globo.com/rj/rio-de-janeiro/noticia/2026/08/17/academia-led-aula-aberta-na-ufrj-debate-impactos-da-inteligencia-artificial-na-producao-de-conteudo.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-08-17",
-      "observedAt": "2026-10-08",
-      "topics": [
-        "ia"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "cnn",
-      "title": "Sete eixos de preparação apontados por professor",
-      "url": "https://www.cnnbrasil.com.br/educacao/redacao-do-enem-professor-aponta-7-temas-que-merecem-atencao-em-2026/",
-      "source": "CNN Brasil / Ademar Celedônio",
-      "kind": "editorial",
-      "date": "2026-08-16",
-      "observedAt": "2026-10-08",
-      "topics": [
-        "leitura",
-        "digital",
-        "clima",
-        "mental",
-        "ia",
-        "inclusao",
-        "educacao",
-        "ciencia",
-        "juventude",
-        "democracia",
-        "idosos"
       ],
       "origin": "collected",
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
@@ -321,52 +395,6 @@
       "observedAt": "2026-10-08",
       "topics": [
         "mental"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "brasil-escola",
-      "title": "15 temas de redação para o Enem 2026",
-      "url": "https://vestibular.brasilescola.uol.com.br/enem/15-temas-redacao-enem-2026.htm",
-      "source": "Brasil Escola",
-      "kind": "editorial",
-      "date": "2026-05-06",
-      "observedAt": "2026-10-08",
-      "topics": [
-        "leitura",
-        "digital",
-        "clima",
-        "mental",
-        "ia",
-        "educacao",
-        "trabalho",
-        "genero",
-        "moradia",
-        "ciencia",
-        "juventude",
-        "democracia",
-        "idosos"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "fgv",
-      "title": "Redação do Enem 2026: possíveis temas",
-      "url": "https://vestibular.fgv.br/blog/redacao-do-enem-2026-possiveis-temas",
-      "source": "FGV",
-      "kind": "editorial",
-      "date": "2026-05-05",
-      "observedAt": "2026-10-08",
-      "topics": [
-        "mental",
-        "ia",
-        "inclusao",
-        "educacao",
-        "trabalho",
-        "ciencia",
-        "idosos"
       ],
       "origin": "collected",
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
@@ -530,9 +558,9 @@
       "id": "mdh-digital",
       "title": "Ministério dos Direitos Humanos",
       "url": "https://www.gov.br/mdh/pt-br/assuntos/noticias/2026/defeso-eleitoral/agosto/eca-digital-conheca-as-regras-de-protecao-de-criancas-e-adolescentes-no-ambiente-online",
-      "ok": true,
-      "count": 1,
-      "message": "Consulta concluída"
+      "ok": false,
+      "count": 0,
+      "message": "Não foi possível consultar a fonte: The read operation timed out"
     },
     {
       "id": "anpd-digital",
@@ -563,8 +591,8 @@
       "title": "Agência Brasil — últimas notícias",
       "url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml",
       "ok": true,
-      "count": 0,
-      "message": "Consulta concluída, sem temas compatíveis"
+      "count": 1,
+      "message": "Consulta concluída"
     },
     {
       "id": "mec-noticias",
@@ -587,7 +615,7 @@
       "title": "G1 Educação — RSS",
       "url": "https://g1.globo.com/rss/g1/educacao/",
       "ok": true,
-      "count": 19,
+      "count": 18,
       "message": "Consulta concluída"
     }
   ]
