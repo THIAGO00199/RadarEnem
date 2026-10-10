@@ -1,16 +1,44 @@
 {
-  "fetchedAt": "2026-10-09T05:51:42.777019+00:00",
+  "fetchedAt": "2026-10-10T05:34:18.319792+00:00",
   "articles": [
     {
-      "id": "public-f88033cdedbc04384817",
-      "title": "Fux pede acesso a processos contra Jair Bolsonaro no STF",
-      "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/fux-pede-acesso-processos-contra-jair-bolsonaro-no-stf",
+      "id": "public-b3eee8aafbe1e843e540",
+      "title": "Edson Fachin manda PF investigar ameaças contra Flávio Dino",
+      "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/edson-fachin-manda-pf-investigar-ameacas-contra-flavio-dino",
       "source": "Agência Brasil — últimas notícias",
       "kind": "news",
       "date": "2026-10-09",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "ia"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-2c54a4bcb35fd1c8ef05",
+      "title": "Pesquisa mostra que 82% são contra crianças de até 3 anos com celular",
+      "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/pesquisa-mostra-que-82-sao-contra-criancas-de-ate-3-anos-com-celular",
+      "source": "Agência Brasil — últimas notícias",
+      "kind": "news",
+      "date": "2026-10-09",
+      "observedAt": "2026-10-10",
+      "topics": [
+        "digital"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-191bfa668435d50c705d",
+      "title": "Fifa: um em cada cinco ataques virtuais na Copa do Mundo foi racista",
+      "url": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/fifa-um-em-cada-cinco-ataques-virtuais-na-copa-do-mundo-foi-racista",
+      "source": "Agência Brasil — últimas notícias",
+      "kind": "news",
+      "date": "2026-10-09",
+      "observedAt": "2026-10-10",
+      "topics": [
+        "mental"
       ],
       "origin": "collected",
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
@@ -22,7 +50,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-08",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "inclusao"
       ],
@@ -36,7 +64,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-07",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "ia"
       ],
@@ -50,7 +78,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-07",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "mental"
       ],
@@ -64,7 +92,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-01",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "idosos"
       ],
@@ -78,7 +106,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-01",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "educacao"
       ],
@@ -92,7 +120,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-29",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "ia",
         "idosos"
@@ -107,7 +135,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-23",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "acesso"
       ],
@@ -121,7 +149,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-18",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "inclusao",
         "educacao"
@@ -136,7 +164,7 @@
       "source": "ANPD",
       "kind": "news",
       "date": "2026-09-16",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "digital",
         "ia"
@@ -151,7 +179,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-16",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "idosos"
       ],
@@ -165,7 +193,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-16",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "mental"
       ],
@@ -179,7 +207,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-16",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "ia",
         "educacao"
@@ -194,7 +222,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-08",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "leitura",
         "ia"
@@ -209,7 +237,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-03",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "educacao"
       ],
@@ -223,7 +251,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-03",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "ia"
       ],
@@ -237,7 +265,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-08-27",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "mental"
       ],
@@ -251,9 +279,24 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-08-21",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "mental"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "mdh-digital",
+      "title": "ECA Digital: conheça as regras de proteção de crianças e adolescentes no ambiente online",
+      "url": "https://www.gov.br/mdh/pt-br/assuntos/noticias/2026/defeso-eleitoral/agosto/eca-digital-conheca-as-regras-de-protecao-de-criancas-e-adolescentes-no-ambiente-online",
+      "source": "Ministério dos Direitos Humanos",
+      "kind": "news",
+      "date": "2026-08-21",
+      "observedAt": "2026-10-10",
+      "topics": [
+        "digital",
+        "juventude"
       ],
       "origin": "collected",
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
@@ -265,21 +308,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-08-20",
-      "observedAt": "2026-10-09",
-      "topics": [
-        "ia"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-e3e8269ac32d1c5f2bac",
-      "title": "Academia LED: aula aberta na UFRJ debate impactos da inteligência artificial na produção de conteúdo",
-      "url": "https://g1.globo.com/rj/rio-de-janeiro/noticia/2026/08/17/academia-led-aula-aberta-na-ufrj-debate-impactos-da-inteligencia-artificial-na-producao-de-conteudo.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-08-17",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "ia"
       ],
@@ -293,7 +322,7 @@
       "source": "CNN Brasil / Ademar Celedônio",
       "kind": "editorial",
       "date": "2026-08-16",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "leitura",
         "digital",
@@ -317,7 +346,7 @@
       "source": "Brasil Escola",
       "kind": "editorial",
       "date": "2026-05-06",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "leitura",
         "digital",
@@ -343,7 +372,7 @@
       "source": "FGV",
       "kind": "editorial",
       "date": "2026-05-05",
-      "observedAt": "2026-10-09",
+      "observedAt": "2026-10-10",
       "topics": [
         "mental",
         "ia",
@@ -357,16 +386,29 @@
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
     },
     {
-      "id": "mdh-digital",
-      "title": "ECA Digital: conheça as regras de proteção de crianças e adolescentes no ambiente online",
-      "url": "https://www.gov.br/mdh/pt-br/assuntos/noticias/2026/defeso-eleitoral/agosto/eca-digital-conheca-as-regras-de-protecao-de-criancas-e-adolescentes-no-ambiente-online",
-      "source": "Ministério dos Direitos Humanos",
+      "id": "public-f88033cdedbc04384817",
+      "title": "Fux pede acesso a processos contra Jair Bolsonaro no STF",
+      "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/fux-pede-acesso-processos-contra-jair-bolsonaro-no-stf",
+      "source": "Agência Brasil — últimas notícias",
       "kind": "news",
-      "date": "2026-08-21",
-      "observedAt": "2026-10-08",
+      "date": "2026-10-09",
+      "observedAt": "2026-10-09",
       "topics": [
-        "digital",
-        "juventude"
+        "ia"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-e3e8269ac32d1c5f2bac",
+      "title": "Academia LED: aula aberta na UFRJ debate impactos da inteligência artificial na produção de conteúdo",
+      "url": "https://g1.globo.com/rj/rio-de-janeiro/noticia/2026/08/17/academia-led-aula-aberta-na-ufrj-debate-impactos-da-inteligencia-artificial-na-producao-de-conteudo.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-08-17",
+      "observedAt": "2026-10-09",
+      "topics": [
+        "ia"
       ],
       "origin": "collected",
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
@@ -558,9 +600,9 @@
       "id": "mdh-digital",
       "title": "Ministério dos Direitos Humanos",
       "url": "https://www.gov.br/mdh/pt-br/assuntos/noticias/2026/defeso-eleitoral/agosto/eca-digital-conheca-as-regras-de-protecao-de-criancas-e-adolescentes-no-ambiente-online",
-      "ok": false,
-      "count": 0,
-      "message": "Não foi possível consultar a fonte: The read operation timed out"
+      "ok": true,
+      "count": 1,
+      "message": "Consulta concluída"
     },
     {
       "id": "anpd-digital",
@@ -591,7 +633,7 @@
       "title": "Agência Brasil — últimas notícias",
       "url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml",
       "ok": true,
-      "count": 1,
+      "count": 3,
       "message": "Consulta concluída"
     },
     {
@@ -615,7 +657,7 @@
       "title": "G1 Educação — RSS",
       "url": "https://g1.globo.com/rss/g1/educacao/",
       "ok": true,
-      "count": 18,
+      "count": 17,
       "message": "Consulta concluída"
     }
   ]
