@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-13T06:36:36.031479+00:00",
+  "fetchedAt": "2026-10-14T04:37:57.126867+00:00",
   "articles": [
     {
       "id": "public-ff8411bff14cb7582d87",
@@ -8,23 +8,9 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-13",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "clima"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-7e1ad5552abb50298804",
-      "title": "Campanha de Lula aciona TSE após post falso sobre comício na Paulista",
-      "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/campanha-de-lula-aciona-tse-apos-post-falso-sobre-comicio-na-paulista",
-      "source": "Agência Brasil — últimas notícias",
-      "kind": "news",
-      "date": "2026-10-12",
-      "observedAt": "2026-10-13",
-      "topics": [
-        "ia"
       ],
       "origin": "collected",
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
@@ -36,7 +22,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-08",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "inclusao"
       ],
@@ -50,7 +36,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-07",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "ia"
       ],
@@ -64,7 +50,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-07",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "mental"
       ],
@@ -78,7 +64,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-01",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "idosos"
       ],
@@ -92,7 +78,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-01",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "educacao"
       ],
@@ -106,7 +92,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-29",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "ia",
         "idosos"
@@ -121,7 +107,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-23",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "acesso"
       ],
@@ -135,7 +121,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-18",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "inclusao",
         "educacao"
@@ -150,7 +136,7 @@
       "source": "ANPD",
       "kind": "news",
       "date": "2026-09-16",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "digital",
         "ia"
@@ -165,7 +151,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-16",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "idosos"
       ],
@@ -179,7 +165,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-16",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "mental"
       ],
@@ -193,7 +179,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-16",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "ia",
         "educacao"
@@ -208,7 +194,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-08",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "leitura",
         "ia"
@@ -223,7 +209,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-03",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "educacao"
       ],
@@ -237,7 +223,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-03",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "ia"
       ],
@@ -251,7 +237,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-08-27",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "mental"
       ],
@@ -265,7 +251,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-08-21",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "mental"
       ],
@@ -279,7 +265,7 @@
       "source": "Ministério dos Direitos Humanos",
       "kind": "news",
       "date": "2026-08-21",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "digital",
         "juventude"
@@ -294,7 +280,7 @@
       "source": "CNN Brasil / Ademar Celedônio",
       "kind": "editorial",
       "date": "2026-08-16",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "leitura",
         "digital",
@@ -318,7 +304,7 @@
       "source": "Brasil Escola",
       "kind": "editorial",
       "date": "2026-05-06",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "leitura",
         "digital",
@@ -344,7 +330,7 @@
       "source": "FGV",
       "kind": "editorial",
       "date": "2026-05-05",
-      "observedAt": "2026-10-13",
+      "observedAt": "2026-10-14",
       "topics": [
         "mental",
         "ia",
@@ -353,6 +339,20 @@
         "trabalho",
         "ciencia",
         "idosos"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-7e1ad5552abb50298804",
+      "title": "Campanha de Lula aciona TSE após post falso sobre comício na Paulista",
+      "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/campanha-de-lula-aciona-tse-apos-post-falso-sobre-comicio-na-paulista",
+      "source": "Agência Brasil — últimas notícias",
+      "kind": "news",
+      "date": "2026-10-12",
+      "observedAt": "2026-10-13",
+      "topics": [
+        "ia"
       ],
       "origin": "collected",
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
@@ -745,8 +745,8 @@
       "title": "Agência Brasil — últimas notícias",
       "url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml",
       "ok": true,
-      "count": 1,
-      "message": "Consulta concluída"
+      "count": 0,
+      "message": "Consulta concluída, sem temas compatíveis"
     },
     {
       "id": "mec-noticias",
