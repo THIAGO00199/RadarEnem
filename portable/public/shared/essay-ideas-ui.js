@@ -49,7 +49,7 @@
         const old=current.getBlueprint?.()||{};
         const status=$("[data-idea-status]");
         if(typeof old[field]==="string"&&old[field].trim()){status.textContent="Esse argumento já contém suas ideias. Nada foi substituído; use o repertório como inspiração.";return;}
-        const suggestion="Repertório para desenvolver: "+item.work+" — "+item.creator+".\\nContexto: "+item.connection+"\\nConexão com o tema: "+item.application;
+        const suggestion="Repertório para desenvolver: "+item.work+" — "+item.creator+".\nContexto: "+item.connection+"\nConexão com o tema: "+item.application;
         if(suggestion.length>2000)return;
         current.onApply?.({...old,[field]:suggestion});
         status.textContent="Referência adicionada ao campo vazio. Reescreva com sua voz e confira a obra.";
