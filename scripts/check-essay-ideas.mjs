@@ -12,6 +12,9 @@ for(const topic of topics){
  assert.equal(topic.routes.length,2,topic.id);
  assert.equal(topic.routes[0].arguments.length,2,topic.id);
  assert.ok(topic.concepts.length>=2&&topic.questions.length>=3&&topic.sources.length,topic.id);
+ assert.equal(topic.repertoire?.length,3,topic.id+': three cultural references expected');
+ assert.deepEqual([...topic.repertoire.map(item=>item.kind)].sort(),['Cinema','Livro','Música brasileira'].sort(),topic.id);
+ for(const item of topic.repertoire)assert.ok(item.work.length>3&&item.creator.length>5&&item.connection.length>35&&item.application.length>50,topic.id+': '+item.work);
  assert.ok(/^https:\/\/www\.gov\.br\/inep\//.test(topic.sources[0].url),topic.id);
  for(const route of topic.routes){
   assert.ok(route.thesis.length>110&&route.care.length>35,route.id);
@@ -36,5 +39,9 @@ const merged=model.fillEmpty(older,seed);
 assert.equal(merged.value.tese,older.tese);assert.equal(merged.added,6);
 const oversized={...seed,tese:'x'.repeat(2001)};assert.equal(model.fillEmpty({},oversized).value.tese,'');
 assert.match(model.markdown(id,1),/Exemplo hipotético/);assert.match(model.markdown(id,1),/Intervenção possível/);
+assert.match(model.markdown(id,1),/Repertório sociocultural/);
+assert.ok(model.search('Quanta').some(topic=>topic.id==='ciencia'),'Works should be searchable');
+assert.ok(model.search('Caetano Veloso').some(topic=>topic.id==='leitura'),'Creators should be searchable');
+assert.equal(new Set(topics.flatMap(topic=>topic.repertoire.map(item=>topic.id+':'+item.work))).size,51);
 assert.doesNotMatch(JSON.stringify(topics),/\b\d{1,3}(?:[.,]\d+)?% de chance/i);
-console.log('Essay ideas: 17 topics aligned with Radar, 34 routes, 68 explained arguments, 34 interventions, primary source link per theme, searchable topics, export and preservation of student text passed.');
+console.log('Essay ideas: 17 topics aligned with Radar, 34 routes, 68 explained arguments, 34 interventions, 51 contextual cultural references, primary source link per theme, searchable topics, export and preservation of student text passed.');

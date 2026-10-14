@@ -15,6 +15,12 @@ const local=(page)=>page.evaluate(()=>JSON.parse(localStorage.getItem('kalore-hu
  await page.locator('.blueprint').evaluate(el=>el.open=true);await page.locator('[data-blueprint="tese"]').fill('Tese que já era minha.');
  await page.locator('[data-blueprint="agente"]').fill('Minha escolha de agente.');
  await page.locator('.essay-ideas-shell [data-idea-topic]').selectOption('digital');
+ assert.equal(await page.locator('.idea-repertoire-card').count(),3,'Each theme must show a book, a song and a film');
+ await page.locator('.idea-repertoire-actions button[data-idea-rep-field="argumento2"]').first().click();
+ const ref=await local(page);
+ assert.match(ref.blueprint.argumento2,/Repertório para desenvolver:/);
+ await page.locator('.idea-repertoire-actions button[data-idea-rep-field="argumento2"]').first().click();
+ assert.equal((await local(page)).blueprint.argumento2,ref.blueprint.argumento2,'Adding a reference may not overwrite existing text');
  await page.locator('.idea-route-tabs [data-idea-route]').first().focus();await page.keyboard.press('ArrowRight');
  assert.equal(await page.locator('.idea-route-tabs [aria-selected=true]').getAttribute('data-idea-route'),'alfabetizacao');
  await page.locator('.idea-route-tabs [data-idea-route]').nth(1).click();

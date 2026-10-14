@@ -1,5 +1,15 @@
 name: Radar public sources — Python
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'lib/essay-ideas-data.ts'
+      - 'lib/radar-data.ts'
+      - 'backend/**'
+      - 'portable/public/shared/essay-ideas-*.js'
+      - 'portable/public/shared/essay-ideas.css'
+      - 'scripts/build-essay-ideas.mjs'
+      - '.github/workflows/radar-daily.yml'
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
