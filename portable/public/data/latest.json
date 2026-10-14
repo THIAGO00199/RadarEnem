@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-14T04:37:57.126867+00:00",
+  "fetchedAt": "2026-10-14T15:34:49.986654+00:00",
   "articles": [
     {
       "id": "public-ff8411bff14cb7582d87",
@@ -720,9 +720,9 @@
       "id": "anpd-digital",
       "title": "ANPD",
       "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/eca-digital-completa-um-ano-e-e-marco-na-protecao-de-criancas-e-adolescentes-na-internet",
-      "ok": true,
-      "count": 1,
-      "message": "Consulta concluída"
+      "ok": false,
+      "count": 0,
+      "message": "Não foi possível consultar a fonte: Conteúdo esperado não encontrado"
     },
     {
       "id": "plano-clima",
@@ -769,7 +769,7 @@
       "title": "G1 Educação — RSS",
       "url": "https://g1.globo.com/rss/g1/educacao/",
       "ok": true,
-      "count": 17,
+      "count": 16,
       "message": "Consulta concluída"
     }
   ]

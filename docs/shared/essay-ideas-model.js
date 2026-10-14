@@ -6,7 +6,7 @@
   const all = () => root.KaloreEssayIdeasData.topics;
   function search(query = "", axis = "all") {
     const terms = normalize(query).split(/\s+/).filter(Boolean);
-    return all().filter((t) => (axis === "all" || t.axis === axis) && terms.every((term) => normalize([t.title, t.axis, ...t.proposals, ...t.keywords].join(" ")).includes(term)));
+    return all().filter((t) => (axis === "all" || t.axis === axis) && terms.every((term) => normalize([t.title, t.axis, ...t.proposals, ...t.keywords, ...(t.repertoire||[]).flatMap((r)=>[r.work,r.creator,r.kind])].join(" ")).includes(term)));
   }
   const get = (id) => all().find((t) => t.id === id) || null;
   const findTheme = (theme) => all().find((t) => t.proposals.some((p) => normalize(p) === normalize(theme))) || null;
@@ -37,6 +37,7 @@
       r.arguments.forEach((a, i) => heading.push("### Argumento " + (i + 1), a.claim, a.reason, "Exemplo hipotético: " + a.example, "Pergunta de ligação: " + a.question));
       heading.push("### Intervenção possível", ...Object.entries(r.intervention).map(([key, val]) => key + ": " + val), "Cuidado: " + r.care);
     }
+    heading.push("## Repertório sociocultural (livros, música brasileira e cinema)", ...(t.repertoire||[]).map((item)=>"### "+item.kind+" · "+item.work+" — "+item.creator+"\n\nContexto: "+item.connection+"\n\nComo aplicar: "+item.application+"\n\nCite com precisão, sem trechos inventados. Obra artística não é dado estatístico."));
     heading.push("## Conceitos para estudar", ...t.concepts.map((c) => c.title + ": " + c.text), "## Perguntas para sair do óbvio", ...t.questions.map((q) => "- " + q), "## Fontes para conferir online", ...t.sources.map((s) => "- " + s.title + ": " + s.url));
     return heading.join("\n\n");
   }
