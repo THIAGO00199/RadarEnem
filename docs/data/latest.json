@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-15T04:20:24.177000+00:00",
+  "fetchedAt": "2026-10-15T18:36:51.384018+00:00",
   "articles": [
     {
       "id": "public-982a1b7c3fc32f0b6560",
@@ -39,6 +39,34 @@
       "observedAt": "2026-10-15",
       "topics": [
         "ia"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-f77d09bb0f530ccf3b2f",
+      "title": "Docentes usam inteligência artificial para inovar e engajar alunos",
+      "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/docentes-usam-inteligencia-artificial-para-inovar-e-engajar-alunos",
+      "source": "Agência Brasil — últimas notícias",
+      "kind": "news",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "topics": [
+        "ia"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-90e8447c3811a58045a0",
+      "title": "São Paulo terá mais chuvas fortes no fim da tarde desta quinta (15)",
+      "url": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/sao-paulo-tera-mais-chuvas-fortes-no-fim-da-tarde-desta-quinta-15",
+      "source": "Agência Brasil — últimas notícias",
+      "kind": "news",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "topics": [
+        "clima"
       ],
       "origin": "collected",
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
@@ -787,7 +815,7 @@
       "title": "Agência Brasil — últimas notícias",
       "url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "message": "Consulta concluída"
     },
     {
