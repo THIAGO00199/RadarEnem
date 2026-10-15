@@ -96,7 +96,7 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "who": "Defesa Civil, Cemaden, ANA e prefeituras",
       "what": "Articular previsões climáticas e preparação local",
       "how": "Mapas de exposição, protocolos de comunicação acessível, simulados escolares e obras preventivas",
-      "why": "Evitar perdas humanas e materiais",
+      "why": "Evitar perdas humanas, materiais e sociais em regiões vulneráveis",
       "detail": "Medir alcance de alertas, tempo de resposta e assistência pós-evento por bairro."
     }
   },
