@@ -1,6 +1,48 @@
 {
-  "fetchedAt": "2026-10-14T15:34:49.986654+00:00",
+  "fetchedAt": "2026-10-15T04:20:24.177000+00:00",
   "articles": [
+    {
+      "id": "public-982a1b7c3fc32f0b6560",
+      "title": "Fim da 6x1: saiba quando entra em vigor nova jornada de trabalho",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/fim-da-6x1-saiba-quando-entra-em-vigor-nova-jornada-de-trabalho",
+      "source": "Agência Brasil — últimas notícias",
+      "kind": "news",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "topics": [
+        "mental"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-02b6ca16a00ab4fe7cf8",
+      "title": "Campanha de Flávio aciona TSE contra posts de artistas e parlamentares",
+      "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/campanha-de-flavio-aciona-tse-contra-posts-de-artistas-e-deputados",
+      "source": "Agência Brasil — últimas notícias",
+      "kind": "news",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "topics": [
+        "ia"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-c522ecac2eb28b51b370",
+      "title": "OAB Rio ganha ação que proíbe plataforma de oferecer petições com IA",
+      "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/oab-rio-ganha-acao-que-proibe-plataforma-de-oferecer-peticoes-com-ia",
+      "source": "Agência Brasil — últimas notícias",
+      "kind": "news",
+      "date": "2026-10-15",
+      "observedAt": "2026-10-15",
+      "topics": [
+        "ia"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
     {
       "id": "public-ff8411bff14cb7582d87",
       "title": "‘Mudanças climáticas’ ou ‘mudança climática’? Por que a diferença entre singular e plural faz diferença",
@@ -8,7 +50,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-13",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "clima"
       ],
@@ -22,7 +64,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-08",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "inclusao"
       ],
@@ -36,7 +78,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-07",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "ia"
       ],
@@ -50,7 +92,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-07",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "mental"
       ],
@@ -64,7 +106,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-01",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "idosos"
       ],
@@ -78,7 +120,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-10-01",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "educacao"
       ],
@@ -92,7 +134,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-29",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "ia",
         "idosos"
@@ -107,7 +149,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-23",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "acesso"
       ],
@@ -121,7 +163,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-18",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "inclusao",
         "educacao"
@@ -136,7 +178,7 @@
       "source": "ANPD",
       "kind": "news",
       "date": "2026-09-16",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "digital",
         "ia"
@@ -151,7 +193,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-16",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "idosos"
       ],
@@ -165,7 +207,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-16",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "mental"
       ],
@@ -179,7 +221,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-16",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "ia",
         "educacao"
@@ -194,7 +236,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-08",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "leitura",
         "ia"
@@ -209,7 +251,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-03",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "educacao"
       ],
@@ -223,7 +265,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-09-03",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "ia"
       ],
@@ -237,21 +279,7 @@
       "source": "G1 Educação — RSS",
       "kind": "news",
       "date": "2026-08-27",
-      "observedAt": "2026-10-14",
-      "topics": [
-        "mental"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "public-937f29964b10d018617e",
-      "title": "Candidatos com ansiedade solicitam apoio prometido no Enem e têm laudo negado; Inep diz que corrigirá erro",
-      "url": "https://g1.globo.com/educacao/noticia/2026/08/21/candidatos-com-ansiedade-atendimento-especializado-enem.ghtml",
-      "source": "G1 Educação — RSS",
-      "kind": "news",
-      "date": "2026-08-21",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "mental"
       ],
@@ -265,7 +293,7 @@
       "source": "Ministério dos Direitos Humanos",
       "kind": "news",
       "date": "2026-08-21",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "digital",
         "juventude"
@@ -280,7 +308,7 @@
       "source": "CNN Brasil / Ademar Celedônio",
       "kind": "editorial",
       "date": "2026-08-16",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "leitura",
         "digital",
@@ -304,7 +332,7 @@
       "source": "Brasil Escola",
       "kind": "editorial",
       "date": "2026-05-06",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "leitura",
         "digital",
@@ -330,7 +358,7 @@
       "source": "FGV",
       "kind": "editorial",
       "date": "2026-05-05",
-      "observedAt": "2026-10-14",
+      "observedAt": "2026-10-15",
       "topics": [
         "mental",
         "ia",
@@ -339,6 +367,20 @@
         "trabalho",
         "ciencia",
         "idosos"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
+      "id": "public-937f29964b10d018617e",
+      "title": "Candidatos com ansiedade solicitam apoio prometido no Enem e têm laudo negado; Inep diz que corrigirá erro",
+      "url": "https://g1.globo.com/educacao/noticia/2026/08/21/candidatos-com-ansiedade-atendimento-especializado-enem.ghtml",
+      "source": "G1 Educação — RSS",
+      "kind": "news",
+      "date": "2026-08-21",
+      "observedAt": "2026-10-14",
+      "topics": [
+        "mental"
       ],
       "origin": "collected",
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
@@ -720,9 +762,9 @@
       "id": "anpd-digital",
       "title": "ANPD",
       "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/eca-digital-completa-um-ano-e-e-marco-na-protecao-de-criancas-e-adolescentes-na-internet",
-      "ok": false,
-      "count": 0,
-      "message": "Não foi possível consultar a fonte: Conteúdo esperado não encontrado"
+      "ok": true,
+      "count": 1,
+      "message": "Consulta concluída"
     },
     {
       "id": "plano-clima",
@@ -745,8 +787,8 @@
       "title": "Agência Brasil — últimas notícias",
       "url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml",
       "ok": true,
-      "count": 0,
-      "message": "Consulta concluída, sem temas compatíveis"
+      "count": 3,
+      "message": "Consulta concluída"
     },
     {
       "id": "mec-noticias",
