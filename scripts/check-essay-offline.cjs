@@ -39,6 +39,17 @@ const local=(page)=>page.evaluate(()=>JSON.parse(localStorage.getItem('kalore-hu
  const axeModule=require('@axe-core/playwright');const AxeBuilder=axeModule.default||axeModule;const audit=await new AxeBuilder({page}).include('#essay-ideas-hub').analyze();
  assert.deepEqual(audit.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>n.target)})),[],'Essay bank should pass the accessibility audit');
  await page.goto(base+'/estudar.html#biblioteca');await page.waitForFunction(()=>document.querySelectorAll('#libraryGrid [data-resource]').length>0);assert.ok(await page.locator('#libraryGrid [data-resource]').count()>0);
+ await page.goto(base+'/guia-estrategico.html');await page.waitForSelector('.topic');
+ assert.equal(await page.locator('.topic').count(),18,'Advanced guide should expose all requested themes');
+ await page.locator('button.topic[data-id="deepfakes"]').click();
+ assert.match(await page.locator('.map h2').innerText(),/deepfakes/i);
+ assert.equal(await page.locator('.rep').count(),4,'Two contextual references per argument');
+ assert.equal(await page.locator('.pi>div').count(),5,'Five intervention elements');
+ await page.locator('#search').fill('Krenak');
+ assert.ok(await page.locator('.topic').count()>0,'Author search should return related topics');
+ await page.locator('#search').fill('');
+ await page.locator('button.topic[data-id="ciclo-hidrologico"]').click();
+ assert.match(await page.locator('.map h2').innerText(),/seca encontra a enchente/i);
  await page.goto(base+'/radar.html');await page.getByRole('button',{name:'Planejar este texto'}).click();await page.waitForSelector('.writing-canvas');
  await page.waitForFunction(()=>document.querySelector('.writing-canvas .essay-ideas-shell'));
  await page.locator('.writing-canvas .essay-ideas-shell [data-idea-topic]').selectOption('ciencia');

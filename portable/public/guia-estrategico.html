@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#12121d">
+<meta name="description" content="ATENA: 18 mapas argumentativos para treino de redação ENEM, com repertório contextualizado, tese, desenvolvimento e intervenção.">
+<title>Mapas de Guerra da Redação | ATENA</title>
+<style>
+:root{color-scheme:dark;--bg:#0c0e18;--panel:#171a29;--soft:#20243a;--line:#363b58;--fg:#f5f3ff;--muted:#babdd3;--violet:#b397ff;--cyan:#76e7e1;--gold:#f7d58c;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:radial-gradient(ellipse at 85% 0%,#3924557a,transparent 38%),var(--bg);margin:0;color:var(--fg);line-height:1.65}
+a{color:var(--cyan);text-underline-offset:3px}button,select,input{font:inherit}button{cursor:pointer}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.wrap{max-width:1240px;padding:24px;margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{letter-spacing:.2em;font-weight:900;color:var(--fg);text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:20px;font-size:13px}
+.pill{font-size:11px;text-transform:uppercase;letter-spacing:.13em;font-weight:850;color:var(--cyan)}
+.hero{padding:60px 0 38px;max-width:850px}h1{line-height:1.06;letter-spacing:-.05em;font-size:clamp(36px,6vw,72px);margin:10px 0 20px}
+.hero p{color:var(--muted);font-size:16px;max-width:760px}.hero strong{color:var(--fg)}
+.metrics{display:flex;gap:13px;flex-wrap:wrap;margin-top:22px}.metrics span{border:1px solid var(--line);background:#1a1c30;border-radius:14px;padding:8px 13px;font-size:12px}
+.metrics b{color:var(--gold);font-size:18px;margin-right:6px}
+.note{border-left:3px solid var(--gold);background:#2a261c;padding:14px 18px;border-radius:0 12px 12px 0;color:#fae9c6;font-size:13px;margin:14px 0 25px}
+.layout{display:grid;grid-template-columns:285px minmax(0,1fr);gap:22px;align-items:start}
+.catalog{position:sticky;top:12px;max-height:calc(100vh - 25px);overflow:auto;padding:17px;border-radius:18px;border:1px solid var(--line);background:var(--panel)}
+.catalog label{display:block;color:var(--muted);font-size:12px;margin:3px 0 9px}
+.catalog input,.catalog select{width:100%;color:var(--fg);background:#111320;border:1px solid #626b86;border-radius:10px;padding:12px;margin:3px 0 13px}
+#topics{display:grid;gap:7px;overflow:auto}.topic{display:block;border:1px solid transparent;border-radius:10px;text-align:left;color:var(--muted);background:transparent;padding:10px;font-size:12px;line-height:1.4;width:100%}
+.topic span{display:block;color:var(--gold);font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.topic[aria-current="true"]{color:var(--fg);background:#3f2d70;border-color:var(--violet);font-weight:750}.topic:hover{background:#29263e;color:var(--fg)}
+.result{font-size:12px;color:var(--muted);margin:4px 0 12px}
+main{min-width:0}
+.map{border-radius:20px;background:linear-gradient(180deg,#1b1d30,#131625);border:1px solid var(--line);padding:clamp(18px,3vw,32px)}
+.map-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap}.map h2{font-size:clamp(24px,3vw,36px);line-height:1.18;letter-spacing:-.03em;margin:9px 0 20px}
+.tag{font-size:11px;color:var(--violet);font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.thesis{border:1px solid #6c57a7;background:#2b2247;border-radius:16px;padding:20px;margin:20px 0}.thesis h3,.subhead{margin:0 0 8px;color:#d1c2ff;font-size:12px;font-weight:850;letter-spacing:.1em;text-transform:uppercase}
+.thesis p{font-size:18px;line-height:1.55;margin:0 0 14px}
+.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid #8175b0;background:#342751;color:#fefaff;border-radius:9px;padding:9px 12px;font-size:12px;font-weight:750}
+.btn:hover{background:#493767}.btn.ghost{background:transparent}.btn.export{background:var(--violet);color:#1b122d;border:0}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:15px}.argument{border:1px solid var(--line);border-radius:16px;padding:18px;background:#171a2b}
+.argument h3{font-size:18px;line-height:1.3;margin:8px 0 12px}.argument>p{margin:0 0 10px;color:#cdd0e0;font-size:13px}
+.reps{display:grid;gap:9px;margin:16px 0}.rep{border-top:1px solid var(--line);padding:11px 0 0}
+.rep b{display:block;font-size:13px;color:var(--gold)}.rep p{font-size:12px;color:#d6d4e4;margin:4px 0 0}
+.section{margin:25px 0}.section>h3{margin:0 0 11px;font-size:18px}
+.words{display:flex;flex-wrap:wrap;gap:8px}.word{border:1px solid #59647e;background:var(--soft);border-radius:100px;padding:6px 12px;font-size:12px;color:var(--fg)}
+.pi{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pi>div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#151a2b}
+.pi b{font-size:11px;letter-spacing:.09em;color:var(--cyan);text-transform:uppercase}.pi p{margin:5px 0 0;font-size:13px}
+.pi .wide{grid-column:1/-1}.copymsg{font-size:13px;color:var(--cyan);min-height:21px;margin:12px 0}
+footer{color:var(--muted);font-size:12px;line-height:1.7;padding:35px 0}
+@media(max-width:950px){.layout{grid-template-columns:1fr}.catalog{position:relative;max-height:none}.catalog #topics{display:flex;overflow-x:auto;gap:8px}.catalog .topic{min-width:185px;max-width:240px;flex:none}.catalog-controls{display:flex;gap:12px}.catalog-controls label{flex:1}}
+@media(max-width:660px){.wrap{padding:16px}.hero{padding-top:35px}.duo,.pi{grid-template-columns:1fr}.pi .wide{grid-column:1}.catalog-controls{display:block}header{align-items:flex-start}nav{gap:10px}#topics{max-height:240px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="brand" href="./">ATENA<span style="color:var(--violet)">.</span></a><nav aria-label="Navegação"><a href="./redacao">Redação</a><a href="./radar">Radar</a><a href="./estudos">Estudos</a></nav></header>
+<div class="hero">
+<div class="pill">Laboratório de alta performance · repertório contextualizado</div>
+<h1>Mapas de guerra <span style="color:var(--violet)">argumentativa.</span></h1>
+<p>18 propostas de treino com tese definida, causa estrutural, consequência demonstrável, repertórios vinculados aos argumentos e intervenção completa. <strong>Não são redações prontas:</strong> use os mapas como base para construir seu texto.</p>
+<div class="metrics"><span><b>18</b> propostas de treino</span><span><b>72</b> referências ligadas a argumentos</span><span><b>90</b> elementos de intervenção</span></div>
+</div>
+<div class="note"><strong>Sobre o ENEM 2026:</strong> estes recortes não são temas confirmados, nem existe garantia de que algum cairá na prova. O Inep exige repertório pertinente e produtivo; citar autor famoso sem explicar a conexão não melhora automaticamente uma redação.</div>
+<div class="layout">
+<aside class="catalog" aria-label="Temas do guia">
+<div class="catalog-controls"><label>Buscar tema, autor ou obra<input id="search" type="search" placeholder="Ex.: Krenak, IA, etarismo" autocomplete="off"></label><label>Eixo temático<select id="axis"><option value="">Todos os eixos</option></select></label></div>
+<p class="result" id="count" role="status" aria-live="polite"></p>
+<div id="topics"></div>
+</aside>
+<main id="main" tabindex="-1"><div class="map"><p>Carregando os mapas editoriais...</p></div></main>
+</div>
+<footer><p>Guia educacional autoral · Atualizado em outubro de 2026 · Fontes de referência para aprofundar: <a href="https://www.gov.br/inep/pt-br/centrais-de-conteudo/acervo-linha-editorial/publicacoes-institucionais/avaliacoes-e-exames-da-educacao-basica/a-redacao-do-enem-2026-cartilha-do-a-participante" target="_blank" rel="noopener noreferrer">Cartilha do Inep</a>, <a href="https://www.gov.br/ana/pt-br/assuntos/monitoramento-e-eventos-criticos/eventos-criticos/monitor-de-secas" target="_blank" rel="noopener noreferrer">ANA</a>, <a href="https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2025/canetas-emagrecedoras-so-poderao-ser-vendidas-com-retencao-de-receita" target="_blank" rel="noopener noreferrer">Anvisa</a> e <a href="https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-material/bens-tombados" target="_blank" rel="noopener noreferrer">Iphan</a>. Confira a fonte antes de citar datas, estatísticas ou normas. Não atribua citações literais não conferidas aos autores.</p><p>ATENA · Educação e autonomia de pensamento.</p></footer>
+</div>
+<script src="./guia-mapas-01.js"></script>
+<script src="./guia-mapas-02.js"></script>
+<script src="./guia-mapas-03.js"></script>
+<script>
+(function(){
+"use strict";
+const maps=globalThis.AtenaWarMaps||[];
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const normalize=s=>String(s??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+let active=maps[0]?.id;
+const axes=[...new Set(maps.map(x=>x.axis))].sort((a,b)=>a.localeCompare(b,"pt-BR"));
+$("axis").innerHTML='<option value="">Todos os eixos</option>'+axes.map(a=>'<option value="'+esc(a)+'">'+esc(a)+'</option>').join("");
+function filtered(){
+const q=normalize($("search").value),ax=$("axis").value;
+return maps.filter(m=>(!ax||m.axis===ax)&&(!q||normalize([m.title,m.axis,m.thesis,...m.words,...m.cause.refs.flat(),...m.impact.refs.flat()].join(" ")).includes(q)));
+}
+function renderCatalog(){
+const list=filtered();
+$("count").textContent=list.length+" de "+maps.length+" propostas";
+$("topics").innerHTML=list.length?list.map((m,i)=>'<button type="button" class="topic" data-id="'+esc(m.id)+'" aria-current="'+(m.id===active)+'"><span>'+String(maps.indexOf(m)+1).padStart(2,"0")+' / '+esc(m.axis)+'</span>'+esc(m.title)+'</button>').join(""):'<p role="status">Nenhuma proposta combina com a pesquisa.</p>';
+if(list.length&&!list.some(m=>m.id===active)){active=list[0].id;renderMap();}
+}
+function paragraph(s){return esc(s);}
+function refs(rows){return '<div class="reps">'+rows.map(r=>'<div class="rep"><b>'+esc(r[0])+'</b><p>'+esc(r[1])+'</p></div>').join("")+'</div>';}
+function argument(item,name,field){
+return '<section class="argument"><div class="tag">'+esc(name)+'</div><h3>'+esc(item.claim)+'</h3><p>'+esc(item.why)+'</p><h4 class="subhead">Duas opções de repertório fundamentado</h4>'+refs(item.refs)+'<button type="button" class="btn ghost" data-copy="'+esc(field)+'">Copiar estrutura do argumento</button></section>';
+}
+function renderMap(){
+const m=maps.find(x=>x.id===active);if(!m)return;
+$("main").innerHTML='<article class="map"><div class="map-head"><div class="tag">'+esc(m.axis)+' · MAPA '+(maps.indexOf(m)+1)+' DE '+maps.length+'</div><button type="button" class="btn export" data-export>Exportar guia .md</button></div><h2>'+esc(m.title)+'</h2><section class="thesis"><h3>Tese central sugerida</h3><p>'+esc(m.thesis)+'</p><button type="button" class="btn" data-copy="thesis">Copiar tese</button></section><div class="duo">'+argument(m.cause,"Argumento 1 · Raiz estrutural","cause")+argument(m.impact,"Argumento 2 · Consequência concreta","impact")+'</div><section class="section"><h3>Vocabulário argumentativo específico</h3><div class="words">'+m.words.map(w=>'<span class="word">'+esc(w)+'</span>').join("")+'</div><p style="font-size:12px;color:var(--muted);margin:12px 0 6px">Conectivos para encadear os parágrafos:</p><div class="words"><span class="word">Sob essa perspectiva</span><span class="word">Por conseguinte</span></div></section><section class="section"><h3>Proposta de intervenção — cinco elementos</h3><div class="pi">'+[["Agente",m.pi.who],["Ação",m.pi.what],["Meio / modo",m.pi.how],["Efeito / finalidade",m.pi.why],["Detalhamento técnico",m.pi.detail]].map(([k,v],i)=>'<div class="'+(i===4?'wide':'')+'"><b>'+esc(k)+'</b><p>'+esc(v)+'</p></div>').join("")+'</div><div class="actions" style="margin-top:14px"><button type="button" class="btn" data-copy="pi">Copiar intervenção</button><button type="button" class="btn ghost" data-copy="all">Copiar mapa completo</button></div></section><p class="copymsg" aria-live="polite" id="copymsg"></p><p style="font-size:12px;color:var(--muted)">Estratégias para treino: formule sua própria redação, confirme os repertórios e adapte a intervenção ao recorte apresentado na prova.</p></article>';
+renderCatalog();
+}
+function makeMarkdown(m){
+const sec=(label,a)=>['## '+label,'**Ponto:** '+a.claim,'**Desenvolvimento:** '+a.why,...a.refs.map(r=>'**Repertório:** '+r[0]+' — '+r[1])].join("\n\n");
+return ['# ATENA | Mapa argumentativo',m.title,'Proposta de treino, não tema confirmado.','## Tese',m.thesis,sec('Argumento 1 — causa',m.cause),sec('Argumento 2 — consequência',m.impact),'## Vocabulário',m.words.join(' · '),'## Intervenção','Agente: '+m.pi.who,'Ação: '+m.pi.what,'Meio: '+m.pi.how,'Finalidade: '+m.pi.why,'Detalhamento: '+m.pi.detail,'Confira autoria, legislação e pertinência antes de citar.'].join("\n\n");
+}
+function toCopy(m,key){
+if(key==="all")return makeMarkdown(m);
+if(key==="thesis")return m.thesis;
+if(key==="pi")return ["Agente: "+m.pi.who,"Ação: "+m.pi.what,"Meio: "+m.pi.how,"Finalidade: "+m.pi.why,"Detalhamento: "+m.pi.detail].join("\n");
+const a=key==="cause"?m.cause:m.impact;
+return [a.claim,a.why,...a.refs.map(x=>x[0]+": "+x[1])].join("\n\n");
+}
+async function copy(text){
+if(navigator.clipboard?.writeText&&location.protocol!=="file:"){await navigator.clipboard.writeText(text);return;}
+const el=document.createElement("textarea");el.value=text;el.style.position="fixed";el.style.left="-9999px";document.body.append(el);el.select();const ok=document.execCommand("copy");el.remove();if(!ok)throw Error("Copy unavailable");
+}
+$("search").addEventListener("input",()=>{renderCatalog()});
+$("axis").addEventListener("change",renderCatalog);
+$("topics").addEventListener("click",e=>{const b=e.target.closest("button[data-id]");if(!b)return;active=b.dataset.id;renderMap();if(innerWidth<=950)$("main").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"instant":"smooth",block:"start"});});
+$("main").addEventListener("click",async e=>{
+const b=e.target.closest("button");if(!b)return;const m=maps.find(x=>x.id===active);if(!m)return;
+if(b.hasAttribute("data-export")){const blob=new Blob([makeMarkdown(m)],{type:"text/markdown;charset=utf-8"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="atena-mapa-"+m.id+".md";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);return;}
+if(b.dataset.copy){try{await copy(toCopy(m,b.dataset.copy));$("copymsg").textContent="Conteúdo copiado. Adapte com sua própria argumentação.";}catch(e){$("copymsg").textContent="Não foi possível copiar automaticamente. Use a exportação Markdown.";}}
+});
+if(maps.length!==18||new Set(maps.map(x=>x.id)).size!==18){$("main").innerHTML='<p role="alert">Falha de integridade do banco de temas.</p>';return;}
+renderMap();
+})();
+</script>
+</body></html>
