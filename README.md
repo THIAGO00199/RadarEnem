@@ -21,9 +21,10 @@ Código original sob [licença MIT](./LICENSE). Consulte o [guia de contribuiç�
 - **18 mapas argumentativos e 72 aplicações de repertório**, acessíveis diretamente pela sidebar. Fontes primárias aparecem no guia e na exportação Markdown.
 - **123 aplicações inventariadas** em um caderno para revisão independente. O registro identifica o texto exato de cada parecer; alterações invalidam aprovações anteriores. A aprovação pedagógica independente continua pendente.
 - A coleta diária passa pela suíte completa. O publicador recebe o artefato validado, verifica a revisão atual e publica release após conferir o domínio.
+- `main` protegida: PR obrigatório, check do GitHub Actions aprovado e atualizado, conversas resolvidas e aplicação das regras aos administradores. Pages usa deploy por artefato com HTTPS obrigatório.
 - Novos testes de backup entre contextos de navegador, auditoria dos 18 mapas nos dois temas, relatório de desempenho atual para sete páginas e templates de bugs.
 
-Consulte o [relatório de confiabilidade](./RELIABILITY.md), o [caderno editorial](./editorial/README.md) e as [pendências registradas](https://github.com/THIAGO00199/RadarEnem/issues). A proteção administrativa de `main` e as integrações comerciais ainda exigem configuração externa.
+Consulte o [relatório de confiabilidade](./RELIABILITY.md), o [caderno editorial](./editorial/README.md) e as [pendências registradas](https://github.com/THIAGO00199/RadarEnem/issues). A revisão pedagógica independente e as integrações comerciais continuam pendentes.
 
 ## O que foi entregue na versão 5
 
@@ -69,7 +70,7 @@ portable/public/hub/    Ferramentas existentes, questões, simulados e bibliotec
 portable/public/shared/ Regras compartilhadas de redação, planejamento e revisão
 portable/public/atena/   Imagem de referência e símbolo vetorial
 scripts/                Build, geração offline, validação e conferência do CDN
-docs/                   Exportação pronta para GitHub Pages
+docs/                   Exportação local; CI publica o artefato da própria execução
 .github/workflows/      Qualidade, coleta diária e conferência da publicação
 ```
 
@@ -88,7 +89,9 @@ O workflow `radar-daily.yml` roda diariamente com `0 0 * * *` UTC e também pode
 
 O navegador lê `data/latest.json`; acessar a plataforma não dispara scraping, processamento remoto de redações ou uma API paga. Sem rede, a última base disponível continua acessível pelo cache.
 
-O modo legado do GitHub Pages serve `main` → `/docs`; os arquivos de publicação são atualizados pelo CI após aprovação. A proteção administrativa e a migração para deploy por artefato estão registradas na issue #4. O domínio personalizado fica em `docs/CNAME`. A compilação é SSG e a atualização é feita por reconstrução agendada: Pages não executa ISR, Next Server, Python ou banco em produção. Há uma cópia pré-renderizada de cada rota, compartilhada entre os visitantes.
+O GitHub Pages usa **GitHub Actions** como origem. A suíte aprovada entrega o artefato da própria execução ao publicador, sem commits do bot na `main` protegida. O domínio personalizado é `atena.dev.br`, com HTTPS obrigatório; o build também preserva `docs/CNAME`. O [PR de teste #9](https://github.com/THIAGO00199/RadarEnem/pull/9), fechado sem merge, comprovou que um check reprovado bloqueia a incorporação e não publica. A compilação é SSG e a atualização é feita por reconstrução agendada: Pages não executa ISR, Next Server, Python ou banco em produção. Há uma cópia pré-renderizada de cada rota, compartilhada entre os visitantes.
+
+O diretório `docs/` no código pode refletir uma compilação anterior. Para identificar o site efetivamente publicado, consulte `https://atena.dev.br/data/build-info.json` e o artefato da execução correspondente.
 
 ## Progresso e uso offline
 
