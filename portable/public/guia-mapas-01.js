@@ -1,4 +1,4 @@
-/* Conteúdo de treino, sem previsão do tema oficial do ENEM. */
+/* Conteúdo de treino; revisão pedagógica independente pendente. */
 globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
   {
     "id": "ciclo-hidrologico",
@@ -11,11 +11,13 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Lei 12.608/2012 — Política Nacional de Proteção e Defesa Civil",
-          "A lei prioriza prevenção e gestão de riscos; conecte-a à insuficiência de ações preventivas concretas."
+          "A lei prioriza prevenção e gestão de riscos; conecte-a à insuficiência de ações preventivas concretas.",
+          "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12608.htm"
         ],
         [
           "ANA — Monitor de Secas",
-          "O monitoramento contínuo de severidade da seca evidencia por que dados hidrológicos devem orientar políticas públicas."
+          "O monitoramento contínuo de severidade da seca evidencia por que dados hidrológicos devem orientar políticas públicas.",
+          "https://monitordesecas.ana.gov.br/"
         ]
       ]
     },
@@ -61,11 +63,12 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Guy Debord — A Sociedade do Espetáculo",
-          "A valorização da imagem como capital simbólico explica por que a aparência pode se sobrepor ao cuidado em saúde."
+          "A mediação das relações sociais pela imagem permite questionar a prioridade dada à aparência no consumo; apresente essa leitura como aplicação interpretativa ao tema."
         ],
         [
           "Anvisa — regras de retenção de receita para agonistas GLP-1 (2025)",
-          "A exigência de controle na venda evidencia a diferença entre prescrição individualizada e uso indiscriminado."
+          "A exigência de controle na venda evidencia a diferença entre prescrição individualizada e uso indiscriminado.",
+          "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2025/canetas-emagrecedoras-so-poderao-ser-vendidas-com-retencao-de-receita"
         ]
       ]
     },
@@ -79,7 +82,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Constituição Federal, art. 196",
-          "O direito à saúde orienta a prioridade do acompanhamento responsável e da informação qualificada."
+          "O direito à saúde orienta a prioridade do acompanhamento responsável e da informação qualificada.",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
         ]
       ]
     },
@@ -115,7 +119,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Lei 13.709/2018 — LGPD",
-          "A proteção de dados pessoais importa quando imagem e voz são usadas sem base legal; não equivale, isoladamente, a uma lei geral sobre deepfakes."
+          "A proteção de dados pessoais importa quando imagem e voz são usadas sem base legal; não equivale, isoladamente, a uma lei geral sobre deepfakes.",
+          "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
         ]
       ]
     },
@@ -129,7 +134,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Marco Civil da Internet — Lei 12.965/2014",
-          "Seus princípios sobre direitos na rede permitem discutir deveres institucionais, sem atribuir ao texto mecanismos automáticos inexistentes."
+          "Seus princípios sobre direitos na rede permitem discutir deveres institucionais, sem atribuir ao texto mecanismos automáticos inexistentes.",
+          "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm"
         ]
       ]
     },
@@ -165,7 +171,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "MP 1.394/2026 — proibição federal de apostas de quota fixa",
-          "O ato anunciado pelo Ministério da Fazenda em setembro de 2026 altera o cenário regulatório; confira a vigência no momento da escrita."
+          "O ato anunciado pelo Ministério da Fazenda em setembro de 2026 altera o cenário regulatório; confira a vigência no momento da escrita.",
+          "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/mpv1394.htm"
         ]
       ]
     },
@@ -179,7 +186,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Constituição Federal, art. 227",
-          "A prioridade de proteção de crianças e adolescentes dá fundamento à prevenção de exposição e danos econômicos."
+          "A prioridade de proteção de crianças e adolescentes dá fundamento à prevenção de exposição e danos econômicos.",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
         ]
       ]
     },
@@ -215,7 +223,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Marco Civil da Internet, art. 4º",
-          "O objetivo de promover acesso à internet fornece base normativa para cobrar políticas de universalização."
+          "O objetivo de promover acesso à internet fornece base normativa para cobrar políticas de universalização.",
+          "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm"
         ]
       ]
     },
@@ -229,7 +238,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "IBGE — PNAD Contínua TIC",
-          "O levantamento distingue acesso e uso de tecnologias, permitindo discutir desigualdades com recortes e anos verificáveis."
+          "O levantamento distingue acesso e uso de tecnologias, permitindo discutir desigualdades com recortes e anos verificáveis.",
+          "https://www.ibge.gov.br/estatisticas/sociais/populacao/17270-pnad-continua.html"
         ]
       ]
     },
@@ -279,7 +289,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Constituição Federal, art. 196",
-          "O direito universal à saúde orienta políticas inclusivas, sem fixar um tipo corporal como ideal."
+          "O direito universal à saúde orienta políticas inclusivas, sem fixar um tipo corporal como ideal.",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
         ]
       ]
     },

@@ -1914,7 +1914,7 @@
     download(
       "kalore-enem-hub-" + dayKey() + ".json",
       JSON.stringify(
-        { version: 5, exportedAt: new Date().toISOString(), state: s, atena: window.AtenaTools?.read() },
+        { version: 5, exportedAt: new Date().toISOString(), state: s, atena: window.AtenaTools?.read(), localData: window.AtenaBackup?.create().data },
         null,
         2,
       ),
@@ -1926,6 +1926,11 @@
     try {
       if (f.size > 12_000_000) throw new Error("Backup acima de 12 MB. Use uma cópia menor.");
       const d = JSON.parse(await f.text());
+      if (d?.app === "ATENA" && d.kind === "full-backup") {
+        window.AtenaBackup.restore(d);
+        location.reload();
+        return;
+      }
       if (
         ![3, 4, 5].includes(d.version) ||
         !d.state ||
@@ -1933,9 +1938,12 @@
         Array.isArray(d.state)
       )
         throw new Error("Use um backup v3, v4 ou v5 do ENEM Hub.");
-      if(d.atena && window.AtenaTools && !window.AtenaTools.write(d.atena))throw new Error("Não foi possível importar o planejamento ATENA.");
-      s = merge(d.state);
-      save();
+      const next = merge(d.state);
+      const copy = window.AtenaBackup.create();
+      if (d.localData !== undefined) copy.data = d.localData;
+      copy.data[KEY] = JSON.stringify(next);
+      if (d.atena) copy.data["atena-workspace-v1"] = JSON.stringify(window.AtenaModel.sanitize(d.atena));
+      window.AtenaBackup.restore(copy);
       location.reload();
     } catch (err) {
       toast(err.message || "Não foi possível importar.");

@@ -1,0 +1,1112 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "map/ciclo-hidrologico/cause/0",
+      "digest": "bdac916233ee0e424b62e4c2fda82835fbc19f9abfa883ec50f93d4ca64f6c4e",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/ciclo-hidrologico/cause/1",
+      "digest": "d3cb8623b3c01a84b1813b52510a8bb97debe165a5de419cfbb51bce39028b51",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/ciclo-hidrologico/impact/0",
+      "digest": "40f615b70fc4c5a9dc3e81efac3e6c06db06b4dfed2b1782600f75a3480b1ca2",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/ciclo-hidrologico/impact/1",
+      "digest": "592c1a93a9d09e02e34b6badb11e0dffd3525fa11610486247401805950165f7",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/canetas-estetica/cause/0",
+      "digest": "9dd151bab4a7ce1cc1bcaa60ad1efaed52c199297b621367fb4deb52f95c6f4f",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/canetas-estetica/cause/1",
+      "digest": "c81bab329421c30ae6e50eb74ac017d5f5704a22fb1fcc2f2d57a73bb5530210",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/canetas-estetica/impact/0",
+      "digest": "960267f4ac01b860107705df2d62030bb7d4b9d0fa248174a14f5b6903c0b4c1",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/canetas-estetica/impact/1",
+      "digest": "a898080126af581598ee0cd8b866d8e89b248de1cd60d59c4e3e71a9f792f325",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/deepfakes/cause/0",
+      "digest": "5644140ac3969e75fc0e20c1897d25ab668dfcadd32bbdff8beed38c89f659f9",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/deepfakes/cause/1",
+      "digest": "a03dd625bd0ea2d8bf9554deaa1c5b460bfbb37dd3b173cc13daf37478a54726",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/deepfakes/impact/0",
+      "digest": "85eb1d6dc3c944ed05397c7d6e45b37c74370f8af234cf5654f392d94bd01ab8",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/deepfakes/impact/1",
+      "digest": "506343f7417a3360617bdd1bc57dbb21aa97bb01465d11fc6b24c6fdf9abfa01",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/bets/cause/0",
+      "digest": "c5bc6437cf403850bdb97da597460ec8c63c377a2226231b6a18beebdbd4fd64",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/bets/cause/1",
+      "digest": "06a28ebc259307a11690637338c646a31f68e5117b8443694d087afed74cfa33",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/bets/impact/0",
+      "digest": "a77fd0a10fb9fed094c7bcb49f3ae92375bfbc7ce99852ff3a344adbbebabc0e",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/bets/impact/1",
+      "digest": "b8f9200171d47f2aeb449914e821680dfb195d2415b9f762d643667a3992b75b",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/inclusao-digital/cause/0",
+      "digest": "1c6575344174704023ce328eab188bccd5ce4b87ed9cd43f5a744759fabe9cf2",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/inclusao-digital/cause/1",
+      "digest": "94aabf7725e457f50afdd323ac41c135174ff31360319050d5a7169733f17ae5",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/inclusao-digital/impact/0",
+      "digest": "dde5df4a7da3d6c01c44fa49ff0f1ec7c5541c0206454e522b8aaadbb35080b5",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/inclusao-digital/impact/1",
+      "digest": "05c44ace4fd945d6edb01fccdb16eb46c66168a384375255500e9b91e0335c8b",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/fitness/cause/0",
+      "digest": "5253a0955c060ff66b6f07a3e950cec77882279d227390541549262e8f0f4d13",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/fitness/cause/1",
+      "digest": "1a27faa21ac51093a6134dd9fa3346117c2b7e364d706c55e360a378a9c72a8e",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/fitness/impact/0",
+      "digest": "5d365bfef7381baaccaf5f90b3a65fd9564295f3a6dc67d5ad9f7a8b174f03c2",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/fitness/impact/1",
+      "digest": "ac1e7ace8d749dc50c92a6d0708339d4fe3aad717b8327e15a4fb20c0fe8f195",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/etarismo/cause/0",
+      "digest": "2dbf6a474f9ce8e9dcc5bbbb299c78affece03de480efea5e1ee3b4f799c0235",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/etarismo/cause/1",
+      "digest": "a7df0ab64d4a969185439d6519a4884e1719998dfb38698177f05a8f22e420c8",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/etarismo/impact/0",
+      "digest": "e60b97a5957160c3be5f43b0299911b0e81f408f4d733e32caee4ec32adf4b03",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/etarismo/impact/1",
+      "digest": "5964f9f74cee1c96228f362c53eb6ed658022b7f016a425f344cb77e4b029c1d",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/povos-originarios/cause/0",
+      "digest": "7bba04db955475a21d07e3af36b0feb5d8c8e5d76169a7c5694ad7aa46e90d50",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/povos-originarios/cause/1",
+      "digest": "47ee5f746ba310a8ecb11cf0ce75e547ecb52dd5c6600d03b4c6a345e54c4c53",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/povos-originarios/impact/0",
+      "digest": "116c001e7536651a6c7fd7218d7436929a0216d90f142b79ad04964936399ce9",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/povos-originarios/impact/1",
+      "digest": "e121a9f0abb4abb54e52e0a5313ed0c6b56c81758929c84351f424852726bf26",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/algoritmos-consumo/cause/0",
+      "digest": "207bf4240f39d182c6e30b0ea60b7b4bd34873c6e529a7b40c24324078ca481f",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/algoritmos-consumo/cause/1",
+      "digest": "a41e8591c894e4b9ddd93ac808d45cedcdea31560704aa6b8d413321c385c508",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/algoritmos-consumo/impact/0",
+      "digest": "b05a1dc7111a8a0e63389f85a863e56e78541ac997e38eeda9daacda73cbc34f",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/algoritmos-consumo/impact/1",
+      "digest": "a78a70b38bb64d8e57eae7ccc3211d3a3da851d28e83def4cb00fcac6d8040b6",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/monumentos/cause/0",
+      "digest": "6d922f2b11de8319b1a9958eadf627946ee1776a7b0a7d8eb4f951b5c97c36f7",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/monumentos/cause/1",
+      "digest": "2f407a39094e76320dc34114dbc4b8f7d9a4c8f9ae5d0e31816e71af268f1ecb",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/monumentos/impact/0",
+      "digest": "f28e724b4e8111c711d79b496be453eb88704520b251c6ae63f2f804b4b72ca1",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/monumentos/impact/1",
+      "digest": "927bcc60d94fdd5c02b79b841c94d1603cdcc4807f79e8341772712139fcff37",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/exploracao-espacial/cause/0",
+      "digest": "ee2387579285f81b707b0ed7fff1687f9cb43bb7012246c3a1fa461b3bd806a2",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/exploracao-espacial/cause/1",
+      "digest": "3cabed24e139755f917a2e24b5fc19e7b48a150f40c2c4f3e089862382ef9a9d",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/exploracao-espacial/impact/0",
+      "digest": "880238de435c9270240fb058d447162196e42ff695aa09f2751d61df2537adba",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/exploracao-espacial/impact/1",
+      "digest": "6a17e514075f9f2d011feb7531164705d1e73543199dc5adcd4d6f629acfd380",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/fauna/cause/0",
+      "digest": "1cb92519727b72320180d0079b5110000545e69ba35695cbd74b0f6ee8b7b157",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/fauna/cause/1",
+      "digest": "7932a8f95fc3ad6c5a860d4f68ebc027ab2eef49917f639b97c25d2ca7ca0dd8",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/fauna/impact/0",
+      "digest": "5c89c997a6d74f3c91d2c2817917af5375f4a519bc4a6f5647184fdb594c2002",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/fauna/impact/1",
+      "digest": "a424aae4df1b078a4e769d61532c2079eec3d62dbae828a0c6b73d53487eb46c",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/migracao/cause/0",
+      "digest": "362d9ecb0e125f91b6d03eb1061a50adead8c8644c44b67155440c8e4af2d06c",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/migracao/cause/1",
+      "digest": "95732bba604a77f1af0f24627108867d397f91894c41329195aed61794cae27f",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/migracao/impact/0",
+      "digest": "d0be91fa397dfd2033fb84e0624db9c61bdd892913d156138063fd805bddf24b",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/migracao/impact/1",
+      "digest": "641064c086c51282d84ddd71f4ecd4fd182554ab3a4fed2e71b8bb016135f16b",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/el-nino/cause/0",
+      "digest": "e9d5f79da33032564ed94319118087330fa7415fea4b364040111ee8ab69b485",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/el-nino/cause/1",
+      "digest": "02156aa15a102852352a986755ab55707436b04ccead17cbbba16925da63acb0",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/el-nino/impact/0",
+      "digest": "a19f5392984e3b109ac181008d98cbb37ab1b0c8a594b12616ac2644ba528ab1",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/el-nino/impact/1",
+      "digest": "6de0c53e89c825292b23bc7e047b37c976b7f1cab8cca5974047a06c2ee5a4f1",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/participacao-juvenil/cause/0",
+      "digest": "c1a254f009d1dfc55210be0cb250fa3488882a0029294b1d91a7d6df7fcccc49",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/participacao-juvenil/cause/1",
+      "digest": "73cc1ccac03e529c36eb4cdd8707477426407615785320a68cefebc0f5ce36ea",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/participacao-juvenil/impact/0",
+      "digest": "b831f7fd0b418ff4bbc067557a89242bb9db115a614c83febae342da7cf3edfd",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/participacao-juvenil/impact/1",
+      "digest": "d08040ca7111854db4460dc77120c75fd766c143ec10a97d246c39da3361222d",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/acessibilidade-digital/cause/0",
+      "digest": "ba532e7224bef584195eb27937f4fb9f0e274761557f490fb638c389523e180b",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/acessibilidade-digital/cause/1",
+      "digest": "b44f6c5f8ebbbc1fee6fa5afed329f9e5584f07cb21d1813a9e2dc931883c98c",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/acessibilidade-digital/impact/0",
+      "digest": "117ea32fd104a1ea90b00c5c406bc7efe5801b983ab3c7d2c6c622e217034319",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/acessibilidade-digital/impact/1",
+      "digest": "ccccf3915a0d457fbfeb3ebae22ce26a2734f8c825a7e673f90fa405cdc7e7c9",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/residuos-eletronicos/cause/0",
+      "digest": "1801ce42bd6c85bfff6fdba9eaa40ad8c2f5a4e2ca145badf09c44b866aa24d7",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/residuos-eletronicos/cause/1",
+      "digest": "3d5e4ad0b486e184d5d618fcef881d8b7db90685e15b61f83970c962f1172143",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/residuos-eletronicos/impact/0",
+      "digest": "24e61c99bb2a70472f6f72b2163e203d266d6ac7cec45ca016143edb4bc48207",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/residuos-eletronicos/impact/1",
+      "digest": "c6f57a21cc6eaf498b241062f3134fd9e61620aec36adf5a2fce8e9e55493000",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/educacao-financeira/cause/0",
+      "digest": "b11e757e98b47de3020433773795119d37f615f6e33b5733b88aee84f90ee9e7",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/educacao-financeira/cause/1",
+      "digest": "0edb16a4d04e719bedd74429182d3377a6e345bd0e044104fe43cb0b95a57a9e",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/educacao-financeira/impact/0",
+      "digest": "e1d11f79af7bccbed194a6afeae7b4709dbc1c8543463c21b0c8dea343fbb8dc",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "map/educacao-financeira/impact/1",
+      "digest": "b6038c348e0db7ea00a053315739e2560aa24d1f5334ea88828eba0a0b971e1c",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/leitura/0",
+      "digest": "1ba606342f6733597fdbd90e5db30160a1d369d2864ea6ef4382efea103ed060",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/leitura/1",
+      "digest": "b6bae90c57264781b957bd5d7a313b1c7348c1a7fa6e1b9091536e578b828c20",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/leitura/2",
+      "digest": "6d7fb7d465b6987e96a3e51ee3218ff8bf1403099fec202aa9c67d6f798a8c81",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/digital/0",
+      "digest": "cf8bb677fe1088d5f861e9f9f20bc20fd7bf478a512743ccc4a9efdad48c90ce",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/digital/1",
+      "digest": "05535a234ca3d0d90eb1f5a3b928f2931103435d2529148b346c90ab81dfbf56",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/digital/2",
+      "digest": "44264a94f2d84fd48c0f50a65ef8126a3d58ac00323f66bdedd9c2d2805b8450",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/clima/0",
+      "digest": "84a0b192a94405d8cd7b1b59c19ab9e65a71832be82a5b714744fa0b7e03bd51",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/clima/1",
+      "digest": "6d7e7b4729cc4e3bd17892cd52743e06947897b78c2b99f3e74063c4fa6c917b",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/clima/2",
+      "digest": "a5059fd3c4970bab6bf234429be8c385dfee4f9619c9af4bd2a6bf7c2fcea1ba",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/mental/0",
+      "digest": "67adf1720642da7e4d277e7834bb05f3cb315cf563aa4d15f24a158ef041a286",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/mental/1",
+      "digest": "fa7c7eecdaaa28f405c5b38cfdaa5ee946d75f9b7b1b603ae3f7ed13ae7bed10",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/mental/2",
+      "digest": "edca5bbb772a22a10094ada1f86492687bd06251f96238c75b105f77ba569a20",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/ia/0",
+      "digest": "14484631e9d2ab401f9c39cd21ea85b96aafd3d49538b0abdc4b6913a1608f06",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/ia/1",
+      "digest": "70b813976c78382e89e1c082cb5cd49b3415118dd7a395ab517a0d13a338ba4f",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/ia/2",
+      "digest": "8b06dfa802bb4fbc38b83347e00b378bdef18c51bfca2692383d20ab69fd88b5",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/inclusao/0",
+      "digest": "edbd9bf6702f43247dc6bae362b1310c3830161db9fbe907e431e9d17f14b2dc",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/inclusao/1",
+      "digest": "e35e9433163749612f3b49d51a605e9ace90cd37ef6c358e5c9d14c03586b5c7",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/inclusao/2",
+      "digest": "205c37b5fa396127798ae37aa21a96bec716a6cf0ae21e745942bc176f5dbc16",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/educacao/0",
+      "digest": "f7545eb73e3e4e26e377b325d3bd4978d298a7c158b8b5e9ade36dc23b6f8bf8",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/educacao/1",
+      "digest": "ae7dd0e74dde5867e4cb640c6aa567933e0593461c09d70f657043f0efee9aea",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/educacao/2",
+      "digest": "1d5242ee1c9bc65c7ecd27f2596ec3ea672717386898345153b9889a895d1a5a",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/trabalho/0",
+      "digest": "36106d921598b9e264118f197146adcf94c5fbba96cf2f9fbfdbc56fffe4046f",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/trabalho/1",
+      "digest": "caaf6c96a3503b994894d39d62c1b03d8c2fad66908f13dd7e5f235982208099",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/trabalho/2",
+      "digest": "666f7b5b5f8321f6db10b32c157b702b3dde77d4350bbadae1577dc4a9a6ac29",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/genero/0",
+      "digest": "36adc4e722eeefa6115ec7aac7facbd81a229b32964d54e3591674d2db505669",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/genero/1",
+      "digest": "81ee7d9ee2dbccd4ec734b72c7deaffd386917d8e3deea280f459867083b8f7c",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/genero/2",
+      "digest": "709ded7f5226d44bcb91b5aff5ab5f30b9e7848a8b90dd8b4b2e676aa8d67651",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/moradia/0",
+      "digest": "628e7993ede71a4c107a6cf85f2bf04de8269394221607935cd5859ef406418d",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/moradia/1",
+      "digest": "83af9b9057666202ef1669e8d552ea0abaa4cc7d5b8f8535dd0f38e358868124",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/moradia/2",
+      "digest": "463b707e524c1bc6209f7861f0e82a3c213ce64e58fb160f3777c0868fd51c6c",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/ciencia/0",
+      "digest": "53fac45166a7b4284f1e41f18a280d878a50fcd7547e9ddfbbf5457b8639d4e8",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/ciencia/1",
+      "digest": "bd532e0ad68b1548cf83882c96a734a6cbfcf3c108743136f520ec25463d60a6",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/ciencia/2",
+      "digest": "12c5b5cab264c7ecc17ca9a3158f9ede4b11a7ada356e3cfb11e4cc702f99400",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/juventude/0",
+      "digest": "641fd4e0e3948dbf9b9e52cc4282266892857e83389a1c929f6781e6d1517254",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/juventude/1",
+      "digest": "7e259c2cd8ca0cf4158b0b84fd6b419306e7e8bd0cb445fe3034ff97d30ae0a9",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/juventude/2",
+      "digest": "97c17a34ca243a9786759343a5860e1c048f2c38cc44aa28cb0a4936c5de7a93",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/democracia/0",
+      "digest": "b122253c4089a5719ffa07d24776bcef19b7b83ab1056c54671c902dd1a116d5",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/democracia/1",
+      "digest": "c218e7d0c893b248515bce56386e040e24e6a41d3576c4bb6ab7e06156680503",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/democracia/2",
+      "digest": "992b0030527ee5f6f615ba324cac37e20dab7cf63a9d92888234c4993f0efc78",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/idosos/0",
+      "digest": "4641fc24bfc5b0d2f61672be42dddf774dec9aba5e4fea1ffb6cdcb14e3ff599",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/idosos/1",
+      "digest": "108f2a2f5b92a1925707fb57bce57399402e589e8777fadf1792beb8af224103",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/idosos/2",
+      "digest": "a19bc9d23f9acaba53eebdc513940efbd163a7a6a208f9990f145d7fd06372b0",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/cultura/0",
+      "digest": "3b158e98a9e1ba2ccc62487499f62f8a4ee41e4acc5697e76136b53712bfd4cb",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/cultura/1",
+      "digest": "84f84b75aa39997837e7ee0f73b15cb74974fee8b8bed8bffacd484a190f20eb",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/cultura/2",
+      "digest": "c7b1225f86f1dfcedc109a5439292deb764f4190de7223d3f9551d1b7141172b",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/fome/0",
+      "digest": "aec41b11a08b0d388378e2726b2b5d33d021c96460d7e3261eb224a0cb380d74",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/fome/1",
+      "digest": "b2b83873411f067cea6afc335b91f030bdde3df9af3cac32d41ff6a339303018",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/fome/2",
+      "digest": "201f21f362730533a9a17f48287218b06c40f8d329b3ca9ab216a5632c9daddc",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/acesso/0",
+      "digest": "cdff402bf416e24ac0d92e0d5134ac6bb95f8fd50b7c6010b232c2e2475c5336",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/acesso/1",
+      "digest": "b12fbd927e2d782f50952af6dd9525d38fa0ee248231df4c33622d1cda04bc24",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "radar/acesso/2",
+      "digest": "8f6a185c18698491038f61b2f976035d3859e824a39167cbfc30d41606197d15",
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    }
+  ]
+}

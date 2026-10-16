@@ -1,0 +1,30 @@
+name: Erro na ATENA
+description: Registre um problema reproduzível sem expor seus textos pessoais.
+title: '[Bug] '
+labels: [bug]
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Prioridade
+      options: [Alta — perda de dados ou bloqueio de estudo, Média — função com falha, Baixa — apresentação]
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Como reproduzir
+      description: Informe a página, os passos e o que esperava acontecer.
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Aparelho e navegador
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidência e resultado esperado
+      description: Não publique backups, rascunhos ou informações pessoais.

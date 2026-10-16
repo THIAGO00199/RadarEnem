@@ -22,13 +22,23 @@ Referência: [documentação oficial de domínios personalizados do GitHub Pages
 
 ## Conferir uma publicação
 
-1. O workflow **Product quality** recompila e verifica os fluxos principais.
-2. O workflow **pages build and deployment** publica o conteúdo de `/docs`.
-3. **Published site smoke check** compara o conteúdo público de cada recurso com o commit. Falha de resolução do domínio indica que a etapa de DNS precisa ser verificada; falha de hash pode indicar uma versão ainda não propagada.
+1. **Product quality** compila e executa as regras, regressões, backup entre navegadores, acessibilidade e desempenho.
+2. A suíte salva o artefato aprovado, incluindo versão e revisão de origem em `data/build-info.json`.
+3. O job `publish` confere se a revisão aprovada ainda é a atual. Se houver uma revisão mais recente, o build antigo não é publicado.
+4. No modo **legacy**, o bot atualiza `docs/` com o artefato aprovado e solicita o build do Pages. No modo **workflow**, `actions/deploy-pages` publica diretamente o artefato da mesma execução, sem commits em `main`.
+5. A conferência do domínio compara os hashes dos recursos públicos com o artefato. Depois disso, o CI cria a release da versão do pacote e anexa o aplicativo offline.
 
-O build de qualidade pode ter identificadores Next diferentes por ser uma nova compilação. O smoke check compara com os arquivos efetivamente commitados, e não com essa recompilação independente.
+`published-smoke.yml` continua disponível para auditoria manual. A coleta diária reutiliza `quality.yml`, parte da última base publicada e passa pelas mesmas verificações; falhas preservam a publicação existente.
 
-Para conferir outro endereço publicado, execute `PUBLISHED_URL=https://atena.dev.br/ python3 scripts/check-published.py`.
+Para conferir outro endereço, execute `PUBLISHED_URL=https://atena.dev.br/ python3 scripts/check-published.py` a partir do build efetivamente publicado. Uma recompilação independente pode gerar outros identificadores Next.
+
+## Ativar a proteção de main
+
+A ativação requer permissão administrativa no GitHub, indisponível no conector usado nesta entrega. A [issue #4](https://github.com/THIAGO00199/RadarEnem/issues/4) acompanha a conclusão.
+
+O workflow já aceita o modo **GitHub Actions** do Pages. Em uma sessão administrativa `gh`, revise `.github/branch-protection.json` e execute `bash scripts/configure-protection.sh`. O script seleciona Pages por workflow, ativa HTTPS e configura PR, check `check`, branch atualizada e bloqueio de force-push/exclusão, inclusive para administradores. Na interface, as configurações equivalentes ficam em Settings → Pages e Settings → Branches.
+
+Após a ativação, acione **Product quality** e confirme o deploy por artefato. Demonstre com um PR de teste que um check reprovado impede a incorporação. O publicador no modo workflow não depende de push do bot em `main`.
 
 ## Apresentação sem rede
 

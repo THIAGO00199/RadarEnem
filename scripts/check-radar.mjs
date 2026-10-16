@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
 import {loadRadar} from './compile-radar.mjs';
 const {model:m,data:d,collector:c}=await loadRadar();
 const baseline=m.rank(d.seed,m.defaultWeights,false,d.BASE_DATE,true);
@@ -25,3 +26,9 @@ const xml='<rss><channel><item><title>Forma&ccedil;&atilde;o de leitores e bibli
 const items=c.parseRSS(xml,'Teste',d.BASE_DATE);
 assert.equal(items.length,1);assert.ok(items[0].topics.includes('leitura'));assert.equal(items[0].date,d.BASE_DATE);assert.ok(m.validEvidence(items[0]));
 console.log('Regras verificadas: total de 100%, cenário PND, limites de pistas, duplicatas, datas, URLs e feed de leitura.');
+
+const published = JSON.parse(await readFile('portable/public/data/latest.json', 'utf8'));
+assert.ok(Array.isArray(published.articles) && published.articles.length <= 500);
+assert.ok(published.articles.every(m.validEvidence), 'every published record must pass the runtime schema');
+assert.ok(Number.isFinite(Date.parse(published.fetchedAt)), 'collection date must be valid');
+console.log('Published Radar dataset:', published.articles.length, 'validated records.');

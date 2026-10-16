@@ -57,7 +57,7 @@
 </div>
 <footer class="atena-footer">
 <p>ATENA · Educação aberta. Confira autoria, leis e dados antes de citar. Fontes: <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem" target="_blank" rel="noopener noreferrer">Inep</a>, <a href="https://www.gov.br/ana/pt-br" target="_blank" rel="noopener noreferrer">ANA</a>, <a href="https://www.gov.br/anvisa/pt-br" target="_blank" rel="noopener noreferrer">Anvisa</a> e <a href="https://www.gov.br/iphan/pt-br" target="_blank" rel="noopener noreferrer">Iphan</a>.</p>
-<p>ATENA · Conhecimento é poder.</p>
+<p>Material autoral de treino. Aguarda revisão pedagógica independente.</p>
 </footer>
 </div></div></div>
 <script>
@@ -94,9 +94,9 @@ $("topics").innerHTML=list.length?list.map((m,i)=>'<button type="button" class="
 if(list.length&&!list.some(m=>m.id===active)){active=list[0].id;renderMap();}
 }
 function paragraph(s){return esc(s);}
-function refs(rows){return '<div class="reps">'+rows.map(r=>'<div class="rep"><b>'+esc(r[0])+'</b><p>'+esc(r[1])+'</p></div>').join("")+'</div>';}
+function refs(rows){return '<div class="reps">'+rows.map(r=>'<div class="rep"><b>'+esc(r[0])+'</b><p>'+esc(r[1])+'</p>'+(r[2]?'<a href="'+esc(r[2])+'" target="_blank" rel="noopener noreferrer">Consultar fonte primária ↗</a>':'')+'</div>').join("")+'</div>';}
 function argument(item,name,field){
-return '<section class="argument"><div class="tag">'+esc(name)+'</div><h3>'+esc(item.claim)+'</h3><p>'+esc(item.why)+'</p><h4 class="subhead">Duas opções de repertório fundamentado</h4>'+refs(item.refs)+'<button type="button" class="btn ghost" data-copy="'+esc(field)+'">Copiar estrutura do argumento</button></section>';
+return '<section class="argument"><div class="tag">'+esc(name)+'</div><h3>'+esc(item.claim)+'</h3><p>'+esc(item.why)+'</p><h4 class="subhead">Repertórios e aplicações possíveis</h4>'+refs(item.refs)+'<button type="button" class="btn ghost" data-copy="'+esc(field)+'">Copiar estrutura do argumento</button></section>';
 }
 function renderMap(){
 const m=maps.find(x=>x.id===active);if(!m)return;
@@ -104,7 +104,7 @@ $("main").innerHTML='<article class="map"><div class="map-head"><div class="tag"
 renderCatalog();
 }
 function makeMarkdown(m){
-const sec=(label,a)=>['## '+label,'**Ponto:** '+a.claim,'**Desenvolvimento:** '+a.why,...a.refs.map(r=>'**Repertório:** '+r[0]+' — '+r[1])].join("\n\n");
+const sec=(label,a)=>['## '+label,'**Ponto:** '+a.claim,'**Desenvolvimento:** '+a.why,...a.refs.map(r=>'**Repertório:** '+r[0]+' — '+r[1]+(r[2]?'\nFonte: '+r[2]:''))].join("\n\n");
 return ['# ATENA | Mapa argumentativo',m.title,'Proposta de treino, não tema confirmado.','## Tese',m.thesis,sec('Argumento 1 — causa',m.cause),sec('Argumento 2 — consequência',m.impact),'## Vocabulário',m.words.join(' · '),'## Intervenção','Agente: '+m.pi.who,'Ação: '+m.pi.what,'Meio: '+m.pi.how,'Finalidade: '+m.pi.why,'Detalhamento: '+m.pi.detail,'Confira autoria, legislação e pertinência antes de citar.'].join("\n\n");
 }
 function toCopy(m,key){

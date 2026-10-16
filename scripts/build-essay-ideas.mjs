@@ -8,5 +8,5 @@ const radarJs=ts.transpileModule(radarSource,{compilerOptions:{module:ts.ModuleK
 const radarModule={exports:{}};new Function('exports','module',radarJs)(radarModule.exports,radarModule);
 new Function('exports','module','require',js)(module.exports,module,(name)=>name==='./radar-data'?radarModule.exports:require(name));
 const topicData=module.exports.essayIdeas;
-await writeFile('portable/public/shared/essay-ideas-data.js','/* Generated from the shared, reviewed editorial topic bank. */\nglobalThis.KaloreEssayIdeasData='+JSON.stringify({version:1,reviewedAt:'2026-10-05',topics:topicData})+';\n');
+await writeFile('portable/public/shared/essay-ideas-data.js','/* Generated from the shared editorial topic bank. Independent review is tracked separately. */\nglobalThis.KaloreEssayIdeasData='+JSON.stringify({version:1,independentReview:'pending',topics:topicData})+';\n');
 console.log('Essay ideas: generated',topicData.length,'topic records and',topicData.reduce((sum,topic)=>sum+topic.routes.length,0),'study routes.');

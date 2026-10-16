@@ -1,4 +1,4 @@
-/* Banco editorial: propostas de treinamento, não temas oficiais do ENEM. */
+/* Conteúdo de treino; revisão pedagógica independente pendente. */
 globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
   {
     "id": "etarismo",
@@ -15,7 +15,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Lei 10.741/2003 — Estatuto da Pessoa Idosa",
-          "O marco jurídico protege a dignidade e a participação e evidencia a obrigação de combater práticas excludentes."
+          "O marco jurídico protege a dignidade e a participação e evidencia a obrigação de combater práticas excludentes.",
+          "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm"
         ]
       ]
     },
@@ -29,7 +30,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "IBGE — Projeções da População",
-          "O envelhecimento demográfico oferece contexto mensurável para adaptar políticas; utilize apenas dados com ano citado."
+          "O envelhecimento demográfico oferece contexto mensurável para adaptar políticas; utilize apenas dados com ano citado.",
+          "https://www.ibge.gov.br/estatisticas/sociais/populacao/9109-projecao-da-populacao.html"
         ]
       ]
     },
@@ -61,7 +63,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Constituição Federal de 1988, arts. 231 e 232",
-          "Reconhecem organização social, direitos originários sobre terras tradicionalmente ocupadas e legitimidade processual indígena."
+          "Reconhecem organização social, direitos originários sobre terras tradicionalmente ocupadas e legitimidade processual indígena.",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
         ],
         [
           "Ailton Krenak — Ideias para Adiar o Fim do Mundo",
@@ -79,7 +82,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Convenção 169 da OIT",
-          "O marco de consulta e participação dos povos interessados sustenta decisões que considerem suas próprias instituições."
+          "O marco de consulta e participação dos povos interessados sustenta decisões que considerem suas próprias instituições.",
+          "https://www.ilo.org/pt-pt/resource/c169-sobre-povos-indigenas-e-tribais"
         ]
       ]
     },
@@ -115,7 +119,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Lei 13.709/2018 — LGPD",
-          "O direito à proteção de dados é pertinente ao uso de perfis comportamentais, embora não resolva toda a opacidade de recomendações."
+          "O direito à proteção de dados é pertinente ao uso de perfis comportamentais, embora não resolva toda a opacidade de recomendações.",
+          "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
         ]
       ]
     },
@@ -161,11 +166,13 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Decreto-Lei 25/1937 — Tombamento",
-          "O instrumento jurídico de proteção evidencia a necessidade de medidas materiais para além do reconhecimento legal."
+          "O instrumento jurídico de proteção evidencia a necessidade de medidas materiais para além do reconhecimento legal.",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0025.htm"
         ],
         [
           "Constituição Federal, art. 216",
-          "Define a proteção do patrimônio cultural como compromisso público ligado à memória e identidade de grupos sociais."
+          "Define a proteção do patrimônio cultural como compromisso público ligado à memória e identidade de grupos sociais.",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
         ]
       ]
     },
@@ -179,7 +186,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Iphan — Política de Patrimônio Cultural Material",
-          "A política orienta conservação, interpretação e educação patrimonial, articulando proteção e participação."
+          "A política orienta conservação, interpretação e educação patrimonial, articulando proteção e participação.",
+          "https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-material"
         ]
       ]
     },
@@ -211,11 +219,13 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Tratado do Espaço Exterior de 1967",
-          "Estabelece princípios de uso pacífico e responsabilidade dos Estados por atividades espaciais; não confunda com regulação exaustiva de lixo orbital."
+          "O tratado veda apropriação nacional e armas de destruição em massa em órbita, prevê uso pacífico dos corpos celestes e responsabilidade estatal; não regula exaustivamente o lixo orbital.",
+          "https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/outerspacetreaty.html"
         ],
         [
           "Constituição Federal, art. 218",
-          "Fundamenta a promoção estatal de ciência, pesquisa e inovação orientadas ao desenvolvimento."
+          "Fundamenta a promoção estatal de ciência, pesquisa e inovação orientadas ao desenvolvimento.",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
         ]
       ]
     },
@@ -229,7 +239,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "INPE — monitoramento por satélites",
-          "O monitoramento ambiental demonstra aplicações sociais concretas de infraestrutura espacial."
+          "O monitoramento ambiental demonstra aplicações sociais concretas de infraestrutura espacial.",
+          "https://terrabrasilis.dpi.inpe.br/"
         ]
       ]
     },
@@ -261,11 +272,13 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Constituição Federal, art. 225, §1º, VII",
-          "Prevê proteção da fauna e flora e veda práticas que coloquem em risco sua função ecológica."
+          "Prevê proteção da fauna e flora e veda práticas que coloquem em risco sua função ecológica.",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
         ],
         [
           "Lei 9.605/1998 — Crimes Ambientais",
-          "Permite discutir responsabilização por condutas lesivas; não equivale a política completa de conservação."
+          "Permite discutir responsabilização por condutas lesivas; não equivale a política completa de conservação.",
+          "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
         ]
       ]
     },
@@ -275,7 +288,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "ICMBio — avaliações do risco de extinção da fauna",
-          "O monitoramento técnico oferece diagnóstico específico por espécie e região, evitando afirmações genéricas."
+          "O monitoramento técnico oferece diagnóstico específico por espécie e região, evitando afirmações genéricas.",
+          "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/fauna-brasileira"
         ],
         [
           "Ailton Krenak — Ideias para Adiar o Fim do Mundo",

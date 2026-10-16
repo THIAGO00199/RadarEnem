@@ -41,3 +41,14 @@
 /* Dialog text is readable immediately; its entrance uses translation only. */
 .compare-dialog{animation:none!important;opacity:1!important}.page-intro .intro-visual{opacity:1!important}
 @media(max-width:1050px){.page-intro .intro-visual .radar-chip{display:none}}
+
+/* Dialogs render in a portal, outside .app-shell: use the action pair explicitly. */
+.compare-dialog .button.primary,
+.compare-dialog .button.primary:hover,
+.compare-dialog .button.primary:focus-visible {
+  background: var(--glow-action);
+  color: #231b0b;
+  border-color: var(--glow-action);
+  opacity: 1;
+  transition-property: transform, box-shadow;
+}

@@ -67,6 +67,7 @@ const server = http.createServer(async (req, res) => {
             "estudos.html",
             "redacao.html",
             "radar.html",
+            "guia-estrategico.html",
             "materiais/redacao.html",
           ]
         : []),
@@ -171,7 +172,9 @@ const server = http.createServer(async (req, res) => {
           transferBytes: median(matches.map((x) => x.transferBytes)),
         });
     }
+  const budgets = { lcpMs: 4000, cls: 0.1, transferBytes: 600000 };
   const report = {
+    budgets,
     checkedAt: new Date().toISOString(),
     method:
       "Chromium headless, viewport 390×844, CPU 4×, latência 150 ms, download 1,6 Mbps, gzip, cache frio, service worker bloqueado, 3 execuções por página; mediana. Servidor local. Não é medição de usuários reais nem prova de desempenho do CDN.",
@@ -183,6 +186,11 @@ const server = http.createServer(async (req, res) => {
     JSON.stringify(report, null, 2) + "\n",
   );
   console.table(summary);
+  const failed = summary.filter(result => result.version === "after" && (result.lcpMs > budgets.lcpMs || result.cls > budgets.cls || result.transferBytes > budgets.transferBytes));
+  if (failed.length) {
+    console.error("Performance budget exceeded:", failed.map(result => result.page).join(", "));
+    process.exitCode = 1;
+  }
 })().catch((e) => {
   console.error(e);
   server.close();

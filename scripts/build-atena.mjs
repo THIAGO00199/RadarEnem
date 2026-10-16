@@ -39,6 +39,12 @@ for (const name of await readdir("docs"))
       );
     await writeFile(path, html);
   }
+const packageInfo = JSON.parse(await readFile("package.json", "utf8"));
+await writeFile("docs/data/build-info.json", JSON.stringify({
+  version: packageInfo.version,
+  sourceRevision: execFileSync("git", ["rev-parse", "HEAD"], { encoding: "utf8" }).trim(),
+  generatedAt: new Date().toISOString(),
+}, null, 2) + "\n");
 await writeFile("docs/.nojekyll", "");
 execFileSync(process.execPath, ["scripts/build-standalone.mjs"], {
   stdio: "inherit",
