@@ -129,6 +129,8 @@ async function overflow(page, name) {
   await page.reload();
   await page.getByRole("heading", { level: 1, name: /Thiago/ }).waitFor();
   assert.equal(await page.locator(".atena-plan-task.completed").count(), 1);
+  assert.equal(await page.locator('.atena-sidebar a[href="./guia-estrategico.html"]').count(),1,'Home navigation must expose Arguments directly');
+  assert.equal(await page.locator('.atena-mobile-dock a[href="./guia-estrategico.html"]').count(),1,'Arguments must be one tap away on phones');
   await page.keyboard.press("Control+k");
   await page.getByLabel("Buscar ferramenta").fill("redacao");
   assert.equal(await page.locator(".atena-search-results a").count(), 1);
@@ -212,6 +214,8 @@ async function overflow(page, name) {
   await screenshot("atena-academy-mobile");
 
   await page.goto(base + "/redacao.html");
+  assert.equal(await page.locator('.atena-sidebar a[href="./guia-estrategico.html"]').count(),1,'Essay sidebar must expose Arguments directly');
+
   await page.locator("#atenaEssay:enabled").waitFor();
   assert.equal(await page.locator(".radar-idea-explorer").isVisible(), false);
   await page.getByText("Explorar teses e argumentos", { exact: true }).click();

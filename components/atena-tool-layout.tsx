@@ -7,6 +7,7 @@ import {
   CalendarDays,
   ChartNoAxesCombined,
   Download,
+  Layers3,
   Menu,
   Moon,
   PenLine,
@@ -96,6 +97,10 @@ export function AtenaToolLayout({
           >
             <PenLine size={19} />
             Redação
+          </a>
+          <a href="./guia-estrategico.html">
+            <Layers3 size={19} />
+            Argumentos
           </a>
           <a href="./estudar.html#simulado">
             <ChartNoAxesCombined size={19} />

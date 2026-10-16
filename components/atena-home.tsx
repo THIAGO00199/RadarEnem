@@ -97,6 +97,12 @@ const tools = [
 ];
 const extraTools = [
   {
+    name: "Argumentos e repertórios",
+    detail: "Teses, causas e referências para 18 temas.",
+    url: "./guia-estrategico.html",
+    Icon: Layers,
+  },
+  {
     name: "Questões por assunto",
     detail: "84 questões autorais com explicação",
     url: "./estudar.html#questoes",
@@ -461,6 +467,10 @@ export default function Home({ generatedAt }: { generatedAt: string }) {
           <a href="./redacao.html">
             <PenLine size={19} />
             Redação
+          </a>
+          <a href="./guia-estrategico.html">
+            <Layers size={19} />
+            Argumentos
           </a>
           <a href="./estudar.html#simulado">
             <ChartNoAxesCombined size={19} />
@@ -1027,13 +1037,10 @@ export default function Home({ generatedAt }: { generatedAt: string }) {
           <PenLine size={20} />
           Redação
         </a>
-        <button
-          onClick={() => go("plano")}
-          aria-current={view === "plano" ? "page" : undefined}
-        >
-          <CalendarDays size={20} />
-          Plano
-        </button>
+        <a href="./guia-estrategico.html">
+          <Layers size={20} />
+          Argumentos
+        </a>
         <button onClick={() => setMenu(true)}>
           <Menu size={20} />
           Mais
