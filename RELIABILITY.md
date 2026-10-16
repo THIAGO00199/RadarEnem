@@ -5,13 +5,13 @@ Verificação de 16/10/2026. As conclusões distinguem implementação, evidênc
 | Prioridade | Item | Resultado |
 |---|---|---|
 | Alta | Contraste do Radar | Controles da comparação usam um par de cores explícito no portal, preservado em hover e foco. A suíte também inspeciona esses estados. |
-| Alta | Qualidade antes de publicar | Build, regras, regressões, acessibilidade e medição de desempenho precedem a publicação do mesmo artefato. A coleta diária usa a suíte completa. A proteção administrativa de `main` ainda depende da [issue #4](https://github.com/THIAGO00199/RadarEnem/issues/4). |
+| Alta | Qualidade antes de publicar | `main` protegida, inclusive para administradores: PR obrigatório, check do GitHub Actions aprovado, branch atualizada e conversas resolvidas. Build, regras, regressões, acessibilidade e desempenho precedem o deploy do mesmo artefato. Teste negativo bloqueou o merge e ignorou a publicação; evidências na [issue #4](https://github.com/THIAGO00199/RadarEnem/issues/4). |
 | Alta | Revisão pedagógica independente | Revisão técnica pontual e fontes primárias adicionadas; 123 aplicações inventariadas por conteúdo. O parecer independente permanece pendente na [issue #5](https://github.com/THIAGO00199/RadarEnem/issues/5). |
 | Alta | Preservação de dados | Backup completo, importação validada antes da escrita, recuperação em falha de quota, cópia anterior à restauração e opção de desfazer. Compatibilidade com v3/v4/v5 preservada. |
 | Média | Documentação | README, publicação, notas de versão, inventário editorial e este relatório atualizados. |
 | Média | Desempenho atual | `check:performance` mede sete páginas em três execuções por página; o relatório JSON identifica método e data. A medição é de laboratório, não tráfego real. |
 | Média | Gestão de bugs | Issues com prioridade e critérios de aceite, template reproduzível e vínculo com a entrega. |
-| Média | Domínio | `https://atena.dev.br/` respondeu 200 com verificação TLS concluída. A publicação valida os hashes dos recursos no domínio antes de criar a release. A consulta DNS por HTTPS confirmou os quatro registros A do GitHub Pages (`185.199.108.153` a `185.199.111.153`); `www` chegou ao domínio principal por HTTPS. |
+| Média | Domínio | `https://atena.dev.br/` respondeu 200 com verificação TLS concluída. HTTPS obrigatório e DNS válido confirmados no Pages. A publicação valida os hashes dos recursos no domínio antes de criar a release. A consulta DNS por HTTPS confirmou os quatro registros A do GitHub Pages (`185.199.108.153` a `185.199.111.153`); `www` chegou ao domínio principal por HTTPS. |
 | Baixa | Release versionada | CI cria a release correspondente ao pacote depois da suíte e da conferência da publicação, anexando o aplicativo offline. A execução do workflow é a evidência de publicação. |
 | Baixa | Contas, assinaturas e sincronização | Ainda não implementadas. Dependem de backend e contas dos provedores; critérios na [issue #6](https://github.com/THIAGO00199/RadarEnem/issues/6). |
 
@@ -31,6 +31,8 @@ O site continua a armazenar o estudo no navegador. Backup permite transferência
 
 ## Proteção administrativa
 
-A configuração revisável está em `.github/branch-protection.json`. `scripts/configure-protection.sh` migra o Pages para GitHub Actions e ativa a proteção em uma sessão `gh` com permissão administrativa. O workflow já distingue `legacy` e `workflow`: no segundo modo, publica por artefato e não escreve em `main`.
+A proteção foi ativada em 16/10/2026. A regra para `main` exige PR, `check` do GitHub Actions, branch atualizada e conversas resolvidas; proíbe force-push e exclusão e não permite bypass por administradores. Aprovação de outra pessoa não é obrigatória. A API confirmou `protected: true`.
 
-Até a ativação pelo administrador, a atualização normal de `docs/` está condicionada à suíte, mas a branch desprotegida ainda permite que um colaborador publique por um caminho externo ao fluxo. Essa dependência não está marcada como resolvida.
+O Pages foi migrado para **GitHub Actions**, com HTTPS obrigatório. O publicador entrega o artefato validado sem escrever em `main`. A política revisável está em `.github/branch-protection.json`; `scripts/configure-protection.sh` permite reaplicá-la em uma sessão administrativa.
+
+O [PR #9](https://github.com/THIAGO00199/RadarEnem/pull/9) foi usado exclusivamente como teste negativo e fechado sem merge. Na [execução 38910114359](https://github.com/THIAGO00199/RadarEnem/actions/runs/38910114359), uma falha intencional resultou em `check: failure`, `publish: skipped` e merge bloqueado. A [issue #4](https://github.com/THIAGO00199/RadarEnem/issues/4) reúne também a conferência do deploy no modo workflow.

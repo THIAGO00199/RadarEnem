@@ -1,6 +1,6 @@
 # Publicação da ATENA
 
-O código e o build estático são publicados no GitHub. O Pages deve servir a branch `main`, pasta `/docs`. O arquivo `docs/CNAME` contém `atena.dev.br`; o build preserva esse arquivo.
+O código fica no GitHub e o Pages usa **GitHub Actions** como origem. O job `publish` recebe o artefato aprovado pela suíte e o publica com `actions/deploy-pages`, sem escrever na `main` protegida. O domínio é `atena.dev.br`, com **Enforce HTTPS** ativo. O build preserva `docs/CNAME`.
 
 ## DNS do domínio
 
@@ -25,20 +25,22 @@ Referência: [documentação oficial de domínios personalizados do GitHub Pages
 1. **Product quality** compila e executa as regras, regressões, backup entre navegadores, acessibilidade e desempenho.
 2. A suíte salva o artefato aprovado, incluindo versão e revisão de origem em `data/build-info.json`.
 3. O job `publish` confere se a revisão aprovada ainda é a atual. Se houver uma revisão mais recente, o build antigo não é publicado.
-4. No modo **legacy**, o bot atualiza `docs/` com o artefato aprovado e solicita o build do Pages. No modo **workflow**, `actions/deploy-pages` publica diretamente o artefato da mesma execução, sem commits em `main`.
+4. No modo **workflow**, ativo neste repositório, `actions/deploy-pages` publica diretamente o artefato da mesma execução, sem commits em `main`. A compatibilidade **legacy** permanece no publicador para outros ambientes; ela exige escrita do bot e não deve ser selecionada neste repositório protegido.
 5. A conferência do domínio compara os hashes dos recursos públicos com o artefato. Depois disso, o CI cria a release da versão do pacote e anexa o aplicativo offline.
 
 `published-smoke.yml` continua disponível para auditoria manual. A coleta diária reutiliza `quality.yml`, parte da última base publicada e passa pelas mesmas verificações; falhas preservam a publicação existente.
 
 Para conferir outro endereço, execute `PUBLISHED_URL=https://atena.dev.br/ python3 scripts/check-published.py` a partir do build efetivamente publicado. Uma recompilação independente pode gerar outros identificadores Next.
 
-## Ativar a proteção de main
+## Proteção de main
 
-A ativação requer permissão administrativa no GitHub, indisponível no conector usado nesta entrega. A [issue #4](https://github.com/THIAGO00199/RadarEnem/issues/4) acompanha a conclusão.
+Ativada em 16/10/2026 pela interface administrativa. A regra exige pull request, check `check` emitido pelo GitHub Actions, branch atualizada e conversas resolvidas; inclui administradores e bloqueia force-push e exclusão. Não exige aprovação de outra pessoa: o repositório pode manter o fluxo de um único mantenedor sem liberar alterações que falhem na suíte.
 
-O workflow já aceita o modo **GitHub Actions** do Pages. Em uma sessão administrativa `gh`, revise `.github/branch-protection.json` e execute `bash scripts/configure-protection.sh`. O script seleciona Pages por workflow, ativa HTTPS e configura PR, check `check`, branch atualizada e bloqueio de force-push/exclusão, inclusive para administradores. Na interface, as configurações equivalentes ficam em Settings → Pages e Settings → Branches.
+O [PR de teste #9](https://github.com/THIAGO00199/RadarEnem/pull/9) introduziu uma falha intencional no início da suíte: `check` falhou, `publish` foi ignorado e o GitHub desabilitou o merge. O PR foi fechado sem incorporação. Evidência: [execução 38910114359](https://github.com/THIAGO00199/RadarEnem/actions/runs/38910114359). A [issue #4](https://github.com/THIAGO00199/RadarEnem/issues/4) registra a conferência da publicação após a migração.
 
-Após a ativação, acione **Product quality** e confirme o deploy por artefato. Demonstre com um PR de teste que um check reprovado impede a incorporação. O publicador no modo workflow não depende de push do bot em `main`.
+Para reaplicar a política em uma sessão administrativa `gh`, revise `.github/branch-protection.json` e execute `bash scripts/configure-protection.sh`. O script seleciona Pages por workflow, ativa HTTPS e configura a proteção. Na interface, as configurações ficam em Settings → Pages e Settings → Branches. Depois de uma alteração administrativa, confirme um deploy por artefato e repita o teste negativo em uma branch descartável, fechando o PR sem merge.
+
+O `docs/` versionado pode conter um build anterior. A revisão efetivamente publicada está em `https://atena.dev.br/data/build-info.json`; use o artefato dessa execução para conferir os hashes, em vez de comparar com uma recompilação independente.
 
 ## Apresentação sem rede
 
