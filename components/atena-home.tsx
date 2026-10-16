@@ -1,4 +1,6 @@
 "use client";
+
+import { backup } from "@/lib/backup";
 import { useAccessibleMenu } from "./use-accessible-menu";
 import {
   useEffect,
@@ -163,6 +165,7 @@ export default function Home({ generatedAt }: { generatedAt: string }) {
   const [profile, setProfile] = useState(workspace.profile),
     [now, setNow] = useState(() => new Date(generatedAt));
   const importRef = useRef<HTMLInputElement>(null);
+  const fullImportRef = useRef<HTMLInputElement>(null);
   const sidebarRef = useAccessibleMenu(menu, () => setMenu(false));
   const model = atenaModel,
     week = model.monday(now),
@@ -336,6 +339,19 @@ export default function Home({ generatedAt }: { generatedAt: string }) {
       if (importRef.current) importRef.current.value = "";
     }
   }
+  async function importFullBackup(file: File) {
+    try {
+      if (file.size > 12_000_000) throw Error("Backup acima de 12 MB.");
+      const value: unknown = JSON.parse(await file.text());
+      if (!window.confirm("Substituir o estudo deste navegador pelo backup? Você poderá desfazer a importação.")) return;
+      backup.restore(value);
+      location.reload();
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : "Não foi possível importar o backup.");
+    } finally {
+      if (fullImportRef.current) fullImportRef.current.value = "";
+    }
+  }
   const planner = (
     <section className="atena-panel atena-planner" aria-labelledby="planTitle">
       <div className="atena-section-head">
@@ -425,6 +441,7 @@ export default function Home({ generatedAt }: { generatedAt: string }) {
   );
   return (
     <div className="atena-shell">
+      <input type="file" ref={fullImportRef} accept="application/json,.json" hidden aria-label="Arquivo de backup completo" onChange={event => { const file = event.target.files?.[0]; if (file) void importFullBackup(file); }} />
       <a className="atena-skip" href="#atena-main">
         Pular para o conteúdo
       </a>
@@ -898,6 +915,11 @@ export default function Home({ generatedAt }: { generatedAt: string }) {
               <section className="atena-panel atena-plan-info">
                 <Target size={30} />
                 <h2>Um ritmo que cabe na sua vida.</h2>
+                <p>Guarde redações, respostas, cartões, planejamento, anotações e preferências em um único arquivo.</p>
+                <button className="atena-button secondary" onClick={() => { try { download("atena-backup-completo.json", backup.create()); } catch { setMessage("O navegador não permitiu ler os dados. Mantenha suas páginas abertas."); } }}>Baixar backup completo</button>
+                <button className="atena-button secondary" onClick={() => fullImportRef.current?.click()}>Importar backup completo</button>
+                <button className="atena-text-button" onClick={() => { try { backup.undo(); location.reload(); } catch (error) { setMessage(error instanceof Error ? error.message : "Não foi possível desfazer."); } }}>Desfazer última importação</button>
+                <p>O arquivo contém seus textos e dados pessoais. Guarde-o em um local de sua confiança. O backup permite transferir o estudo entre aparelhos e endereços.</p>
                 <p>
                   Seu plano atual tem {goal} blocos de{" "}
                   {workspace.profile.minutes} minutos por semana. A primeira

@@ -51,7 +51,9 @@ const server = http.createServer(async (req,res) => {
     await page.evaluate((theme)=>{document.documentElement.dataset.theme=theme;},theme);
     for(const tab of ["Radar","Dossiê PND","Inep","Fontes","Histórico","Meu plano","Método"]) { await page.getByRole("tab",{name:tab,exact:tab!=="Dossiê PND"}).click(); await page.waitForTimeout(80); await inspect("Radar/"+tab+"/"+theme); }
     await page.getByRole("tab",{name:"Radar",exact:true}).click();
-    await page.getByRole("button",{name:"Comparar temas",exact:true}).click(); await inspect("Radar/comparação/"+theme); await page.keyboard.press("Escape");
+    await page.getByRole("button",{name:"Comparar temas",exact:true}).click(); await inspect("Radar/comparação/"+theme);
+    for(let i=0;i<2;i++){await page.getByRole('link',{name:'Treinar redação',exact:true}).nth(i).hover();await inspect('Radar/comparação/hover-'+i+'/'+theme);}
+    await page.keyboard.press("Escape");
     await page.locator(".topic-notebook summary").click(); await inspect("Radar/anotações/"+theme);
     await page.getByRole('button',{name:'Planejar este texto'}).click(); await inspect('Radar/roteiro/tese/'+theme); await page.getByRole('button',{name:'Argumentos',exact:true}).click(); await inspect('Radar/roteiro/argumentos/'+theme); await page.getByRole('button',{name:'Intervenção',exact:true}).click(); await inspect('Radar/roteiro/intervenção/'+theme); await page.keyboard.press('Escape');
   }
@@ -62,9 +64,15 @@ const server = http.createServer(async (req,res) => {
     await page.locator('#catalogSearch').fill('ESCOLA CADERNOS'); await page.locator('#catalogList [data-practice-q="ctx-m1"]').click(); await inspect('Hub/assunto/mobile/'+theme); await page.keyboard.press('Escape');
     await page.goto(base+'/radar.html?mobileCanvas='+theme); await page.evaluate(t=>document.documentElement.dataset.theme=t,theme); await page.getByRole('button',{name:'Planejar este texto'}).click(); await inspect('Radar/roteiro/mobile/'+theme); await page.keyboard.press('Escape');
   }
+  for(const theme of ['dark','light']) {
+    await page.goto(base+'/guia-estrategico.html');
+    await page.evaluate(t=>document.documentElement.dataset.theme=t,theme);
+    const ids=await page.locator('#topics [data-id]').evaluateAll(nodes=>nodes.map(node=>node.dataset.id));
+    for(const id of ids){await page.locator('#topics [data-id="'+id+'"]').click();await inspect('Argumentos/'+id+'/mobile/'+theme);}
+  }
   for(const name of ["index","redacao","matematica","revisao","planejamento"]) {await page.goto(base+"/materiais/"+name+".html");await inspect("Materiais/"+name+"/mobile");}
   await ctx.close();await browser.close();server.close();
-  await fs.writeFile(path.resolve(__dirname,"../portable/public/data/accessibility-audit.json"),JSON.stringify({checkedAt:new Date().toISOString(),engine:"axe-core/playwright "+require("axe-core/package.json").version,scope:"14 seções do Hub nos dois temas, flashcards virados, busca, sete estados de prática guiada e escrita, exploração de questões, respostas e transferência de roteiros; sete seções do Radar, comparação, anotações e três etapas do roteiro nos dois temas; novas telas também a 390 px; cinco páginas de materiais. Regras automatizadas WCAG 2 A/AA, 2.1 A/AA e 2.2 AA. Não constitui certificação nem substitui testes com tecnologias assistivas.",results},null,2)+"\n");
+  await fs.writeFile(path.resolve(__dirname,"../portable/public/data/accessibility-audit.json"),JSON.stringify({checkedAt:new Date().toISOString(),engine:"axe-core/playwright "+require("axe-core/package.json").version,scope:"14 seções do Hub nos dois temas, flashcards virados, busca, sete estados de prática guiada e escrita, exploração de questões, respostas e transferência de roteiros; sete seções do Radar, comparação, anotações e três etapas do roteiro nos dois temas; novas telas também a 390 px; 18 mapas argumentativos nos dois temas a 390 px; cinco páginas de materiais. Regras automatizadas WCAG 2 A/AA, 2.1 A/AA e 2.2 AA. Não constitui certificação nem substitui testes com tecnologias assistivas.",results},null,2)+"\n");
   console.log("Acessibilidade:",results.length,"telas,",results.reduce((n,r)=>n+r.violations.length,0),"regras com violações.");
   if(results.some((r)=>r.violations.length))process.exitCode=1;
 })().catch((error)=>{console.error(error);server.close();process.exit(1);});

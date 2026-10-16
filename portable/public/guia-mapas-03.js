@@ -1,4 +1,4 @@
-/* Propostas educativas de redação, não temas confirmados da prova. */
+/* Conteúdo de treino; revisão pedagógica independente pendente. */
 globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
   {
     "id": "migracao",
@@ -11,7 +11,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Lei 13.445/2017 — Lei de Migração",
-          "Seu enfoque de direitos e não discriminação fornece base para exigir acolhimento digno no Brasil."
+          "Seu enfoque de direitos e não discriminação fornece base para exigir acolhimento digno no Brasil.",
+          "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13445.htm"
         ],
         [
           "Hannah Arendt — Origens do Totalitarismo",
@@ -29,7 +30,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Constituição Federal, art. 5º",
-          "A igualdade e a proteção de direitos fundamentais fundamentam atendimento sem discriminação."
+          "A igualdade e a proteção de direitos fundamentais fundamentam atendimento sem discriminação.",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
         ]
       ]
     },
@@ -61,11 +63,13 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "OMM — monitoramento do El Niño/Oscilação Sul",
-          "A variabilidade do Pacífico influencia padrões climáticos, mas não explica isoladamente todo evento extremo."
+          "A variabilidade do Pacífico influencia padrões climáticos, mas não explica isoladamente todo evento extremo.",
+          "https://wmo.int/topics/el-nino-la-nina"
         ],
         [
           "ANA — Salas de Situação",
-          "Boletins hidrológicos e alertas demonstram como dados científicos devem orientar decisões locais antecipadas."
+          "Boletins hidrológicos e alertas demonstram como dados científicos devem orientar decisões locais antecipadas.",
+          "https://www.gov.br/ana/pt-br/sala-de-situacao"
         ]
       ]
     },
@@ -75,7 +79,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Lei 12.608/2012 — Política Nacional de Proteção e Defesa Civil",
-          "A diretriz de prevenção reforça a obrigação de preparar e recuperar territórios antes e depois de crises."
+          "A diretriz de prevenção reforça a obrigação de preparar e recuperar territórios antes e depois de crises.",
+          "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12608.htm"
         ],
         [
           "Ailton Krenak — Ideias para Adiar o Fim do Mundo",
@@ -111,7 +116,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Lei 12.852/2013 — Estatuto da Juventude",
-          "Prevê direitos de participação e a formulação de políticas, com alcance etário próprio; não substitui as garantias do ECA para adolescentes."
+          "Prevê direitos de participação e a formulação de políticas, com alcance etário próprio; não substitui as garantias do ECA para adolescentes.",
+          "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12852.htm"
         ],
         [
           "Paulo Freire — Pedagogia da Autonomia",
@@ -125,7 +131,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Constituição Federal, art. 1º, parágrafo único",
-          "O princípio de exercício popular do poder ajuda a defender processos de participação democrática."
+          "O princípio de exercício popular do poder ajuda a defender processos de participação democrática.",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
         ],
         [
           "Sérgio Buarque de Holanda — Raízes do Brasil",
@@ -161,11 +168,13 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Lei 13.146/2015 — Lei Brasileira de Inclusão, art. 63",
-          "Estabelece obrigatoriedade de acessibilidade em sítios mantidos por empresas com sede ou representação no país e órgãos de governo, conforme a lei."
+          "Estabelece obrigatoriedade de acessibilidade em sítios mantidos por empresas com sede ou representação no país e órgãos de governo, conforme a lei.",
+          "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm"
         ],
         [
           "W3C — Web Content Accessibility Guidelines (WCAG)",
-          "Os critérios técnicos orientam interfaces perceptíveis, operáveis e compreensíveis."
+          "Os critérios técnicos orientam conteúdos perceptíveis, operáveis, compreensíveis e robustos; os quatro princípios precisam ser considerados em conjunto.",
+          "https://www.w3.org/TR/WCAG22/"
         ]
       ]
     },
@@ -179,7 +188,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Constituição Federal, art. 5º",
-          "A igualdade de direitos sustenta a cobrança de serviços acessíveis em condições equivalentes."
+          "A igualdade de direitos sustenta a cobrança de serviços acessíveis em condições equivalentes.",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
         ]
       ]
     },
@@ -211,11 +221,13 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Lei 12.305/2010 — Política Nacional de Resíduos Sólidos",
-          "Institui responsabilidade compartilhada e logística reversa, base jurídica para cobrar os agentes da cadeia produtiva."
+          "Institui responsabilidade compartilhada e logística reversa, base jurídica para cobrar os agentes da cadeia produtiva.",
+          "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm"
         ],
         [
           "Decreto 10.240/2020",
-          "Regulamenta o sistema de logística reversa de produtos eletroeletrônicos domésticos e componentes."
+          "Regulamenta o sistema de logística reversa de produtos eletroeletrônicos domésticos e componentes.",
+          "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/decreto/d10240.htm"
         ]
       ]
     },
@@ -261,11 +273,13 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "BNCC — educação financeira como tema transversal",
-          "O currículo oferece abertura para abordar decisões econômicas reais de modo interdisciplinar, não apenas cálculo."
+          "O currículo oferece abertura para abordar decisões econômicas reais de modo interdisciplinar, não apenas cálculo.",
+          "https://basenacionalcomum.mec.gov.br/"
         ],
         [
           "Lei 8.078/1990 — Código de Defesa do Consumidor",
-          "Seus princípios sobre informação clara e proteção contra publicidade abusiva ajudam a compreender direitos nas relações de consumo."
+          "Seus princípios sobre informação clara e proteção contra publicidade abusiva ajudam a compreender direitos nas relações de consumo.",
+          "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
         ]
       ]
     },

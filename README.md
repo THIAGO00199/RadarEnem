@@ -9,9 +9,21 @@ Código original sob [licença MIT](./LICENSE). Consulte o [guia de contribuiç�
 - [Abrir a ATENA](https://atena.dev.br/)
 - [Academia de estudos](https://atena.dev.br/estudos.html)
 - [Estúdio de redação](https://atena.dev.br/redacao.html)
+- [Argumentos e repertórios](https://atena.dev.br/guia-estrategico.html)
 - [Radar de temas](https://atena.dev.br/radar.html)
 - [Simulados, PDFs e outras ferramentas](https://atena.dev.br/estudar.html)
 - [Aplicativo offline de um arquivo](https://atena.dev.br/estudar-offline.html)
+
+## Atualização 5.1
+
+- Comparação do Radar com contraste corrigido, incluindo hover e foco nos dois temas.
+- **Backup completo em Meu plano**, com rascunhos, versões, progresso, cartões, preferências e anotações do Radar. Inclui validação antes da gravação, recuperação após falha e opção de desfazer a última importação. O Hub preserva compatibilidade com backups v3/v4/v5 e aceita o backup completo.
+- **18 mapas argumentativos e 72 aplicações de repertório**, acessíveis diretamente pela sidebar. Fontes primárias aparecem no guia e na exportação Markdown.
+- **123 aplicações inventariadas** em um caderno para revisão independente. O registro identifica o texto exato de cada parecer; alterações invalidam aprovações anteriores. A aprovação pedagógica independente continua pendente.
+- A coleta diária passa pela suíte completa. O publicador recebe o artefato validado, verifica a revisão atual e publica release após conferir o domínio.
+- Novos testes de backup entre contextos de navegador, auditoria dos 18 mapas nos dois temas, relatório de desempenho atual para sete páginas e templates de bugs.
+
+Consulte o [relatório de confiabilidade](./RELIABILITY.md), o [caderno editorial](./editorial/README.md) e as [pendências registradas](https://github.com/THIAGO00199/RadarEnem/issues). A proteção administrativa de `main` e as integrações comerciais ainda exigem configuração externa.
 
 ## O que foi entregue na versão 5
 
@@ -76,11 +88,11 @@ O workflow `radar-daily.yml` roda diariamente com `0 0 * * *` UTC e também pode
 
 O navegador lê `data/latest.json`; acessar a plataforma não dispara scraping, processamento remoto de redações ou uma API paga. Sem rede, a última base disponível continua acessível pelo cache.
 
-GitHub Pages serve `main` → `/docs`. O domínio personalizado fica em `docs/CNAME`. A compilação é SSG e a atualização é feita por reconstrução agendada: Pages não executa ISR, Next Server, Python ou banco em produção. Há uma cópia pré-renderizada de cada rota, compartilhada entre os visitantes.
+O modo legado do GitHub Pages serve `main` → `/docs`; os arquivos de publicação são atualizados pelo CI após aprovação. A proteção administrativa e a migração para deploy por artefato estão registradas na issue #4. O domínio personalizado fica em `docs/CNAME`. A compilação é SSG e a atualização é feita por reconstrução agendada: Pages não executa ISR, Next Server, Python ou banco em produção. Há uma cópia pré-renderizada de cada rota, compartilhada entre os visitantes.
 
 ## Progresso e uso offline
 
-A conta é dispensável. Rascunhos, respostas, plano, cartões e preferências ficam no armazenamento local do navegador. `kalore-hub-v3` mantém a identidade do progresso anterior; `atena-workspace-v1` guarda os novos cartões, plano e checklist. Use **Dados → Exportar** no Hub antes de trocar de aparelho, limpar o navegador ou mudar de domínio.
+A conta é dispensável. Rascunhos, respostas, plano, cartões e preferências ficam no armazenamento local do navegador. `kalore-hub-v3` mantém a identidade do progresso anterior; `atena-workspace-v1` guarda os novos cartões, plano e checklist. Use **Meu plano → Baixar backup completo** ou **Dados → Exportar** no Hub antes de trocar de aparelho, limpar o navegador ou mudar de domínio. A importação mantém uma cópia de recuperação; **Meu plano → Desfazer última importação** permite retomá-la.
 
 Armazenamento de `github.io` e `atena.dev.br` é separado pelo navegador. Exporte no endereço antigo e importe no novo para transferir o estudo. O arquivo independente também usa seu próprio armazenamento.
 
@@ -94,6 +106,8 @@ Armazenamento de `github.io` e `atena.dev.br` é separado pelo navegador. Export
 pnpm build:pages
 pnpm typecheck
 pnpm check:atena
+pnpm check:backup
+pnpm check:editorial
 python3 -m unittest backend.test_radar_collect
 pnpm check:radar
 pnpm check:session
@@ -106,6 +120,7 @@ Para os testes de navegador, instale Playwright e axe-core em um diretório de f
 
 ```sh
 pnpm check:atena-ui
+pnpm check:backup-ui
 pnpm check:ui
 pnpm check:offline-app
 pnpm check:experience

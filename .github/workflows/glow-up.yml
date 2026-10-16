@@ -62,7 +62,7 @@ jobs:
         if: always() && steps.build.outcome == 'success'
         run: node scripts/preview-glow.cjs
       - name: Record generated build and audit
-        if: always() && steps.build.outcome == 'success'
+        if: success() && steps.build.outcome == 'success'
         run: |
           npm run build:pages
           git config user.name "github-actions[bot]"

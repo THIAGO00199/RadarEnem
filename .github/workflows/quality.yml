@@ -1,9 +1,19 @@
 name: Product quality
 on:
   push:
-    branches: [main, experience/orbit, experience/clarity, experience/ideas-offline, feature/atena-saas]
+    branches: ['**']
   pull_request:
   workflow_dispatch:
+    inputs:
+      refresh_sources:
+        description: Coletar fontes antes de validar
+        type: boolean
+        default: false
+  workflow_call:
+    inputs:
+      refresh_sources:
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -12,7 +22,7 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
@@ -28,6 +38,11 @@ jobs:
           test -n "$CHROMIUM_PATH"
           echo "CHROMIUM_PATH=$CHROMIUM_PATH" >> "$GITHUB_ENV"
           echo "NODE_PATH=$RUNNER_TEMP/quality-tools/node_modules" >> "$GITHUB_ENV"
+      - name: Collect sources for a scheduled update
+        if: inputs.refresh_sources == true
+        run: |
+          node scripts/seed-published-radar.mjs
+          python3 backend/radar_collect.py
       - name: Build the published products
         id: build
         run: |
@@ -40,6 +55,8 @@ jobs:
           node --check portable/public/hub/experience.js
           node --check portable/public/shared/motion.js
           npm run check:atena
+          npm run check:backup
+          npm run check:editorial
           python3 -m unittest backend.test_radar_collect
           npm run check:radar
           node scripts/check-recommend.mjs
@@ -52,6 +69,7 @@ jobs:
       - name: Existing flows and offline functionality
         run: |
           npm run check:atena-ui
+          npm run check:backup-ui
           npm run check:ui
           npm run check:offline-app
       - name: Guided practice, writing and Radar comparison
@@ -66,3 +84,78 @@ jobs:
       - name: Accessibility in both palettes
         if: always() && steps.build.outcome == 'success'
         run: npm run check:accessibility
+
+      - name: Measure current mobile performance
+        if: success()
+        run: npm run check:performance
+      - name: Preserve audit evidence with the tested build
+        if: success()
+        run: |
+          cp portable/public/data/accessibility-audit.json docs/data/
+          cp portable/public/data/performance-audit.json docs/data/
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: success()
+        with:
+          name: atena-validated-${{ github.run_id }}
+          path: docs/
+          include-hidden-files: true
+          retention-days: 7
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa
+        if: success()
+        with:
+          path: docs/
+  publish:
+    needs: check
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: 24
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: atena-validated-${{ github.run_id }}
+          path: ${{ runner.temp }}/validated-site
+      - name: Check the current source and Pages mode
+        id: mode
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" = "$GITHUB_SHA" ]; then
+            echo "current=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "current=false" >> "$GITHUB_OUTPUT"
+          fi
+          pages_mode=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq .build_type)
+          case "$pages_mode" in legacy|workflow) ;; *) echo "Unknown Pages mode"; exit 1 ;; esac
+          echo "type=$pages_mode" >> "$GITHUB_OUTPUT"
+      - name: Publish the validated artifact in legacy Pages mode
+        if: steps.mode.outputs.current == 'true' && steps.mode.outputs.type == 'legacy'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VALIDATED_SITE: ${{ runner.temp }}/validated-site
+        run: bash scripts/publish-validated.sh
+      - name: Deploy the tested artifact with GitHub Pages Actions
+        id: deployment
+        if: steps.mode.outputs.current == 'true' && steps.mode.outputs.type == 'workflow'
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e
+      - name: Verify the custom domain and create the versioned release
+        if: steps.mode.outputs.current == 'true' && steps.mode.outputs.type == 'workflow'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VALIDATED_SITE: ${{ runner.temp }}/validated-site
+        run: |
+          rm -rf docs
+          mkdir docs
+          cp -a "$VALIDATED_SITE/." docs/
+          bash scripts/verify-release.sh "$GITHUB_SHA"

@@ -1,6 +1,6 @@
 {
   "name": "atena-edtech",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -30,7 +30,11 @@
     "check:experience": "node scripts/check-orbit.cjs",
     "data:update:python": "python3 backend/radar_collect.py",
     "check:atena": "node scripts/check-atena.mjs",
-    "check:atena-ui": "node scripts/check-atena-ui.cjs"
+    "check:atena-ui": "node scripts/check-atena-ui.cjs",
+    "check:backup": "node scripts/check-backup.cjs",
+    "check:editorial": "node scripts/check-editorial.mjs",
+    "editorial:prepare": "node scripts/build-essay-ideas.mjs && node scripts/check-editorial.mjs --prepare",
+    "check:backup-ui": "node scripts/check-backup-ui.cjs"
   },
   "dependencies": {
     "class-variance-authority": "0.7.1",
