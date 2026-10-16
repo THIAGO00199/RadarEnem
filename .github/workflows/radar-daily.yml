@@ -3,6 +3,13 @@ on:
   push:
     branches: [main]
     paths:
+      - 'components/atena-home.tsx'
+      - 'components/atena-tool-layout.tsx'
+      - 'app/radar-page.tsx'
+      - 'app/atena.css'
+      - 'portable/public/guia-estrategico.html'
+      - 'portable/public/guia-estrategico.css'
+      - 'portable/public/guia-mapas-*.js'
       - 'lib/essay-ideas-data.ts'
       - 'lib/radar-data.ts'
       - 'backend/**'
