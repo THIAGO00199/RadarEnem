@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-16T02:36:58.408781+00:00",
+  "fetchedAt": "2026-10-16T04:15:58.649583+00:00",
   "articles": [
     {
       "id": "public-ff8411bff14cb7582d87",
@@ -296,6 +296,26 @@
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
     },
     {
+      "id": "fgv",
+      "title": "Redação do Enem 2026: possíveis temas",
+      "url": "https://vestibular.fgv.br/blog/redacao-do-enem-2026-possiveis-temas",
+      "source": "FGV",
+      "kind": "editorial",
+      "date": "2026-05-05",
+      "observedAt": "2026-10-16",
+      "topics": [
+        "mental",
+        "ia",
+        "inclusao",
+        "educacao",
+        "trabalho",
+        "ciencia",
+        "idosos"
+      ],
+      "origin": "collected",
+      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
+    },
+    {
       "id": "public-982a1b7c3fc32f0b6560",
       "title": "Fim da 6x1: saiba quando entra em vigor nova jornada de trabalho",
       "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/fim-da-6x1-saiba-quando-entra-em-vigor-nova-jornada-de-trabalho",
@@ -375,26 +395,6 @@
       "observedAt": "2026-10-15",
       "topics": [
         "mental"
-      ],
-      "origin": "collected",
-      "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
-    },
-    {
-      "id": "fgv",
-      "title": "Redação do Enem 2026: possíveis temas",
-      "url": "https://vestibular.fgv.br/blog/redacao-do-enem-2026-possiveis-temas",
-      "source": "FGV",
-      "kind": "editorial",
-      "date": "2026-05-05",
-      "observedAt": "2026-10-15",
-      "topics": [
-        "mental",
-        "ia",
-        "inclusao",
-        "educacao",
-        "trabalho",
-        "ciencia",
-        "idosos"
       ],
       "origin": "collected",
       "note": "Fonte pública consultada pelo script Python. Classificação por palavras-chave; confira o contexto na origem. Não é previsão do tema do ENEM."
@@ -758,9 +758,9 @@
       "id": "fgv",
       "title": "FGV",
       "url": "https://vestibular.fgv.br/blog/redacao-do-enem-2026-possiveis-temas",
-      "ok": false,
-      "count": 0,
-      "message": "Não foi possível consultar a fonte: <urlopen error [Errno 104] Connection reset by peer>"
+      "ok": true,
+      "count": 1,
+      "message": "Consulta concluída"
     },
     {
       "id": "brasil-escola",
