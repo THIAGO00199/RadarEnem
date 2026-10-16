@@ -3,76 +3,73 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#12121d">
+<meta name="theme-color" content="#0b0d12">
 <meta name="description" content="ATENA: 18 mapas argumentativos para treino de redação ENEM, com repertório contextualizado, tese, desenvolvimento e intervenção.">
 <title>Mapas de Guerra da Redação | ATENA</title>
-<style>
-:root{color-scheme:dark;--bg:#0c0e18;--panel:#171a29;--soft:#20243a;--line:#363b58;--fg:#f5f3ff;--muted:#babdd3;--violet:#b397ff;--cyan:#76e7e1;--gold:#f7d58c;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:radial-gradient(ellipse at 85% 0%,#3924557a,transparent 38%),var(--bg);margin:0;color:var(--fg);line-height:1.65}
-a{color:var(--cyan);text-underline-offset:3px}button,select,input{font:inherit}button{cursor:pointer}
-:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
-.wrap{max-width:1240px;padding:24px;margin:auto}
-header{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{letter-spacing:.2em;font-weight:900;color:var(--fg);text-decoration:none}
-nav{display:flex;flex-wrap:wrap;gap:20px;font-size:13px}
-.pill{font-size:11px;text-transform:uppercase;letter-spacing:.13em;font-weight:850;color:var(--cyan)}
-.hero{padding:60px 0 38px;max-width:850px}h1{line-height:1.06;letter-spacing:-.05em;font-size:clamp(36px,6vw,72px);margin:10px 0 20px}
-.hero p{color:var(--muted);font-size:16px;max-width:760px}.hero strong{color:var(--fg)}
-.metrics{display:flex;gap:13px;flex-wrap:wrap;margin-top:22px}.metrics span{border:1px solid var(--line);background:#1a1c30;border-radius:14px;padding:8px 13px;font-size:12px}
-.metrics b{color:var(--gold);font-size:18px;margin-right:6px}
-.note{border-left:3px solid var(--gold);background:#2a261c;padding:14px 18px;border-radius:0 12px 12px 0;color:#fae9c6;font-size:13px;margin:14px 0 25px}
-.layout{display:grid;grid-template-columns:285px minmax(0,1fr);gap:22px;align-items:start}
-.catalog{position:sticky;top:12px;max-height:calc(100vh - 25px);overflow:auto;padding:17px;border-radius:18px;border:1px solid var(--line);background:var(--panel)}
-.catalog label{display:block;color:var(--muted);font-size:12px;margin:3px 0 9px}
-.catalog input,.catalog select{width:100%;color:var(--fg);background:#111320;border:1px solid #626b86;border-radius:10px;padding:12px;margin:3px 0 13px}
-#topics{display:grid;gap:7px;overflow:auto}.topic{display:block;border:1px solid transparent;border-radius:10px;text-align:left;color:var(--muted);background:transparent;padding:10px;font-size:12px;line-height:1.4;width:100%}
-.topic span{display:block;color:var(--gold);font-size:10px;letter-spacing:.12em;text-transform:uppercase}
-.topic[aria-current="true"]{color:var(--fg);background:#3f2d70;border-color:var(--violet);font-weight:750}.topic:hover{background:#29263e;color:var(--fg)}
-.result{font-size:12px;color:var(--muted);margin:4px 0 12px}
-main{min-width:0}
-.map{border-radius:20px;background:linear-gradient(180deg,#1b1d30,#131625);border:1px solid var(--line);padding:clamp(18px,3vw,32px)}
-.map-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap}.map h2{font-size:clamp(24px,3vw,36px);line-height:1.18;letter-spacing:-.03em;margin:9px 0 20px}
-.tag{font-size:11px;color:var(--violet);font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-.thesis{border:1px solid #6c57a7;background:#2b2247;border-radius:16px;padding:20px;margin:20px 0}.thesis h3,.subhead{margin:0 0 8px;color:#d1c2ff;font-size:12px;font-weight:850;letter-spacing:.1em;text-transform:uppercase}
-.thesis p{font-size:18px;line-height:1.55;margin:0 0 14px}
-.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid #8175b0;background:#342751;color:#fefaff;border-radius:9px;padding:9px 12px;font-size:12px;font-weight:750}
-.btn:hover{background:#493767}.btn.ghost{background:transparent}.btn.export{background:var(--violet);color:#1b122d;border:0}
-.duo{display:grid;grid-template-columns:1fr 1fr;gap:15px}.argument{border:1px solid var(--line);border-radius:16px;padding:18px;background:#171a2b}
-.argument h3{font-size:18px;line-height:1.3;margin:8px 0 12px}.argument>p{margin:0 0 10px;color:#cdd0e0;font-size:13px}
-.reps{display:grid;gap:9px;margin:16px 0}.rep{border-top:1px solid var(--line);padding:11px 0 0}
-.rep b{display:block;font-size:13px;color:var(--gold)}.rep p{font-size:12px;color:#d6d4e4;margin:4px 0 0}
-.section{margin:25px 0}.section>h3{margin:0 0 11px;font-size:18px}
-.words{display:flex;flex-wrap:wrap;gap:8px}.word{border:1px solid #59647e;background:var(--soft);border-radius:100px;padding:6px 12px;font-size:12px;color:var(--fg)}
-.pi{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.pi>div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#151a2b}
-.pi b{font-size:11px;letter-spacing:.09em;color:var(--cyan);text-transform:uppercase}.pi p{margin:5px 0 0;font-size:13px}
-.pi .wide{grid-column:1/-1}.copymsg{font-size:13px;color:var(--cyan);min-height:21px;margin:12px 0}
-footer{color:var(--muted);font-size:12px;line-height:1.7;padding:35px 0}
-@media(max-width:950px){.layout{grid-template-columns:1fr}.catalog{position:relative;max-height:none}.catalog #topics{display:flex;overflow-x:auto;gap:8px}.catalog .topic{min-width:185px;max-width:240px;flex:none}.catalog-controls{display:flex;gap:12px}.catalog-controls label{flex:1}}
-@media(max-width:660px){.wrap{padding:16px}.hero{padding-top:35px}.duo,.pi{grid-template-columns:1fr}.pi .wide{grid-column:1}.catalog-controls{display:block}header{align-items:flex-start}nav{gap:10px}#topics{max-height:240px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+<link rel="stylesheet" href="./guia-estrategico.css">
 </head>
 <body>
-<div class="wrap">
-<header><a class="brand" href="./">ATENA<span style="color:var(--violet)">.</span></a><nav aria-label="Navegação"><a href="./redacao">Redação</a><a href="./radar">Radar</a><a href="./estudos">Estudos</a></nav></header>
-<div class="hero">
-<div class="pill">Laboratório de alta performance · repertório contextualizado</div>
-<h1>Mapas de guerra <span style="color:var(--violet)">argumentativa.</span></h1>
-<p>18 propostas de treino com tese definida, causa estrutural, consequência demonstrável, repertórios vinculados aos argumentos e intervenção completa. <strong>Não são redações prontas:</strong> use os mapas como base para construir seu texto.</p>
-<div class="metrics"><span><b>18</b> propostas de treino</span><span><b>72</b> referências ligadas a argumentos</span><span><b>90</b> elementos de intervenção</span></div>
-</div>
-<div class="note"><strong>Sobre o ENEM 2026:</strong> estes recortes não são temas confirmados, nem existe garantia de que algum cairá na prova. O Inep exige repertório pertinente e produtivo; citar autor famoso sem explicar a conexão não melhora automaticamente uma redação.</div>
-<div class="layout">
-<aside class="catalog" aria-label="Temas do guia">
-<div class="catalog-controls"><label>Buscar tema, autor ou obra<input id="search" type="search" placeholder="Ex.: Krenak, IA, etarismo" autocomplete="off"></label><label>Eixo temático<select id="axis"><option value="">Todos os eixos</option></select></label></div>
-<p class="result" id="count" role="status" aria-live="polite"></p>
-<div id="topics"></div>
+<a class="atena-skip" href="#main">Pular para o conteúdo</a>
+<div class="atena-shell">
+<button type="button" class="atena-menu-backdrop" id="navBackdrop" aria-label="Fechar navegação"></button>
+<aside class="atena-sidebar" id="globalSidebar" aria-label="Navegação principal">
+<a class="atena-brand" href="./" aria-label="ATENA, início"><img src="./atena/symbol.svg" alt="" width="35" height="42"><span>ATENA<small>CONHECIMENTO É PODER</small></span></a>
+<button type="button" class="atena-mobile-close atena-icon" id="closeNav" aria-label="Fechar navegação"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+<span class="atena-nav-caption">SEU UNIVERSO DE ESTUDO</span>
+<nav aria-label="Navegação principal"><a href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10H3z"/><path d="M9 20v-6h6v6"/></svg><span>Início</span></a>
+<a href="./estudos.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg><span>Estudos</span></a>
+<a href="./redacao.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19 7-7 3 3-7 7-5 1z"/><path d="m18 13 3 3"/><path d="M3 4h11M3 9h9M3 14h6"/></svg><span>Redação</span></a>
+<a href="./estudar.html#simulado"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M6 17V9M12 17V4M18 17v-6"/></svg><span>Simulados</span></a>
+<a href="./radar.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 12l7-7"/></svg><span>Radar de temas</span></a>
+<a href="./guia-estrategico.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg><span>Argumentos e repertórios</span></a>
+<a href="./#plano"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18"/></svg><span>Meu plano</span></a>
+<a href="./estudar.html#progresso"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg><span>Desempenho</span></a>
+<a href="./#comunidade"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M18 8a3 3 0 0 1 0 6M17 17a4 4 0 0 1 4 3"/></svg><span>Comunidade</span></a></nav>
+<a class="atena-sidebar-offline" href="./estudar-offline.html" download="atena-offline.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg><span>Seu estudo vai com você.<small>Baixar aplicativo offline</small></span></a>
+<div class="atena-sidebar-bottom"><span class="atena-avatar">A</span><div><strong>Seu espaço. Seu ritmo.</strong><small>Gratuito e de código aberto.</small></div></div>
 </aside>
-<main id="main" tabindex="-1"><div class="map"><p>Carregando os mapas editoriais...</p></div></main>
+<div class="atena-stage">
+<header class="atena-topbar">
+<button type="button" class="atena-mobile-menu atena-icon" id="openNav" aria-label="Abrir navegação" aria-expanded="false" aria-controls="globalSidebar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+<div class="atena-breadcrumb"><span>Seu espaço</span><span class="breadcrumb-arrow">›</span><strong>Argumentos e repertórios</strong></div>
+<div class="atena-topbar-actions"><a class="atena-topbar-link" href="./radar.html">Radar de temas ↗</a><button class="atena-icon" id="themeToggle" type="button" aria-label="Alternar tema" aria-pressed="false" title="Alternar tema"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button></div>
+</header>
+<div class="atena-main">
+<div class="guide-heading"><div><span class="guide-eyebrow">ATENA / SEU LABORATÓRIO DE ARGUMENTOS</span><h1>Argumentos e repertórios</h1><p>Seu acervo de teses, causas, consequências e propostas de intervenção.</p></div><a class="guide-mini-link" href="./redacao.html">Abrir estúdio de redação ↗</a></div>
+<section class="guide-hero" aria-labelledby="hero-title">
+<img class="guide-hero-image" src="./atena/atena.webp" alt="" loading="eager" decoding="async">
+<div class="guide-hero-copy">
+<span class="pill"><span class="guide-live-dot"></span> REPERTÓRIO COM PROPÓSITO</span>
+<h2 id="hero-title">Não basta citar.<br><em>É preciso argumentar.</em></h2>
+<p>Explore temas de treino, encontre a causa do problema, sustente suas ideias com obras relevantes e construa intervenções completas. Tudo no seu ritmo.</p>
+<div class="guide-hero-footer"><span>TESES FUNDAMENTADAS</span><span>BRASILIDADE</span><span>SEM TEXTO PRONTO</span></div>
 </div>
-<footer><p>Guia educacional autoral · Atualizado em outubro de 2026 · Fontes de referência para aprofundar: <a href="https://www.gov.br/inep/pt-br/centrais-de-conteudo/acervo-linha-editorial/publicacoes-institucionais/avaliacoes-e-exames-da-educacao-basica/a-redacao-do-enem-2026-cartilha-do-a-participante" target="_blank" rel="noopener noreferrer">Cartilha do Inep</a>, <a href="https://www.gov.br/ana/pt-br/assuntos/monitoramento-e-eventos-criticos/eventos-criticos/monitor-de-secas" target="_blank" rel="noopener noreferrer">ANA</a>, <a href="https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2025/canetas-emagrecedoras-so-poderao-ser-vendidas-com-retencao-de-receita" target="_blank" rel="noopener noreferrer">Anvisa</a> e <a href="https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-material/bens-tombados" target="_blank" rel="noopener noreferrer">Iphan</a>. Confira a fonte antes de citar datas, estatísticas ou normas. Não atribua citações literais não conferidas aos autores.</p><p>ATENA · Educação e autonomia de pensamento.</p></footer>
+</section>
+<section class="guide-metrics" aria-label="Recursos do guia"><div><strong>18</strong><span>temas para<br>treinar</span></div><div><strong>72</strong><span>repertórios<br>contextualizados</span></div><div><strong>5</strong><span>etapas de<br>intervenção</span></div></section>
+<div class="guide-note" role="note"><span class="guide-note-mark" aria-hidden="true">i</span><span><strong>Material de estudo, não previsão.</strong> Os temas são propostas de treino e não foram confirmados pelo Inep. Repertório produtivo é aquele que você explica e conecta ao problema, sem citações inventadas.</span></div>
+<div class="layout">
+<aside class="catalog" aria-label="Catálogo de temas de redação">
+<div class="catalog-head"><span>ESCOLHA UM TEMA</span><small>ACERVO 2026</small></div>
+<div class="catalog-controls"><label for="search">Buscar assunto, autor ou obra<input id="search" type="search" placeholder="Ex.: Krenak, IA, etarismo" autocomplete="off"></label><label for="axis">Eixo temático<select id="axis"><option value="">Todos os eixos</option></select></label></div>
+<p class="result" id="count" role="status" aria-live="polite"></p><div id="topics"></div>
+</aside>
+<main id="main" tabindex="-1"><div class="map"><p>Carregando o repertório da ATENA...</p></div></main>
 </div>
+<footer class="atena-footer">
+<p>ATENA · Educação aberta. Confira autoria, leis e dados antes de citar. Fontes: <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem" target="_blank" rel="noopener noreferrer">Inep</a>, <a href="https://www.gov.br/ana/pt-br" target="_blank" rel="noopener noreferrer">ANA</a>, <a href="https://www.gov.br/anvisa/pt-br" target="_blank" rel="noopener noreferrer">Anvisa</a> e <a href="https://www.gov.br/iphan/pt-br" target="_blank" rel="noopener noreferrer">Iphan</a>.</p>
+<p>ATENA · Conhecimento é poder.</p>
+</footer>
+</div></div></div>
+<script>
+(function(){
+"use strict";
+const root=document.documentElement,sidebar=document.getElementById("globalSidebar"),backdrop=document.getElementById("navBackdrop"),toggle=document.getElementById("themeToggle"),open=document.getElementById("openNav"),close=document.getElementById("closeNav");
+try{root.dataset.theme=localStorage.getItem("kalore-color-theme")==="light"?"light":"dark"}catch{root.dataset.theme="dark"}
+function updateTheme(){const light=root.dataset.theme==="light";toggle.setAttribute("aria-pressed",String(light));toggle.setAttribute("title",light?"Ativar tema escuro":"Ativar tema claro")}
+function menu(active){sidebar.classList.toggle("open",active);backdrop.classList.toggle("open",active);open.setAttribute("aria-expanded",String(active));if(active){close.focus()}else{open.focus()}}
+open.addEventListener("click",()=>menu(true));close.addEventListener("click",()=>menu(false));backdrop.addEventListener("click",()=>menu(false));document.addEventListener("keydown",e=>{if(e.key==="Escape"&&sidebar.classList.contains("open"))menu(false)});toggle.addEventListener("click",()=>{root.dataset.theme=root.dataset.theme==="light"?"dark":"light";try{localStorage.setItem("kalore-color-theme",root.dataset.theme)}catch{}updateTheme()});updateTheme();
+})();
+</script>
 <script src="./guia-mapas-01.js"></script>
 <script src="./guia-mapas-02.js"></script>
 <script src="./guia-mapas-03.js"></script>
