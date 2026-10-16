@@ -127,3 +127,7 @@ main#main{min-width:0}
 /* Keep inline navigation icon geometry identical to the React ATENA shell. */
 .atena-sidebar-offline svg{width:20px;height:20px;flex-shrink:0;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 @media(max-width:900px){.atena-sidebar nav a{min-height:45px}}
+
+.rep a{display:inline-flex;align-items:center;min-height:30px;color:var(--a-gold);text-decoration:underline;text-underline-offset:4px;font-size:12px}
+
+.atena-footer a{text-decoration:underline;text-underline-offset:3px}

@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-06T02:03:21.109Z",
+  "checkedAt": "2026-10-16T12:48:16.660Z",
   "engine": "axe-core/playwright 4.11.4",
-  "scope": "14 seções do Hub nos dois temas, flashcards virados, busca, sete estados de prática guiada e escrita, exploração de questões, respostas e transferência de roteiros; sete seções do Radar, comparação, anotações e três etapas do roteiro nos dois temas; novas telas também a 390 px; cinco páginas de materiais. Regras automatizadas WCAG 2 A/AA, 2.1 A/AA e 2.2 AA. Não constitui certificação nem substitui testes com tecnologias assistivas.",
+  "scope": "14 seções do Hub nos dois temas, flashcards virados, busca, sete estados de prática guiada e escrita, exploração de questões, respostas e transferência de roteiros; sete seções do Radar, comparação, anotações e três etapas do roteiro nos dois temas; novas telas também a 390 px; 18 mapas argumentativos nos dois temas a 390 px; cinco páginas de materiais. Regras automatizadas WCAG 2 A/AA, 2.1 A/AA e 2.2 AA. Não constitui certificação nem substitui testes com tecnologias assistivas.",
   "results": [
     {
       "name": "Hub/hoje/dark",
@@ -276,6 +276,14 @@
       "violations": []
     },
     {
+      "name": "Radar/comparação/hover-0/dark",
+      "violations": []
+    },
+    {
+      "name": "Radar/comparação/hover-1/dark",
+      "violations": []
+    },
+    {
       "name": "Radar/anotações/dark",
       "violations": []
     },
@@ -324,6 +332,14 @@
       "violations": []
     },
     {
+      "name": "Radar/comparação/hover-0/light",
+      "violations": []
+    },
+    {
+      "name": "Radar/comparação/hover-1/light",
+      "violations": []
+    },
+    {
       "name": "Radar/anotações/light",
       "violations": []
     },
@@ -369,6 +385,150 @@
     },
     {
       "name": "Radar/roteiro/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/ciclo-hidrologico/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/canetas-estetica/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/deepfakes/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/bets/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/inclusao-digital/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/fitness/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/etarismo/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/povos-originarios/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/algoritmos-consumo/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/monumentos/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/exploracao-espacial/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/fauna/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/migracao/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/el-nino/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/participacao-juvenil/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/acessibilidade-digital/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/residuos-eletronicos/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/educacao-financeira/mobile/dark",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/ciclo-hidrologico/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/canetas-estetica/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/deepfakes/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/bets/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/inclusao-digital/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/fitness/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/etarismo/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/povos-originarios/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/algoritmos-consumo/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/monumentos/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/exploracao-espacial/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/fauna/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/migracao/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/el-nino/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/participacao-juvenil/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/acessibilidade-digital/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/residuos-eletronicos/mobile/light",
+      "violations": []
+    },
+    {
+      "name": "Argumentos/educacao-financeira/mobile/light",
       "violations": []
     },
     {
