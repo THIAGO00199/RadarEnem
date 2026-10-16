@@ -1,6 +1,8 @@
 import "./prepare-atena.mjs";
 import { cp, rm, readdir, readFile, writeFile } from "node:fs/promises";
 import { execFileSync } from "node:child_process";
+// Repeated local builds must not accumulate obsolete chunks in the offline cache.
+await rm("out", { recursive: true, force: true });
 execFileSync(process.execPath, ["node_modules/next/dist/bin/next", "build"], {
   stdio: "inherit",
   env: { ...process.env, NEXT_TELEMETRY_DISABLED: "1" },

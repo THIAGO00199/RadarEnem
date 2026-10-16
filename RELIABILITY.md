@@ -11,7 +11,7 @@ Verificação de 16/10/2026. As conclusões distinguem implementação, evidênc
 | Média | Documentação | README, publicação, notas de versão, inventário editorial e este relatório atualizados. |
 | Média | Desempenho atual | `check:performance` mede sete páginas em três execuções por página; o relatório JSON identifica método e data. A medição é de laboratório, não tráfego real. |
 | Média | Gestão de bugs | Issues com prioridade e critérios de aceite, template reproduzível e vínculo com a entrega. |
-| Média | Domínio | `https://atena.dev.br/` respondeu 200 com verificação TLS concluída. A publicação valida os hashes dos recursos no domínio antes de criar a release. A resolução DNS direta do ambiente de execução é limitada; essa limitação não impede o acesso HTTPS verificado. |
+| Média | Domínio | `https://atena.dev.br/` respondeu 200 com verificação TLS concluída. A publicação valida os hashes dos recursos no domínio antes de criar a release. A consulta DNS por HTTPS confirmou os quatro registros A do GitHub Pages (`185.199.108.153` a `185.199.111.153`); `www` chegou ao domínio principal por HTTPS. |
 | Baixa | Release versionada | CI cria a release correspondente ao pacote depois da suíte e da conferência da publicação, anexando o aplicativo offline. A execução do workflow é a evidência de publicação. |
 | Baixa | Contas, assinaturas e sincronização | Ainda não implementadas. Dependem de backend e contas dos provedores; critérios na [issue #6](https://github.com/THIAGO00199/RadarEnem/issues/6). |
 
