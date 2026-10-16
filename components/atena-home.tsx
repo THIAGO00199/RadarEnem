@@ -67,6 +67,13 @@ const tools = [
     tone: "cream",
   },
   {
+    name: "Argumentos e repertórios",
+    detail: "Teses, causas e referências para 18 temas.",
+    url: "./guia-estrategico.html",
+    Icon: Layers,
+    tone: "gold",
+  },
+  {
     name: "Simulados",
     detail: "Treine o raciocínio e a gestão do tempo.",
     url: "./estudar.html#simulado",
@@ -461,6 +468,10 @@ export default function Home({ generatedAt }: { generatedAt: string }) {
           <a href="./redacao.html">
             <PenLine size={19} />
             Redação
+          </a>
+          <a href="./guia-estrategico.html">
+            <Layers size={19} />
+            Argumentos
           </a>
           <a href="./estudar.html#simulado">
             <ChartNoAxesCombined size={19} />
