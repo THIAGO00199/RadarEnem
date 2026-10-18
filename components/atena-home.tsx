@@ -1,5 +1,6 @@
 "use client";
 
+import { AtenaNavigation } from "./atena-navigation";
 import { backup } from "@/lib/backup";
 import { useAccessibleMenu } from "./use-accessible-menu";
 import {
@@ -7,13 +8,11 @@ import {
   useMemo,
   useRef,
   useState,
-  type CSSProperties,
 } from "react";
 import {
   ArrowUpRight,
   ArrowRight,
   BookOpen,
-  CalendarDays,
   ChartNoAxesCombined,
   Check,
   ChevronRight,
@@ -98,6 +97,7 @@ const tools = [
   },
 ];
 const extraTools = [
+  { name: "Minha nota", detail: "Calcule sua média e compare objetivos com pesos por curso.", url: "./minha-nota.html", Icon: GraduationCap },
   {
     name: "Argumentos e repertórios",
     detail: "Teses, causas e referências para 18 temas.",
@@ -467,55 +467,7 @@ export default function Home({ generatedAt }: { generatedAt: string }) {
         >
           <X size={20} />
         </button>
-        <span className="atena-nav-caption">SEU UNIVERSO DE ESTUDO</span>
-        <nav>
-          <button
-            onClick={() => go("inicio")}
-            aria-current={view === "inicio" ? "page" : undefined}
-          >
-            <Sparkles size={19} />
-            Início
-          </button>
-          <a href="./estudos.html">
-            <BookOpen size={19} />
-            Estudos
-            <ChevronRight size={14} />
-          </a>
-          <a href="./redacao.html">
-            <PenLine size={19} />
-            Redação
-          </a>
-          <a href="./guia-estrategico.html">
-            <Layers size={19} />
-            Argumentos
-          </a>
-          <a href="./estudar.html#simulado">
-            <ChartNoAxesCombined size={19} />
-            Simulados
-          </a>
-          <a href="./radar.html">
-            <Radar size={19} />
-            Radar de temas
-          </a>
-          <button
-            onClick={() => go("plano")}
-            aria-current={view === "plano" ? "page" : undefined}
-          >
-            <CalendarDays size={19} />
-            Meu plano
-          </button>
-          <a href="./estudar.html#progresso">
-            <Target size={19} />
-            Desempenho
-          </a>
-          <button
-            onClick={() => go("comunidade")}
-            aria-current={view === "comunidade" ? "page" : undefined}
-          >
-            <Users size={19} />
-            Comunidade
-          </button>
-        </nav>
+        <AtenaNavigation active={view} onView={go} />
         <a
           className="atena-sidebar-offline"
           href="./estudar-offline.html"
@@ -597,8 +549,8 @@ export default function Home({ generatedAt }: { generatedAt: string }) {
               <h1>
                 {view === "inicio"
                   ? summary.name
-                    ? "Seu próximo capítulo, " + summary.name + "."
-                    : "Seu próximo capítulo começa aqui."
+                    ? "Vamos estudar, " + summary.name + "?"
+                    : "Seu estudo começa aqui."
                   : view === "plano"
                     ? "Constância tem um plano."
                     : "Conhecimento cresce quando circula."}
@@ -622,290 +574,51 @@ export default function Home({ generatedAt }: { generatedAt: string }) {
           </div>
           {view === "inicio" && (
             <>
-              <section className="atena-hero" aria-labelledby="heroTitle">
-                <div className="atena-hero-copy">
-                  <span className="atena-kicker">
-                    <span className="atena-live-dot" /> SABEDORIA ANTIGA.
-                    AMBIÇÃO NOVA.
-                  </span>
-                  <h2 id="heroTitle">
-                    Conhecimento
-                    <br />é poder.
-                    <br />
-                    <em>Faça dele o seu.</em>
-                  </h2>
-                  <p>
-                    Da primeira questão à redação que você tem orgulho de
-                    escrever. Tudo em um lugar, no seu ritmo.
-                  </p>
-                  <div className="atena-hero-actions">
-                    <a
-                      className="atena-button primary"
-                      href={
-                        summary.pending
-                          ? "./estudar.html#erros"
-                          : "./estudos.html"
-                      }
-                    >
-                      {summary.pending
-                        ? "Revisar meus erros"
-                        : "Começar meu estudo"}
-                      <ArrowUpRight size={18} />
+              <div className="atena-home-grid">
+                <section className="atena-focus-card" aria-labelledby="nextStudyTitle">
+                  <img className="atena-focus-art" src="./atena/atena.webp" alt="" width="1229" height="1536" fetchPriority="high" />
+                  <div className="atena-focus-copy">
+                    <span className="atena-kicker">SEU PRÓXIMO PASSO · {next?.minutes || workspace.profile.minutes} MIN</span>
+                    <h2 id="nextStudyTitle">{summary.pending ? "Um erro pode virar aprendizado." : next?.title || "Semana concluída. Vamos revisar?"}</h2>
+                    <p>{summary.pending ? `${summary.pending} questões para retomar. Confira a explicação e tente outra vez.` : "Uma atividade de cada vez. Seu plano já está pronto para começar."}</p>
+                    <a className="atena-button primary" href={summary.pending ? "./estudar.html#erros" : next?.tab === "trilhas" ? "./estudos.html" : next?.tab === "redacao" ? "./redacao.html" : "./estudar.html#" + (next?.tab || "flashcards")}>
+                      {summary.pending ? "Revisar meus erros" : "Começar atividade"}<ArrowRight size={18} />
                     </a>
-                    <a className="atena-hero-link" href="./redacao.html">
-                      Explorar redação
-                      <ArrowRight size={16} />
-                    </a>
+                    <button className="atena-text-button" onClick={() => go("plano")}>Ver meu plano<ArrowUpRight size={15} /></button>
                   </div>
-                  <div className="atena-hero-trust">
-                    <span>
-                      <ShieldCheck size={14} />
-                      Gratuito
-                    </span>
-                    <span>Sem cadastro</span>
-                    <span>Código aberto</span>
-                  </div>
-                </div>
-                <img
-                  className="atena-hero-image"
-                  src="./atena/atena.webp"
-                  alt="Atena em mármore, com detalhes dourados, segurando uma prova do ENEM e o seu painel de estudos."
-                  width="1229"
-                  height="1536"
-                  fetchPriority="high"
-                />
-                <span className="atena-hero-number" aria-hidden="true">
-                  01 / O SEU FUTURO
-                </span>
-                <div className="atena-hero-tag">
-                  <span>✦</span> A sabedoria abre caminhos.
-                </div>
-              </section>
-              <section
-                className="atena-metrics"
-                aria-label="Seu progresso registrado"
-              >
-                <article>
-                  <span>SEQUÊNCIA ATUAL</span>
-                  <strong>
-                    {summary.streak}
-                    <small>{summary.streak === 1 ? "dia" : "dias"}</small>
-                  </strong>
-                  <Flame size={21} />
-                </article>
-                <article>
-                  <span>QUESTÕES PRATICADAS</span>
-                  <strong>
-                    {summary.answers}
-                    <small>tentativas</small>
-                  </strong>
-                  <GraduationCap size={21} />
-                </article>
-                <article>
-                  <span>FOCO REGISTRADO</span>
-                  <strong>
-                    {summary.focus}
-                    <small>minutos</small>
-                  </strong>
-                  <Focus size={21} />
-                </article>
-                <article>
-                  <span>REDAÇÕES SALVAS</span>
-                  <strong>
-                    {summary.essays}
-                    <small>versões</small>
-                  </strong>
-                  <PenLine size={21} />
-                </article>
-              </section>
-              <div className="atena-dashboard-grid">
-                <section className="atena-panel atena-next">
-                  <span className="atena-kicker">SEU PRÓXIMO PASSO</span>
-                  <div className="atena-next-heading">
-                    <span className="atena-tool-icon gold">
-                      <BookOpen size={23} />
-                    </span>
-                    <span className="atena-duration">
-                      {next?.minutes || workspace.profile.minutes} MIN
-                    </span>
-                  </div>
-                  <h2>
-                    {summary.pending
-                      ? "Volte a um erro. Encontre um caminho."
-                      : next?.title || "Semana concluída. Que tal revisar?"}
-                  </h2>
-                  <p>
-                    {summary.pending
-                      ? summary.pending +
-                        " questões aguardam revisão. Leia a explicação e tente justificar a resposta."
-                      : "Uma atividade curta, um avanço concreto. Você escolhe quando começar."}
-                  </p>
-                  <a
-                    className="atena-button primary"
-                    href={
-                      summary.pending
-                        ? "./estudar.html#erros"
-                        : next?.tab === "trilhas"
-                          ? "./estudos.html"
-                          : next?.tab === "redacao"
-                            ? "./redacao.html"
-                            : "./estudar.html#" + (next?.tab || "flashcards")
-                    }
-                  >
-                    Vamos nessa
-                    <ArrowRight size={18} />
-                  </a>
                 </section>
-                <section className="atena-panel atena-week">
+                <section className="atena-panel atena-week-compact" aria-labelledby="weekTitle">
                   <div className="atena-section-head">
-                    <div>
-                      <span className="atena-kicker">
-                        CONSTÂNCIA, SEM PRESSÃO
-                      </span>
-                      <h2>Sua meta semanal</h2>
-                    </div>
-                    <button
-                      className="atena-icon"
-                      aria-label="Editar meta semanal"
-                      onClick={openProfile}
-                    >
-                      <Settings2 size={18} />
-                    </button>
+                    <h2 id="weekTitle">Sua semana</h2>
+                    <button className="atena-icon" aria-label="Editar meta semanal" onClick={openProfile}><Settings2 size={18} /></button>
                   </div>
-                  <div className="atena-week-score">
-                    <div
-                      className="atena-ring"
-                      style={{ "--progress": percent + "%" } as CSSProperties}
-                    >
-                      <div>
-                        <strong>
-                          {percent}
-                          <small>%</small>
-                        </strong>
-                      </div>
-                    </div>
-                    <div>
-                      <strong>
-                        {summary.activeDays} de {goal} dias
-                      </strong>
-                      <p>
-                        {summary.activeDays
-                          ? "Cada dia de prática constrói o próximo."
-                          : "Seu primeiro dia pode ser hoje."}
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    className="atena-week-days"
-                    aria-label="Atividade nesta semana"
-                  >
+                  <p className="atena-week-total"><strong>{summary.activeDays}</strong> de {goal} dias de estudo</p>
+                  <progress className="atena-week-progress" max="100" value={percent} aria-label="Meta semanal" />
+                  <div className="atena-week-days" aria-label="Atividade nesta semana">
                     {summary.days.map((d, i) => (
-                      <div
-                        key={d.date}
-                        className={
-                          (d.active ? "active " : "") +
-                          (d.date === today ? "today" : "")
-                        }
-                      >
+                      <div key={d.date} className={(d.active ? "active " : "") + (d.date === today ? "today" : "")}>
                         <span>{["S", "T", "Q", "Q", "S", "S", "D"][i]}</span>
-                        <span
-                          role="img"
-                          aria-label={
-                            d.date +
-                            ": " +
-                            (d.active
-                              ? "atividade registrada"
-                              : "sem atividade registrada")
-                          }
-                        >
+                        <span role="img" aria-label={d.date + ": " + (d.active ? "atividade registrada" : "sem atividade registrada")}>
                           {d.active ? <Check size={15} /> : <span />}
                         </span>
                       </div>
                     ))}
                   </div>
-                  <button
-                    className="atena-text-button"
-                    onClick={() => go("plano")}
-                  >
-                    Ver meu plano
-                    <ArrowUpRight size={15} />
-                  </button>
-                </section>
-                <section className="atena-panel atena-writing-card">
-                  <span className="atena-kicker">IDEIAS QUE GANHAM VOZ</span>
-                  <PenLine size={31} />
-                  <h2>
-                    Uma tese.
-                    <br />
-                    Mil possibilidades.
-                  </h2>
-                  <p>
-                    Explore 17 temas, compare argumentos e desenvolva uma
-                    intervenção com propósito.
-                  </p>
-                  <a href="./redacao.html">
-                    Entrar no estúdio
-                    <ArrowUpRight size={18} />
-                  </a>
+                  <a className="atena-text-button" href="./estudar.html#progresso">Ver desempenho<ArrowUpRight size={15} /></a>
                 </section>
               </div>
-              <section className="atena-tools-section">
-                <div className="atena-section-head">
-                  <div>
-                    <span className="atena-kicker">
-                      O SEU ARSENAL DE CONHECIMENTO
-                    </span>
-                    <h2>Menos abas. Mais aprendizado.</h2>
-                  </div>
-                  <span className="atena-section-note">
-                    Escolha por onde começar.
-                  </span>
+              <section className="atena-score-invitation" aria-labelledby="scoreInvitationTitle">
+                <span className="atena-tool-icon gold"><GraduationCap size={26} /></span>
+                <div>
+                  <span className="atena-kicker">OLHE PARA O SEU OBJETIVO</span>
+                  <h2 id="scoreInvitationTitle">Onde usar minha nota?</h2>
+                  <p>Calcule sua média e compare os cursos que você tem em mente.</p>
                 </div>
-                <div className="atena-tools-grid">
-                  {tools.map(({ name, detail, url, Icon, tone }, i) => (
-                    <a className="atena-tool-card" href={url} key={name}>
-                      <div>
-                        <span className={"atena-tool-icon " + tone}>
-                          <Icon size={24} />
-                        </span>
-                        <span className="atena-tool-number">0{i + 1}</span>
-                      </div>
-                      <h3>{name}</h3>
-                      <p>{detail}</p>
-                      <ArrowUpRight className="atena-tool-arrow" size={19} />
-                    </a>
-                  ))}
-                </div>
+                <a className="atena-button secondary" href="./minha-nota.html">Explorar minha nota<ArrowUpRight size={17} /></a>
               </section>
-              <div className="atena-lower-grid">
-                {planner}
-                <section className="atena-panel atena-offline-card">
-                  <span className="atena-kicker">
-                    SEM INTERNET? COM POSSIBILIDADES.
-                  </span>
-                  <div className="atena-offline-art" aria-hidden="true">
-                    <Download size={43} />
-                    <span>100%</span>
-                    <small>OFFLINE</small>
-                  </div>
-                  <h2>Seu estudo não precisa de sinal.</h2>
-                  <p>
-                    Um arquivo com o Hub, o estúdio de redação, suas ferramentas
-                    e quatro PDFs autorais. Baixe e abra no navegador.
-                  </p>
-                  <a
-                    className="atena-button secondary"
-                    href="./estudar-offline.html"
-                    download="atena-offline.html"
-                  >
-                    Levar a ATENA comigo
-                    <Download size={17} />
-                  </a>
-                  <small>
-                    Fontes e provas oficiais externas abrem com internet. Os
-                    dados ficam no navegador; use o backup para transferir.
-                  </small>
-                </section>
+              <div className="atena-home-help">
+                <span>Quer estudar outra coisa?</span>
+                <button className="atena-text-button" onClick={() => { setQuery(""); setSearchOpen(true); }}>Encontrar uma ferramenta<Search size={15} /></button>
               </div>
             </>
           )}

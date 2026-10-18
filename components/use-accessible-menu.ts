@@ -17,7 +17,7 @@ export function useAccessibleMenu(open: boolean, close: () => void) {
     const focusable = () =>
       Array.from(
         sidebar.current?.querySelectorAll<HTMLElement>(
-          "a[href], button:not([disabled])",
+          "a[href], button:not([disabled]), summary",
         ) || [],
       ).filter((node) => node.getClientRects().length);
     const frame = requestAnimationFrame(() => focusable()[0]?.focus());

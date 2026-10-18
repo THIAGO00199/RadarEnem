@@ -124,13 +124,16 @@ async function overflow(page, name) {
   await page.getByRole("dialog").getByLabel("Meta semanal").selectOption("3");
   await page.getByRole("button", { name: "Salvar meu ritmo" }).click();
   await page.getByRole("heading", { level: 1, name: /Thiago/ }).waitFor();
+  assert.equal(await page.locator(".atena-task-check").count(), 0, "The home must not repeat the full planner");
+  await page.getByRole("button", { name: "Ver meu plano", exact: true }).click();
   await page.locator(".atena-task-check").first().click();
   assert.equal(await page.locator(".atena-plan-task.completed").count(), 1);
   await page.reload();
-  await page.getByRole("heading", { level: 1, name: /Thiago/ }).waitFor();
+  await page.getByRole("heading", { name: "Constância tem um plano." }).waitFor();
   assert.equal(await page.locator(".atena-plan-task.completed").count(), 1);
   assert.equal(await page.locator('.atena-sidebar a[href="./guia-estrategico.html"]').count(),1,'Home navigation must expose Arguments directly');
   assert.equal(await page.locator('.atena-mobile-dock a[href="./guia-estrategico.html"]').count(),1,'Arguments must be one tap away on phones');
+  await page.locator(".atena-sidebar").getByRole("button", { name: "Início", exact: true }).click();
   await page.keyboard.press("Control+k");
   await page.getByLabel("Buscar ferramenta").fill("redacao");
   assert.equal(await page.locator(".atena-search-results a").count(), 1);
@@ -155,6 +158,55 @@ async function overflow(page, name) {
     "false",
   );
   await screenshot("atena-home-mobile");
+
+  // Score calculations, editing, persistence and references use real form interactions.
+  await page.goto(base + "/minha-nota.html");
+  await page.getByRole("button", { name: "Adicionar meu primeiro curso" }).waitFor();
+  assert.match(await page.locator(".atena-score-average").innerText(), /0 de 5/);
+  for (const [label, value] of [["Linguagens", "600"], ["Ciências Humanas", "650"], ["Ciências da Natureza", "700"], ["Matemática", "750"], ["Redação", "900"]]) await page.getByLabel(label, { exact: true }).fill(value);
+  assert.equal(await page.locator(".atena-score-average strong").innerText(), "720,00");
+  await page.getByRole("button", { name: "Adicionar meu primeiro curso" }).click();
+  await page.getByLabel("Curso", { exact: true }).fill("Engenharia Civil");
+  await page.getByLabel("Instituição", { exact: true }).fill("Universidade de teste");
+  await page.getByLabel("Peso de Matemática", { exact: true }).fill("3");
+  await page.getByLabel("Peso de Redação", { exact: true }).fill("2");
+  await page.getByText("Adicionar nota de corte de referência (opcional)", { exact: true }).click();
+  await page.getByLabel("Nota de referência", { exact: true }).fill("740");
+  await page.getByRole("button", { name: "Salvar objetivo" }).click();
+  await page.getByRole("alert").filter({ hasText: "Informe o ano" }).waitFor();
+  await page.getByLabel("Ano da referência", { exact: true }).fill("2025");
+  await page.getByLabel("Link da fonte (opcional)").fill("https://sisu.mec.gov.br/cursos");
+  await inspect("Minha nota/form/mobile/dark");
+  await screenshot("atena-score-form-mobile");
+  await page.getByRole("button", { name: "Salvar objetivo" }).click();
+  await page.getByRole("heading", { name: "Engenharia Civil" }).waitFor();
+  assert.match(await page.locator(".atena-score-comparison").innerText(), /750,00/);
+  assert.match(await page.locator(".atena-score-difference").innerText(), /10,00 pontos acima/);
+  await page.reload();
+  await page.getByRole("heading", { name: "Engenharia Civil" }).waitFor();
+  assert.equal(await page.getByLabel("Matemática", { exact: true }).inputValue(), "750");
+  await page.getByRole("button", { name: "Editar Engenharia Civil" }).click();
+  await page.getByLabel("Peso de Matemática", { exact: true }).fill("1");
+  await page.getByLabel("Peso de Redação", { exact: true }).fill("1");
+  await page.getByRole("button", { name: "Salvar objetivo" }).click();
+  assert.match(await page.locator(".atena-score-comparison").innerText(), /720,00/);
+  assert.match(await page.locator(".atena-score-difference").innerText(), /20,00 pontos abaixo/);
+  await page.getByRole("button", { name: "Remover Engenharia Civil" }).click();
+  assert.equal(await page.locator(".atena-score-target").count(), 0);
+  await page.getByRole("button", { name: "Desfazer remoção" }).click();
+  assert.equal(await page.locator(".atena-score-target").count(), 1);
+  for (const theme of ["dark", "light"]) {
+    await page.evaluate(theme => { document.documentElement.dataset.theme = theme; }, theme);
+    for (const width of [360, 768, 1440]) {
+      await page.setViewportSize({ width, height: 900 });
+      await overflow(page, "Minha nota/" + width + "/" + theme);
+      await inspect("Minha nota/" + width + "/" + theme);
+    }
+    await screenshot("atena-scores-desktop-" + theme);
+  }
+  await page.setViewportSize({ width: 390, height: 844 });
+  await screenshot("atena-scores-mobile");
+  await page.evaluate(() => { document.documentElement.dataset.theme = "dark"; });
 
   // An existing student's first five lessons and empty energy must remain usable.
   await page.evaluate(() => {

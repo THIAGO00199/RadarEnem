@@ -1,3 +1,10 @@
+# ATENA 5.2 — 18/10/2026
+
+- Início focado na próxima atividade e na semana, sem repetir o plano completo, a vitrine de ferramentas e os anúncios de recursos.
+- Navegação compartilhada entre início, estudos, redação e Minha nota, com materiais e organização em grupos expansíveis. Atalho móvel de Argumentos preservado.
+- Minha nota: média simples ou por pesos, até 12 objetivos, edição e remoção reversível. Referências de corte identificadas por ano, modalidade e fonte informada pelo estudante; sem catálogo automático ou promessa de aprovação.
+- Notas e objetivos locais incluídos no backup completo. Testes de cálculo, persistência, navegação e acessibilidade adicionados à verificação do produto.
+
 # Radar 3.1 + ENEM Hub 6.0 — 01/10/2026
 
 - Biblioteca ampliada de nove portais para 68 referências de PDFs com matéria, ano, instituição e fonte; busca por múltiplos termos sem acentos, filtros, favoritos, leitura e paginação.

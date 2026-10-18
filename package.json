@@ -1,6 +1,6 @@
 {
   "name": "atena-edtech",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -29,6 +29,7 @@
     "check:session": "node scripts/check-session.mjs",
     "check:experience": "node scripts/check-orbit.cjs",
     "data:update:python": "python3 backend/radar_collect.py",
+    "check:scores": "node scripts/check-scores.mjs",
     "check:atena": "node scripts/check-atena.mjs",
     "check:atena-ui": "node scripts/check-atena-ui.cjs",
     "check:backup": "node scripts/check-backup.cjs",

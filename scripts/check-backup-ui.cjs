@@ -25,6 +25,7 @@ const server = http.createServer(async (req, res) => {
     await page.evaluate(draft => {
       localStorage.setItem("kalore-hub-v3", JSON.stringify({ draft, draftTheme: "Educação", xp: 270, course: { track: "mat", done: { "mat-6": true } } }));
       localStorage.setItem("kalore-radar-v2", JSON.stringify({ notes: { digital: "Minha anotação" }, favorites: ["digital"] }));
+      localStorage.setItem("atena-scores-v1", JSON.stringify({ version: 1, kind: "boletim", scores: { linguagens: "600", humanas: "650", natureza: "700", matematica: "750", redacao: "900" }, targets: [] }));
       localStorage.setItem("unrelated", "private");
     }, draft);
     const pending = page.waitForEvent("download");
@@ -42,6 +43,9 @@ const server = http.createServer(async (req, res) => {
     await restored.waitForFunction(expected => JSON.parse(localStorage.getItem("kalore-hub-v3") || "{}").draft === expected, draft);
     await restored.reload();
     assert.equal(await restored.evaluate(() => JSON.parse(localStorage.getItem("kalore-radar-v2")).notes.digital), "Minha anotação");
+    await restored.goto(base + "/minha-nota.html");
+    await restored.getByText("720,00", { exact: true }).waitFor();
+    assert.equal(await restored.getByLabel("Redação", { exact: true }).inputValue(), "900");
     await restored.goto(base + "/redacao.html");
     await restored.getByRole("textbox", { name: "Rascunho da redação" }).waitFor();
     await restored.waitForFunction(expected => document.querySelector('[aria-label="Rascunho da redação"]').value === expected, draft);

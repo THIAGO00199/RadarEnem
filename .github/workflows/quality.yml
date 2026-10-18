@@ -55,6 +55,7 @@ jobs:
           node --check portable/public/hub/experience.js
           node --check portable/public/shared/motion.js
           npm run check:atena
+          npm run check:scores
           npm run check:backup
           npm run check:editorial
           python3 -m unittest backend.test_radar_collect
@@ -67,6 +68,8 @@ jobs:
           node --check portable/public/shared/essay-ideas-ui.js
           node --check portable/public/hub/insights.js
       - name: Existing flows and offline functionality
+        env:
+          SCREENSHOT_DIR: ${{ runner.temp }}/atena-previews
         run: |
           npm run check:atena-ui
           npm run check:backup-ui
@@ -85,6 +88,14 @@ jobs:
         if: always() && steps.build.outcome == 'success'
         run: npm run check:accessibility
 
+      - name: Preserve interface previews
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: atena-previews-${{ github.run_id }}
+          path: ${{ runner.temp }}/atena-previews/
+          retention-days: 7
+          if-no-files-found: ignore
       - name: Measure current mobile performance
         if: success()
         run: npm run check:performance

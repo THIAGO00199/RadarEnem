@@ -2141,3 +2141,152 @@ html.motion-off .atena-shell *::after {
 .atena-boot-status button {
   margin-top: 10px;
 }
+
+/* A calmer dashboard: one next action, weekly context and a separate score tool. */
+.atena-sidebar { overflow-y: auto; scrollbar-width: thin; }
+.atena-sidebar > * { flex-shrink: 0; }
+.atena-navigation .atena-nav-caption { padding: 8px 14px; margin: 0; }
+.atena-nav-group { border-top: 1px solid var(--a-line); margin-top: 10px; padding-top: 8px; }
+.atena-nav-group > summary { display: flex; align-items: center; gap: 11px; min-height: 48px; padding: 10px 14px; color: var(--a-muted); font-size: 12px; line-height: 1.5; cursor: pointer; list-style: none; border-radius: 10px; }
+.atena-nav-group > summary::-webkit-details-marker { display: none; }
+.atena-nav-group > summary > svg { flex-shrink: 0; }
+.atena-nav-group > summary > svg:last-child { margin-left: auto; }
+.atena-nav-group[open] > summary > svg:last-child { transform: rotate(180deg); }
+.atena-nav-group > summary:hover { background: var(--a-raised); color: var(--a-text); }
+.atena-sidebar .atena-nav-group :is(a, button) { width: 100%; padding-left: 23px; font-size: 12px; }
+.atena-shell summary:focus-visible, .atena-dialog summary:focus-visible { outline: 2px solid var(--a-gold); outline-offset: 3px; }
+.atena-home-grid { display: grid; grid-template-columns: minmax(0, 1.9fr) minmax(270px, 1fr); gap: 20px; }
+.atena-focus-card { position: relative; isolation: isolate; overflow: hidden; min-height: 340px; border: 1px solid var(--a-line); border-radius: 18px; background: #17191c; color: #f4eee3; }
+.atena-focus-art { position: absolute; right: 0; top: 0; height: 100%; width: 48%; object-fit: cover; object-position: 48% 23%; z-index: -2; }
+.atena-focus-card:after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #17191c 32%, #17191cf2 49%, #17191c20 100%); }
+.atena-focus-copy { position: relative; width: 74%; padding: 32px; }
+.atena-focus-copy > .atena-kicker { color: #e5c158; font-size: 10px; letter-spacing: 1.1px; }
+.atena-focus-copy h2 { font-size: clamp(23px, 2.2vw, 33px); line-height: 1.22; letter-spacing: -.7px; margin: 17px 0 12px; text-wrap: balance; }
+.atena-focus-copy p { color: #c8c4bc; font-size: 13px; line-height: 1.7; max-width: 330px; margin-bottom: 23px; }
+.atena-focus-copy .atena-text-button { display: flex; color: #eee4cf; margin-top: 18px; }
+.atena-week-compact { padding: 25px; }
+.atena-week-compact .atena-section-head { margin: 0 0 23px; }
+.atena-week-compact .atena-section-head h2 { font-size: 17px; margin: 0; }
+.atena-week-compact .atena-week-total { margin: 0 0 12px; font-size: 12px; }
+.atena-week-total strong { color: var(--a-text); font-size: 32px; font-weight: 650; margin-right: 4px; }
+.atena-week-progress { appearance: none; display: block; width: 100%; height: 6px; border: 0; border-radius: 10px; overflow: hidden; background: var(--a-line); color: var(--a-gold); }
+.atena-week-progress::-webkit-progress-bar { background: var(--a-line); }
+.atena-week-progress::-webkit-progress-value { background: var(--a-gold); border-radius: 10px; }
+.atena-week-progress::-moz-progress-bar { background: var(--a-gold); }
+.atena-week-compact .atena-week-days { margin: 24px 0; }
+.atena-score-invitation { display: flex; gap: 20px; align-items: center; padding: 25px 28px; border: 1px solid var(--a-line); background: var(--a-panel); border-radius: 16px; margin-top: 20px; }
+.atena-score-invitation > .atena-tool-icon { flex-shrink: 0; }
+.atena-score-invitation h2 { font-size: 20px; margin: 4px 0 7px; letter-spacing: -.3px; }
+.atena-score-invitation p { font-size: 13px; line-height: 1.6; color: var(--a-muted); margin: 0; }
+.atena-score-invitation > a { margin-left: auto; flex-shrink: 0; }
+.atena-home-help { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 14px; color: var(--a-muted); font-size: 12px; padding: 25px 0 0; }
+.atena-home-help .atena-text-button { margin: 0; }
+
+/* The score calculator starts empty; advanced comparison data stays in a dialog. */
+.atena-scores-layout { display: grid; grid-template-columns: minmax(270px, 340px) minmax(0, 1fr); gap: 28px; align-items: start; }
+.atena-scores-entry { padding: 26px; }
+.atena-scores-entry h2 { margin: 5px 0 24px; font-size: 20px; }
+.atena-score-label { display: flex; flex-direction: column; gap: 8px; color: var(--a-text); font-size: 12px; font-weight: 650; min-width: 0; }
+.atena-score-label :is(input, select) { font: 500 14px/1.5 Manrope, sans-serif; width: 100%; min-height: 45px; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--a-line); background: var(--a-bg); color: var(--a-text); box-sizing: border-box; }
+.atena-score-label input::placeholder { color: var(--a-muted); opacity: 1; }
+.atena-score-label input[aria-invalid="true"] { border-color: #f08b77; }
+.atena-score-label > span { display: flex; align-items: center; gap: 10px; }
+.atena-score-label abbr { text-decoration: none; color: var(--a-gold); min-width: 27px; font-size: 10px; }
+.atena-score-inputs { display: grid; gap: 17px; margin-top: 23px; }
+.atena-scores-entry .atena-score-help { font-size: 12px; line-height: 1.6; margin: 10px 0 0; }
+.atena-score-average { border-top: 1px solid var(--a-line); margin-top: 24px; padding-top: 20px; display: flex; flex-direction: column; gap: 7px; }
+.atena-score-average > span { font-size: 12px; color: var(--a-muted); }
+.atena-score-average > strong { font-size: 36px; line-height: 1.2; color: var(--a-gold); font-weight: 650; letter-spacing: -1px; }
+.atena-score-average > small { font-size: 11px; color: var(--a-muted); line-height: 1.6; }
+.atena-score-goals > .atena-section-head { gap: 16px; margin: 0 0 22px; }
+.atena-score-goals h2 { margin: 5px 0 0; font-size: 20px; }
+.atena-score-empty { text-align: center; border: 1px dashed var(--a-line); border-radius: 16px; padding: 48px 30px; }
+.atena-score-empty > svg { color: var(--a-gold); margin: 0 auto 18px; }
+.atena-score-empty h3 { font-size: 20px; margin: 0 0 12px; }
+.atena-score-empty p { max-width: 400px; margin: 0 auto 24px; color: var(--a-muted); font-size: 13px; line-height: 1.8; }
+.atena-score-targets { display: grid; gap: 16px; }
+.atena-score-target { padding: 25px; min-width: 0; }
+.atena-score-target .atena-section-head { align-items: flex-start; margin-bottom: 8px; gap: 10px; }
+.atena-score-target h3 { font-size: 19px; margin: 0 0 5px; overflow-wrap: anywhere; }
+.atena-score-target p { margin: 0; overflow-wrap: anywhere; }
+.atena-score-actions { display: flex; flex-shrink: 0; }
+.atena-score-target .atena-score-context { font-size: 11px; color: var(--a-muted); }
+.atena-score-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 22px 0 17px; }
+.atena-score-comparison > div { display: flex; flex-direction: column; gap: 7px; }
+.atena-score-comparison span { font-size: 11px; color: var(--a-muted); }
+.atena-score-comparison strong { font-size: 25px; font-weight: 650; }
+.atena-score-comparison > div:last-child strong { font-size: 18px; padding-top: 6px; color: var(--a-muted); }
+.atena-score-target .atena-score-difference { font-size: 12px; color: var(--a-text); padding: 12px 0 16px; border-top: 1px solid var(--a-line); }
+.atena-score-details { font-size: 12px; color: var(--a-muted); }
+.atena-score-details summary { cursor: pointer; min-height: 35px; align-content: center; }
+.atena-score-details p { font-size: 12px; margin: 9px 0; }
+.atena-score-details a, .atena-score-guidance a, .atena-score-storage a { display: inline-flex; align-items: center; gap: 7px; color: var(--a-gold); min-height: 35px; font-size: 12px; }
+.atena-score-guidance { padding: 24px 0; max-width: 650px; }
+.atena-score-guidance h3 { font-size: 13px; margin: 0 0 9px; }
+.atena-score-guidance p { color: var(--a-muted); font-size: 12px; line-height: 1.8; margin: 0 0 8px; }
+.atena-score-storage { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 22px 0 0; color: var(--a-muted); font-size: 11px; line-height: 1.7; }
+.atena-score-storage a { flex-shrink: 0; }
+.atena-score-dialog { --a-bg: var(--kalore-bg); --a-panel: var(--kalore-surface); --a-text: var(--kalore-text); --a-muted: var(--kalore-muted); --a-line: var(--kalore-border); --a-gold: var(--kalore-primary); max-width: 620px !important; max-height: 90dvh; overflow-y: auto; }
+.atena-score-form { display: grid; gap: 22px; }
+.atena-score-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+.atena-score-weights { border: 0; min-width: 0; padding: 0; }
+.atena-score-weights legend { font-weight: 650; font-size: 13px; }
+.atena-score-weights p, .atena-score-reference p { margin: 5px 0 14px; color: var(--a-muted); font-size: 12px; line-height: 1.7; }
+.atena-score-weights > div { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+.atena-score-weights input { padding: 9px; }
+.atena-score-reference { border-block: 1px solid var(--a-line); padding: 12px 0; }
+.atena-score-reference summary { cursor: pointer; font-size: 12px; padding: 5px 0; line-height: 1.7; }
+.atena-score-reference .atena-score-form-grid { margin: 15px 0; }
+.atena-score-reference p { margin: 12px 0 0; }
+.atena-score-form-actions { display: flex; justify-content: flex-end; gap: 12px; }
+.atena-score-error { color: #f7a394; font-size: 12px; line-height: 1.6; }
+:root[data-theme="light"] .atena-score-error { color: #a52d20; }
+.atena-score-notice { display: flex; gap: 20px; align-items: center; font-size: 12px; padding-top: 15px; }
+.atena-shell button:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+@media (max-width: 1150px) {
+  .atena-home-grid { grid-template-columns: minmax(0, 1fr); }
+  .atena-focus-card { min-height: 300px; }
+  .atena-focus-copy { max-width: 540px; }
+  .atena-week-compact { display: grid; grid-template-columns: 1fr 1fr; align-items: center; column-gap: 30px; }
+  .atena-week-compact .atena-section-head { margin-bottom: 8px; }
+  .atena-week-compact .atena-week-days { grid-row: 1 / 4; grid-column: 2; margin: 0; }
+  .atena-week-compact .atena-text-button { grid-column: 2; margin-top: 10px; }
+  .atena-score-invitation { flex-wrap: wrap; }
+  .atena-score-invitation > a { margin-left: 0; }
+  .atena-scores-layout { grid-template-columns: minmax(240px, 300px) minmax(0, 1fr); gap: 20px; }
+  .atena-score-goals > .atena-section-head { flex-wrap: wrap; }
+}
+@media (max-width: 980px) {
+  .atena-scores-layout { grid-template-columns: 1fr; }
+  .atena-score-inputs { grid-template-columns: 1fr 1fr; }
+  .atena-score-goals > .atena-section-head { flex-wrap: nowrap; }
+}
+@media (max-width: 760px) {
+  .atena-focus-copy { width: 81%; padding: 26px 22px; }
+  .atena-focus-copy h2 { font-size: 27px; }
+  .atena-focus-copy p { max-width: 290px; font-size: 13px; }
+  .atena-focus-art { width: 52%; opacity: .8; }
+  .atena-focus-card:after { background: linear-gradient(90deg, #17191c 27%, #17191ce8 50%, #17191c35); }
+  .atena-week-compact { padding: 22px; }
+  .atena-week-compact .atena-week-days { gap: 5px; }
+  .atena-week-compact .atena-week-days > div > span:last-child { width: 25px; height: 25px; }
+  .atena-score-invitation { padding: 22px; gap: 15px; }
+  .atena-score-invitation > .atena-tool-icon { display: none; }
+  .atena-score-invitation > a { width: 100%; margin-top: 4px; }
+  .atena-home-help { text-align: center; gap: 4px; }
+  .atena-score-inputs { grid-template-columns: 1fr; }
+  .atena-score-goals > .atena-section-head { flex-wrap: wrap; }
+  .atena-scores-entry, .atena-score-target { padding: 22px; }
+  .atena-score-empty { padding: 34px 22px; }
+  .atena-score-storage { align-items: flex-start; flex-direction: column; gap: 4px; }
+  .atena-score-form-grid { grid-template-columns: 1fr; gap: 15px; }
+  .atena-score-dialog { width: calc(100% - 28px) !important; }
+}
+@media (max-width: 520px) {
+  .atena-week-compact { display: block; }
+  .atena-week-compact .atena-week-days { margin: 20px 0 15px; }
+  .atena-week-compact .atena-week-days > div > span:last-child { width: 32px; height: 32px; }
+  .atena-focus-copy { width: 90%; }
+  .atena-focus-copy h2 { max-width: 260px; }
+  .atena-score-invitation h2 { font-size: 21px; }
+}
