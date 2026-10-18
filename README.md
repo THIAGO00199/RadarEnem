@@ -14,6 +14,14 @@ Código original sob [licença MIT](./LICENSE). Consulte o [guia de contribuiç�
 - [Simulados, PDFs e outras ferramentas](https://atena.dev.br/estudar.html)
 - [Aplicativo offline de um arquivo](https://atena.dev.br/estudar-offline.html)
 
+## Atualização 5.2
+
+O início agora concentra a próxima atividade, o progresso semanal e o acesso a **Minha nota**. O plano completo continua em Meu espaço → Meu plano. Materiais e ferramentas ficam em um grupo expansível; busca e atalho móvel de Argumentos continuam disponíveis.
+
+Em [Minha nota](https://atena.dev.br/minha-nota.html), informe as cinco notas do ENEM ou uma simulação, adicione até 12 cursos e ajuste os pesos de cada área. É possível guardar uma nota de corte com ano, modalidade e fonte, editar objetivos e desfazer uma remoção. Os cursos e referências são informados pelo usuário; a ferramenta não tem catálogo automático, estimativa de TRI nem previsão de aprovação. Confira também as notas mínimas e demais regras da instituição.
+
+O novo armazenamento `atena-scores-v1` entra no backup completo. Os cálculos funcionam localmente e a página integra o cache PWA; a consulta externa ao Sisu exige rede.
+
 ## Atualização 5.1
 
 - Comparação do Radar com contraste corrigido, incluindo hover e foco nos dois temas.
@@ -109,6 +117,7 @@ Armazenamento de `github.io` e `atena.dev.br` é separado pelo navegador. Export
 pnpm build:pages
 pnpm typecheck
 pnpm check:atena
+pnpm check:scores
 pnpm check:backup
 pnpm check:editorial
 python3 -m unittest backend.test_radar_collect

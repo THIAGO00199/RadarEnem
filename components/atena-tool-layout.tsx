@@ -1,32 +1,20 @@
 "use client";
+import { AtenaNavigation } from "./atena-navigation";
 import { useAccessibleMenu } from "./use-accessible-menu";
 import { useEffect, useState } from "react";
-import {
-  ArrowLeft,
-  BookOpen,
-  CalendarDays,
-  ChartNoAxesCombined,
-  Download,
-  Layers3,
-  Menu,
-  Moon,
-  PenLine,
-  Radar,
-  Sun,
-  Target,
-  Users,
-  X,
-} from "lucide-react";
+import { ArrowLeft, Download, Menu, Moon, Sun, X } from "lucide-react";
 export function AtenaToolLayout({
   children,
   title,
   kicker,
   active,
+  description = "Aprenda, experimente e continue. Todo avanço conta.",
 }: {
   children: React.ReactNode;
   title: string;
   kicker: string;
-  active: "estudos" | "redacao";
+  active: "estudos" | "redacao" | "nota";
+  description?: string;
 }) {
   const [menu, setMenu] = useState(false),
     [theme, setTheme] = useState<"dark" | "light">("dark");
@@ -78,51 +66,7 @@ export function AtenaToolLayout({
         >
           <X size={20} />
         </button>
-        <span className="atena-nav-caption">SEU UNIVERSO DE ESTUDO</span>
-        <nav aria-label="Navegação principal">
-          <a href="./">
-            <Target size={19} />
-            Início
-          </a>
-          <a
-            href="./estudos.html"
-            aria-current={active === "estudos" ? "page" : undefined}
-          >
-            <BookOpen size={19} />
-            Estudos
-          </a>
-          <a
-            href="./redacao.html"
-            aria-current={active === "redacao" ? "page" : undefined}
-          >
-            <PenLine size={19} />
-            Redação
-          </a>
-          <a href="./guia-estrategico.html">
-            <Layers3 size={19} />
-            Argumentos
-          </a>
-          <a href="./estudar.html#simulado">
-            <ChartNoAxesCombined size={19} />
-            Simulados
-          </a>
-          <a href="./radar.html">
-            <Radar size={19} />
-            Radar de temas
-          </a>
-          <a href="./#plano">
-            <CalendarDays size={19} />
-            Meu plano
-          </a>
-          <a href="./estudar.html#progresso">
-            <Target size={19} />
-            Desempenho
-          </a>
-          <a href="./#comunidade">
-            <Users size={19} />
-            Comunidade
-          </a>
-        </nav>
+        <AtenaNavigation active={active} />
         <a
           className="atena-sidebar-offline"
           href="./estudar-offline.html"
@@ -169,7 +113,7 @@ export function AtenaToolLayout({
             <div>
               <span className="atena-kicker">{kicker}</span>
               <h1>{title}</h1>
-              <p>Aprenda, experimente e continue. Todo avanço conta.</p>
+              <p>{description}</p>
             </div>
           </div>
           {children}
