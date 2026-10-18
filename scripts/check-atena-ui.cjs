@@ -196,7 +196,12 @@ async function overflow(page, name) {
   await page.getByRole("button", { name: "Desfazer remoção" }).click();
   assert.equal(await page.locator(".atena-score-target").count(), 1);
   for (const theme of ["dark", "light"]) {
-    await page.evaluate(theme => { document.documentElement.dataset.theme = theme; }, theme);
+    await page.evaluate(async theme => {
+      document.documentElement.dataset.theme = theme;
+      // Audit the selected palette after finite theme transitions have settled.
+      await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+      await Promise.allSettled(document.getAnimations().filter(animation => Number.isFinite(animation.effect?.getComputedTiming().endTime)).map(animation => animation.finished));
+    }, theme);
     for (const width of [360, 768, 1440]) {
       await page.setViewportSize({ width, height: 900 });
       await overflow(page, "Minha nota/" + width + "/" + theme);

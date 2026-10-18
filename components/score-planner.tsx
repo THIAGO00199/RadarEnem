@@ -68,7 +68,7 @@ export function ScorePlanner() {
           <div className="atena-score-average" aria-live="polite" aria-atomic="true">
             <span>Média simples{state.kind === "simulacao" ? " · simulação" : ""}</span>
             <strong>{average === null ? "—" : format(average)}</strong>
-            <small>{average === null ? `${complete} de 5 notas preenchidas. Complete todas para calcular.` : "Todos os pesos iguais a 1. A média de cada curso aparece ao lado."}</small>
+            <small>{average === null ? `${complete} de 5 notas preenchidas. Complete todas para calcular.` : "Todos os pesos iguais a 1. A média ponderada aparece em cada objetivo."}</small>
           </div>
         </section>
         <section className="atena-score-goals" aria-labelledby="goalsTitle">

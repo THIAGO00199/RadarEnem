@@ -2262,6 +2262,8 @@ html.motion-off .atena-shell *::after {
   .atena-score-goals > .atena-section-head { flex-wrap: nowrap; }
 }
 @media (max-width: 760px) {
+  .atena-sidebar { visibility: hidden; box-shadow: none; }
+  .atena-sidebar.open { visibility: visible; box-shadow: 20px 0 80px #0008; }
   .atena-focus-copy { width: 81%; padding: 26px 22px; }
   .atena-focus-copy h2 { font-size: 27px; }
   .atena-focus-copy p { max-width: 290px; font-size: 13px; }
