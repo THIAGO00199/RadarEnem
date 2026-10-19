@@ -67,6 +67,11 @@ const server = http.createServer(async (req, res) => {
         await page.setViewportSize({ width: 390, height: 844 }); await inspect('atena-arguments-' + theme + '-' + tab.normalize('NFD').replace(/[^a-zA-Z]/g, ''));
       }
     }
+    await page.locator('#openNav').click();
+    await page.setViewportSize({ width: 1440, height: 1000 });
+    await page.waitForFunction(() => document.querySelector('.atena-stage').inert === false);
+    assert.equal(await page.locator('.atena-stage').evaluate(el => el.inert), false, 'Resizing an open mobile menu must release the page');
+    assert.equal(await page.locator('#globalSidebar').evaluate(el => el.classList.contains('open')), false);
     await page.goto(base + '/instalar.html');
     await page.getByRole('radio', { name: 'iPhone e iPad', exact: true }).check();
     assert.match(await page.locator('.atena-install-guide').innerText(), /Safari/);
