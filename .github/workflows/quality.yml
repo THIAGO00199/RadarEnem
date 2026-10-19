@@ -56,6 +56,8 @@ jobs:
           node --check portable/public/shared/motion.js
           npm run check:atena
           npm run check:scores
+          npm run check:catalog
+          npm run check:arguments
           npm run check:backup
           npm run check:editorial
           python3 -m unittest backend.test_radar_collect
@@ -71,6 +73,7 @@ jobs:
         env:
           SCREENSHOT_DIR: ${{ runner.temp }}/atena-previews
         run: |
+          npm run check:expansion-ui
           npm run check:atena-ui
           npm run check:backup-ui
           npm run check:ui

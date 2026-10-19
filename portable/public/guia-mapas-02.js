@@ -1,5 +1,4 @@
-/* Conteúdo de treino; revisão pedagógica independente pendente. */
-globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
+globalThis.AtenaWarMaps=(globalThis.AtenaWarMaps||[]).concat([
   {
     "id": "etarismo",
     "axis": "Cidadania",
@@ -11,7 +10,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Simone de Beauvoir — A Velhice",
-          "A autora analisa como o lugar social atribuído ao envelhecimento influencia a experiência individual."
+          "A autora analisa como o lugar social atribuído ao envelhecimento influencia a experiência individual.",
+          "https://www.novafronteira.com.br/a-velhice-colecao-autora"
         ],
         [
           "Lei 10.741/2003 — Estatuto da Pessoa Idosa",
@@ -26,7 +26,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Ecléa Bosi — Memória e Sociedade: Lembranças de Velhos",
-          "Valoriza narrativas e memória de pessoas idosas, combatendo sua invisibilidade simbólica."
+          "Valoriza narrativas e memória de pessoas idosas, combatendo sua invisibilidade simbólica.",
+          "https://www.companhiadasletras.com.br/livro/9786559213955/"
         ],
         [
           "IBGE — Projeções da População",
@@ -68,7 +69,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Ailton Krenak — Ideias para Adiar o Fim do Mundo",
-          "A crítica a uma visão instrumental da natureza reforça o significado cultural do território para diferentes comunidades."
+          "A crítica a uma visão instrumental da natureza reforça o significado cultural do território para diferentes comunidades.",
+          "https://www.companhiadasletras.com.br/livro/9788535933581/"
         ]
       ]
     },
@@ -78,7 +80,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Davi Kopenawa e Bruce Albert — A Queda do Céu",
-          "O testemunho yanomami apresenta conexões entre cosmologia, território e efeitos de invasões; não o universalize a todos os povos."
+          "O testemunho yanomami apresenta conexões entre cosmologia, território e efeitos de invasões; não o universalize a todos os povos.",
+          "https://www.companhiadasletras.com.br/9788535926200-a-queda-do-ceu-3640/p"
         ],
         [
           "Convenção 169 da OIT",
@@ -115,7 +118,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Guy Debord — A Sociedade do Espetáculo",
-          "A crítica à mediação das relações pela imagem ajuda a analisar influência comercial na construção de desejos."
+          "A crítica à mediação das relações pela imagem ajuda a analisar influência comercial na construção de desejos.",
+          "https://www.contrapontoeditora.com.br/produto.php?id=10014"
         ],
         [
           "Lei 13.709/2018 — LGPD",
@@ -130,11 +134,13 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Zygmunt Bauman — Vida para Consumo",
-          "A noção de sociedade de consumidores ajuda a explicar pertencimento condicionado à aquisição de produtos."
+          "A noção de sociedade de consumidores ajuda a explicar pertencimento condicionado à aquisição de produtos.",
+          "https://www.companhiadasletras.com.br/livro/9786559790647/"
         ],
         [
           "Zé Ramalho — Admirável Gado Novo",
-          "A canção pode ilustrar conformismo coletivo como analogia; não atribua à música uma teoria dos algoritmos."
+          "A canção pode ilustrar conformismo coletivo como analogia; não atribua à música uma teoria dos algoritmos.",
+          "https://www.zeramalho.com.br/biography-pt-br"
         ]
       ]
     },
@@ -182,7 +188,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Walter Benjamin — Sobre o Conceito de História",
-          "A crítica à história narrada apenas do ponto de vista dos vencedores ajuda a problematizar quais memórias são preservadas."
+          "A crítica à história narrada apenas do ponto de vista dos vencedores ajuda a problematizar quais memórias são preservadas.",
+          "https://www.suhrkamp.de/buch/walter-benjamin-werke-und-nachlass-kritische-gesamtausgabe-t-9783518585498"
         ],
         [
           "Iphan — Política de Patrimônio Cultural Material",
@@ -235,7 +242,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Milton Santos — Por uma Outra Globalização",
-          "A obra permite perguntar quem se apropria dos benefícios de redes tecnológicas globais."
+          "A obra permite perguntar quem se apropria dos benefícios de redes tecnológicas globais.",
+          "https://www.record.com.br/products/por-uma-outra-globalizacao"
         ],
         [
           "INPE — monitoramento por satélites",
@@ -293,7 +301,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Ailton Krenak — Ideias para Adiar o Fim do Mundo",
-          "A reflexão sobre interdependência da vida sustenta uma visão que não separa sociedade e biodiversidade."
+          "A reflexão sobre interdependência da vida sustenta uma visão que não separa sociedade e biodiversidade.",
+          "https://www.companhiadasletras.com.br/livro/9788535933581/"
         ]
       ]
     },
@@ -314,4 +323,4 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "detail": "Medir conectividade de áreas e tendências populacionais por espécies prioritárias."
     }
   }
-]];
+]);

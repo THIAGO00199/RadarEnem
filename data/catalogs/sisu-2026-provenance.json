@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "year": 2026,
+  "stage": "chamada-regular",
+  "checkedAt": "2026-10-19T12:29:05.441137+00:00",
+  "sources": {
+    "cutoffs": {
+      "url": "https://sisu.mec.gov.br/static/pdf/Portal%20Sisu_%20Sisu2026_inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "sha256": "e8af948584955c78092ab514f87b03334cc901debe2dba91d600aa6009e6db30"
+    },
+    "rules": {
+      "url": "https://sisu.mec.gov.br/static/pdf/Portal_Sisu_2026_Vagas%20ofertadas.xlsx",
+      "sha256": "189318d1aa281ad60f1e8771eae1d56cac2bb703a1904b41959ac4c3b38e7319"
+    }
+  },
+  "rawEdition": {
+    "cutoffs": 302,
+    "rules": 2026
+  },
+  "counts": {
+    "records": 62567,
+    "institutions": 136,
+    "offers": 7390,
+    "positiveReferences": 46996,
+    "missingReferences": 15571
+  },
+  "states": {
+    "AC": 20,
+    "AL": 166,
+    "AM": 133,
+    "AP": 35,
+    "BA": 611,
+    "CE": 300,
+    "DF": 70,
+    "ES": 155,
+    "GO": 237,
+    "MA": 166,
+    "MG": 1120,
+    "MS": 325,
+    "MT": 181,
+    "PA": 83,
+    "PB": 360,
+    "PE": 327,
+    "PI": 246,
+    "PR": 663,
+    "RJ": 529,
+    "RN": 268,
+    "RR": 47,
+    "RS": 537,
+    "SC": 283,
+    "SE": 133,
+    "SP": 301,
+    "TO": 94
+  },
+  "notes": [
+    "Nota do último classificado na última vaga da chamada regular; não é previsão.",
+    "Zero no arquivo de cortes é tratado como referência ausente.",
+    "Média mínima usa as cinco notas sem pesos; classificação usa os pesos do curso.",
+    "Bônus pode ter vagas compartilhadas com AC; não somar vagas de modalidades.",
+    "Sem dados pessoais de candidatos."
+  ]
+}

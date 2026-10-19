@@ -131,3 +131,43 @@ main#main{min-width:0}
 .rep a{display:inline-flex;align-items:center;min-height:30px;color:var(--a-gold);text-decoration:underline;text-underline-offset:4px;font-size:12px}
 
 .atena-footer a{text-decoration:underline;text-underline-offset:3px}
+
+/* Read one stage at a time and keep the student's own outline within reach. */
+.guide-intro { display:flex; align-items:center; gap:22px; padding:20px 23px; border:1px solid var(--a-line); border-radius:14px; background:var(--a-panel); margin-bottom:18px; }
+.guide-intro .guide-hero-image { position:static; width:84px; height:84px; object-fit:cover; object-position:50% 25%; border-radius:12px; opacity:1; flex-shrink:0; }
+.guide-intro p { color:var(--a-muted); font-size:13px; line-height:1.8; margin:4px 0; }
+.guide-intro strong { color:var(--a-text); font-size:15px; }
+.guide-nav-group { border-top:1px solid var(--a-line); padding-top:8px; margin-top:9px; }
+.guide-nav-group summary { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:11px 13px; min-height:46px; color:var(--a-muted); font-size:12px; cursor:pointer; list-style:none; }
+.guide-nav-group summary::-webkit-details-marker { display:none; }
+.guide-nav-group summary:hover { color:var(--a-text); }
+.guide-nav-group > a { padding-left:23px!important; }
+.guide-favorites-filter { display:flex; align-items:center; gap:9px; color:var(--a-text); font-size:12px; padding:10px 4px; min-height:42px; cursor:pointer; }
+.guide-favorites-filter input { accent-color:var(--a-gold); }
+.guide-mobile-select { display:none; }
+.guide-tabs { display:flex; gap:6px; border-bottom:1px solid var(--a-line); margin:0 -2px 24px; overflow-x:auto; padding:0 2px 12px; }
+.guide-tabs button { flex:1 0 auto; min-height:43px; font:650 12px/1.5 Manrope,sans-serif; color:var(--a-muted); border:1px solid transparent; background:transparent; border-radius:9px; padding:11px 13px; }
+.guide-tabs button[aria-selected="true"] { background:var(--a-raised); color:var(--a-gold); border-color:var(--a-line); }
+.guide-panel[hidden] { display:none; }
+.guide-panel > .btn { margin-top:22px; }
+.guide-panel .thesis small { display:block; color:var(--a-muted); font-size:12px; line-height:1.7; }
+.guide-panel .argument details { margin-top:auto; color:var(--a-muted); font-size:12px; line-height:1.9; }
+.guide-panel summary { min-height:37px; cursor:pointer; align-content:center; }
+.guide-lead,.guide-check { color:var(--a-muted); font-size:13px; line-height:1.9; margin:0 0 23px; }
+.guide-check { margin-top:22px; }
+.guide-references { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+.guide-references .rep { display:flex; flex-direction:column; gap:12px; padding:20px; margin:0; background:var(--a-bg); }
+.guide-references .rep h3 { font-size:15px; line-height:1.6; margin:0; color:var(--a-text); }
+.guide-references .rep p { font-size:13px; line-height:1.85; }
+.guide-references .rep details { color:var(--a-muted); font-size:12px; }
+.guide-references .rep > .actions { margin-top:auto; }
+.guide-draft { display:grid; gap:20px; }
+.guide-draft label { display:grid; gap:10px; font-size:13px; font-weight:650; }
+.guide-draft textarea { resize:vertical; width:100%; min-height:90px; font:400 14px/1.8 Manrope,sans-serif; color:var(--a-text); background:var(--a-bg); border:1px solid var(--a-line); border-radius:10px; padding:13px; }
+.guide-draft textarea:focus-visible,.atena-shell summary:focus-visible { outline:2px solid var(--a-gold); outline-offset:3px; }
+.guide-draft-actions { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:22px; }
+.guide-status { min-height:24px; font-size:12px; line-height:1.8; color:var(--a-gold); padding:12px 0; }
+.guide-empty p { font-size:13px; line-height:1.8; color:var(--a-muted); }
+@media(max-width:1190px) { .guide-references { grid-template-columns:1fr; } }
+@media(max-width:900px) { #topics { display:none; } .guide-mobile-select { display:grid; gap:8px; font-size:12px; color:var(--a-muted); } .guide-mobile-select select { max-width:100%; width:100%; min-width:0; color:var(--a-text); background:var(--a-bg); border:1px solid var(--a-line); border-radius:9px; padding:12px; font:500 13px/1.6 Manrope,sans-serif; } .atena-sidebar { visibility:hidden; } .atena-sidebar.open { visibility:visible; } }
+@media(max-width:640px) { .guide-intro { padding:18px; gap:15px; } .guide-intro .guide-hero-image { width:58px; height:78px; } .guide-intro p { font-size:12px; } .guide-intro strong { font-size:13px; } .guide-tabs { gap:3px; } .guide-tabs button { padding:10px; font-size:11px; } .guide-references .rep { padding:17px; } .guide-panel .argument > p { font-size:13px; } .guide-draft-actions .btn { width:100%; } }

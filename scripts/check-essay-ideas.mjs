@@ -14,7 +14,7 @@ for(const topic of topics){
  assert.ok(topic.concepts.length>=2&&topic.questions.length>=3&&topic.sources.length,topic.id);
  assert.equal(topic.repertoire?.length,3,topic.id+': three cultural references expected');
  assert.deepEqual([...topic.repertoire.map(item=>item.kind)].sort(),['Cinema','Livro','Música brasileira'].sort(),topic.id);
- for(const item of topic.repertoire)assert.ok(item.work.length>3&&item.creator.length>5&&item.connection.length>35&&item.application.length>50,topic.id+': '+item.work);
+ for(const item of topic.repertoire){assert.equal(new URL(item.source).protocol,'https:',topic.id+': reference source');assert.ok(item.work.length>3&&item.creator.length>5&&item.connection.length>35&&item.application.length>50,topic.id+': '+item.work);}
  assert.ok(/^https:\/\/www\.gov\.br\/inep\//.test(topic.sources[0].url),topic.id);
  for(const route of topic.routes){
   assert.ok(route.thesis.length>110&&route.care.length>35,route.id);
@@ -59,14 +59,15 @@ for(const map of maps){
  assert.ok(map.impact.claim.length>65&&map.impact.why.length>75,map.id+': consequence');
  for(const argument of [map.cause,map.impact]){
   assert.equal(argument.refs.length,2,map.id+': two reference options');
-  for(const ref of argument.refs)assert.ok(ref[0].length>8&&ref[1].length>75,map.id+': developed reference');
+  for(const ref of argument.refs){assert.equal(new URL(ref[2]).protocol,'https:',map.id+': reference source');assert.ok(ref[0].length>8&&ref[1].length>75,map.id+': developed reference');}
  }
  assert.ok(map.words.length>=5&&map.words.length<=8,map.id+': topical vocabulary');
  for(const key of ['who','what','how','why','detail'])assert.ok(map.pi[key].length>35,map.id+': intervention '+key);
 }
 const guide=await readFile('portable/public/guia-estrategico.html','utf8');
 assert.ok(guide.includes('guia-mapas-01.js')&&guide.includes('guia-mapas-03.js'),'all data bundles included');
-assert.ok(guide.includes('data-copy')&&guide.includes('data-export'),'copy and export actions available');
+const guideUi=await readFile('portable/public/shared/argument-library-ui.js','utf8');
+assert.ok(guideUi.includes('data-copy')&&guideUi.includes('data-export'),'copy and export actions available');
 const explorer=await readFile('portable/public/shared/essay-ideas-ui.js','utf8');
 assert.ok(explorer.includes('guia-estrategico.html'),'guide discoverable from Radar and essay editor');
 console.log('18 advanced practice maps: 72 developed references, topical vocabulary, five intervention elements, search, copy, export and discoverability passed.');

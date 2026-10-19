@@ -2292,3 +2292,60 @@ html.motion-off .atena-shell *::after {
   .atena-focus-copy h2 { max-width: 260px; }
   .atena-score-invitation h2 { font-size: 21px; }
 }
+
+/* Installation is one guided action, with native browser confirmation. */
+.atena-install-hero { display: flex; gap: 30px; align-items: flex-start; padding: 32px; border: 1px solid var(--a-line); border-radius: 18px; background: var(--a-panel); margin-bottom: 24px; }
+.atena-install-hero > img { border-radius: 23px; flex-shrink: 0; }
+.atena-install-hero h2 { font-size: 28px; line-height: 1.3; margin: 8px 0 14px; letter-spacing: -.6px; }
+.atena-install-hero p { font-size: 14px; line-height: 1.8; color: var(--a-muted); max-width: 700px; margin: 0 0 22px; }
+.atena-install-hero .atena-install-success { display: flex; align-items: center; gap: 10px; color: var(--a-gold); }
+.atena-install-hero .atena-install-message { margin: 17px 0 0; font-size: 12px; }
+.atena-install-layout { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.atena-install-guide, .atena-install-offline { padding: 27px; }
+.atena-platforms { padding: 0; margin: 0 0 25px; border: 0; }
+.atena-platforms legend { font-size: 12px; color: var(--a-muted); margin-bottom: 13px; }
+.atena-platforms > div { display: flex; flex-wrap: wrap; gap: 8px; }
+.atena-platforms label { display: flex; gap: 8px; align-items: center; padding: 11px; border: 1px solid var(--a-line); border-radius: 9px; font-size: 12px; cursor: pointer; }
+.atena-platforms label.selected { color: var(--a-gold); border-color: var(--a-gold); background: var(--a-bg); }
+.atena-platforms input { accent-color: var(--a-gold); }
+.atena-install-guide h2, .atena-install-offline h2 { font-size: 20px; }
+.atena-install-guide ol { padding-left: 21px; font-size: 13px; line-height: 1.9; color: var(--a-muted); }
+.atena-install-guide li { margin: 15px 0; padding-left: 6px; }
+.atena-install-guide .atena-text-button { display: flex; font-size: 12px; }
+.atena-install-offline > svg { color: var(--a-gold); margin-bottom: 17px; }
+.atena-install-offline p { font-size: 12px; line-height: 1.85; }
+.atena-install-offline .atena-install-cache { color: var(--a-text); border-left: 2px solid var(--a-gold); padding-left: 13px; margin-block: 20px; }
+.atena-install-file { padding: 24px 4px; font-size: 12px; color: var(--a-muted); line-height: 1.8; }
+.atena-install-file summary { display: flex; align-items: center; gap: 9px; cursor: pointer; min-height: 42px; color: var(--a-text); }
+.atena-install-file p { margin-block: 15px; }
+@media(max-width: 980px) { .atena-install-layout { grid-template-columns: 1fr; } }
+@media(max-width: 600px) { .atena-install-hero { padding: 25px; flex-direction: column; gap: 18px; } .atena-install-hero > img { width: 72px; height: 72px; border-radius: 18px; } .atena-install-hero h2 { font-size: 24px; } .atena-install-guide, .atena-install-offline { padding: 22px; } }
+
+/* Course exploration stays separate from saved personal goals. */
+.atena-score-goal-buttons { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; }
+.atena-course-explorer { margin-top:28px; padding:28px; scroll-margin-top:24px; min-width:0; }
+.atena-course-filters { display:grid; grid-template-columns:minmax(220px,1.5fr) .6fr 1fr 1fr; gap:12px; margin:24px 0 12px; }
+.atena-course-search span { display:flex; align-items:center; gap:6px; }
+.atena-course-filters select { width:100%; min-width:0; text-overflow:ellipsis; }
+.atena-course-result-head { display:flex; align-items:center; justify-content:space-between; gap:16px; margin:22px 0 16px; color:var(--a-muted); font-size:13px; }
+.atena-course-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.atena-course-card { border:1px solid var(--a-line); border-radius:16px; padding:20px; min-width:0; display:flex; flex-direction:column; align-items:stretch; gap:10px; background:var(--a-panel); }
+.atena-course-card h3 { font-family:var(--font-display),serif; font-size:23px; line-height:1.2; overflow-wrap:anywhere; margin:0; }
+.atena-course-card > p { margin:0; font-size:13px; line-height:1.6; color:var(--a-muted); }
+.atena-course-card .atena-course-campus { font-size:12px; }
+.atena-course-card .atena-score-comparison { gap:10px; margin:10px 0; }
+.atena-course-card .atena-score-comparison strong { font-size:24px; }
+.atena-course-card .atena-button { margin-top:auto; font-size:12px; }
+.atena-course-card .atena-score-details { margin:0 0 8px; }
+.atena-course-card .atena-score-details p { font-size:12px; overflow-wrap:anywhere; }
+.atena-course-minimum { color:var(--a-text); font-size:12px; line-height:1.6; border-left:3px solid var(--a-gold); padding-left:10px; }
+.atena-course-minimum.unmet { border-left-color:var(--a-muted); }
+.atena-course-pagination { display:flex; justify-content:center; align-items:center; gap:20px; margin:24px 0; font-size:13px; }
+.atena-course-empty { text-align:center; padding:30px 16px; color:var(--a-muted); }
+.atena-course-empty h3 { color:var(--a-text); }
+.atena-course-provenance { padding-top:18px; margin-top:20px; border-top:1px solid var(--a-line); font-size:13px; line-height:1.7; color:var(--a-muted); }
+.atena-course-provenance summary { color:var(--a-text); cursor:pointer; }
+.atena-course-provenance a { display:flex; align-items:center; gap:5px; color:var(--a-text); margin-top:8px; width:fit-content; }
+.atena-score-catalog-notice { border-left:3px solid var(--a-gold); padding:10px 14px; color:var(--a-muted); font-size:12px; line-height:1.6; }
+@media(max-width:1190px) { .atena-course-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .atena-course-filters { grid-template-columns:1.5fr .7fr; } }
+@media(max-width:650px) { .atena-score-goal-buttons { justify-content:flex-start; } .atena-course-explorer { padding:20px 16px; } .atena-course-grid { grid-template-columns:1fr; } .atena-course-filters { grid-template-columns:1fr; } .atena-course-pagination { gap:8px; font-size:11px; } .atena-course-pagination .atena-button { padding:10px; min-height:44px; } .atena-course-result-head { align-items:flex-start; } }

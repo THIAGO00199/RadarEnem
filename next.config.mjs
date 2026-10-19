@@ -18,7 +18,7 @@ export default function nextConfig(phase) {
       ...config,
       output: undefined,
       async rewrites() {
-        return ["estudos", "redacao", "radar", "minha-nota"].map((route) => ({
+        return ["estudos", "redacao", "radar", "minha-nota", "instalar"].map((route) => ({
           source: `/${route}.html`,
           destination: `/${route}`,
         }));

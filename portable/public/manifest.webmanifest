@@ -1,7 +1,7 @@
 {
   "name": "ATENA · Conhecimento é poder",
   "short_name": "ATENA",
-  "description": "Trilhas, redação, questões, revisão e planejamento para o ENEM 2026.",
+  "description": "Estudos, redação, repertórios, questões, cursos e planejamento para o ENEM.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -26,5 +26,22 @@
       "purpose": "any maskable"
     }
   ],
-  "id": "./"
+  "id": "./",
+  "shortcuts": [
+    {
+      "name": "Continuar meus estudos",
+      "short_name": "Estudos",
+      "url": "./estudos.html"
+    },
+    {
+      "name": "Escrever uma redação",
+      "short_name": "Redação",
+      "url": "./redacao.html"
+    },
+    {
+      "name": "Explorar cursos e notas",
+      "short_name": "Minha nota",
+      "url": "./minha-nota.html"
+    }
+  ]
 }

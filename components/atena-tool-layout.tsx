@@ -13,7 +13,7 @@ export function AtenaToolLayout({
   children: React.ReactNode;
   title: string;
   kicker: string;
-  active: "estudos" | "redacao" | "nota";
+  active: "estudos" | "redacao" | "nota" | "instalar";
   description?: string;
 }) {
   const [menu, setMenu] = useState(false),
@@ -69,12 +69,11 @@ export function AtenaToolLayout({
         <AtenaNavigation active={active} />
         <a
           className="atena-sidebar-offline"
-          href="./estudar-offline.html"
-          download="atena-offline.html"
+          href="./instalar.html"
         >
           <Download size={20} />
           <span>
-            Seu estudo vai com você.<small>Baixar aplicativo offline</small>
+            Instalar ATENA<small>Android, iPhone e computador</small>
           </span>
         </a>
         <div className="atena-sidebar-bottom">

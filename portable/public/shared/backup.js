@@ -1,7 +1,7 @@
 /* One portable copy of the student's local data; never sends it to a server. */
 (function (root) {
   "use strict";
-  const keys = ["kalore-hub-v3", "kalore-hub-v2", "atena-workspace-v1", "atena-scores-v1", "kalore-radar-v2", "radar-enem-v1", "kalore-essay-brief-v1", "kalore-color-theme", "kalore-motion"];
+  const keys = ["kalore-hub-v3", "kalore-hub-v2", "atena-workspace-v1", "atena-scores-v1", "atena-arguments-v1", "kalore-radar-v2", "radar-enem-v1", "kalore-essay-brief-v1", "kalore-color-theme", "kalore-motion"];
   const checkpoint = "atena-restore-point-v1";
   const limit = 12_000_000;
   const object = value => value && typeof value === "object" && !Array.isArray(value);

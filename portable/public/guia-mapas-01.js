@@ -1,5 +1,4 @@
-/* Conteúdo de treino; revisão pedagógica independente pendente. */
-globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
+globalThis.AtenaWarMaps=(globalThis.AtenaWarMaps||[]).concat([
   {
     "id": "ciclo-hidrologico",
     "axis": "Meio ambiente",
@@ -27,11 +26,13 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Graciliano Ramos — Vidas Secas",
-          "A obra dramatiza a vulnerabilidade social associada à estiagem; explicite que o romance não é estatística contemporânea."
+          "A obra dramatiza a vulnerabilidade social associada à estiagem; explicite que o romance não é estatística contemporânea.",
+          "https://www.record.com.br/products/vidas-secas-edicao-oficial"
         ],
         [
           "Ailton Krenak — Ideias para Adiar o Fim do Mundo",
-          "A crítica à ruptura entre vida humana e natureza ajuda a analisar um desenvolvimento que desconsidera limites ambientais."
+          "A crítica à ruptura entre vida humana e natureza ajuda a analisar um desenvolvimento que desconsidera limites ambientais.",
+          "https://www.companhiadasletras.com.br/livro/9788535933581/"
         ]
       ]
     },
@@ -63,7 +64,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Guy Debord — A Sociedade do Espetáculo",
-          "A mediação das relações sociais pela imagem permite questionar a prioridade dada à aparência no consumo; apresente essa leitura como aplicação interpretativa ao tema."
+          "A mediação das relações sociais pela imagem permite questionar a prioridade dada à aparência no consumo; apresente essa leitura como aplicação interpretativa ao tema.",
+          "https://www.contrapontoeditora.com.br/produto.php?id=10014"
         ],
         [
           "Anvisa — regras de retenção de receita para agonistas GLP-1 (2025)",
@@ -78,7 +80,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Michel Foucault — Vigiar e Punir",
-          "O conceito de disciplinamento dos corpos permite problematizar normas sociais sobre aparência, sem reduzir a obra à medicina."
+          "Foucault analisa instituições disciplinares e técnicas de controle dos corpos. Por analogia, essa lente permite discutir normas de aparência; efeitos e riscos do medicamento exigem fontes de saúde, como a Anvisa.",
+          "https://livrariavozes.bookwire.com.br/library/publication/vigiar-e-punir"
         ],
         [
           "Constituição Federal, art. 196",
@@ -114,8 +117,9 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "why": "Conteúdos aparentemente convincentes alcançam usuários mais depressa do que processos de checagem e correção.",
       "refs": [
         [
-          "Hannah Arendt — Verdade e Política",
-          "A reflexão sobre verdade factual e vida pública ajuda a discutir a fragilidade de consensos diante de narrativas manipuladas."
+          "Hannah Arendt — Verdade e política, ensaio em Entre o passado e o futuro",
+          "A reflexão sobre verdade factual e vida pública ajuda a discutir a fragilidade de consensos diante de narrativas manipuladas.",
+          "https://editoraperspectiva.com.br/produtos/entre-o-passado-e-o-futuro-edicao-em-capa-dura-revista-e-atualizada-hannah-arendt/"
         ],
         [
           "Lei 13.709/2018 — LGPD",
@@ -130,7 +134,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "George Orwell — 1984",
-          "A ficção sobre manipulação de registros ilustra a disputa pelo controle do que uma sociedade considera verdadeiro."
+          "A ficção sobre manipulação de registros ilustra a disputa pelo controle do que uma sociedade considera verdadeiro.",
+          "https://www.companhiadasletras.com.br/livro/9788535914849/1984"
         ],
         [
           "Marco Civil da Internet — Lei 12.965/2014",
@@ -167,7 +172,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Zygmunt Bauman — Vida para Consumo",
-          "A análise da sociedade de consumidores esclarece a exploração mercadológica de expectativas e desejos."
+          "A análise da sociedade de consumidores esclarece a exploração mercadológica de expectativas e desejos.",
+          "https://www.companhiadasletras.com.br/livro/9786559790647/"
         ],
         [
           "MP 1.394/2026 — proibição federal de apostas de quota fixa",
@@ -182,7 +188,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Carolina Maria de Jesus — Quarto de Despejo",
-          "A experiência de privação descrita no diário ajuda a mostrar a gravidade de comprometer recursos indispensáveis, sem associar personagens a apostas."
+          "A experiência de privação descrita no diário ajuda a mostrar a gravidade de comprometer recursos indispensáveis, sem associar personagens a apostas.",
+          "https://www.coletivoleitor.com.br/produto/quarto-de-despejo-diario-de-uma-favelada-2"
         ],
         [
           "Constituição Federal, art. 227",
@@ -219,7 +226,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Milton Santos — Por uma Outra Globalização",
-          "A obra contrapõe globalização excludente e possibilidades de organização mais solidária do território."
+          "A obra contrapõe globalização excludente e possibilidades de organização mais solidária do território.",
+          "https://www.record.com.br/products/por-uma-outra-globalizacao"
         ],
         [
           "Marco Civil da Internet, art. 4º",
@@ -234,7 +242,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Paulo Freire — Pedagogia da Autonomia",
-          "A autonomia exige aprendizado crítico; aplicada ao digital, vai além do uso mecânico de aplicativos."
+          "A autonomia exige aprendizado crítico; aplicada ao digital, vai além do uso mecânico de aplicativos.",
+          "https://www.record.com.br/products/pedagogia-da-autonomia"
         ],
         [
           "IBGE — PNAD Contínua TIC",
@@ -271,11 +280,13 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Guy Debord — A Sociedade do Espetáculo",
-          "A crítica ao predomínio da imagem explica a visibilidade comercial de padrões de aparência."
+          "A crítica ao predomínio da imagem explica a visibilidade comercial de padrões de aparência.",
+          "https://www.contrapontoeditora.com.br/produto.php?id=10014"
         ],
         [
           "Pierre Bourdieu — A Distinção",
-          "A relação entre gostos, consumo e posições sociais ajuda a analisar a aparência como marcador simbólico."
+          "A relação entre gostos, consumo e posições sociais ajuda a analisar a aparência como marcador simbólico.",
+          "https://www.edusp.com.br/livros/distincao/"
         ]
       ]
     },
@@ -285,7 +296,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Byung-Chul Han — Sociedade do Cansaço",
-          "A crítica ao imperativo de desempenho ilumina a transformação do autocuidado em cobrança incessante."
+          "A crítica ao imperativo de desempenho ilumina a transformação do autocuidado em cobrança incessante.",
+          "https://www.livrariavozes.com.br/sociedadedocansaco8532649963/p"
         ],
         [
           "Constituição Federal, art. 196",
@@ -311,4 +323,4 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "detail": "Avaliar campanhas por sua acessibilidade e pelo respeito à diversidade física, social e etária."
     }
   }
-]];
+]);

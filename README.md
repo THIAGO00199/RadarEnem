@@ -10,9 +10,32 @@ Código original sob [licença MIT](./LICENSE). Consulte o [guia de contribuiç�
 - [Academia de estudos](https://atena.dev.br/estudos.html)
 - [Estúdio de redação](https://atena.dev.br/redacao.html)
 - [Argumentos e repertórios](https://atena.dev.br/guia-estrategico.html)
+- [Minha nota e catálogo de faculdades](https://atena.dev.br/minha-nota.html)
+- [Instalar no iPhone, Android ou computador](https://atena.dev.br/instalar.html)
 - [Radar de temas](https://atena.dev.br/radar.html)
 - [Simulados, PDFs e outras ferramentas](https://atena.dev.br/estudar.html)
 - [Aplicativo offline de um arquivo](https://atena.dev.br/estudar-offline.html)
+
+## Atualização 5.3
+
+**Argumentos e repertórios:** o guia de 18 propostas organiza o estudo em Argumentar, Repertórios, Intervenção e Meu roteiro. Inclui busca por assunto, autor ou obra, filtros, favoritos, anotações por mapa, exportação e transferência dos campos vazios para o estúdio, preservando o texto existente. Os 17 temas do estúdio continuam como acervo complementar. As 123 aplicações agora têm fontes da obra ou do conceito; foram corrigidas ligações temáticas e delimitadas analogias. As fontes confirmam contexto e autoria; as aplicações são interpretações editoriais, com revisão independente ainda pendente.
+
+**Faculdades por curso:** Minha nota carrega sob demanda o catálogo oficial do SiSU 2026: 136 instituições, 7.390 ofertas por campus/turno e 62.567 registros de modalidade. Busca e filtros permitem comparar a média com pesos, o corte histórico da chamada regular e os mínimos por área e média simples. Zero ou ausência na planilha não vira corte zero. Modalidades com bônus mostram a média sem bonificação e exigem consulta ao edital. Não há previsão de aprovação nem verificação de elegibilidade em cotas.
+
+**Instalação pelo navegador:** a página Instalar ATENA orienta Android, iPhone/iPad e computador. Oferece o botão nativo quando o navegador disponibiliza a instalação, identifica o modo aplicativo e confirma o cache dos recursos principais. O pacote independente para computador permanece disponível. Esta entrega é uma PWA; não há publicação em lojas de aplicativos.
+
+Notas, objetivos, favoritos e roteiros entram no backup completo. O catálogo publicado também funciona offline após o cache inicial. Não há sincronização automática entre aparelhos.
+
+### Atualizar a base oficial do SiSU
+
+O build usa a base versionada, sem consultar o MEC durante a compilação. Para reconstruí-la a partir das duas planilhas oficiais:
+
+```sh
+npm run data:import:sisu -- --source-dir /tmp/atena-sisu --download
+npm run check:catalog
+```
+
+O importador usa apenas a biblioteca padrão do Python, confere a junção entre curso, instituição, campus, turno, grau e modalidade, e preserva pesos e mínimos. A origem, os hashes e as notas metodológicas ficam em `data/catalogs/sisu-2026-provenance.json`. Para outra edição, é preciso revisar o esquema e a semântica antes de publicar.
 
 ## Atualização 5.2
 
