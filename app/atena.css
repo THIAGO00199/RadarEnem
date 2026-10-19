@@ -2309,7 +2309,7 @@ html.motion-off .atena-shell *::after {
 .atena-platforms label.selected { color: var(--a-gold); border-color: var(--a-gold); background: var(--a-bg); }
 .atena-platforms input { accent-color: var(--a-gold); }
 .atena-install-guide h2, .atena-install-offline h2 { font-size: 20px; }
-.atena-install-guide ol { padding-left: 21px; font-size: 13px; line-height: 1.9; color: var(--a-muted); }
+.atena-install-guide ol { list-style: decimal; padding-left: 21px; font-size: 13px; line-height: 1.9; color: var(--a-muted); }
 .atena-install-guide li { margin: 15px 0; padding-left: 6px; }
 .atena-install-guide .atena-text-button { display: flex; font-size: 12px; }
 .atena-install-offline > svg { color: var(--a-gold); margin-bottom: 17px; }

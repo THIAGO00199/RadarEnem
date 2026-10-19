@@ -32,7 +32,7 @@ export function InstallApp() {
       <img src="./atena/app-icon-192.png" width="96" height="96" alt="Ícone dourado da ATENA" />
       <div><span className="atena-kicker">ANDROID · IPHONE · COMPUTADOR</span><h2>Seu espaço de estudo. Sempre por perto.</h2><p>Trilhas, redação, argumentos, questões e suas metas em uma janela própria. A instalação é feita diretamente pelo navegador.</p>
         {installed ? <p className="atena-install-success" role="status"><CheckCircle2 size={19} />A ATENA está instalada neste aparelho.</p> : available ? <button className="atena-button primary" disabled={busy} onClick={requestInstall}><Download size={18} />{busy ? "Abrindo instalação…" : "Instalar ATENA"}</button> : <a className="atena-button primary" href="#installationGuide"><Smartphone size={18} />Ver como instalar</a>}
-        {message && <p className="atena-install-message" role="status">{message}</p>}
+        {message && !installed && <p className="atena-install-message" role="status">{message}</p>}
       </div>
     </section>
     <div className="atena-install-layout">
