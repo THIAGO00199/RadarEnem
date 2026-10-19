@@ -68,7 +68,7 @@ const server = http.createServer(async (req,res) => {
     await page.goto(base+'/guia-estrategico.html');
     await page.evaluate(t=>document.documentElement.dataset.theme=t,theme);
     const ids=await page.locator('#topics [data-id]').evaluateAll(nodes=>nodes.map(node=>node.dataset.id));
-    for(const id of ids){await page.locator('#topics [data-id="'+id+'"]').click();await inspect('Argumentos/'+id+'/mobile/'+theme);}
+    for(const id of ids){await page.locator('#mapSelect').selectOption(id);await inspect('Argumentos/'+id+'/mobile/'+theme);}
   }
   for(const name of ["index","redacao","matematica","revisao","planejamento"]) {await page.goto(base+"/materiais/"+name+".html");await inspect("Materiais/"+name+"/mobile");}
   await ctx.close();await browser.close();server.close();

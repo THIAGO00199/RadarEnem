@@ -37,7 +37,7 @@ const server = http.createServer(async (req, res) => {
     await page.getByLabel('Estado', { exact: true }).selectOption('PR');
     await page.getByLabel('Instituição', { exact: true }).selectOption('571');
     await page.getByLabel('Curso, faculdade ou cidade', { exact: true }).fill('medicina');
-    const medicine = page.locator('.atena-course-card').filter({ hasText: 'Curitiba' }).first();
+    const medicine = page.locator('.atena-course-card').filter({ hasText: 'Curitiba' }).filter({ has: page.getByRole('heading', { name: 'MEDICINA', exact: true }) }).first();
     await medicine.waitFor();
     assert.match(await medicine.innerText(), /817,16/); assert.match(await medicine.innerText(), /17,16 pontos abaixo/);
     await page.getByLabel('Redação', { exact: true }).fill('0');
