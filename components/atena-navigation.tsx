@@ -3,7 +3,7 @@
 import { BookOpen, CalendarDays, ChartNoAxesCombined, ChevronDown, FileText, Focus, GraduationCap, Layers3, PenLine, Radar, Sparkles, Target, Users } from "lucide-react";
 
 type HomeView = "inicio" | "plano" | "comunidade";
-type Active = HomeView | "estudos" | "redacao" | "nota";
+type Active = HomeView | "estudos" | "redacao" | "nota" | "instalar";
 
 /** The same destinations and grouping across the dashboard and study tools. */
 export function AtenaNavigation({ active, onView }: { active: Active; onView?: (view: HomeView) => void }) {

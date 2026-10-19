@@ -6,6 +6,7 @@ function storage(seed = {}) {
   return { data, getItem: key => data.get(key) ?? null, setItem: (key, value) => data.set(key, String(value)), removeItem: key => data.delete(key) };
 }
 const original = {
+  "atena-arguments-v1": JSON.stringify({ version: 1, active: "deepfakes", favorites: ["deepfakes"], drafts: { deepfakes: { tese: "Minha tese com voz própria" } } }),
   "atena-scores-v1": JSON.stringify({ version: 1, kind: "boletim", scores: { redacao: "920" }, targets: [{ course: "Engenharia", weights: { matematica: "3" } }] }),
   "kalore-hub-v3": JSON.stringify({ draft: "Minha tese com ação, Ω e 日本語", xp: 125, essays: [{ text: "Versão antiga" }], course: { done: { mat6: true } } }),
   "atena-workspace-v1": JSON.stringify({ version: 1, cards: [{ front: "Frente", back: "Verso" }], weeks: { "2026-10-12": [] } }),

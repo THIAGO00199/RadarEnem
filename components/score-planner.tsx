@@ -2,9 +2,10 @@
 
 import { useEffect, useState, type SetStateAction } from "react";
 import { ArrowUpRight, GraduationCap, Pencil, Plus, Trash2 } from "lucide-react";
+import { CourseExplorer } from "./course-explorer";
 import { AtenaToolLayout } from "./atena-tool-layout";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "./ui/dialog";
-import { AREAS, SCORE_KEY, newTarget, numberValue, sanitizeScores, scoreValue, targetError, weightedAverage, type ScoreState, type ScoreTarget } from "@/lib/scores";
+import { AREAS, SCORE_KEY, newTarget, minimumStatus, numberValue, sanitizeScores, scoreValue, targetError, weightedAverage, type ScoreState, type ScoreTarget } from "@/lib/scores";
 
 const format = (value: number) => value.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
@@ -17,6 +18,8 @@ export function ScorePlanner() {
   const [draft, setDraft] = useState<ScoreTarget | null>(null);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
+  const [catalogOpen, setCatalogOpen] = useState(false);
+  useEffect(() => { if (catalogOpen) document.getElementById("courseCatalog")?.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" }); }, [catalogOpen]);
   const [removed, setRemoved] = useState<ScoreTarget | null>(null);
   useEffect(() => {
     try {
@@ -33,6 +36,7 @@ export function ScorePlanner() {
   const average = weightedAverage(state.scores);
   const complete = AREAS.filter(({ id }) => scoreValue(state.scores[id], id) !== null).length;
   const edit = (target: ScoreTarget) => { setError(""); setDraft({ ...target, weights: { ...target.weights } }); };
+  const changeDraft = (patch: Partial<ScoreTarget>) => { if (draft) setDraft({ ...draft, ...patch, official: undefined }); };
   const save = () => {
     if (!draft) return;
     const problem = targetError(draft);
@@ -74,48 +78,53 @@ export function ScorePlanner() {
         <section className="atena-score-goals" aria-labelledby="goalsTitle">
           <div className="atena-section-head">
             <div><span className="atena-kicker">02 / SEUS CAMINHOS</span><h2 id="goalsTitle">Cursos no seu horizonte</h2></div>
-            <button className="atena-button secondary" disabled={!loaded || state.targets.length >= 12} onClick={() => edit(newTarget())}><Plus size={17} />Adicionar curso</button>
+            <div className="atena-score-goal-buttons"><button className="atena-button primary" id="exploreCourses" aria-expanded={catalogOpen} aria-controls="courseCatalog" onClick={() => setCatalogOpen(value => !value)}><GraduationCap size={17} />Explorar faculdades</button><button className="atena-button secondary" disabled={!loaded || state.targets.length >= 12} onClick={() => edit(newTarget())}><Plus size={17} />Adicionar curso</button></div>
           </div>
           {!state.targets.length && <div className="atena-score-empty">
             <GraduationCap size={38} />
             <h3>Qual curso você tem em mente?</h3>
-            <p>Adicione a instituição e os pesos do curso. Se tiver uma nota de corte de referência, guarde também o ano e a modalidade.</p>
+            <p>Explore cursos com notas de corte, pesos e mínimos oficiais do SiSU 2026, ou cadastre uma referência pessoal.</p>
             <button className="atena-button primary" disabled={!loaded} onClick={() => edit(newTarget())}>Adicionar meu primeiro curso<Plus size={17} /></button>
           </div>}
           <div className="atena-score-targets">
             {state.targets.map(target => {
               const weighted = weightedAverage(state.scores, target.weights), cutoff = numberValue(target.cutoff);
               // Round only the displayed comparison, never the weighted calculation.
-              const delta = weighted !== null && cutoff !== null ? Math.round((weighted - cutoff) * 100) / 100 : null;
+              const minima = minimumStatus(state.scores, target.official);
+              const bonus = (target.official?.bonusPercent || 0) > 0;
+              const delta = weighted !== null && cutoff !== null && !bonus ? Math.round((weighted - cutoff) * 100) / 100 : null;
               return <article className="atena-panel atena-score-target" key={target.id}>
                 <div className="atena-section-head"><div><h3>{target.course}</h3><p>{target.institution}{target.campus ? ` · ${target.campus}` : ""}</p></div>
                   <div className="atena-score-actions"><button className="atena-icon" aria-label={`Editar ${target.course}`} onClick={() => edit(target)}><Pencil size={16} /></button><button className="atena-icon" aria-label={`Remover ${target.course}`} onClick={() => { setRemoved(target); update(current => ({ ...current, targets: current.targets.filter(item => item.id !== target.id) })); setNotice("Objetivo removido."); }}><Trash2 size={16} /></button></div>
                 </div>
                 <p className="atena-score-context">{target.modality}{target.year ? ` · referência ${target.year}` : ""}</p>
-                <div className="atena-score-comparison"><div><span>Sua média com pesos</span><strong>{weighted === null ? "—" : format(weighted)}</strong></div><div><span>Referência informada</span><strong>{cutoff === null ? "Não informada" : format(cutoff)}</strong></div></div>
-                <p className="atena-score-difference">{delta === null ? (weighted === null ? "Preencha as cinco notas para comparar." : "Adicione uma referência para acompanhar a diferença.") : delta === 0 ? "Sua média coincide com a referência informada." : `${format(Math.abs(delta))} pontos ${delta > 0 ? "acima" : "abaixo"} da referência informada.`}</p>
-                <details className="atena-score-details"><summary>Pesos e fonte</summary><p>{AREAS.map(({ id, short }) => `${short}: ${target.weights[id]}`).join(" · ")}</p>{target.source ? <a href={target.source} target="_blank" rel="noopener noreferrer">Abrir fonte informada<ArrowUpRight size={14} /></a> : <p>Referência pessoal, sem fonte vinculada. Confira os dados no edital.</p>}</details>
+                <div className="atena-score-comparison"><div><span>Sua média com pesos</span><strong>{weighted === null ? "—" : format(weighted)}</strong></div><div><span>{target.official ? "Corte SiSU · chamada regular" : "Referência informada"}</span><strong>{cutoff === null ? "Não informada" : format(cutoff)}</strong></div></div>
+                <p className="atena-score-difference">{bonus ? "Modalidade com bônus. Confira o edital; sua média exibida não inclui a bonificação." : delta === null ? (weighted === null ? "Preencha as cinco notas para comparar." : "Adicione uma referência para acompanhar a diferença.") : delta === 0 ? "Sua média coincide com a referência informada." : `${format(Math.abs(delta))} pontos ${delta > 0 ? "acima" : "abaixo"} da referência informada.`}</p>
+                <>{minima.complete && <p className={`atena-course-minimum ${minima.unmet.length ? "unmet" : ""}`}>{minima.unmet.length ? `Abaixo dos mínimos: ${minima.unmet.join(", ")}.` : "Suas notas atendem aos mínimos numéricos desta oferta."}</p>}</>
+                <details className="atena-score-details"><summary>Pesos e fonte</summary><p>{AREAS.map(({ id, short }) => `${short}: ${target.weights[id]}`).join(" · ")}</p>{target.official && <><p>Mínimos: {AREAS.map(({ id, short }) => `${short}: ${target.official!.minimums[id]}`).join(" · ")}. Média simples mínima: {target.official.minimumAverage}.</p><a href={target.official.rulesSource} target="_blank" rel="noopener noreferrer">Abrir pesos e mínimos oficiais<ArrowUpRight size={14} /></a></>}{target.source ? <a href={target.source} target="_blank" rel="noopener noreferrer">Abrir fonte informada<ArrowUpRight size={14} /></a> : <p>Referência pessoal, sem fonte vinculada. Confira os dados no edital.</p>}</details>
               </article>;
             })}
           </div>
           <aside className="atena-score-guidance">
             <h3>Confira as regras de cada curso</h3>
-            <p>Os cursos são adicionados por você. Consulte pesos, notas mínimas, campus, turno e modalidade no processo seletivo. Uma nota de corte é uma referência: pode mudar e não garante aprovação.</p>
+            <p>O catálogo reúne instituições públicas participantes do SiSU 2026. Você também pode cadastrar cursos de outros processos manualmente. Confira modalidade, documentação e critérios do edital. A comparação histórica não garante aprovação.</p>
             <a href="https://sisu.mec.gov.br/cursos" target="_blank" rel="noopener noreferrer">Consultar cursos no Sisu<ArrowUpRight size={15} /></a>
           </aside>
         </section>
       </div>
+      <div id="courseCatalog">{catalogOpen && <CourseExplorer scores={state.scores} onChoose={edit} onClose={() => { setCatalogOpen(false); document.getElementById("exploreCourses")?.focus(); }} />}</div>
       <div className="atena-score-storage"><span>{storageError || "Notas e objetivos ficam neste navegador e entram no backup completo da ATENA."}</span><a href="./#plano">Abrir backup<ArrowUpRight size={14} /></a></div>
       {(notice || removed) && <div className="atena-score-notice" role="status"><span>{notice}</span>{removed && <button className="atena-text-button" disabled={state.targets.length >= 12} onClick={() => { update(current => ({ ...current, targets: [...current.targets, removed] })); setRemoved(null); setNotice("Objetivo recuperado."); }}>Desfazer remoção</button>}</div>}
       <Dialog open={draft !== null} onOpenChange={open => { if (!open) setDraft(null); }}>
         <DialogContent className="atena-dialog atena-score-dialog">
           <DialogHeader><DialogTitle>{draft?.id ? "Editar objetivo" : "Adicionar um curso"}</DialogTitle><DialogDescription>Use os dados da instituição e da modalidade em que você quer concorrer.</DialogDescription></DialogHeader>
           {draft && <form className="atena-score-form" onSubmit={event => { event.preventDefault(); save(); }}>
+            <>{draft.official && <p className="atena-score-catalog-notice">Dados preenchidos pela base oficial SiSU 2026. Ao editar os campos, este objetivo passa a ser uma referência pessoal e os mínimos automáticos são desvinculados.</p>}</>
             <div className="atena-score-form-grid">
-              {([{ key: "course", label: "Curso", placeholder: "Ex.: Engenharia Civil", required: true }, { key: "institution", label: "Instituição", placeholder: "Ex.: universidade desejada", required: true }, { key: "campus", label: "Campus e turno (opcional)", placeholder: "Ex.: Campus Centro · noturno" }, { key: "modality", label: "Modalidade de concorrência", required: true }] as const).map(field => <label className="atena-score-label" key={field.key}>{field.label}<input value={draft[field.key]} maxLength={120} required={"required" in field && field.required} placeholder={"placeholder" in field ? field.placeholder : undefined} onChange={event => setDraft({ ...draft, [field.key]: event.target.value })} /></label>)}
+              {([{ key: "course", label: "Curso", placeholder: "Ex.: Engenharia Civil", required: true }, { key: "institution", label: "Instituição", placeholder: "Ex.: universidade desejada", required: true }, { key: "campus", label: "Campus e turno (opcional)", placeholder: "Ex.: Campus Centro · noturno" }, { key: "modality", label: "Modalidade de concorrência", required: true }] as const).map(field => <label className="atena-score-label" key={field.key}>{field.label}<input value={draft[field.key]} maxLength={field.key === "modality" ? 1500 : 300} required={"required" in field && field.required} placeholder={"placeholder" in field ? field.placeholder : undefined} onChange={event => changeDraft({ [field.key]: event.target.value })} /></label>)}
             </div>
-            <fieldset className="atena-score-weights"><legend>Pesos do curso</legend><p>Começamos com peso 1. Ajuste conforme o edital.</p><div>{AREAS.map(({ id, short, name }) => <label className="atena-score-label" key={id}><abbr title={name}>{short}</abbr><input aria-label={`Peso de ${name}`} inputMode="decimal" maxLength={12} required value={draft.weights[id]} onChange={event => setDraft({ ...draft, weights: { ...draft.weights, [id]: event.target.value } })} /></label>)}</div></fieldset>
-            <details className="atena-score-reference" open={Boolean(draft.cutoff)}><summary>Adicionar nota de corte de referência (opcional)</summary><div className="atena-score-form-grid"><label className="atena-score-label">Nota de referência<input inputMode="decimal" maxLength={12} placeholder="Ex.: 720,5" value={draft.cutoff} onChange={event => setDraft({ ...draft, cutoff: event.target.value })} /></label><label className="atena-score-label">Ano da referência<input inputMode="numeric" maxLength={4} placeholder="Ex.: 2026" value={draft.year} onChange={event => setDraft({ ...draft, year: event.target.value })} /></label></div><label className="atena-score-label">Link da fonte (opcional)<input type="url" placeholder="https://…" maxLength={2000} value={draft.source} onChange={event => setDraft({ ...draft, source: event.target.value })} /></label><p>Compare o mesmo campus, turno e modalidade. A ATENA não verifica automaticamente a referência.</p></details>
+            <fieldset className="atena-score-weights"><legend>Pesos do curso</legend><p>{draft.official ? "Pesos importados da oferta escolhida. A ordem corresponde às cinco áreas do ENEM." : "Começamos com peso 1. Ajuste conforme o edital."}</p><div>{AREAS.map(({ id, short, name }) => <label className="atena-score-label" key={id}><abbr title={name}>{short}</abbr><input aria-label={`Peso de ${name}`} inputMode="decimal" maxLength={12} required value={draft.weights[id]} onChange={event => changeDraft({ weights: { ...draft.weights, [id]: event.target.value } })} /></label>)}</div></fieldset>
+            <details className="atena-score-reference" open={Boolean(draft.cutoff)}><summary>Adicionar nota de corte de referência (opcional)</summary><div className="atena-score-form-grid"><label className="atena-score-label">Nota de referência<input inputMode="decimal" maxLength={12} placeholder="Ex.: 720,5" value={draft.cutoff} onChange={event => changeDraft({ cutoff: event.target.value })} /></label><label className="atena-score-label">Ano da referência<input inputMode="numeric" maxLength={4} placeholder="Ex.: 2026" value={draft.year} onChange={event => changeDraft({ year: event.target.value })} /></label></div><label className="atena-score-label">Link da fonte (opcional)<input type="url" placeholder="https://…" maxLength={2000} value={draft.source} onChange={event => changeDraft({ source: event.target.value })} /></label><p>Compare o mesmo campus, turno e modalidade. Os dados de objetivos manuais são informados por você.</p></details>
             {error && <p className="atena-score-error" role="alert">{error}</p>}
             <div className="atena-score-form-actions"><button type="button" className="atena-button secondary" onClick={() => setDraft(null)}>Cancelar</button><button type="submit" className="atena-button primary">Salvar objetivo</button></div>
           </form>}

@@ -40,7 +40,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A obra dramatiza a vulnerabilidade social associada à estiagem; explicite que o romance não é estatística contemporânea.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.record.com.br/products/vidas-secas-edicao-oficial
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -54,7 +54,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A crítica à ruptura entre vida humana e natureza ajuda a analisar um desenvolvimento que desconsidera limites ambientais.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.companhiadasletras.com.br/livro/9788535933581/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -68,7 +68,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A mediação das relações sociais pela imagem permite questionar a prioridade dada à aparência no consumo; apresente essa leitura como aplicação interpretativa ao tema.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.contrapontoeditora.com.br/produto.php?id=10014
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -94,9 +94,9 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Contexto:** A pressão estética pode produzir decisões de saúde inadequadas e aprofundar desigualdades de acesso ao cuidado.
 
-**Aplicação sugerida:** O conceito de disciplinamento dos corpos permite problematizar normas sociais sobre aparência, sem reduzir a obra à medicina.
+**Aplicação sugerida:** Foucault analisa instituições disciplinares e técnicas de controle dos corpos. Por analogia, essa lente permite discutir normas de aparência; efeitos e riscos do medicamento exigem fontes de saúde, como a Anvisa.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://livrariavozes.bookwire.com.br/library/publication/vigiar-e-punir
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -118,13 +118,13 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Tema:** O uso da Inteligência Artificial e as deepfakes: o que é real e o que é fictício na vida online?
 
-**Referência:** Hannah Arendt — Verdade e Política
+**Referência:** Hannah Arendt — Verdade e política, ensaio em Entre o passado e o futuro
 
 **Contexto:** A assimetria entre produção automatizada e verificação pública favorece manipulações.
 
 **Aplicação sugerida:** A reflexão sobre verdade factual e vida pública ajuda a discutir a fragilidade de consensos diante de narrativas manipuladas.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://editoraperspectiva.com.br/produtos/entre-o-passado-e-o-futuro-edicao-em-capa-dura-revista-e-atualizada-hannah-arendt/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -152,7 +152,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A ficção sobre manipulação de registros ilustra a disputa pelo controle do que uma sociedade considera verdadeiro.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.companhiadasletras.com.br/livro/9788535914849/1984
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -180,7 +180,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A análise da sociedade de consumidores esclarece a exploração mercadológica de expectativas e desejos.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.companhiadasletras.com.br/livro/9786559790647/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -208,7 +208,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A experiência de privação descrita no diário ajuda a mostrar a gravidade de comprometer recursos indispensáveis, sem associar personagens a apostas.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.coletivoleitor.com.br/produto/quarto-de-despejo-diario-de-uma-favelada-2
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -236,7 +236,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A obra contrapõe globalização excludente e possibilidades de organização mais solidária do território.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.record.com.br/products/por-uma-outra-globalizacao
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -264,7 +264,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A autonomia exige aprendizado crítico; aplicada ao digital, vai além do uso mecânico de aplicativos.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.record.com.br/products/pedagogia-da-autonomia
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -292,7 +292,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A crítica ao predomínio da imagem explica a visibilidade comercial de padrões de aparência.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.contrapontoeditora.com.br/produto.php?id=10014
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -306,7 +306,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A relação entre gostos, consumo e posições sociais ajuda a analisar a aparência como marcador simbólico.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.edusp.com.br/livros/distincao/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -320,7 +320,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A crítica ao imperativo de desempenho ilumina a transformação do autocuidado em cobrança incessante.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.livrariavozes.com.br/sociedadedocansaco8532649963/p
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -348,7 +348,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A autora analisa como o lugar social atribuído ao envelhecimento influencia a experiência individual.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.novafronteira.com.br/a-velhice-colecao-autora
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -376,7 +376,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Valoriza narrativas e memória de pessoas idosas, combatendo sua invisibilidade simbólica.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.companhiadasletras.com.br/livro/9786559213955/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -418,7 +418,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A crítica a uma visão instrumental da natureza reforça o significado cultural do território para diferentes comunidades.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.companhiadasletras.com.br/livro/9788535933581/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -432,7 +432,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** O testemunho yanomami apresenta conexões entre cosmologia, território e efeitos de invasões; não o universalize a todos os povos.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.companhiadasletras.com.br/9788535926200-a-queda-do-ceu-3640/p
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -460,7 +460,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A crítica à mediação das relações pela imagem ajuda a analisar influência comercial na construção de desejos.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.contrapontoeditora.com.br/produto.php?id=10014
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -488,7 +488,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A noção de sociedade de consumidores ajuda a explicar pertencimento condicionado à aquisição de produtos.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.companhiadasletras.com.br/livro/9786559790647/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -502,7 +502,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A canção pode ilustrar conformismo coletivo como analogia; não atribua à música uma teoria dos algoritmos.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.zeramalho.com.br/biography-pt-br
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -544,7 +544,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A crítica à história narrada apenas do ponto de vista dos vencedores ajuda a problematizar quais memórias são preservadas.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.suhrkamp.de/buch/walter-benjamin-werke-und-nachlass-kritische-gesamtausgabe-t-9783518585498
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -600,7 +600,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A obra permite perguntar quem se apropria dos benefícios de redes tecnológicas globais.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.record.com.br/products/por-uma-outra-globalizacao
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -670,7 +670,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A reflexão sobre interdependência da vida sustenta uma visão que não separa sociedade e biodiversidade.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.companhiadasletras.com.br/livro/9788535933581/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -698,7 +698,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A reflexão sobre apatridia e perda de proteção política ilumina a importância de instituições que garantam direitos.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.companhiadasletras.com.br/livro/9788535922042/origens-do-totalitarismo
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -712,7 +712,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** O deslocamento por condições adversas oferece paralelo literário, sem confundir migração interna com refúgio internacional.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.record.com.br/products/vidas-secas-edicao-oficial
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -780,9 +780,9 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Contexto:** Comunidades vulneráveis acumulam perdas quando a resposta se limita à emergência.
 
-**Aplicação sugerida:** A reflexão sobre interdependência ambiental ajuda a questionar ocupações territoriais incompatíveis com limites ecológicos.
+**Aplicação sugerida:** A crítica à separação entre humanidade e natureza pode introduzir responsabilidade ambiental. Para explicar El Niño e os riscos de cada região, a argumentação precisa dos dados da OMM e da ANA.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.companhiadasletras.com.br/livro/9788535933581/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -810,7 +810,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** O protagonismo no aprendizado sustenta práticas de diálogo e construção coletiva de decisões.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.record.com.br/products/pedagogia-da-autonomia
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -838,7 +838,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A tensão entre relações pessoais e impessoalidade institucional permite criticar decisões restritas a círculos fechados.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.companhiadasletras.com.br/livro/9788535925487/raizes-do-brasil
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -880,7 +880,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A abordagem social da deficiência desloca a atenção da pessoa para obstáculos criados pelo ambiente.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.editorabrasiliense.com.br/catalogo.php?id=309
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -936,7 +936,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A análise dos riscos produzidos pela modernização ajuda a discutir danos ambientais pouco visíveis no consumo diário.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.editora34.com.br/livro/567
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -950,7 +950,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A crítica à distribuição desigual dos benefícios da tecnologia permite problematizar a transferência de custos socioambientais.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.record.com.br/products/por-uma-outra-globalizacao
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -992,7 +992,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** A centralidade do consumo como forma de reconhecimento social ajuda a explicar pressão por compras.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.companhiadasletras.com.br/livro/9786559790647/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1006,7 +1006,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** O ensino que forma julgamento crítico reforça a necessidade de escolhas informadas, e não memorização de slogans financeiros.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.record.com.br/products/pedagogia-da-autonomia
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1020,7 +1020,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Defender mediação de leitura e bibliotecas como espaços de participação, e não só depósitos de livros.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://cortezeditora.com.br/Categoria/a-importancia-do-ato-de-ler-122/p
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1034,7 +1034,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Associar o acesso aos livros à formação de repertório cultural; não assumir que música substitui políticas de leitura.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.youtube.com/watch?v=MPZI0W39_tU
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1048,7 +1048,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Debater alfabetização, escuta e desigualdade de acesso à escrita no cotidiano.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.festivaldorio.com.br/br/edicoes-anteriores/2018/filmes/central-do-brasil
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1062,7 +1062,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Argumentar por proteção de dados e desenho de serviços que respeitem crianças; o livro não trata exclusivamente de infância.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://intrinseca.com.br/livro/a-era-do-capitalismo-de-vigilancia/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1076,7 +1076,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Contrastar conectividade técnica com qualidade da comunicação; não atribuir à obra uma análise de redes sociais.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.youtube.com/watch?v=6rnJTPj19_A
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1090,7 +1090,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Explorar responsabilidade de empresas e educação midiática, distinguindo cenas dramatizadas de pesquisas.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://thesocialdilemma.com/the-film/credits/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1104,7 +1104,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Relacionar preservação ambiental a direitos territoriais e justiça climática.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.companhiadasletras.com.br/livro/9788535933581/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1118,7 +1118,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Conectar impacto ambiental com comunidades afetadas, evitando substituir dados científicos por interpretação artística.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.youtube.com/watch?v=YSwq5mJwi38
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1132,7 +1132,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Usar como analogia para vulnerabilidades socioambientais; não o apresentar como estudo climático.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.casacinepoa.com.br/filmes/ilha-das-flores/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1146,7 +1146,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Relacionar hiperconexão à cobrança social, sem transformar o ensaio em diagnóstico médico.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.livrariavozes.com.br/sociedadedocansaco8532649963/p
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1160,7 +1160,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Explorar a cultura da urgência e a importância de acolhimento, sem afirmar que a música comprova efeitos clínicos.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.lenine.com.br/discografia-lenine/dudu-falcao/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1170,11 +1170,11 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Referência:** Divertida Mente — Pete Docter (direção)
 
-**Contexto:** A animação apresenta emoções como parte da experiência humana.
+**Contexto:** A mudança de cidade e escola de Riley é narrada por emoções personificadas, que entram em conflito durante a adaptação.
 
-**Aplicação sugerida:** Defender educação socioemocional sem reduzir saúde mental a personagens ou emoções isoladas.
+**Aplicação sugerida:** Explorar acolhimento e reconhecimento de emoções como leitura da narrativa; a obra não estuda hiperconexão nem demonstra a eficácia de políticas de saúde mental.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.pixar.com/inside-out
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1188,7 +1188,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Comparar mecanismos de controle informacional a riscos contemporâneos, sem dizer que o romance prevê a IA.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.companhiadasletras.com.br/livro/9788535914849/1984
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1202,7 +1202,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Relacionar autonomia crítica à circulação de informações; a música não analisa algoritmos.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.zeramalho.com.br/biography-pt-br
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1216,7 +1216,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Examinar a necessidade de transparência digital; distinguir manipulação de dados de conteúdos gerados por IA.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://media.netflix.com/en/only-on-netflix/80117542
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1230,7 +1230,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Identificar barreiras de participação e propor acessibilidade em lugar de culpabilizar indivíduos.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.editorabrasiliense.com.br/catalogo.php?id=309
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1244,7 +1244,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Debater respeito à diversidade, sem reduzir inclusão a mensagens de boa vontade.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.metasocial.org.br/c%C3%B3pia-campanhas-publicitarias
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1258,7 +1258,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Discutir acessibilidade e protagonismo sem generalizar a experiência retratada a todas as deficiências.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.lacuna.film/hoje-eu-quero-voltar-sozinho
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1272,7 +1272,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Defender formação docente e participação do estudante no processo de alfabetização.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.record.com.br/products/pedagogia-do-oprimido
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1286,7 +1286,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Debater práticas pedagógicas e permanência, sem atribuir os problemas apenas ao professor.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.youtube.com/watch?v=SQVbrILJxac
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1298,9 +1298,9 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Contexto:** O documentário reúne vivências e desafios de estudantes do ensino médio brasileiro.
 
-**Aplicação sugerida:** Usar como ponto de partida para discutir desigualdades e expectativas escolares, com dados atuais à parte.
+**Aplicação sugerida:** Usar no recorte de permanência e desigualdade escolar: o documentário acompanha o ensino médio, portanto não comprova causas da alfabetização inicial.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.institutounibanco.org.br/iniciativas/nunca-me-sonharam/wp-content/uploads/2017/09/IU_NMS_Release_Oficial.pdf
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1314,7 +1314,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Conectar vulnerabilidade econômica à necessidade de proteção social, observando o contexto histórico da narrativa.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.record.com.br/products/vidas-secas-edicao-oficial
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1328,7 +1328,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Articular dignidade do trabalho e invisibilidade de riscos, sem inventar estatísticas a partir da letra.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.chicobuarque.com.br/obra/cancao/98
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1342,7 +1342,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Comparar pressões produtivas de épocas diferentes sem equipará-las literalmente.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.charliechaplin.com/en/films/6-Modern-Times
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1356,7 +1356,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Discutir naturalização de estereótipos e consequências institucionais, evitando tratar mulheres como grupo homogêneo.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.novafronteira.com.br/o-segundo-sexo-70-anos
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1370,7 +1370,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Discutir redes de apoio e responsabilização, sem transcrever versos nem tratar arte como dado estatístico.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://elzasoares.bandcamp.com/track/maria-da-vila-matilde
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1382,9 +1382,9 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Contexto:** Retrata hierarquias domésticas, desigualdades de classe e expectativas de gênero.
 
-**Aplicação sugerida:** Examinar como trabalho de cuidado e relações sociais podem reproduzir assimetrias.
+**Aplicação sugerida:** Aplicar sobretudo ao recorte sobre trabalho de cuidado, explicando a relação entre gênero, classe e autonomia de Val e Jéssica. Para violência digital, é preciso construir outra ligação e consultar evidências específicas.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://gullanemais.com/projetos/que-horas-ela-volta/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1398,7 +1398,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Fundamentar o debate sobre direito à cidade com uma perspectiva vivida e situada, sem generalizar o diário.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.coletivoleitor.com.br/produto/quarto-de-despejo-diario-de-uma-favelada-2
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1412,7 +1412,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Questionar ausência de infraestrutura e oportunidades; separar representação artística de dados atuais.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.youtube.com/watch?v=rc3ek-aAfB0
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1426,7 +1426,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Apresentar o conflito entre ociosidade imobiliária e acesso à habitação com cuidado às distintas perspectivas.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.carlacaffe.com.br/cinema-1/era-o-hotel-cambridge
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1440,7 +1440,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Argumentar pela educação científica e verificação de fontes, evitando opor ciência e população.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.companhiadasletras.com.br/livro/9788535908343/o-mundo-assombrado-pelos-demonios
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1454,7 +1454,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Discutir divulgação científica e curiosidade intelectual sem confundir metáfora com evidência sobre saúde.
 
-**Fonte para consulta:** https://gilbertogil.com.br/discografia/quanta/
+**Fonte para consulta:** https://gilbertogil.com.br/musicas/?letra=Q
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1466,9 +1466,9 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Contexto:** Dramatiza a busca familiar por conhecimento diante de uma doença rara.
 
-**Aplicação sugerida:** Debater limites entre pesquisa, evidência e decisões em saúde, sem extrair recomendações médicas do filme.
+**Aplicação sugerida:** Discutir a busca por conhecimento e o diálogo entre famílias e pesquisadores. A narrativa não comprova a eficácia de tratamentos nem justifica automedicação.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.universalpicturesathome.com/movies/lorenzos-oil
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1482,7 +1482,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Discutir ausência de oportunidades e proteção, evitando associar pobreza a criminalidade inevitável.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.companhiadasletras.com.br/livro/9788535911695/capitaes-da-areia
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1496,7 +1496,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Conectar participação juvenil a políticas que escutem adolescentes sem idealizações.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.youtube.com/watch?v=aceLI0wa1mQ
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1510,7 +1510,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Explorar contexto e acesso a oportunidades, sem tratar a ficção como estatística nacional.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://imagemfilmes.com.br/filme/cidade-de-deus
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1524,7 +1524,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Distinguir voto, participação pública e acesso efetivo a direitos.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.record.com.br/products/cidadania-no-brasil-o-longo-caminho/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1538,7 +1538,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Relacionar memória democrática à participação cívica sem usar a obra como evidência de opiniões atuais.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.joaobosco.com.br/texto/joao-bosco-80-anos
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1552,7 +1552,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Discutir garantias de direitos e importância de instituições democráticas.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://gshow.globo.com/cultura-pop/filmes/globo-filmes/generos/drama/oanoemquemeuspaissairamdeferias.ghtml
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1566,7 +1566,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Defender autonomia e políticas de cuidado sem reduzir todas as pessoas idosas à dependência.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.novafronteira.com.br/a-velhice-colecao-autora
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1580,7 +1580,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Introduzir a diversidade de trajetórias no envelhecimento; não generalizar o sentido da canção.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.youtube.com/watch?v=YBg9bDzEEPc
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1594,7 +1594,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Discutir cuidado e dignidade, reconhecendo que doença não representa todo o envelhecimento.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.netflix.com/br/title/80233408
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1608,7 +1608,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Relacionar território, memória e patrimônio cultural aos direitos de comunidades tradicionais.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://todavialivros.com.br/livros/torto-arado
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1622,7 +1622,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Discutir apagamentos e resistência sem tratar grupos diversos como uma cultura única.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.youtube.com/watch?v=9OBBkQxMtXs
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1636,7 +1636,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Usar como analogia de pertencimento, deixando explícito que não é um retrato documental.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.vitrinefilmes.com.br/pt/movie/bacurau
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1650,7 +1650,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Explicar relações entre renda, produção e acesso aos alimentos com apoio de dados atuais.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://todavialivros.com.br/livros/geografia-da-fome
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1664,7 +1664,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Associar segurança alimentar à dignidade, sem confundir metáforas poéticas com dados.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.youtube.com/watch?v=jLW3ZpjFRt4
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1678,7 +1678,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Questionar desperdício e hierarquias de acesso aos alimentos, sem generalizar a situação do curta.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://www.casacinepoa.com.br/filmes/ilha-das-flores/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1692,7 +1692,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Defender inclusão como acesso, competência de uso e participação, não apenas conexão disponível.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://editora34.com.br/livro/115
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1706,7 +1706,7 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Aplicação sugerida:** Contrastar o potencial da rede com desigualdades concretas de infraestrutura e letramento.
 
-**Fonte para consulta:** https://gilbertogil.com.br/discografia/quanta/
+**Fonte para consulta:** https://gilbertogil.com.br/musicas/?letra=P
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.
 
@@ -1714,12 +1714,12 @@ Aprovação humana pendente. Este inventário permite conferir cada aplicação 
 
 **Tema:** Inclusão digital e acesso à informação
 
-**Referência:** O Menino que Descobriu o Vento — Chiwetel Ejiofor (direção)
+**Referência:** Freenet? — Pedro Ekman (direção)
 
-**Contexto:** O filme destaca conhecimento técnico e soluções locais em cenário de restrição de recursos.
+**Contexto:** Documentário brasileiro de 2016 que examina acesso à internet, privacidade, neutralidade da rede e concentração de poder em diferentes países.
 
-**Aplicação sugerida:** Usar como analogia da importância da educação e de condições materiais para inovar, não como estudo de acesso à internet.
+**Aplicação sugerida:** Relacionar conexão, regras de funcionamento da rede e exercício de direitos; separar os casos apresentados no filme de indicadores atuais de acesso no Brasil.
 
-**Fonte para consulta:** Conferir edição, créditos ou ficha técnica da obra.
+**Fonte para consulta:** https://intervozes.org.br/videos/freenet-e-um-convite-a-reflexao-sobre-o-que-esta-em-jogo-quando-a-internet-deixa-de-ser-livre/
 
 **Parecer independente:** preencher em `editorial/reviews.json` com nome, data, evidências e observações.

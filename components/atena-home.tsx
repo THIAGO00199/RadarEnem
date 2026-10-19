@@ -97,6 +97,7 @@ const tools = [
   },
 ];
 const extraTools = [
+  { name: "Instalar ATENA", detail: "Aplicativo para Android, iPhone, iPad e computador.", url: "./instalar.html", Icon: Download },
   { name: "Minha nota", detail: "Calcule sua média e compare objetivos com pesos por curso.", url: "./minha-nota.html", Icon: GraduationCap },
   {
     name: "Argumentos e repertórios",
@@ -470,12 +471,11 @@ export default function Home({ generatedAt }: { generatedAt: string }) {
         <AtenaNavigation active={view} onView={go} />
         <a
           className="atena-sidebar-offline"
-          href="./estudar-offline.html"
-          download="atena-offline.html"
+          href="./instalar.html"
         >
           <Download size={20} />
           <span>
-            Seu estudo vai com você.<small>Baixar aplicativo offline</small>
+            Instalar ATENA<small>Android, iPhone e computador</small>
           </span>
           <ArrowUpRight size={16} />
         </a>

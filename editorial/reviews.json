@@ -21,7 +21,7 @@
     },
     {
       "id": "map/ciclo-hidrologico/impact/0",
-      "digest": "40f615b70fc4c5a9dc3e81efac3e6c06db06b4dfed2b1782600f75a3480b1ca2",
+      "digest": "8c4f89c3f560c4c9efa568f0e672c26336a46414114e657bb8f63544308e5ef0",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -30,7 +30,7 @@
     },
     {
       "id": "map/ciclo-hidrologico/impact/1",
-      "digest": "592c1a93a9d09e02e34b6badb11e0dffd3525fa11610486247401805950165f7",
+      "digest": "de7477db9ede92d48518ec9a9c33934e61ecf0ef9757b957108902dc3fe836bb",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -39,7 +39,7 @@
     },
     {
       "id": "map/canetas-estetica/cause/0",
-      "digest": "9dd151bab4a7ce1cc1bcaa60ad1efaed52c199297b621367fb4deb52f95c6f4f",
+      "digest": "f2a7893e553e3883372750e4b3f708d21c45c5b780dcd2a275878af041b66c50",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -57,7 +57,7 @@
     },
     {
       "id": "map/canetas-estetica/impact/0",
-      "digest": "960267f4ac01b860107705df2d62030bb7d4b9d0fa248174a14f5b6903c0b4c1",
+      "digest": "cd6440f710dcf1ccbe91867a307bcbfbbb093afef8b8a17ebc7847bf029b1613",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -75,7 +75,7 @@
     },
     {
       "id": "map/deepfakes/cause/0",
-      "digest": "5644140ac3969e75fc0e20c1897d25ab668dfcadd32bbdff8beed38c89f659f9",
+      "digest": "3c441e0a67a09c0f2bddaf1f0fefd945cbe59daaa024b018b9038f6699103759",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -93,7 +93,7 @@
     },
     {
       "id": "map/deepfakes/impact/0",
-      "digest": "85eb1d6dc3c944ed05397c7d6e45b37c74370f8af234cf5654f392d94bd01ab8",
+      "digest": "e2f45c549e78ac2d058e53f5f6c5d3480af6e52a0ab92cf57e5c8d1a5ab668eb",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -111,7 +111,7 @@
     },
     {
       "id": "map/bets/cause/0",
-      "digest": "c5bc6437cf403850bdb97da597460ec8c63c377a2226231b6a18beebdbd4fd64",
+      "digest": "4daecee2907922e85948cb9ed1fb1091b361919910749377edbb398ac0717cfc",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -129,7 +129,7 @@
     },
     {
       "id": "map/bets/impact/0",
-      "digest": "a77fd0a10fb9fed094c7bcb49f3ae92375bfbc7ce99852ff3a344adbbebabc0e",
+      "digest": "2ddd72f4346234ee398ef0f56e89282ff4deeb3185c76544f213a8a54f0a7672",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -147,7 +147,7 @@
     },
     {
       "id": "map/inclusao-digital/cause/0",
-      "digest": "1c6575344174704023ce328eab188bccd5ce4b87ed9cd43f5a744759fabe9cf2",
+      "digest": "2435a7c2ad738602e7313f881f5b2b087a936c831da522615d492b3e929b9bc2",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -165,7 +165,7 @@
     },
     {
       "id": "map/inclusao-digital/impact/0",
-      "digest": "dde5df4a7da3d6c01c44fa49ff0f1ec7c5541c0206454e522b8aaadbb35080b5",
+      "digest": "d8ca2b97a08ee51fc0e4ddbe0e5a114220731d3b751224f3f8c4a5198e3afebe",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -183,7 +183,7 @@
     },
     {
       "id": "map/fitness/cause/0",
-      "digest": "5253a0955c060ff66b6f07a3e950cec77882279d227390541549262e8f0f4d13",
+      "digest": "8d8628856c6b95ce29a31d8b0e73126d5e79ecd164479464630f2a3d44b119fc",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -192,7 +192,7 @@
     },
     {
       "id": "map/fitness/cause/1",
-      "digest": "1a27faa21ac51093a6134dd9fa3346117c2b7e364d706c55e360a378a9c72a8e",
+      "digest": "0fdb9ec92a6c33d64ca8cabdac622792fa41d890948c9fadd789047030b9bd18",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -201,7 +201,7 @@
     },
     {
       "id": "map/fitness/impact/0",
-      "digest": "5d365bfef7381baaccaf5f90b3a65fd9564295f3a6dc67d5ad9f7a8b174f03c2",
+      "digest": "4a97a8ae202499466156122a5d69a2b614fad6616558dd22c27ade5e19cf1f2c",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -219,7 +219,7 @@
     },
     {
       "id": "map/etarismo/cause/0",
-      "digest": "2dbf6a474f9ce8e9dcc5bbbb299c78affece03de480efea5e1ee3b4f799c0235",
+      "digest": "bd84f1fc706aa0606327a9507110ea0ff0298bcb7dd238af39f7ee09e997423a",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -237,7 +237,7 @@
     },
     {
       "id": "map/etarismo/impact/0",
-      "digest": "e60b97a5957160c3be5f43b0299911b0e81f408f4d733e32caee4ec32adf4b03",
+      "digest": "2922806ca812dfed05b998bb66527075f7ae1148ff6407dc4bc931081de99383",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -264,7 +264,7 @@
     },
     {
       "id": "map/povos-originarios/cause/1",
-      "digest": "47ee5f746ba310a8ecb11cf0ce75e547ecb52dd5c6600d03b4c6a345e54c4c53",
+      "digest": "177c2c2963a5712fb7fcee97e3a23679b8b25209e5ea46d1539a158df9896251",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -273,7 +273,7 @@
     },
     {
       "id": "map/povos-originarios/impact/0",
-      "digest": "116c001e7536651a6c7fd7218d7436929a0216d90f142b79ad04964936399ce9",
+      "digest": "04fba769856805756b04fa1ea8fefc3b112c8559875a8d5aefb23e733ae2d139",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -291,7 +291,7 @@
     },
     {
       "id": "map/algoritmos-consumo/cause/0",
-      "digest": "207bf4240f39d182c6e30b0ea60b7b4bd34873c6e529a7b40c24324078ca481f",
+      "digest": "8277f25eda94282cd427d4b990c882b4b603d4100c41afba8d09803e424d8194",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -309,7 +309,7 @@
     },
     {
       "id": "map/algoritmos-consumo/impact/0",
-      "digest": "b05a1dc7111a8a0e63389f85a863e56e78541ac997e38eeda9daacda73cbc34f",
+      "digest": "2691655d9852579ded4b068eceede771c066ffe5f349dcddb17263fe9f4a35f9",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -318,7 +318,7 @@
     },
     {
       "id": "map/algoritmos-consumo/impact/1",
-      "digest": "a78a70b38bb64d8e57eae7ccc3211d3a3da851d28e83def4cb00fcac6d8040b6",
+      "digest": "1b2305d1ea23c6b5d31a4756e27e0fdb3ebf5a7721457fa61eacf652a4f67fa1",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -345,7 +345,7 @@
     },
     {
       "id": "map/monumentos/impact/0",
-      "digest": "f28e724b4e8111c711d79b496be453eb88704520b251c6ae63f2f804b4b72ca1",
+      "digest": "a3ad957da50c66884b1a5381f493fb47c8a0b3d7539332039bf0743f43214b8a",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -381,7 +381,7 @@
     },
     {
       "id": "map/exploracao-espacial/impact/0",
-      "digest": "880238de435c9270240fb058d447162196e42ff695aa09f2751d61df2537adba",
+      "digest": "9e99639121da00c5f204047333f3712100762f98eddceaae468e75ec1c6be36e",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -426,7 +426,7 @@
     },
     {
       "id": "map/fauna/impact/1",
-      "digest": "a424aae4df1b078a4e769d61532c2079eec3d62dbae828a0c6b73d53487eb46c",
+      "digest": "496027bd289868d6cef9857f704d30c1491c324ac7951d4981e98859269787b6",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -444,7 +444,7 @@
     },
     {
       "id": "map/migracao/cause/1",
-      "digest": "95732bba604a77f1af0f24627108867d397f91894c41329195aed61794cae27f",
+      "digest": "2f53d82130278ca81c52f8d72235530e826b9a75b03d172069b3357e895e0f23",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -453,7 +453,7 @@
     },
     {
       "id": "map/migracao/impact/0",
-      "digest": "d0be91fa397dfd2033fb84e0624db9c61bdd892913d156138063fd805bddf24b",
+      "digest": "99a74841e5acb6a01f38d26a85b925dc1a792d7e9d859cda0941bb162ccce35c",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -498,7 +498,7 @@
     },
     {
       "id": "map/el-nino/impact/1",
-      "digest": "6de0c53e89c825292b23bc7e047b37c976b7f1cab8cca5974047a06c2ee5a4f1",
+      "digest": "103c23f023f0a4c260318f0b83e00e820548291f324b9829df5f85bdfa0fb1d1",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -516,7 +516,7 @@
     },
     {
       "id": "map/participacao-juvenil/cause/1",
-      "digest": "73cc1ccac03e529c36eb4cdd8707477426407615785320a68cefebc0f5ce36ea",
+      "digest": "7d9583dfb06ec5cb05d32e07407576d2c9f72a64e6d8596cde21fae382ee6a6d",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -534,7 +534,7 @@
     },
     {
       "id": "map/participacao-juvenil/impact/1",
-      "digest": "d08040ca7111854db4460dc77120c75fd766c143ec10a97d246c39da3361222d",
+      "digest": "74df447aca69a46071f39e4039589e967c73556ef7e308735d0e2a4bd4202e95",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -561,7 +561,7 @@
     },
     {
       "id": "map/acessibilidade-digital/impact/0",
-      "digest": "117ea32fd104a1ea90b00c5c406bc7efe5801b983ab3c7d2c6c622e217034319",
+      "digest": "3b5ef2055eff7c6889b078a839ed02ba414072f6574518ab991a0e3b6e9d9c5c",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -597,7 +597,7 @@
     },
     {
       "id": "map/residuos-eletronicos/impact/0",
-      "digest": "24e61c99bb2a70472f6f72b2163e203d266d6ac7cec45ca016143edb4bc48207",
+      "digest": "87c9346c4fbb88e7b315521e8316b7804b289d0d735ccf26c9505b09eb924c65",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -606,7 +606,7 @@
     },
     {
       "id": "map/residuos-eletronicos/impact/1",
-      "digest": "c6f57a21cc6eaf498b241062f3134fd9e61620aec36adf5a2fce8e9e55493000",
+      "digest": "be2064983436c58f19ece935913bd81639497126250482b2c6e8cc5297f880d6",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -633,7 +633,7 @@
     },
     {
       "id": "map/educacao-financeira/impact/0",
-      "digest": "e1d11f79af7bccbed194a6afeae7b4709dbc1c8543463c21b0c8dea343fbb8dc",
+      "digest": "21cdde9ce33cc450fa600fb0cde95f5357c97217378687c18f88a991194b4b3f",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -642,7 +642,7 @@
     },
     {
       "id": "map/educacao-financeira/impact/1",
-      "digest": "b6038c348e0db7ea00a053315739e2560aa24d1f5334ea88828eba0a0b971e1c",
+      "digest": "ce6be3446af0b0ff5094f8f3a9b2af07348a3de0c9d88d345fd69c6a9c33ba82",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -651,7 +651,7 @@
     },
     {
       "id": "radar/leitura/0",
-      "digest": "1ba606342f6733597fdbd90e5db30160a1d369d2864ea6ef4382efea103ed060",
+      "digest": "cd98d2a147f2b01a3ffbe0d6616694e7f54ff68a5ac35f131d5aaccd28820f29",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -660,7 +660,7 @@
     },
     {
       "id": "radar/leitura/1",
-      "digest": "b6bae90c57264781b957bd5d7a313b1c7348c1a7fa6e1b9091536e578b828c20",
+      "digest": "7606e9515faa3b8945a081cc804ee1c298fe34ea76d0ff1a9ff17ea37959ae13",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -669,7 +669,7 @@
     },
     {
       "id": "radar/leitura/2",
-      "digest": "6d7fb7d465b6987e96a3e51ee3218ff8bf1403099fec202aa9c67d6f798a8c81",
+      "digest": "34116c5e7815a0a3987e2d3ae75acf0eb52d80d0139afd4468d18f9f0f835dbc",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -678,7 +678,7 @@
     },
     {
       "id": "radar/digital/0",
-      "digest": "cf8bb677fe1088d5f861e9f9f20bc20fd7bf478a512743ccc4a9efdad48c90ce",
+      "digest": "7bbb4877899beaac3c19a22cf9cb421231000f3197a21ccea87f647ee88789bf",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -687,7 +687,7 @@
     },
     {
       "id": "radar/digital/1",
-      "digest": "05535a234ca3d0d90eb1f5a3b928f2931103435d2529148b346c90ab81dfbf56",
+      "digest": "de397ef415c4313bc752924eb5342c858427426bc95edd570ff7e4f4a978b20a",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -696,7 +696,7 @@
     },
     {
       "id": "radar/digital/2",
-      "digest": "44264a94f2d84fd48c0f50a65ef8126a3d58ac00323f66bdedd9c2d2805b8450",
+      "digest": "c1fe84ecc12adcebe348c801a1c4f8cd11cb94ba76ba9bfa66253d61eaa981ca",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -705,7 +705,7 @@
     },
     {
       "id": "radar/clima/0",
-      "digest": "84a0b192a94405d8cd7b1b59c19ab9e65a71832be82a5b714744fa0b7e03bd51",
+      "digest": "d90e17020d2f29e3756887f6e689e902d13e5df4e609aa49ec685c09149f8cd0",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -714,7 +714,7 @@
     },
     {
       "id": "radar/clima/1",
-      "digest": "6d7e7b4729cc4e3bd17892cd52743e06947897b78c2b99f3e74063c4fa6c917b",
+      "digest": "83cd2dcf9d41fea1ac5ccced251c3586ad798e7d0a73241ab5e81aa6fceca9a3",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -723,7 +723,7 @@
     },
     {
       "id": "radar/clima/2",
-      "digest": "a5059fd3c4970bab6bf234429be8c385dfee4f9619c9af4bd2a6bf7c2fcea1ba",
+      "digest": "81e7c4544cfd99f8b50591b56b3024ebdc924a0d7063e99f1c4228a1c8f3f19a",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -732,7 +732,7 @@
     },
     {
       "id": "radar/mental/0",
-      "digest": "67adf1720642da7e4d277e7834bb05f3cb315cf563aa4d15f24a158ef041a286",
+      "digest": "710c523198beee2d026dec80700d54994c2e79e442adb763bf519268cf0fb8fb",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -741,7 +741,7 @@
     },
     {
       "id": "radar/mental/1",
-      "digest": "fa7c7eecdaaa28f405c5b38cfdaa5ee946d75f9b7b1b603ae3f7ed13ae7bed10",
+      "digest": "f37fbf8d1cb1294bbb5c995ad56391b64573df7197545a182e46dde5fd184e50",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -750,7 +750,7 @@
     },
     {
       "id": "radar/mental/2",
-      "digest": "edca5bbb772a22a10094ada1f86492687bd06251f96238c75b105f77ba569a20",
+      "digest": "ff5efada5b60a452fcbfab06b878ac75c048230bde153008fb2bf5e1dbf9bb06",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -759,7 +759,7 @@
     },
     {
       "id": "radar/ia/0",
-      "digest": "14484631e9d2ab401f9c39cd21ea85b96aafd3d49538b0abdc4b6913a1608f06",
+      "digest": "ae758c410a79d4b89212a7920fa16f1499fc91fc78664a1d17f5601f444041ac",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -768,7 +768,7 @@
     },
     {
       "id": "radar/ia/1",
-      "digest": "70b813976c78382e89e1c082cb5cd49b3415118dd7a395ab517a0d13a338ba4f",
+      "digest": "01854f5d490cbd2f970b20d9efdd26b9b5221fee2f87951432e591fc0998170e",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -777,7 +777,7 @@
     },
     {
       "id": "radar/ia/2",
-      "digest": "8b06dfa802bb4fbc38b83347e00b378bdef18c51bfca2692383d20ab69fd88b5",
+      "digest": "67c5079e6f611e3d34b68f4b9158fa1bc4af73c7fb55b832d249ce86156e46a6",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -786,7 +786,7 @@
     },
     {
       "id": "radar/inclusao/0",
-      "digest": "edbd9bf6702f43247dc6bae362b1310c3830161db9fbe907e431e9d17f14b2dc",
+      "digest": "c32d069a8121379379fe8466461a3d57a53262be7f83672561c312bcf0fbf634",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -795,7 +795,7 @@
     },
     {
       "id": "radar/inclusao/1",
-      "digest": "e35e9433163749612f3b49d51a605e9ace90cd37ef6c358e5c9d14c03586b5c7",
+      "digest": "d6e7172173a946eebd7e5effd1ce4f2a635ac4df6e82d90398dccdb00eadfcb2",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -804,7 +804,7 @@
     },
     {
       "id": "radar/inclusao/2",
-      "digest": "205c37b5fa396127798ae37aa21a96bec716a6cf0ae21e745942bc176f5dbc16",
+      "digest": "4dc03adb3153754c5cbf05760a51a70babd3fe87997085ad00bd8e84a8b37e56",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -813,7 +813,7 @@
     },
     {
       "id": "radar/educacao/0",
-      "digest": "f7545eb73e3e4e26e377b325d3bd4978d298a7c158b8b5e9ade36dc23b6f8bf8",
+      "digest": "0426b3352ea6e56926e0137b065f6545cef2956da2d92478b7d89d3ac9459264",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -822,7 +822,7 @@
     },
     {
       "id": "radar/educacao/1",
-      "digest": "ae7dd0e74dde5867e4cb640c6aa567933e0593461c09d70f657043f0efee9aea",
+      "digest": "8318a81977d1d514e14257c75e30b246ad659566e2e379638b9156abe2474424",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -831,7 +831,7 @@
     },
     {
       "id": "radar/educacao/2",
-      "digest": "1d5242ee1c9bc65c7ecd27f2596ec3ea672717386898345153b9889a895d1a5a",
+      "digest": "346c3401035083e15282227e8779904daa33f1f1cc88dfdeb0e9de1dad37d12e",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -840,7 +840,7 @@
     },
     {
       "id": "radar/trabalho/0",
-      "digest": "36106d921598b9e264118f197146adcf94c5fbba96cf2f9fbfdbc56fffe4046f",
+      "digest": "c2e7fda5a6422cd95e5b85dcf1b3c818959dd1070474851256ce7abbe6d29158",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -849,7 +849,7 @@
     },
     {
       "id": "radar/trabalho/1",
-      "digest": "caaf6c96a3503b994894d39d62c1b03d8c2fad66908f13dd7e5f235982208099",
+      "digest": "ebaa369bfa29af1f31ddb2f1ef6710223d2fc00dd23536158bc07595c7c0d1eb",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -858,7 +858,7 @@
     },
     {
       "id": "radar/trabalho/2",
-      "digest": "666f7b5b5f8321f6db10b32c157b702b3dde77d4350bbadae1577dc4a9a6ac29",
+      "digest": "53166c7b448fd5459442724bea284f63cba68b4e7417a8faae383cb2e76caa9a",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -867,7 +867,7 @@
     },
     {
       "id": "radar/genero/0",
-      "digest": "36adc4e722eeefa6115ec7aac7facbd81a229b32964d54e3591674d2db505669",
+      "digest": "329d50dceb827562dd1a400c75ccf1c0415bcd2e4eb75ee0256f30e835fb5e29",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -876,7 +876,7 @@
     },
     {
       "id": "radar/genero/1",
-      "digest": "81ee7d9ee2dbccd4ec734b72c7deaffd386917d8e3deea280f459867083b8f7c",
+      "digest": "e24d38a92ebdf2538d12f282c3385bca338e82b56a6d8062194ca013d6aeb702",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -885,7 +885,7 @@
     },
     {
       "id": "radar/genero/2",
-      "digest": "709ded7f5226d44bcb91b5aff5ab5f30b9e7848a8b90dd8b4b2e676aa8d67651",
+      "digest": "25901ce621e145136af0988897ca66cb5d8f278f47dcc4ce397b86d5136a1dd5",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -894,7 +894,7 @@
     },
     {
       "id": "radar/moradia/0",
-      "digest": "628e7993ede71a4c107a6cf85f2bf04de8269394221607935cd5859ef406418d",
+      "digest": "d94a4a0dbfe9c05264f2eccb0e6543d6394411a4c9863b9216b6cce961c73b89",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -903,7 +903,7 @@
     },
     {
       "id": "radar/moradia/1",
-      "digest": "83af9b9057666202ef1669e8d552ea0abaa4cc7d5b8f8535dd0f38e358868124",
+      "digest": "bb7a5e7985b9b3a734d73bb9e4627042be6564f6be9bee0a47f829f6f7f6ae39",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -912,7 +912,7 @@
     },
     {
       "id": "radar/moradia/2",
-      "digest": "463b707e524c1bc6209f7861f0e82a3c213ce64e58fb160f3777c0868fd51c6c",
+      "digest": "6dd8d8f04254ca0f9846343c72e5c834e5ebe6728a339efe6dd4facb86f1ee81",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -921,7 +921,7 @@
     },
     {
       "id": "radar/ciencia/0",
-      "digest": "53fac45166a7b4284f1e41f18a280d878a50fcd7547e9ddfbbf5457b8639d4e8",
+      "digest": "566f1168e47491769a301e5f702bcb09f5f916f9a26caced665d41a6117c1546",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -930,7 +930,7 @@
     },
     {
       "id": "radar/ciencia/1",
-      "digest": "bd532e0ad68b1548cf83882c96a734a6cbfcf3c108743136f520ec25463d60a6",
+      "digest": "ad35764fdaf39f910bfa2d737ab59d20a47e2a13e2d73f307183ca8d521418a3",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -939,7 +939,7 @@
     },
     {
       "id": "radar/ciencia/2",
-      "digest": "12c5b5cab264c7ecc17ca9a3158f9ede4b11a7ada356e3cfb11e4cc702f99400",
+      "digest": "3aaee1691d8f4c62fad4dfc4215dab9b02bed5f2f69cfd4b30468e0da9c66908",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -948,7 +948,7 @@
     },
     {
       "id": "radar/juventude/0",
-      "digest": "641fd4e0e3948dbf9b9e52cc4282266892857e83389a1c929f6781e6d1517254",
+      "digest": "8c57145f2f9842527f23a6c813bc3970d34092da4f233787cc00ae5fcf0e5c2e",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -957,7 +957,7 @@
     },
     {
       "id": "radar/juventude/1",
-      "digest": "7e259c2cd8ca0cf4158b0b84fd6b419306e7e8bd0cb445fe3034ff97d30ae0a9",
+      "digest": "0b11d1782ac1d78a34b0e4e01304a58dc7d3113ca3b8879c8f796cf0463bbe92",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -966,7 +966,7 @@
     },
     {
       "id": "radar/juventude/2",
-      "digest": "97c17a34ca243a9786759343a5860e1c048f2c38cc44aa28cb0a4936c5de7a93",
+      "digest": "0a426d0e34bfe764494ea9bbbb71c05c98940ccded76e2c7a8c11bcb8972a817",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -975,7 +975,7 @@
     },
     {
       "id": "radar/democracia/0",
-      "digest": "b122253c4089a5719ffa07d24776bcef19b7b83ab1056c54671c902dd1a116d5",
+      "digest": "e5cfda2ad7873ecc3000460b6232c29c181558a80ed505156a15b0d64da969ec",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -984,7 +984,7 @@
     },
     {
       "id": "radar/democracia/1",
-      "digest": "c218e7d0c893b248515bce56386e040e24e6a41d3576c4bb6ab7e06156680503",
+      "digest": "4f2669940e2a236608b73ec2c81bddbdc4831604e462cf9601fe4d1faf002cd8",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -993,7 +993,7 @@
     },
     {
       "id": "radar/democracia/2",
-      "digest": "992b0030527ee5f6f615ba324cac37e20dab7cf63a9d92888234c4993f0efc78",
+      "digest": "6d149b8eecd0860f7dfd43e8acb4a7b67f059c6c80dc84a1e11e677dbd5d996c",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -1002,7 +1002,7 @@
     },
     {
       "id": "radar/idosos/0",
-      "digest": "4641fc24bfc5b0d2f61672be42dddf774dec9aba5e4fea1ffb6cdcb14e3ff599",
+      "digest": "c5a030491202c6105c20b0be6607976cb212560c57658caeffe8d9fbb5e1ed58",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -1011,7 +1011,7 @@
     },
     {
       "id": "radar/idosos/1",
-      "digest": "108f2a2f5b92a1925707fb57bce57399402e589e8777fadf1792beb8af224103",
+      "digest": "b81f2cb35030ab93002078e20c547db519dfee1f35916fe520670c524511cf07",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -1020,7 +1020,7 @@
     },
     {
       "id": "radar/idosos/2",
-      "digest": "a19bc9d23f9acaba53eebdc513940efbd163a7a6a208f9990f145d7fd06372b0",
+      "digest": "22c0f1742c6345ce6835f811ca1a447404e83a0b684a0c40573a747eb0f24307",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -1029,7 +1029,7 @@
     },
     {
       "id": "radar/cultura/0",
-      "digest": "3b158e98a9e1ba2ccc62487499f62f8a4ee41e4acc5697e76136b53712bfd4cb",
+      "digest": "65b4aded3c8fc17bdc44141af13fe31f6bed893271cf6dbe53d9960542242b67",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -1038,7 +1038,7 @@
     },
     {
       "id": "radar/cultura/1",
-      "digest": "84f84b75aa39997837e7ee0f73b15cb74974fee8b8bed8bffacd484a190f20eb",
+      "digest": "84422092c0939da0e2bd35bcde39ba4caa3f619f0be80f8952d9a84e8dcf4451",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -1047,7 +1047,7 @@
     },
     {
       "id": "radar/cultura/2",
-      "digest": "c7b1225f86f1dfcedc109a5439292deb764f4190de7223d3f9551d1b7141172b",
+      "digest": "6b00a467d4042ec9786c21604e75aaeed9d4b29e14c7b8ddc489dfd8bfa45873",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -1056,7 +1056,7 @@
     },
     {
       "id": "radar/fome/0",
-      "digest": "aec41b11a08b0d388378e2726b2b5d33d021c96460d7e3261eb224a0cb380d74",
+      "digest": "955a42335077d8aa55c7897b189588013b250f0dfbeff3453b1c62d4f6b7efe8",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -1065,7 +1065,7 @@
     },
     {
       "id": "radar/fome/1",
-      "digest": "b2b83873411f067cea6afc335b91f030bdde3df9af3cac32d41ff6a339303018",
+      "digest": "3e380f534a15bce9a33c487e1779657ef8044a4ee32a681b6b173d9a9a7836bc",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -1074,7 +1074,7 @@
     },
     {
       "id": "radar/fome/2",
-      "digest": "201f21f362730533a9a17f48287218b06c40f8d329b3ca9ab216a5632c9daddc",
+      "digest": "9dc934f72227094e353c30603004b6b58c6ab11fb39db41e8e072d1cc2e3a85b",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -1083,7 +1083,7 @@
     },
     {
       "id": "radar/acesso/0",
-      "digest": "cdff402bf416e24ac0d92e0d5134ac6bb95f8fd50b7c6010b232c2e2475c5336",
+      "digest": "c311308b91f26406fb09257c223d7892eddb3911359ad4f88cae6ff59d4c7331",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -1092,7 +1092,7 @@
     },
     {
       "id": "radar/acesso/1",
-      "digest": "b12fbd927e2d782f50952af6dd9525d38fa0ee248231df4c33622d1cda04bc24",
+      "digest": "d72d7e42f9978f8f83ad6ef794b058d9335fc8e15ef733b8d466eea2eb176fa5",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,
@@ -1101,7 +1101,7 @@
     },
     {
       "id": "radar/acesso/2",
-      "digest": "8f6a185c18698491038f61b2f976035d3859e824a39167cbfc30d41606197d15",
+      "digest": "59bcca8411e7ab573f131cdfd1f8e82bc3e81ef06fb66d8b08918b8162e1426c",
       "status": "pending",
       "reviewer": null,
       "reviewedAt": null,

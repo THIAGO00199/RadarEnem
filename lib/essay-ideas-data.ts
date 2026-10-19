@@ -1,10 +1,11 @@
 /* Editorial study routes shared by Radar, Hub and the standalone offline app. */
 import {topics as radarTopics} from './radar-data';
-export type RepertoireItem = { kind:'Livro'|'Música brasileira'|'Cinema'; work:string; creator:string; connection:string; application:string };
+import { repertoireSources } from './repertoire-sources';
+export type RepertoireItem = { kind:'Livro'|'Música brasileira'|'Cinema'; work:string; creator:string; connection:string; application:string; source?:string; sourceTitle?:string };
 export type ArgumentIdea = { claim:string; reason:string; example:string; question:string };
 export type InterventionIdea = { agente:string; acao:string; meio:string; finalidade:string };
 export type EssayRoute = { id:string; label:string; thesis:string; arguments:[ArgumentIdea,ArgumentIdea]; intervention:InterventionIdea; care:string };
-export type EssayIdeaTopic = { id:string; title:string; axis:string; proposals:[string,string,string]; keywords:string[]; routes:[EssayRoute,EssayRoute]; concepts:[{title:string;text:string},{title:string;text:string}]; questions:[string,string,string]; sources:[{title:string;url:string}]; repertoire?:RepertoireItem[] };
+export type EssayIdeaTopic = { id:string; title:string; axis:string; proposals:[string,string,string]; keywords:string[]; routes:[EssayRoute,EssayRoute]; concepts:[{title:string;text:string},{title:string;text:string}]; questions:[string,string,string]; sources:{title:string;url:string}[]; repertoire?:RepertoireItem[] };
 const arg=(claim:string,reason:string,example:string,question:string):ArgumentIdea=>({claim,reason,example,question});
 const fix=(agente:string,acao:string,meio:string,finalidade:string):InterventionIdea=>({agente,acao,meio,finalidade});
 const route=(id:string,label:string,thesis:string,a:ArgumentIdea,b:ArgumentIdea,intervention:InterventionIdea,care:string):EssayRoute=>({id,label,thesis,arguments:[a,b],intervention,care});
@@ -90,3 +91,26 @@ for(const idea of essayIdeas){
  const radarTopic=radarTopics.find(topic=>topic.id===idea.id);
  if(radarTopic){const alternates=idea.proposals.filter(prompt=>prompt!==radarTopic.proposal);idea.proposals=[radarTopic.proposal,alternates[0]||radarTopic.proposal,alternates[1]||radarTopic.proposal];}
 }
+
+// Match each source to the work itself, keeping applications explicitly editorial.
+const normalizeWork=(value:string)=>value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+for(const topic of essayIdeas){
+ for(const item of topic.repertoire||[]){
+  const source=repertoireSources.refs.find(ref=>normalizeWork(ref.match)===normalizeWork(item.work));
+  if(source){item.source=source.source;item.sourceTitle=source.sourceTitle;}
+ }
+ const more=(repertoireSources.topicSources as Record<string,{title:string;url:string}[]>)[topic.id]||[];
+ topic.sources=[...topic.sources,...more];
+}
+
+{const topic=essayIdeas.find(topic=>topic.id==="acesso");if(topic?.repertoire){const index=topic.repertoire.findIndex(item=>item.kind==='Cinema');if(index>=0)topic.repertoire[index]={"kind": "Cinema", "work": "Freenet?", "creator": "Pedro Ekman (direção)", "connection": "Documentário brasileiro de 2016 que examina acesso à internet, privacidade, neutralidade da rede e concentração de poder em diferentes países.", "application": "Relacionar conexão, regras de funcionamento da rede e exercício de direitos; separar os casos apresentados no filme de indicadores atuais de acesso no Brasil.", "source": "https://intervozes.org.br/videos/freenet-e-um-convite-a-reflexao-sobre-o-que-esta-em-jogo-quando-a-internet-deixa-de-ser-livre/", "sourceTitle": "Intervozes — Freenet?, realizadores e contexto"};}}
+
+{const topic=essayIdeas.find(topic=>topic.id==="inclusao");if(topic)for(const route of topic.routes)route.care+=' '+"Delimite a condição e as barreiras abordadas. A lei reconhece pessoas com TEA como pessoas com deficiência para efeitos legais; isso não autoriza tratar toda neurodivergência como deficiência. O filme sobre deficiência visual serve ao recorte correspondente.";}
+
+{const item=essayIdeas.find(topic=>topic.id==="educacao")?.repertoire?.find(item=>item.work==="Nunca Me Sonharam");if(item)Object.assign(item,{"application": "Usar no recorte de permanência e desigualdade escolar: o documentário acompanha o ensino médio, portanto não comprova causas da alfabetização inicial.", "source": "https://www.institutounibanco.org.br/iniciativas/nunca-me-sonharam/wp-content/uploads/2017/09/IU_NMS_Release_Oficial.pdf"});}
+
+{const item=essayIdeas.find(topic=>topic.id==="genero")?.repertoire?.find(item=>item.work==="Que Horas Ela Volta?");if(item)Object.assign(item,{"application": "Aplicar sobretudo ao recorte sobre trabalho de cuidado, explicando a relação entre gênero, classe e autonomia de Val e Jéssica. Para violência digital, é preciso construir outra ligação e consultar evidências específicas.", "source": "https://gullanemais.com/projetos/que-horas-ela-volta/"});}
+
+{const item=essayIdeas.find(topic=>topic.id==="mental")?.repertoire?.find(item=>item.work==="Divertida Mente");if(item)Object.assign(item,{"application": "Explorar acolhimento e reconhecimento de emoções como leitura da narrativa; a obra não estuda hiperconexão nem demonstra a eficácia de políticas de saúde mental.", "connection": "A mudança de cidade e escola de Riley é narrada por emoções personificadas, que entram em conflito durante a adaptação.", "source": "https://www.pixar.com/inside-out"});}
+
+{const item=essayIdeas.find(topic=>topic.id==="ciencia")?.repertoire?.find(item=>item.work==="O Óleo de Lorenzo");if(item)Object.assign(item,{"application": "Discutir a busca por conhecimento e o diálogo entre famílias e pesquisadores. A narrativa não comprova a eficácia de tratamentos nem justifica automedicação.", "source": "https://www.universalpicturesathome.com/movies/lorenzos-oil"});}

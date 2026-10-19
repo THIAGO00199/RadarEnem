@@ -25,3 +25,5 @@
 .essay-ideas-special-link{display:flex;align-items:center;justify-content:center;min-height:44px;padding:11px 14px;border:1px solid var(--kalore-violet,#b397ff);border-radius:12px;background:color-mix(in srgb,var(--kalore-violet,#b397ff) 13%,transparent);color:inherit;text-decoration:none;font-size:12px;font-weight:800;line-height:1.45;text-align:center}
 .essay-ideas-special-link:hover{background:color-mix(in srgb,var(--kalore-violet,#b397ff) 25%,transparent)}
 @media(max-width:760px){.essay-ideas-heading-actions{max-width:none;width:100%}.essay-ideas-special-link{width:100%}}
+
+.idea-repertoire-card a { color:var(--kalore-text); text-decoration:underline; text-underline-offset:3px; font-weight:650; }

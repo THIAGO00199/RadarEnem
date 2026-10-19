@@ -1,5 +1,4 @@
-/* Conteúdo de treino; revisão pedagógica independente pendente. */
-globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
+globalThis.AtenaWarMaps=(globalThis.AtenaWarMaps||[]).concat([
   {
     "id": "migracao",
     "axis": "Direitos e diversidade",
@@ -16,7 +15,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Hannah Arendt — Origens do Totalitarismo",
-          "A reflexão sobre apatridia e perda de proteção política ilumina a importância de instituições que garantam direitos."
+          "A reflexão sobre apatridia e perda de proteção política ilumina a importância de instituições que garantam direitos.",
+          "https://www.companhiadasletras.com.br/livro/9788535922042/origens-do-totalitarismo"
         ]
       ]
     },
@@ -26,7 +26,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Graciliano Ramos — Vidas Secas",
-          "O deslocamento por condições adversas oferece paralelo literário, sem confundir migração interna com refúgio internacional."
+          "O deslocamento por condições adversas oferece paralelo literário, sem confundir migração interna com refúgio internacional.",
+          "https://www.record.com.br/products/vidas-secas-edicao-oficial"
         ],
         [
           "Constituição Federal, art. 5º",
@@ -84,7 +85,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Ailton Krenak — Ideias para Adiar o Fim do Mundo",
-          "A reflexão sobre interdependência ambiental ajuda a questionar ocupações territoriais incompatíveis com limites ecológicos."
+          "A crítica à separação entre humanidade e natureza pode introduzir responsabilidade ambiental. Para explicar El Niño e os riscos de cada região, a argumentação precisa dos dados da OMM e da ANA.",
+          "https://www.companhiadasletras.com.br/livro/9788535933581/"
         ]
       ]
     },
@@ -121,7 +123,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Paulo Freire — Pedagogia da Autonomia",
-          "O protagonismo no aprendizado sustenta práticas de diálogo e construção coletiva de decisões."
+          "O protagonismo no aprendizado sustenta práticas de diálogo e construção coletiva de decisões.",
+          "https://www.record.com.br/products/pedagogia-da-autonomia"
         ]
       ]
     },
@@ -136,7 +139,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
         ],
         [
           "Sérgio Buarque de Holanda — Raízes do Brasil",
-          "A tensão entre relações pessoais e impessoalidade institucional permite criticar decisões restritas a círculos fechados."
+          "A tensão entre relações pessoais e impessoalidade institucional permite criticar decisões restritas a círculos fechados.",
+          "https://www.companhiadasletras.com.br/livro/9788535925487/raizes-do-brasil"
         ]
       ]
     },
@@ -184,7 +188,8 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Débora Diniz — O Que É Deficiência",
-          "A abordagem social da deficiência desloca a atenção da pessoa para obstáculos criados pelo ambiente."
+          "A abordagem social da deficiência desloca a atenção da pessoa para obstáculos criados pelo ambiente.",
+          "https://www.editorabrasiliense.com.br/catalogo.php?id=309"
         ],
         [
           "Constituição Federal, art. 5º",
@@ -237,11 +242,13 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Ulrich Beck — Sociedade de Risco",
-          "A análise dos riscos produzidos pela modernização ajuda a discutir danos ambientais pouco visíveis no consumo diário."
+          "A análise dos riscos produzidos pela modernização ajuda a discutir danos ambientais pouco visíveis no consumo diário.",
+          "https://www.editora34.com.br/livro/567"
         ],
         [
           "Milton Santos — Por uma Outra Globalização",
-          "A crítica à distribuição desigual dos benefícios da tecnologia permite problematizar a transferência de custos socioambientais."
+          "A crítica à distribuição desigual dos benefícios da tecnologia permite problematizar a transferência de custos socioambientais.",
+          "https://www.record.com.br/products/por-uma-outra-globalizacao"
         ]
       ]
     },
@@ -289,11 +296,13 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "refs": [
         [
           "Zygmunt Bauman — Vida para Consumo",
-          "A centralidade do consumo como forma de reconhecimento social ajuda a explicar pressão por compras."
+          "A centralidade do consumo como forma de reconhecimento social ajuda a explicar pressão por compras.",
+          "https://www.companhiadasletras.com.br/livro/9786559790647/"
         ],
         [
           "Paulo Freire — Pedagogia da Autonomia",
-          "O ensino que forma julgamento crítico reforça a necessidade de escolhas informadas, e não memorização de slogans financeiros."
+          "O ensino que forma julgamento crítico reforça a necessidade de escolhas informadas, e não memorização de slogans financeiros.",
+          "https://www.record.com.br/products/pedagogia-da-autonomia"
         ]
       ]
     },
@@ -314,4 +323,4 @@ globalThis.AtenaWarMaps=[...(globalThis.AtenaWarMaps||[]),...[
       "detail": "Avaliar aprendizagem sobre taxas, direitos, privacidade e decisões de compra sem coletar dados financeiros dos alunos."
     }
   }
-]];
+]);

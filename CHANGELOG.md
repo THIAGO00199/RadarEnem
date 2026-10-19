@@ -1,3 +1,12 @@
+# ATENA 5.3 — 19/10/2026
+
+- Reorganiza argumentos em quatro etapas, com favoritos, roteiro por mapa, exportação e transferência para os campos vazios do estúdio.
+- Completa fontes das 123 aplicações culturais/conceituais e corrige ligações temáticas, contexto e limites de analogias.
+- Adiciona catálogo oficial SiSU 2026 com busca, filtros, paginação, pesos, mínimos e cortes por curso/campus/turno/modalidade; mantém o cadastro manual.
+- Preserva a ausência de corte e não aplica automaticamente bônus ou elegibilidade em cotas.
+- Adiciona instalação PWA orientada para Android, iPhone/iPad e computador, com evento nativo e confirmação do cache principal.
+- Amplia o backup para favoritos e roteiros e os testes de cálculos, catálogo, instalação e uso offline.
+
 # ATENA 5.2 — 18/10/2026
 
 - Início focado na próxima atividade e na semana, sem repetir o plano completo, a vitrine de ferramentas e os anúncios de recursos.

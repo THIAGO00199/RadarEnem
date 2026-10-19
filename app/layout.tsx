@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "Uma plataforma gratuita e aberta para o ENEM. Estudos, redação, simulados, radar de temas, PDFs e revisão offline.",
   icons: { icon: "./favicon.svg", apple: "./atena/apple-touch-icon.png" },
   manifest: "./manifest.webmanifest",
+  appleWebApp: { capable: true, title: "ATENA", statusBarStyle: "default" },
   openGraph: {
     type: "website",
     locale: "pt_BR",
@@ -60,8 +61,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        {children}
-        <OfflineProvider />
+        <OfflineProvider>{children}</OfflineProvider>
       </body>
     </html>
   );

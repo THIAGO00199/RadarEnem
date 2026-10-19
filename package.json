@@ -1,6 +1,6 @@
 {
   "name": "atena-edtech",
-  "version": "5.2.0",
+  "version": "5.3.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -35,7 +35,11 @@
     "check:backup": "node scripts/check-backup.cjs",
     "check:editorial": "node scripts/check-editorial.mjs",
     "editorial:prepare": "node scripts/build-essay-ideas.mjs && node scripts/check-editorial.mjs --prepare",
-    "check:backup-ui": "node scripts/check-backup-ui.cjs"
+    "check:backup-ui": "node scripts/check-backup-ui.cjs",
+    "check:catalog": "node scripts/check-course-catalog.mjs",
+    "check:arguments": "node scripts/check-arguments.mjs",
+    "check:expansion-ui": "node scripts/check-expansion-ui.cjs",
+    "data:import:sisu": "python3 scripts/import-sisu.py"
   },
   "dependencies": {
     "class-variance-authority": "0.7.1",

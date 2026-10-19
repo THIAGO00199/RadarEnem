@@ -25,7 +25,7 @@ for (const theme of context.KaloreEssayIdeasData.topics)
     reference: ref.work + " — " + ref.creator,
     context: ref.connection,
     application: ref.application,
-    source: ["Quanta", "Pela Internet"].includes(ref.work) ? "https://gilbertogil.com.br/discografia/quanta/" : null,
+    source: ref.source || null,
   }));
 const digest = value => createHash("sha256").update(JSON.stringify(value)).digest("hex");
 const old = JSON.parse(await readFile("editorial/reviews.json", "utf8").catch(() => '{"items":[]}'));

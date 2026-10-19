@@ -18,6 +18,7 @@ export type ScoreTarget = {
   cutoff: string;
   source: string;
   weights: Values;
+  official?: { catalogId: string; minimums: Values; minimumAverage: string; bonusPercent: number; rulesSource: string };
 };
 export type ScoreState = { version: 1; kind: "simulacao" | "boletim"; scores: Values; targets: ScoreTarget[] };
 export const values = (initial = ""): Values => Object.fromEntries(AREAS.map(({ id }) => [id, initial])) as Values;
@@ -65,6 +66,14 @@ export function targetError(target: ScoreTarget): string {
   if (target.source.trim() && !safeSource(target.source.trim())) return "Use um endereço de fonte que comece com https:// ou http://.";
   return "";
 }
+export function minimumStatus(scores: Values, official: ScoreTarget["official"]): { complete: boolean; unmet: string[] } {
+  const average = weightedAverage(scores);
+  if (!official || average === null) return { complete: false, unmet: [] };
+  const unmet: string[] = AREAS.filter(({ id }) => scoreValue(scores[id], id)! < Number(official.minimums[id])).map(({ name }) => name);
+  // The MEC report defines this threshold as the SIMPLE mean, even for weighted courses.
+  if (average < Number(official.minimumAverage)) unmet.push("média simples mínima");
+  return { complete: true, unmet };
+}
 export function sanitizeScores(raw: unknown): ScoreState {
   const empty: ScoreState = { version: 1, kind: "simulacao", scores: values(), targets: [] };
   if (!raw || typeof raw !== "object" || Array.isArray(raw)) return empty;
@@ -82,9 +91,16 @@ export function sanitizeScores(raw: unknown): ScoreState {
   for (const rawTarget of (Array.isArray(data.targets) ? data.targets.slice(0, 12) : [])) {
     const input = record(rawTarget), weights = record(input.weights);
     const target = newTarget();
-    for (const key of ["id", "course", "institution", "campus", "modality", "year", "cutoff"] as const) target[key] = text(input[key]);
+    for (const key of ["id", "course", "institution", "campus", "modality", "year", "cutoff"] as const) target[key] = text(input[key], key === "modality" ? 1500 : 300);
     target.source = safeSource(text(input.source, 2000));
     for (const { id } of AREAS) target.weights[id] = text(weights[id], 12);
+    const official = record(input.official), minimums = record(official.minimums);
+    const minimumValues = values();
+    for (const { id } of AREAS) minimumValues[id] = text(minimums[id], 12);
+    const minimumAverage = text(official.minimumAverage, 12), bonusPercent = official.bonusPercent;
+    if (/^[a-f0-9]{16}$/.test(text(official.catalogId)) && AREAS.every(({ id }) => scoreValue(minimumValues[id], id) !== null) && numberValue(minimumAverage) !== null && Number(minimumAverage) <= 10000 && typeof bonusPercent === "number" && Number.isFinite(bonusPercent) && bonusPercent >= 0 && bonusPercent <= 100 && safeSource(text(official.rulesSource, 2000))) {
+      target.official = { catalogId: text(official.catalogId), minimums: minimumValues, minimumAverage, bonusPercent, rulesSource: safeSource(text(official.rulesSource, 2000)) };
+    }
     if (/^[a-zA-Z0-9_-]{1,80}$/.test(target.id) && !used.has(target.id) && !targetError(target)) {
       empty.targets.push(target);
       used.add(target.id);
