@@ -171,3 +171,5 @@ main#main{min-width:0}
 @media(max-width:1190px) { .guide-references { grid-template-columns:1fr; } }
 @media(max-width:900px) { #topics { display:none; } .guide-mobile-select { display:grid; gap:8px; font-size:12px; color:var(--a-muted); } .guide-mobile-select select { max-width:100%; width:100%; min-width:0; color:var(--a-text); background:var(--a-bg); border:1px solid var(--a-line); border-radius:9px; padding:12px; font:500 13px/1.6 Manrope,sans-serif; } .atena-sidebar { visibility:hidden; } .atena-sidebar.open { visibility:visible; } }
 @media(max-width:640px) { .guide-intro { padding:18px; gap:15px; } .guide-intro .guide-hero-image { width:58px; height:78px; } .guide-intro p { font-size:12px; } .guide-intro strong { font-size:13px; } .guide-tabs { gap:3px; } .guide-tabs button { padding:10px; font-size:11px; } .guide-references .rep { padding:17px; } .guide-panel .argument > p { font-size:13px; } .guide-draft-actions .btn { width:100%; } }
+
+.guide-draft-field { display:grid; gap:10px; }
