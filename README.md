@@ -173,3 +173,6 @@ A CI testa as mesmas funções. Auditorias automatizadas não substituem avalia�
 O site estático reduz trabalho por visitante e dispensa servidor de aplicação. Não foi realizado teste de 100 mil acessos simultâneos; isso não é uma capacidade garantida. Limites e políticas da hospedagem continuam aplicáveis. Sincronização de conta, sala de comunidade e avaliação humana de redação ainda não são serviços implementados.
 
 Histórico de decisões: [Auditoria](./AUDITORIA.md), [Experiência](./EXPERIENCIA.md) e [Clareza](./CLAREZA.md).
+---
+
+[English](./README.en.md) · [Español](./README.es.md)
